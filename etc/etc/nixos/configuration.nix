@@ -49,7 +49,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim ranger ripgrep fzf firefox fd gitMinimal bat flameshot rofi
-    pass pass-otp stow exa vscode
+    pass pass-otp stow exa vscode atool
   ];
 
   sound.enable = true;
