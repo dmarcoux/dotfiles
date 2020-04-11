@@ -6,7 +6,7 @@
 
 {
   imports = [ 
-    ./hardware-configuration.nix # Include the results of the hardware scan
+    /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan
   ];
 
   # Allow installation of unfree packages
@@ -39,6 +39,9 @@
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = { LC_TIME = "fr_CA.UTF-8"; };
   };
+
+  # Enable a basic set of fonts providing several font styles and families and reasonable coverage of Unicode
+  fonts.enableDefaultFonts = true;
 
   time.timeZone = "Europe/Berlin";
 
