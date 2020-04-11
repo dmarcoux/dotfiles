@@ -1,0 +1,12 @@
+# ripgrep ignores anything matching this
+
+.git/
+
+# Minified files
+*.min.css
+*.css.map
+*.min.js
+*.js.map
+
+# Compiled files
+.sass-cache/
