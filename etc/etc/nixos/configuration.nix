@@ -5,8 +5,9 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ 
+  imports = [
     /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan
+    ./ranger.nix
     ./vim.nix
   ];
 
@@ -37,7 +38,7 @@
       enp2s0.useDHCP = true;
       wlp3s0.useDHCP = true;
     };
-  }; 
+  };
 
   # Select internationalisation properties
   i18n = {
@@ -61,7 +62,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    ranger ripgrep fzf firefox fd gitMinimal bat flameshot rofi
+    ripgrep fzf firefox fd gitMinimal bat flameshot rofi
     pass pass-otp stow exa vscode atool
   ];
 
@@ -109,7 +110,7 @@
     extraGroups = [
       "wheel" # Enable ‘sudo’ for the user
       "networkmanager" # Enable configuration of the network with NetworkManager
-    ]; 
+    ];
   };
 
   # Set zsh as default shell
