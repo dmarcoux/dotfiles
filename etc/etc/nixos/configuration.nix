@@ -10,6 +10,7 @@
     ./ranger.nix
     ./redshift.nix
     ./vim.nix
+    ./zsh.nix
   ];
 
   # Allow installation of unfree packages
@@ -101,10 +102,6 @@
       "networkmanager" # Enable configuration of the network with NetworkManager
     ];
   };
-
-  # Set zsh as default shell
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
 
   # Use GnuPG agent with SSH support
   programs.gnupg = {
