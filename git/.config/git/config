@@ -9,6 +9,7 @@
 [diff]
   algorithm = histogram
   compactionHeuristic = true
+  wsErrorHighlight = all
 [fetch]
   prune = true
 [gpg]
