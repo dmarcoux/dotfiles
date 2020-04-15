@@ -10,6 +10,7 @@
     ./ranger.nix
     ./redshift.nix
     ./vim.nix
+    ./vscode.nix
     ./zsh.nix
   ];
 
@@ -25,7 +26,6 @@
   # Environment variables set on shell initialisation
   environment.variables = {
     BROWSER = "firefox";
-    VISUAL = "code";
   };
 
   networking = {
@@ -65,7 +65,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     ripgrep fzf firefox fd gitMinimal bat flameshot rofi
-    pass pass-otp stow exa vscode atool
+    pass pass-otp stow exa atool
   ];
 
   sound.enable = true;
