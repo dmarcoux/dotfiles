@@ -7,6 +7,7 @@
 {
   imports = [ 
     /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan
+    ./vim.nix
   ];
 
   # Allow installation of unfree packages
@@ -21,7 +22,6 @@
   # Environment variables set on shell initialisation
   environment.variables = {
     BROWSER = "firefox";
-    EDITOR = "vim";
     VISUAL = "code";
   };
 
@@ -61,7 +61,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim ranger ripgrep fzf firefox fd gitMinimal bat flameshot rofi
+    ranger ripgrep fzf firefox fd gitMinimal bat flameshot rofi
     pass pass-otp stow exa vscode atool
   ];
 
