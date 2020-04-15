@@ -8,6 +8,7 @@
   imports = [
     /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan
     ./ranger.nix
+    ./redshift.nix
     ./vim.nix
   ];
 
@@ -69,21 +70,9 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  # Enable location with geoclue2 for redshift
-  location.provider = "geoclue2";
-
   services = {
     # Enable CUPS to print documents.
     printing.enable = true;
-
-    # Use redshift to adapt screen's color temperature depending on the time of day
-    redshift = {
-      enable = true;
-      temperature = {
-        day = 5500;
-        night = 3500;
-      };
-    };
 
     xserver = {
       # Enable the X11 windowing system
