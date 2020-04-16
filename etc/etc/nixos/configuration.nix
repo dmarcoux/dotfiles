@@ -82,7 +82,8 @@
       # Set keyboard layout to Canadian Multilingual
       layout = "ca";
       xkbVariant = "multi";
-      xkbOptions = "eurosign:e";
+      # AltGr + e for €, Swap Left Control and Caps Lock
+      xkbOptions = "eurosign:e,ctrl:swapcaps";
 
       # Enable touchpad support
       libinput.enable = true;
