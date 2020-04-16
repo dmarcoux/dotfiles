@@ -11,6 +11,7 @@
     ./redshift.nix
     ./vim.nix
     ./vscode.nix
+    ./xfce-with-i3.nix
     ./zsh.nix
   ];
 
@@ -64,10 +65,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    ripgrep fzf firefox fd gitMinimal bat flameshot rofi
+    ripgrep fzf firefox fd gitMinimal bat flameshot
     pass pass-otp stow exa atool
   ];
-
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
@@ -87,17 +87,6 @@
 
       # Enable touchpad support
       libinput.enable = true;
-
-      desktopManager.xfce = {
-        enable = true; # Enable the XFCE desktop environment
-        enableXfwm = false; # Disable XFCE's window manager (we're using i3 instead)
-        noDesktop = true; # Don't install XFCE desktop components
-      };
-
-      # Enable i3 window manager to replace Xfwm
-      windowManager.i3.enable = true;
-      # Set i3 as the default window manager
-      windowManager.default = "i3";
     };
   };
 
