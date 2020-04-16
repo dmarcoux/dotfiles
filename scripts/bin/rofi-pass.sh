@@ -2,7 +2,7 @@
 
 # A rofi frontend to pass
 #
-# Use with: rofi -modi "pass:~/dotfiles/scripts/rofi-pass.sh" -show pass
+# Use with: rofi -modi "pass:/path/to/this/script.sh" -show pass
 
 if [ -z "$*" ]; then
   # rofi first calls the script with no arguments

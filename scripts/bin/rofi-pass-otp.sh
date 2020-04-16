@@ -2,7 +2,7 @@
 
 # A rofi frontend to pass-otp
 #
-# Use with: rofi -modi "pass-otp:~/dotfiles/scripts/rofi-pass-otp.sh" -show pass-otp
+# Use with: rofi -modi "pass-otp:/path/to/this/script.sh" -show pass-otp
 
 if [ -z "$*" ]; then
   # rofi first calls the script with no arguments

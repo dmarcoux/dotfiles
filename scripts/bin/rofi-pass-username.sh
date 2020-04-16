@@ -2,7 +2,7 @@
 
 # A rofi frontend to pass (username in filenames; everything after =)
 #
-# Use with: rofi -modi "pass-username:~/dotfiles/scripts/rofi-pass-username.sh" -show pass-username
+# Use with: rofi -modi "pass-username:/path/to/this/script.sh" -show pass-username
 
 if [ -z "$*" ]; then
   # rofi first calls the script with no arguments
