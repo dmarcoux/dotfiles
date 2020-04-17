@@ -7,6 +7,7 @@
 {
   imports = [
     /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan
+    ./password-store.nix
     ./ranger.nix
     ./redshift.nix
     ./vim.nix
@@ -52,7 +53,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     ripgrep fzf firefox fd gitMinimal bat flameshot
-    pass pass-otp stow exa atool
+    stow exa atool
   ];
   sound.enable = true;
   hardware.pulseaudio.enable = true;
