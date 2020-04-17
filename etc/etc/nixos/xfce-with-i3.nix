@@ -15,6 +15,7 @@
       extraPackages = with pkgs; [
         rofi # Replace dmenu
         i3status
+        udiskie # Automounter for removable medias
       ];
     };
 
