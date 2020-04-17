@@ -75,6 +75,13 @@
     # Enable CUPS to print documents.
     printing.enable = true;
 
+    unclutter = {
+      # Hide mouse cursor when inactive
+      enable = true;
+      # Number of seconds before the cursor is marked as inactive
+      timeout = 10;
+    };
+
     xserver = {
       # Enable the X11 windowing system
       enable = true;
