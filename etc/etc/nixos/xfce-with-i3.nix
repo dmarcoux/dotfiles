@@ -15,13 +15,15 @@
       extraPackages = with pkgs; [
         rofi # Replace dmenu
         i3status
-        lightlocker # Replace i3lock
       ];
     };
 
     # Set i3 as the default window manager
     windowManager.default = "i3";
   };
+
+  # Replace i3lock as the default screen locker
+  programs.slock.enable = true;
 
   # Add font-awesome to fonts for icons in workspace names
   fonts.fonts = with pkgs; [ font-awesome-ttf ];
