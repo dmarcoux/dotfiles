@@ -24,11 +24,6 @@
     efi.canTouchEfiVariables = true;
   };
 
-  # Environment variables set on shell initialisation
-  environment.variables = {
-    BROWSER = "firefox";
-  };
-
   networking = {
     hostName = "DM-Laptop";
     networkmanager.enable = true;

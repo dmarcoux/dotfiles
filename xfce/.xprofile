@@ -1,0 +1,20 @@
+# Default browser
+export BROWSER=firefox
+
+#----- XDG Base Directory
+# From https://wiki.archlinux.org/index.php/XDG_Base_Directory_support
+
+# User-specific configuration files
+export XDG_CONFIG_HOME=$HOME/.config
+
+# User-specific data files
+export XDG_DATA_HOME=$HOME/.local/share
+
+# User-specific non-essential (cached) data
+export XDG_CACHE_HOME=$HOME/.cache
+
+#----- password-store
+# Do not pollute the home directory
+export PASSWORD_STORE_DIR=$XDG_CONFIG_HOME/password-store/passwords
+# Default length for generated passwords
+export PASSWORD_STORE_GENERATED_LENGTH=30
