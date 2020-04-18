@@ -1,4 +1,5 @@
 # Configuration for zsh
+
 { pkgs, ... }:
 
 {
