@@ -8,6 +8,7 @@
   imports = [
     /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan
     ./docker.nix
+    ./git.nix
     ./password-store.nix
     ./ranger.nix
     ./redshift.nix
@@ -53,7 +54,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    ripgrep fzf firefox fd gitMinimal bat flameshot
+    ripgrep fzf firefox fd bat flameshot
     stow exa atool
   ];
   sound.enable = true;
