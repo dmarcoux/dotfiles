@@ -1,3 +1,6 @@
+# Add binaries installed for user to the PATH (pip, stack, cargo, etc...)
+export PATH=$PATH:~/.local/bin:~/.cargo/bin
+
 # Default browser
 export BROWSER=firefox
 
@@ -18,3 +21,70 @@ export XDG_CACHE_HOME=$HOME/.cache
 export PASSWORD_STORE_DIR=$XDG_CONFIG_HOME/password-store/passwords
 # Default length for generated passwords
 export PASSWORD_STORE_GENERATED_LENGTH=30
+
+#----- less
+# Colored man pages
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[38;33;246m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[04;38;5;146m'
+
+#----- fzf
+# If fzf is installed
+if type fzf > /dev/null; then
+  # Default command to use when input is tty (using the default 'fd' command)
+  export FZF_DEFAULT_COMMAND='command fd --hidden --type file --no-ignore-vcs --exclude .git'
+
+  # Default command for the CTRL+T key binding
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+  # Default command for the ALT+C key binding (using the default 'fd' command)
+  export FZF_ALT_C_COMMAND='command fd --hidden --type directory --exclude .git'
+
+  # Default colors, Solarized (Light)
+  _fzf_default_colors() {
+    # Commented colors are not used, but kept if I ever want to change this one day
+    # local black='#002B36'
+    local grey='#839496'
+    # local dark_beige='#EEE8D5'
+    local light_beige='#FDF6E3'
+    local yellow='#B58900'
+    # local orange='#CB4B16'
+    # local red='#DC322F'
+    # local magenta='#D33682'
+    # local violet='#6C71C4'
+    local blue='#268BD2'
+    # local cyan='#2AA198'
+    local green='#859900'
+
+    export FZF_DEFAULT_COLORS="
+      --color fg:$grey,bg:$light_beige,hl:$blue,fg+:$light_beige,bg+:$green,hl+:$blue
+      --color info:$yellow,prompt:$yellow,pointer:$light_beige,marker:$light_beige,spinner:$yellow
+    "
+  }
+  _fzf_default_colors
+
+  # Keybinds to select, deselect and toggle all results
+  export FZF_BIND_SELECT="--bind ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all"
+
+  # Default layout (fullscreen and input from top)
+  export FZF_LAYOUT="--min-height=100 --reverse"
+
+  # Default options
+  export FZF_DEFAULT_OPTS="$FZF_BIND_SELECT $FZF_LAYOUT $FZF_DEFAULT_COLORS"
+fi
+
+#----- ripgrep
+# If ripgrep is installed
+if type rg > /dev/null; then
+  export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/config"
+fi
+
+#----- ranger
+# If ranger is installed
+if type ranger > /dev/null; then
+  export BAT_THEME=ansi-light
+fi
