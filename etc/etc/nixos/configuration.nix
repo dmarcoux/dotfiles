@@ -7,6 +7,7 @@
 {
   imports = [
     /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan
+    ./docker.nix
     ./password-store.nix
     ./ranger.nix
     ./redshift.nix
