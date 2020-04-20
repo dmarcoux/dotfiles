@@ -7,5 +7,6 @@
   environment.systemPackages = with pkgs; [
     gitMinimal # Just git
     gitAndTools.hub # Makes git easier to use with GitHub
+    git-lfs
   ];
 }
