@@ -9,6 +9,7 @@
     /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan
     ./docker.nix
     ./git.nix
+    ./packages.nix
     ./password-store.nix
     ./ranger.nix
     ./redshift.nix
@@ -51,12 +52,6 @@
 
   time.timeZone = "Europe/Berlin";
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    ripgrep fzf firefox fd bat flameshot
-    stow exa atool
-  ];
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
