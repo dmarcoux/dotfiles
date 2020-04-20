@@ -7,6 +7,7 @@
 {
   imports = [
     /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan
+    ./chromium.nix
     ./docker.nix
     ./git.nix
     ./open-build-service.nix
