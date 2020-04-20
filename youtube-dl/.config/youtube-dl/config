@@ -1,0 +1,17 @@
+# Do not overwrite files
+--no-overwrites
+
+# Add metadata to the video files
+--add-metadata
+
+# Write video description to a .description file
+--write-description
+
+# Restrict filenames to only ASCII characters, and avoid "&" and spaces in filenames
+--restrict-filenames
+
+# Save videos under "~/Videos/WebsiteName/" with the filename "VideoTitle---FormatNote-VideoId.VideoExtension"
+--output "~/Videos/%(extractor_key)s/%(title)s---%(format_note)s-%(id)s.%(ext)s"
+
+# Select the best audio quality (when extracting audio with -x/--extract-audio)
+--audio-quality 0
