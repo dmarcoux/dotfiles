@@ -9,6 +9,7 @@
     /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan
     ./docker.nix
     ./git.nix
+    ./open-build-service.nix
     ./packages.nix
     ./password-store.nix
     ./ranger.nix
