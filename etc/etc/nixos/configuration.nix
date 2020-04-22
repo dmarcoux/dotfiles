@@ -35,10 +35,11 @@
     networkmanager.enable = true;
   };
 
+  # Configure the console keymap from the xserver keyboard settings
+  console.useXkbConfig = true;
+
   # Select internationalisation properties
   i18n = {
-    consoleFont = "Lat2-Terminus16";
-    consoleUseXkbConfig = true; # Configure the console keymap from the xserver keyboard settings
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
       LANGUAGE = "en_US.UTF-8";
