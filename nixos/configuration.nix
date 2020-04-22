@@ -1,12 +1,12 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’)
+# System configuration which applies to all users
+# https://nixos.org/nixos/manual/options.html
 
 { config, pkgs, ... }:
 
 {
   imports = [
-    /etc/nixos/hardware-configuration.nix # Include the results of the hardware scan
+    <home-manager/nixos> # from home-manager channel
+    # TODO: Split between system and user configuration
     ./chromium.nix
     ./docker.nix
     ./git.nix
@@ -23,17 +23,6 @@
 
   # Allow installation of unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # Use the systemd-boot EFI boot loader
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-  };
-
-  networking = {
-    hostName = "DM-Laptop";
-    networkmanager.enable = true;
-  };
 
   # Configure the console keymap from the xserver keyboard settings
   console.useXkbConfig = true;
@@ -78,9 +67,6 @@
       xkbVariant = "multi";
       # AltGr + e for €, Swap Left Control and Caps Lock
       xkbOptions = "eurosign:e,ctrl:swapcaps";
-
-      # Enable touchpad support
-      libinput.enable = true;
     };
   };
 
@@ -93,6 +79,9 @@
       "networkmanager" # Enable configuration of the network with NetworkManager
     ];
   };
+
+  # User configuration with home-manager
+  home-manager.users.dany = import ../home-manager/home.nix ;
 
   # Use GnuPG agent with SSH support
   programs.gnupg = {
