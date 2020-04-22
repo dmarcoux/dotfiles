@@ -10,8 +10,7 @@
   environment = {
     # Remove shell aliases set by NixOS' defaults
     shellAliases = {};
-    # TODO 20.03
     # Include ~/bin/ in $PATH
-    # homeBinInPath = true;
+    homeBinInPath = true;
   };
 }
