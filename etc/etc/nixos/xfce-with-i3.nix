@@ -19,8 +19,8 @@
       ];
     };
 
-    # Set i3 as the default window manager
-    windowManager.default = "i3";
+    # Set XFCE + i3 as the default graphical session to pre-select in the session chooser
+    displayManager.defaultSession = "xfce+i3";
   };
 
   # Replace i3lock as the default screen locker
