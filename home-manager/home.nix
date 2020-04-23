@@ -5,6 +5,7 @@
 
 {
   imports = [
+    ./gnupg.nix
     ./redshift.nix
   ];
 }

@@ -82,15 +82,6 @@
 
   # User configuration with home-manager
   home-manager.users.dany = import ../home-manager/home.nix ;
-
-  # Use GnuPG agent with SSH support
-  programs.gnupg = {
-    agent = {
-      enable = true;
-      enableSSHSupport = true;
-    };
-  };
-
   # `sudo` asks for the root password
   security.sudo.extraConfig = "Defaults rootpw";
 
