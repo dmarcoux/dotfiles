@@ -1,6 +1,11 @@
 # User configuration for redshift
 
+{ pkgs, ... }:
+
 {
+  # Install redshift
+  home.packages = [ pkgs.redshift ];
+
   # Use redshift to adapt screen's color temperature depending on the time of day
   services.redshift = {
     enable = true;
