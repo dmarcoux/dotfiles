@@ -9,4 +9,7 @@
     ./password-store.nix
     ./redshift.nix
   ];
+
+  # Don't manage the keyboard configuration with home-manager
+  home.keyboard = null;
 }
