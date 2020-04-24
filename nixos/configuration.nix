@@ -12,7 +12,6 @@
     ./git.nix
     ./open-build-service.nix
     ./packages.nix
-    ./password-store.nix
     ./ranger.nix
     ./redshift.nix
     ./vim.nix

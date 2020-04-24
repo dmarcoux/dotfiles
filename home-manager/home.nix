@@ -6,6 +6,7 @@
 {
   imports = [
     ./gnupg.nix
+    ./password-store.nix
     ./redshift.nix
   ];
 }

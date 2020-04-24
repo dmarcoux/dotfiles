@@ -16,12 +16,6 @@ export XDG_DATA_HOME=$HOME/.local/share
 # User-specific non-essential (cached) data
 export XDG_CACHE_HOME=$HOME/.cache
 
-#----- password-store
-# Do not pollute the home directory
-export PASSWORD_STORE_DIR=$XDG_CONFIG_HOME/password-store/passwords
-# Default length for generated passwords
-export PASSWORD_STORE_GENERATED_LENGTH=30
-
 #----- less
 # Colored man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'
