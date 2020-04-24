@@ -1,9 +1,6 @@
 # Add binaries installed for user to the PATH (pip, stack, cargo, etc...)
 export PATH=$PATH:~/.local/bin:~/.cargo/bin
 
-# Default browser
-export BROWSER=firefox
-
 #----- less
 # Colored man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'

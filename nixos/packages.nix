@@ -10,7 +10,6 @@
     bat
     exa
     fd
-    firefox
     flameshot
     fzf
     jq
