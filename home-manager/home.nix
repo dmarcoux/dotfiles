@@ -11,6 +11,7 @@
     ./redshift.nix
     ./rofi.nix
     ./udiskie.nix
+    ./xdg.nix
   ];
 
   # Don't manage the keyboard configuration with home-manager

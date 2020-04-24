@@ -4,18 +4,6 @@ export PATH=$PATH:~/.local/bin:~/.cargo/bin
 # Default browser
 export BROWSER=firefox
 
-#----- XDG Base Directory
-# From https://wiki.archlinux.org/index.php/XDG_Base_Directory_support
-
-# User-specific configuration files
-export XDG_CONFIG_HOME=$HOME/.config
-
-# User-specific data files
-export XDG_DATA_HOME=$HOME/.local/share
-
-# User-specific non-essential (cached) data
-export XDG_CACHE_HOME=$HOME/.cache
-
 #----- less
 # Colored man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'
