@@ -10,13 +10,13 @@
     ./chromium.nix
     ./docker.nix
     ./git.nix
+    ./i3.nix
     ./open-build-service.nix
     ./packages.nix
     ./ranger.nix
     ./redshift.nix
     ./vim.nix
     ./vscode.nix
-    ./xfce-with-i3.nix
     ./zsh.nix
   ];
 
@@ -60,6 +60,11 @@
     xserver = {
       # Enable the X11 windowing system
       enable = true;
+
+      # Enable minimal desktop/display manager setup to have a login screen
+      # home-manager will take over after login in
+      desktopManager.xterm.enable = true;
+      displayManager.lightdm.enable = true;
 
       # Set keyboard layout to Canadian Multilingual
       layout = "ca";

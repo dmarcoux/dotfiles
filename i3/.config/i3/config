@@ -103,17 +103,15 @@ assign [title="^Terminal$"] → $WS1
 
 assign [class="^Firefox$"] → $WS2
 
-# Launch daemon for automounting optical and removable drives
-exec --no-startup-id udiskie --tray
-
 # Launch terminal
 exec xfce4-terminal --hide-menubar --title=Terminal
 
 # Launch web browser
 exec $BROWSER
 
+# TODO: Find replacement for i3
 # Launch power manager (battery and screen brightness)
-exec --no-startup-id xfce4-power-manager
+# exec --no-startup-id xfce4-power-manager
 
 # Launch screenshot software
 exec --no-startup-id flameshot
@@ -126,8 +124,8 @@ exec --no-startup-id flameshot
 bindsym $mod+Shift+r restart
 
 # Lock the screen
-# --release is needed when xflock4 is using slock (see https://github.com/i3/i3/issues/3298)
-bindsym --release $mod+Shift+C exec --no-startup-id "xflock4"
+# --release is needed when using slock (see https://github.com/i3/i3/issues/3298)
+bindsym --release $mod+Shift+C exec --no-startup-id "slock"
 
 # Start a terminal
 bindsym $mod+Return exec xfce4-terminal --hide-menubar --title=Terminal
