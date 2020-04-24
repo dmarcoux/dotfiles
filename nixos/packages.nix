@@ -17,7 +17,6 @@
     openresolv
     pdftk
     peek
-    ripgrep
     shellcheck
     stow
     thunderbird-bin

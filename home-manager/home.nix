@@ -10,6 +10,7 @@
     ./i3.nix
     ./password-store.nix
     ./redshift.nix
+    ./ripgrep.nix
     ./rofi.nix
     ./udiskie.nix
     ./xdg.nix

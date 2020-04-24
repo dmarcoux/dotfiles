@@ -56,12 +56,6 @@ if type fzf > /dev/null; then
   export FZF_DEFAULT_OPTS="$FZF_BIND_SELECT $FZF_LAYOUT $FZF_DEFAULT_COLORS"
 fi
 
-#----- ripgrep
-# If ripgrep is installed
-if type rg > /dev/null; then
-  export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/config"
-fi
-
 #----- ranger
 # If ranger is installed
 if type ranger > /dev/null; then
