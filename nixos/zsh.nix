@@ -1,10 +1,9 @@
-# Configuration for zsh
+# System configuration for zsh
 
 { pkgs, ... }:
 
 {
   # Set zsh as default shell
-  programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
   environment = {
@@ -12,5 +11,7 @@
     shellAliases = {};
     # Include ~/bin/ in $PATH
     homeBinInPath = true;
+    # Enable completion for system packages
+    pathsToLink = [ "/share/zsh" ];
   };
 }

@@ -16,6 +16,7 @@
     ./rofi.nix
     ./udiskie.nix
     ./xdg.nix
+    ./zsh.nix
   ];
 
   # Don't manage the keyboard configuration with home-manager
