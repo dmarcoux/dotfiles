@@ -1,4 +1,4 @@
-# Configuration for maintaining my packages on the Open Build Service
+# System configuration for maintaining my packages on the Open Build Service
 
 { pkgs, ... }:
 

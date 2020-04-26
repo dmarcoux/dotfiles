@@ -1,4 +1,4 @@
-# Configuration for chromium
+# System configuration for chromium
 
 { pkgs, ... }:
 

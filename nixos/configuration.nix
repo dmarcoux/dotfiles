@@ -6,18 +6,17 @@
 {
   imports = [
     <home-manager/nixos> # from home-manager channel
-    # TODO: Split between system and user configuration
     ./chromium.nix
     ./docker.nix
-    ./git.nix
+    ./git.nix # TODO: Split between system and user configuration
     ./i3.nix
     ./open-build-service.nix
-    ./packages.nix
+    ./packages.nix # TODO: Split packages between system and user configuration
     ./ranger.nix
     ./redshift.nix
-    ./vim.nix
-    ./vscode.nix
-    ./zsh.nix
+    ./vim.nix # TODO: Split between system and user configuration
+    ./vscode.nix # TODO: Split between system and user configuration
+    ./zsh.nix # TODO: Split between system and user configuration
   ];
 
   # Allow installation of unfree packages

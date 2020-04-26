@@ -1,4 +1,4 @@
-# Configuration for docker
+# System configuration for docker
 
 { pkgs, ... }:
 

@@ -1,4 +1,4 @@
-# Configuration for ranger
+# System configuration for ranger
 
 { pkgs, ... }:
 
