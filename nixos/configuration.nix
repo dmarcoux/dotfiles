@@ -8,7 +8,6 @@
     <home-manager/nixos> # from home-manager channel
     ./chromium.nix
     ./docker.nix
-    ./git.nix # TODO: Split between system and user configuration
     ./i3.nix
     ./open-build-service.nix
     ./packages.nix # TODO: Split packages between system and user configuration

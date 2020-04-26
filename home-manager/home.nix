@@ -6,6 +6,7 @@
 {
   imports = [
     ./firefox.nix
+    ./git.nix
     ./gnupg.nix
     ./i3.nix
     ./password-store.nix
