@@ -13,7 +13,7 @@
     ./packages.nix # TODO: Split packages between system and user configuration
     ./ranger.nix
     ./redshift.nix
-    ./vim.nix # TODO: Split between system and user configuration
+    ./vim.nix
     ./vscode.nix # TODO: Split between system and user configuration
     ./zsh.nix # TODO: Split between system and user configuration
   ];

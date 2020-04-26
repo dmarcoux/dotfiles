@@ -1,4 +1,4 @@
-# Configuration for vim
+# System configuration for vim
 # https://nixos.wiki/wiki/Vim
 
 { pkgs, ... }:
@@ -32,8 +32,7 @@
         vim-easy-align
 
         # Lightning fast left-right movement
-        # TODO: Uncomment once using NixOS 20.03 (https://github.com/NixOS/nixpkgs/commit/6f66fad9bea2649bd5df2dc486febfcc98a9cf27)
-        # quick-scope
+        quick-scope
 
         #---------- Colorscheme Plugins
         # Solarized light and dark colorscheme
