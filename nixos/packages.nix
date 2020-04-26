@@ -7,7 +7,6 @@
 {
   environment.systemPackages = with pkgs; [
     atool
-    bat
     exa
     fd
     flameshot
