@@ -1,6 +1,6 @@
 # User configuration for fd
 
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
   # Install fd
