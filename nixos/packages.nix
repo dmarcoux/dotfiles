@@ -6,6 +6,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    arandr
     atool
     exa
     fd
