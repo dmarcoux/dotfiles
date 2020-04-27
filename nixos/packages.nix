@@ -24,7 +24,6 @@
     xcape
     xournal
     xsel
-    yank
     zbar
     zip
   ];

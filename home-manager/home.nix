@@ -16,6 +16,7 @@
     ./rofi.nix
     ./udiskie.nix
     ./xdg.nix
+    ./yank.nix
     ./zsh.nix
   ];
 
