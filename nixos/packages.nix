@@ -21,6 +21,7 @@
     units
     universal-ctags
     xcape
+    xfce.xfce4-power-manager
     xournal
     xsel
     zbar

@@ -109,9 +109,8 @@ exec xfce4-terminal --hide-menubar --title=Terminal
 # Launch web browser
 exec $BROWSER
 
-# TODO: Find replacement for i3
 # Launch power manager (battery and screen brightness)
-# exec --no-startup-id xfce4-power-manager
+exec --no-startup-id xfce4-power-manager
 
 # Launch screenshot software
 exec --no-startup-id flameshot
