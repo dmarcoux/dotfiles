@@ -1,10 +1,8 @@
-# If Docker is installed, set it up
-if type docker > /dev/null 2>&1; then
-  ealias doc='docker'
-  ealias doccom='docker-compose'
+{
+  programs.zsh.initExtra = ''
+    ealias doc='docker'
+    ealias doccom='docker-compose'
 
-  # If fzf is installed, setup the following aliases
-  if type fzf > /dev/null 2>&1; then
     # Select a locally available image and run a new container based on it
     ealias drunf='docker image ls | fzf --header-lines=1 | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty docker run'
 
@@ -22,5 +20,5 @@ if type docker > /dev/null 2>&1; then
 
     # Select Docker images and remove them
     ealias drmif='docker image ls | fzf --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=3 | xargs --no-run-if-empty docker rmi --force'
-  fi
-fi
+  '';
+}

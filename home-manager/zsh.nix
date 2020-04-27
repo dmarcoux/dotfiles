@@ -6,10 +6,22 @@
   imports = [
     ./zsh/autocompletion.nix
     ./zsh/color_ls.nix
+    ./zsh/curl.nix
+    ./zsh/docker.nix
+    ./zsh/exa.nix
+    ./zsh/fd.nix
+    ./zsh/general.nix
     ./zsh/git.nix
     ./zsh/history.nix
+    ./zsh/hub.nix
+    ./zsh/jq.nix
+    ./zsh/osc.nix
+    ./zsh/pass.nix
     ./zsh/prompt.nix
     ./zsh/ranger.nix
+    ./zsh/vnc.nix
+    ./zsh/xmllint.nix
+    ./zsh/youtube-dl.nix
     ./zsh/aliases_setup.nix # Last imported file, but first to be processed (others depend on it)
   ];
 
