@@ -8,7 +8,6 @@
   environment.systemPackages = with pkgs; [
     arandr
     atool
-    exa
     jq
     mumble
     openresolv

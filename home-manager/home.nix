@@ -7,6 +7,7 @@
   imports = [
     ./bat.nix
     ./dircolors.nix
+    ./exa.nix
     ./fd.nix
     ./firefox.nix
     ./flameshot.nix
