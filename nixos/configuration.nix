@@ -10,7 +10,7 @@
     ./docker.nix
     ./i3.nix
     ./open-build-service.nix
-    ./packages.nix # TODO: Split packages between system and user configuration
+    ./packages.nix
     ./redshift.nix
     ./vim.nix
     ./vscode.nix # TODO: Split between system and user configuration
