@@ -5,7 +5,6 @@
 {
   imports = [
     ./zsh/autocompletion.nix
-    ./zsh/color_ls.nix
     ./zsh/curl.nix
     ./zsh/docker.nix
     ./zsh/exa.nix
