@@ -20,6 +20,7 @@
     ./jq.nix
     ./kitty.nix
     ./password-store.nix
+    ./pasystray.nix
     ./ranger.nix
     ./redshift.nix
     ./ripgrep.nix
