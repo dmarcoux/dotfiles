@@ -10,7 +10,6 @@
     exa
     fd
     flameshot
-    fzf
     jq
     mumble
     openresolv

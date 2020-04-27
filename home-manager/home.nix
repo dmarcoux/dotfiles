@@ -7,6 +7,7 @@
   imports = [
     ./bat.nix
     ./firefox.nix
+    ./fzf.nix
     ./git.nix
     ./gnupg.nix
     ./i3.nix
