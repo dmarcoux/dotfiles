@@ -7,6 +7,8 @@
     font.name = "DejaVu Sans Mono 13";
     settings = {
       enable_audio_bell = false;
+      cursor_blink_interval = 0; # Don't blink cursor
+      scrollback_lines = 10000;
       # Solarized Light theme
       # https://github.com/kovidgoyal/kitty/issues/897
       background = "#fdf6e3";
