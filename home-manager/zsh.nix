@@ -15,7 +15,6 @@
     ./zsh/prompt.nix
     ./zsh/vnc.nix
     ./zsh/xmllint.nix
-    ./zsh/youtube-dl.nix
     ./zsh/aliases_setup.nix # Last imported file, but first to be processed (others depend on it)
   ];
 

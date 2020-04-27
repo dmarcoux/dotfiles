@@ -28,6 +28,7 @@
     ./xcape.nix
     ./xdg.nix
     ./yank.nix
+    ./youtube-dl.nix
     ./zsh.nix
   ];
 
