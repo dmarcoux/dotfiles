@@ -13,7 +13,7 @@
     pdftk
     peek
     shellcheck
-    stow
+    stow # TODO: Remove once configuration with home-manager is done
     thunderbird-bin
     units
     universal-ctags
