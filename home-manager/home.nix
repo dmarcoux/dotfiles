@@ -6,6 +6,7 @@
 {
   imports = [
     ./bat.nix
+    ./fd.nix
     ./firefox.nix
     ./fzf.nix
     ./git.nix

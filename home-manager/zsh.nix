@@ -9,7 +9,6 @@
     ./zsh/curl.nix
     ./zsh/docker.nix
     ./zsh/exa.nix
-    ./zsh/fd.nix
     ./zsh/general.nix
     ./zsh/git.nix
     ./zsh/history.nix

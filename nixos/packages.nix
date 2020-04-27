@@ -9,7 +9,6 @@
     arandr
     atool
     exa
-    fd
     flameshot
     jq
     mumble
