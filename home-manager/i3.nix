@@ -3,11 +3,8 @@
 { pkgs, ... }:
 
 {
-  # Install packages
-  home.packages = with pkgs; [
-    i3status
-    xfce.terminal # xfce4-terminal
-  ];
+  # Install xfce4-terminal
+  home.packages = [ pkgs.xfce.terminal ];
 
   xsession.windowManager.i3 = {
     enable = true; # Enable i3 window manager to replace Xfwm

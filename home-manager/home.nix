@@ -11,6 +11,7 @@
     ./git.nix
     ./gnupg.nix
     ./i3.nix
+    ./i3status.nix
     ./password-store.nix
     ./redshift.nix
     ./ripgrep.nix
