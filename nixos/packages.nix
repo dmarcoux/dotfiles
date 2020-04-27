@@ -9,7 +9,6 @@
     arandr
     atool
     exa
-    flameshot
     jq
     mumble
     openresolv

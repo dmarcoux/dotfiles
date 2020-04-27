@@ -9,6 +9,7 @@
     ./dircolors.nix
     ./fd.nix
     ./firefox.nix
+    ./flameshot.nix
     ./fzf.nix
     ./git.nix
     ./gnupg.nix
