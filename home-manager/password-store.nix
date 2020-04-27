@@ -1,6 +1,6 @@
 # User configuration for password-store
 
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   programs.password-store = {
@@ -9,8 +9,7 @@
     package = pkgs.pass.withExtensions (exts: [ exts.pass-otp ]);
     # Set environment variables used by password-store and its extensions
     settings = {
-      # TODO: Use $XDG_CONFIG_HOME
-      PASSWORD_STORE_DIR = "/home/dany/.config/password-store/passwords";
+      PASSWORD_STORE_DIR = "${config.xdg.configHome}/password-store/passwords";
       PASSWORD_STORE_GENERATED_LENGTH = "30";
     };
   };
