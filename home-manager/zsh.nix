@@ -15,7 +15,6 @@
     ./zsh/hub.nix
     ./zsh/jq.nix
     ./zsh/osc.nix
-    ./zsh/pass.nix
     ./zsh/prompt.nix
     ./zsh/ranger.nix
     ./zsh/vnc.nix
