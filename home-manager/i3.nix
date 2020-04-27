@@ -3,9 +3,6 @@
 { pkgs, ... }:
 
 {
-  # Install xfce4-terminal
-  home.packages = [ pkgs.xfce.terminal ];
-
   xsession.windowManager.i3 = {
     enable = true; # Enable i3 window manager to replace Xfwm
     # Empty settings are instead set below in extraConfig
@@ -130,7 +127,7 @@
       assign [class="^Firefox$"] → $WS2
 
       # Launch terminal
-      exec xfce4-terminal --hide-menubar --title=Terminal
+      exec kitty
 
       # Launch web browser
       exec $BROWSER
@@ -147,7 +144,7 @@
       bindsym --release $mod+Shift+C exec --no-startup-id "slock"
 
       # Start a terminal
-      bindsym $mod+Return exec xfce4-terminal --hide-menubar --title=Terminal
+      bindsym $mod+Return exec kitty
 
       # Kill the focused window
       bindsym $mod+Shift+Escape kill

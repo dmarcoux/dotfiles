@@ -18,6 +18,7 @@
     ./i3.nix
     ./i3status.nix
     ./jq.nix
+    ./kitty.nix
     ./password-store.nix
     ./ranger.nix
     ./redshift.nix
