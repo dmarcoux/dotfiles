@@ -15,7 +15,7 @@
     ./redshift.nix
     ./vim.nix
     ./vscode.nix # TODO: Split between system and user configuration
-    ./zsh.nix # TODO: Split between system and user configuration
+    ./zsh.nix
   ];
 
   # Allow installation of unfree packages
