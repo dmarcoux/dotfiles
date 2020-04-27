@@ -23,6 +23,7 @@
     ./ripgrep.nix
     ./rofi.nix
     ./udiskie.nix
+    ./xcape.nix
     ./xdg.nix
     ./yank.nix
     ./zsh.nix
