@@ -6,6 +6,7 @@
 {
   imports = [
     ./bat.nix
+    ./cbatticon.nix
     ./dircolors.nix
     ./exa.nix
     ./fd.nix

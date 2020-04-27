@@ -17,7 +17,6 @@
     thunderbird-bin
     units
     universal-ctags
-    xfce.xfce4-power-manager
     xournal
     xsel
     zbar

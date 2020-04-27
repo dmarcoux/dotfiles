@@ -135,9 +135,6 @@
       # Launch web browser
       exec $BROWSER
 
-      # Launch power manager (battery and screen brightness)
-      exec --no-startup-id xfce4-power-manager
-
       #################
       # Key bindings
       #################
