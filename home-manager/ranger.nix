@@ -7,6 +7,7 @@
   home.packages = [ (pkgs.ranger.override { highlight = null; }) ];
 
   # Set default `bat` theme for syntax highlighting in file previews
+  # TODO: Replace theme with solarized light when NixOS 20.09 is released (double-check the name of the theme)
   home.sessionVariables = { BAT_THEME = "ansi-light"; };
 
   # Configure rifle, the file launcher of ranger

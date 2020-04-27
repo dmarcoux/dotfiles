@@ -4,9 +4,8 @@
   programs.bat = {
     enable = true;
     config = {
-      color = "never";
-      # TODO: Replace color with this when NixOS 20.09 is released (double-check the name of the theme)
-      # theme = "solarized-light";
+      # TODO: Replace theme with solarized light when NixOS 20.09 is released (double-check the name of the theme)
+      theme = "ansi-light";
     };
   };
 
