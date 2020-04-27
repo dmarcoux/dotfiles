@@ -1,6 +1,2 @@
 # Swap files
 *.swp
-
-# Tracking the history and tagged files/directories is pointless
-ranger/.config/ranger/history
-ranger/.config/ranger/tagged
