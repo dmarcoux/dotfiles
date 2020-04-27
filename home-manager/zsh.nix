@@ -16,7 +16,6 @@
     ./zsh/jq.nix
     ./zsh/osc.nix
     ./zsh/prompt.nix
-    ./zsh/ranger.nix
     ./zsh/vnc.nix
     ./zsh/xmllint.nix
     ./zsh/youtube-dl.nix

@@ -14,6 +14,7 @@
     ./i3.nix
     ./i3status.nix
     ./password-store.nix
+    ./ranger.nix
     ./redshift.nix
     ./ripgrep.nix
     ./rofi.nix
