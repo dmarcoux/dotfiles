@@ -8,7 +8,6 @@
   environment.systemPackages = with pkgs; [
     arandr
     atool
-    jq
     mumble
     openresolv
     pdftk

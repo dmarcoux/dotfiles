@@ -16,6 +16,7 @@
     ./gnupg.nix
     ./i3.nix
     ./i3status.nix
+    ./jq.nix
     ./password-store.nix
     ./ranger.nix
     ./redshift.nix

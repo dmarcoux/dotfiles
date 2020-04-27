@@ -11,7 +11,6 @@
     ./zsh/git.nix
     ./zsh/history.nix
     ./zsh/hub.nix
-    ./zsh/jq.nix
     ./zsh/osc.nix
     ./zsh/prompt.nix
     ./zsh/vnc.nix
