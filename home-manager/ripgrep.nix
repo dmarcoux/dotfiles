@@ -29,7 +29,7 @@
   '';
 
   # ripgrep ignores anything matching this
-  xdg.configFile."ripgrep/.ignore".text = ''
+  home.file.".ignore".text = ''
     .git/
 
     *.swp
