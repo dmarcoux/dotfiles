@@ -12,6 +12,7 @@
     openresolv
     pdftk
     peek
+    rake
     shellcheck
     thunderbird-bin
     units
