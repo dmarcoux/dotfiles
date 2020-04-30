@@ -5,9 +5,9 @@
 
 {
   imports = [
-    <home-manager/nixos> # from home-manager channel
     ./chromium.nix
     ./docker.nix
+    ./home-manager.nix
     ./i3.nix
     ./open-build-service.nix
     ./packages.nix
@@ -79,15 +79,6 @@
       "wheel" # Enable ‘sudo’ for the user
       "networkmanager" # Enable configuration of the network with NetworkManager
     ];
-  };
-
-  home-manager = {
-    # User configuration with home-manager
-    users.dany = import ../home-manager/home.nix;
-    # Whenever home-manager installs packages, install them as system packages (so what NixOS does)
-    useUserPackages = true;
-    # Have home-manager rely on the global `pkgs` configured via the system options `nixpkgs`
-    useGlobalPkgs = true;
   };
 
   # `sudo` asks for the root password
