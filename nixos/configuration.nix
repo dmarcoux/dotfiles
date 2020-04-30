@@ -9,6 +9,7 @@
     ./docker.nix
     ./home-manager.nix
     ./i3.nix
+    ./locales.nix
     ./open-build-service.nix
     ./packages.nix
     ./redshift.nix
@@ -22,18 +23,6 @@
 
   # Configure the console keymap from the xserver keyboard settings
   console.useXkbConfig = true;
-
-  # Select internationalisation properties
-  i18n = {
-    defaultLocale = "en_US.UTF-8";
-    extraLocaleSettings = {
-      LANGUAGE = "en_US.UTF-8";
-      LC_COLLATE = "en_US.UTF-8";
-      LC_CTYPE = "en_US.UTF-8";
-      LC_TIME = "fr_CA.UTF-8";
-      LESSCHARSET = "utf-8";
-    };
-  };
 
   # Enable a basic set of fonts providing several font styles and families and reasonable coverage of Unicode
   fonts.enableDefaultFonts = true;
