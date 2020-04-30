@@ -3,8 +3,11 @@
 { pkgs, config, ... }:
 
 {
-  # Install hub
-  home.packages = [ pkgs.gitAndTools.hub ];
+  # Install extra packages
+  home.packages = with pkgs; [
+    git-crypt
+    gitAndTools.hub
+  ];
 
   programs.git = {
     # Install git only, nothing extra like the `send-email` command
