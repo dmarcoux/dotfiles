@@ -19,6 +19,7 @@
     ./i3status.nix
     ./jq.nix
     ./kitty.nix
+    ./network-manager.nix
     ./password-store.nix
     ./pasystray.nix
     ./ranger.nix
