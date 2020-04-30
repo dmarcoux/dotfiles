@@ -10,20 +10,28 @@ be aware that I haven't used my dotfiles on another OS or Linux distribution.
 
 Go to your home directory
 
-`cd`
+```
+cd
+```
 
 Clone the repo
 
-`git clone http://github.com/dmarcoux/dotfiles-nixos dotfiles`
+```
+git clone http://github.com/dmarcoux/dotfiles-nixos dotfiles
+```
 
 Go to the dotfiles directory
 
-`cd dotfiles`
+```
+cd dotfiles
+```
 
 Symlink one of the host configurations to `/etc/nixos/configuration.nix` (the
 default path to the main NixOS configuration module)
 
-`sudo ln --symbolic "$PWD/hosts/laptop/configuration.nix" /etc/nixos/configuration.nix`
+```
+sudo ln --symbolic "$PWD/hosts/laptop/configuration.nix" /etc/nixos/configuration.nix
+```
 
 Setup the `secrets` git submodule
 
@@ -34,7 +42,9 @@ git submodule update
 
 Build the NixOS system
 
-`sudo nixos-rebuild switch`
+```
+sudo nixos-rebuild switch
+```
 
 ### Explanations
 
