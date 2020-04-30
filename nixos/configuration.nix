@@ -9,6 +9,7 @@
     ./docker.nix
     ./home-manager.nix
     ./i3.nix
+    ./keyboard.nix
     ./locales.nix
     ./open-build-service.nix
     ./packages.nix
@@ -21,9 +22,6 @@
 
   # Allow installation of unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # Configure the console keymap from the xserver keyboard settings
-  console.useXkbConfig = true;
 
   # Enable a basic set of fonts providing several font styles and families and reasonable coverage of Unicode
   fonts.enableDefaultFonts = true;
@@ -45,12 +43,6 @@
       # home-manager will take over after login in
       desktopManager.xterm.enable = true;
       displayManager.lightdm.enable = true;
-
-      # Set keyboard layout to Canadian Multilingual
-      layout = "ca";
-      xkbVariant = "multi";
-      # AltGr + e for €, Swap Left Control and Caps Lock
-      xkbOptions = "eurosign:e,ctrl:swapcaps";
     };
   };
 
