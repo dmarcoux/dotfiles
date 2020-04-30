@@ -13,6 +13,7 @@
     ./open-build-service.nix
     ./packages.nix
     ./redshift.nix
+    ./unclutter.nix
     ./vim.nix
     ./vscode.nix # TODO: Split between system and user configuration
     ./zsh.nix
@@ -35,13 +36,6 @@
   services = {
     # Enable CUPS to print documents.
     printing.enable = true;
-
-    unclutter = {
-      # Hide mouse cursor when inactive
-      enable = true;
-      # Number of seconds before the cursor is marked as inactive
-      timeout = 10;
-    };
 
     xserver = {
       # Enable the X11 windowing system
