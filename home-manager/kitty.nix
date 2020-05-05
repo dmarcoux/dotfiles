@@ -9,6 +9,14 @@
       enable_audio_bell = false;
       cursor_blink_interval = 0; # Don't blink cursor
       scrollback_lines = 10000;
+      tab_bar_edge = "top";
+      tab_bar_style = "separator";
+      tab_separator = "' | '"; # Quote are needed, otherwise spaces are ignored
+      tab_bar_margin_width = "1.0";
+      active_tab_foreground = "#fdf6e3";
+      active_tab_background = "#859900";
+      inactive_tab_foreground = "#657b83";
+      inactive_tab_background = "#fdf6e3";
       # Solarized Light theme
       # https://github.com/kovidgoyal/kitty/issues/897
       background = "#fdf6e3";
