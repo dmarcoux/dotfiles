@@ -10,9 +10,8 @@
   ];
 
   programs.git = {
-    # Install git only, nothing extra like the `send-email` command
+    # Install git
     enable = true;
-    package = pkgs.gitMinimal;
 
     extraConfig = {
       branch = { autoSetupRebase = "always"; };
