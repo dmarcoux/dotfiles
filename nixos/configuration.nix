@@ -23,6 +23,10 @@
   # Allow installation of unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Install documentation targeted at developers
+  documentation.dev.enable = true;
+  environment.systemPackages = [ pkgs.manpages ];
+
   # Enable a basic set of fonts providing several font styles and families and reasonable coverage of Unicode
   fonts.enableDefaultFonts = true;
 
