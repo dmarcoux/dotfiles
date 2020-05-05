@@ -5,6 +5,7 @@
 
 {
   imports = [
+    ./autorandr.nix
     ./bat.nix
     ./cbatticon.nix
     ./dircolors.nix
