@@ -126,6 +126,8 @@
 
       assign [class="^Firefox$"] → $WS2
 
+      assign [class="^Chromium-browser$"] → $WS5
+
       # Automatically select the first display configuration to match the connected monitors
       # TODO: Use `--default ''${config.services.autorandr.defaultTarget}`, but it's not working since `services.autorandr` is not defined in home-manager (it's defined in NixOS itself)
       exec "${pkgs.autorandr}/bin/autorandr --change --default vertical"
