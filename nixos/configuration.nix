@@ -16,7 +16,6 @@
     ./redshift.nix
     ./unclutter.nix
     ./vim.nix
-    ./vscode.nix # TODO: Split between system and user configuration
     ./zsh.nix
   ];
 
