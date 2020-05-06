@@ -5,6 +5,10 @@
   programs.kitty = {
     enable = true;
     font.name = "DejaVu Sans Mono 13";
+    keybindings = {
+      # Open new tab next to the current tab and in the current working directory instead of $HOME
+      "ctrl+shift+t" = "new_tab_with_cwd !neighbor";
+    };
     settings = {
       enable_audio_bell = false;
       cursor_blink_interval = 0; # Don't blink cursor
