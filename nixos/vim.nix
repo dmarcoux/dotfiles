@@ -34,6 +34,10 @@
         # Lightning fast left-right movement
         quick-scope
 
+        # Use fzf inside vim to open files and much more
+        fzf-vim
+        fzfWrapper
+
         #---------- Colorscheme Plugins
         # Solarized light and dark colorscheme
         vim-colors-solarized
@@ -42,6 +46,13 @@
       # Setup vim's configuration file
       vimrcConfig.customRC = ''
         "-------------------- Plugins Settings
+        "---------- fzf-vim
+        " Non-recursive mapping in Normal and Visual modes for Ctrl+p to start fzf for files
+        nnoremap <C-p> :Files<CR>
+        vnoremap <C-p> :Files<CR>
+        " Non-recursive mapping in Normal and Visual modes for Ctrl+n to start fzf for buffers
+        nnoremap <C-n> :Buffers<CR>
+        vnoremap <C-n> :Buffers<CR>
         "---------- vim-colors-solarized
         " Use light version of colorscheme
         set background=light
