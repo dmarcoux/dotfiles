@@ -128,9 +128,8 @@
         set cursorcolumn
         set cursorline
 
-        " Show the line number where the cursor is located and around it, show relative line numbers
+        " Show the line number where the cursor is located
         set number
-        set relativenumber
 
         " Height (in number of lines) of the command bar at the bottom
         set cmdheight=2
