@@ -9,6 +9,7 @@
     arandr
     atool
     mumble
+    openvpn
     openresolv
     pdftk
     peek
