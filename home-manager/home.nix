@@ -9,6 +9,7 @@
     ./bat.nix
     ./cbatticon.nix
     ./dircolors.nix
+    ./email.nix
     ./exa.nix
     ./fd.nix
     ./firefox.nix

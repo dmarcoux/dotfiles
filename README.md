@@ -33,13 +33,6 @@ default path to the main NixOS configuration module)
 sudo ln --symbolic "$PWD/hosts/laptop/configuration.nix" /etc/nixos/configuration.nix
 ```
 
-Setup the `secrets` git submodule
-
-```
-git submodule init
-git submodule update
-```
-
 Build the NixOS system
 
 ```
@@ -56,8 +49,6 @@ This repository is structured as follow:
 - *hosts*: Host specific configuration
 
 - *nixos*: System configuration which applies to all users and hosts
-
-- *secrets*: Git submodule of a private and encrypted git repository containing secrets
 
 - *scripts*: Various scripts to have in $PATH through a symlink (`ln --symbolic "$PWD/scripts" "$HOME/bin"`)
 
