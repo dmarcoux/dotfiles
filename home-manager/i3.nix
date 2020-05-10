@@ -122,7 +122,7 @@
       #   2. Start xprop
       #   3. Click on program's window
       #   4. Get value of 'WM_CLASS(STRING)' from xprop's output
-      assign [class="^kitty$"] → $WS1
+      assign [class="^Termite$"] → $WS1
 
       assign [class="^Firefox$"] → $WS2
 
@@ -133,7 +133,7 @@
       exec "${pkgs.autorandr}/bin/autorandr --change --default vertical"
 
       # Launch terminal
-      exec kitty
+      exec termite
 
       # Launch web browser
       exec $BROWSER
@@ -150,7 +150,7 @@
       bindsym --release $mod+Shift+C exec --no-startup-id "slock"
 
       # Start a terminal
-      bindsym $mod+Return exec kitty
+      bindsym $mod+Return exec termite
 
       # Kill the focused window
       bindsym $mod+Shift+Escape kill

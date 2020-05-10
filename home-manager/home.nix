@@ -20,7 +20,6 @@
     ./i3.nix
     ./i3status.nix
     ./jq.nix
-    ./kitty.nix
     ./network-manager.nix
     ./password-store.nix
     ./pasystray.nix
@@ -28,6 +27,7 @@
     ./redshift.nix
     ./ripgrep.nix
     ./rofi.nix
+    ./termite.nix
     ./udiskie.nix
     ./xcape.nix
     ./xdg.nix
