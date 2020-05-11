@@ -39,6 +39,9 @@
         fzf-vim
         fzfWrapper
 
+        # Change Vim working directory to project root (defined by the presence of a .git directory or anything else, it's configurable)
+        vim-rooter
+
         #---------- Colorscheme Plugins
         # Solarized light and dark colorscheme
         vim-colors-solarized
