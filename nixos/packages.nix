@@ -18,6 +18,7 @@
     thunderbird-bin
     units
     universal-ctags
+    update-resolv-conf
     xournal
     xsel
     zbar
