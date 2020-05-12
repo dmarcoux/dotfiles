@@ -22,6 +22,8 @@
     enable = true;
     enableCompletion = true;
     defaultKeymap = "emacs";
+    # Don't pollute home directory with zsh's config (this path is relative to $HOME)
+    dotDir = ".config/zsh";
     history = {
       # Don't pollute home directory with zsh's history
       path = "${config.xdg.dataHome}/zsh/zsh_history";
