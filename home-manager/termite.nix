@@ -41,4 +41,13 @@
     scrollbar = "right";
     searchWrap = true;
   };
+
+  # Set the terminal title to "zsh: $USERNAME@$PWD"
+  # https://github.com/thestinger/termite/issues/1#issuecomment-5973525
+  programs.zsh.initExtra = ''
+    case "$TERM" in
+      vte*|xterm*)
+        precmd() { print -Pn '\e];zsh: %n@%~\a' } ;;
+    esac
+  '';
 }
