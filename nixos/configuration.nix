@@ -5,6 +5,7 @@
 
 {
   imports = [
+    ../secrets/vpn/work.nix
     ./chromium.nix
     ./docker.nix
     ./home-manager.nix
