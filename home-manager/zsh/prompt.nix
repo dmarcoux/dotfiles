@@ -7,9 +7,6 @@
     # with the format being: " branch_name "
     zstyle ':vcs_info:*' formats " %b " enable git
 
-    # Call the package in a pre-command
-    precmd() { vcs_info }
-
     # Enable command substitution in the prompt
     setopt prompt_subst
 

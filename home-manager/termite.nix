@@ -47,7 +47,8 @@
   programs.zsh.initExtra = ''
     case "$TERM" in
       vte*|xterm*)
-        precmd() { print -Pn '\e];zsh: %n@%~\a' } ;;
+        # vcs_info; is for the prompt since only one precmd function can be defined, I do it all here
+        precmd() { vcs_info; print -Pn '\e];zsh: %n@%~\a' } ;;
     esac
   '';
 }
