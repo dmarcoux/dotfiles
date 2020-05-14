@@ -11,6 +11,7 @@
     mumble
     openvpn
     openresolv
+    p11-kit
     pdftk
     peek
     rake
