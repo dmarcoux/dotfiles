@@ -8,6 +8,7 @@
   environment.systemPackages = with pkgs; [
     arandr
     atool
+    buku
     libreoffice
     mumble
     openvpn
