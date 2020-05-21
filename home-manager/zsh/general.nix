@@ -1,5 +1,7 @@
 {
   programs.zsh.initExtra = ''
+    ealias cnf='command-not-found'
+
     # Quicker than cd ..; cd ...; etc...
     #   ~$ cd ~/dir/example/folder
     #   ~/dir/example/folder$ up 2
