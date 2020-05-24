@@ -8,7 +8,7 @@
     # Set keyboard layout to Canadian Multilingual
     layout = "ca";
     xkbVariant = "multi";
-    # AltGr + e for €, Swap Left Control and Caps Lock
-    xkbOptions = "eurosign:e,ctrl:swapcaps";
+    # AltGr + e for €, Swap Left Control and Caps Lock, AltGr + Space produces a normal space instead of a non-breakable space
+    xkbOptions = "eurosign:e,ctrl:swapcaps,nbsp:none";
   };
 }
