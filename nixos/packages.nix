@@ -19,9 +19,11 @@
     rake
     shellcheck
     thunderbird-bin
+    tigervnc
     units
     universal-ctags
     update-resolv-conf
+    x11vnc
     xournal
     xsel
     zbar
