@@ -126,6 +126,8 @@
 
       assign [class="^Firefox$"] → $WS2
 
+      assign [class="^Thunderbird$"] → $WS4
+
       assign [class="^Chromium-browser$"] → $WS5
 
       # Automatically select the first display configuration to match the connected monitors
@@ -137,6 +139,9 @@
 
       # Launch web browser
       exec $BROWSER
+
+      # Launch email client
+      exec thunderbird
 
       #################
       # Key bindings
