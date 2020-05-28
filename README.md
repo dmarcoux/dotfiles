@@ -6,39 +6,6 @@ community. I was inspired by a few repos on GitHub and it helped me tremendously
 in my quest to fine-tune my setup. I use Linux, more specifically NixOS, so
 be aware that I haven't used my dotfiles on another OS or Linux distribution.
 
-### Quick Install
-
-Go to your home directory
-
-```
-cd
-```
-
-Clone the repo
-
-```
-git clone http://github.com/dmarcoux/dotfiles-nixos dotfiles
-```
-
-Go to the dotfiles directory
-
-```
-cd dotfiles
-```
-
-Symlink one of the host configurations to `/etc/nixos/configuration.nix` (the
-default path to the main NixOS configuration module)
-
-```
-sudo ln --symbolic "$PWD/hosts/laptop/configuration.nix" /etc/nixos/configuration.nix
-```
-
-Build the NixOS system
-
-```
-sudo nixos-rebuild switch
-```
-
 ### Explanations
 
 This repository is structured as follow:
