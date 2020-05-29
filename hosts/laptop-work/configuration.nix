@@ -4,6 +4,7 @@
 
 {
   imports = [
+    ./autorandr.nix
     ./hardware-configuration.nix # Include the results of the hardware scan
     ../../nixos/configuration.nix # System configuration
   ];
