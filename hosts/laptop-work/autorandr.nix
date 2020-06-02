@@ -63,6 +63,7 @@
             gamma = "1.0:0.909:0.769";
             mode = "1920x1080";
             position = "0x0";
+            primary = true;
             rate = "60.00";
             # TODO: Not possible to set CRTC with home-manager
             # crtc 0
