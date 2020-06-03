@@ -17,8 +17,6 @@ This repository is structured as follow:
 
 - *nixos*: System configuration which applies to all users and hosts
 
-- *scripts*: Various scripts to have in $PATH through a symlink (`ln --symbolic "$PWD/scripts" "$HOME/bin"`)
-
 ### Credits
 
 The blog post [Migration to NixOS](https://www.malloc47.com/migrating-to-nixos/)

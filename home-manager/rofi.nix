@@ -9,7 +9,7 @@
       ! pass-username:: Frontend to pass (username in filenames)
       ! pass: Frontend to pass
       ! pass-otp: Frontend to pass-otp
-      rofi.modi: window,drun,pass-username:rofi-pass-username.sh,pass:rofi-pass.sh,pass-otp:rofi-pass-otp.sh
+      rofi.modi: window,drun,pass-username:rofi-pass-username,pass:rofi-pass,pass-otp:rofi-pass-otp
 
       rofi.font: DejaVu Sans Mono 13
 

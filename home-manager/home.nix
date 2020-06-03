@@ -28,6 +28,7 @@
     ./redshift.nix
     ./ripgrep.nix
     ./rofi.nix
+    ./scripts.nix
     ./termite.nix
     ./udiskie.nix
     ./xcape.nix
