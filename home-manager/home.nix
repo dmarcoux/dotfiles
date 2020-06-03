@@ -16,6 +16,7 @@
     ./fzf.nix
     ./git.nix
     ./gnupg.nix
+    ./gtk.nix
     ./i3.nix
     ./i3status.nix
     ./jq.nix
