@@ -2,13 +2,11 @@
 
 {
   home-manager.users.dany.programs.autorandr = {
-    enable = true;
     profiles = {
       both = {
         config = {
           "HDMI-1" = {
             enable = true;
-            gamma = "1.0:0.909:0.769";
             mode = "1920x1080";
             position = "0x0";
             primary = true;
@@ -18,7 +16,6 @@
           };
           "eDP-1" = {
             enable = true;
-            gamma = "1.0:0.909:0.769";
             mode = "1920x1080";
             position = "0x1080";
             rate = "60.00";
@@ -38,7 +35,6 @@
         config = {
           "HDMI-1" = {
             enable = true;
-            gamma = "1.0:0.909:0.769";
             mode = "1920x1080";
             position = "0x0";
             primary = true;
@@ -60,7 +56,6 @@
         config = {
           "eDP-1" = {
             enable = true;
-            gamma = "1.0:0.909:0.769";
             mode = "1920x1080";
             position = "0x0";
             primary = true;

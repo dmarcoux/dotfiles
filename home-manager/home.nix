@@ -6,6 +6,7 @@
 {
   imports = [
     ../secrets/ssh/work.nix
+    ./autorandr.nix
     ./bat.nix
     ./cbatticon.nix
     ./dircolors.nix
