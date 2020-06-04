@@ -42,7 +42,7 @@ sudo passwd dany
 
 Reboot
 
-Set my GPG and SSH keys with `scripts/restore_backup.sh` script
+Set my GPG and SSH keys with `restore-backup-keys` script
 
 Clone the dotfiles repository
 
