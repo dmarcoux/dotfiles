@@ -95,7 +95,7 @@
     setup_existing_fork() {
       if [ -z "$1" ]; then
         # Display usage
-        echo "Usage: ''${funcstack[1]} git@github.com:username/upsteam_repo.git"
+        echo "Usage: ''${funcstack[1]} git@github.com:username/upstream_repo.git"
         return
       fi
 
