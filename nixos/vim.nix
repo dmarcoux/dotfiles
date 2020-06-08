@@ -45,6 +45,10 @@
         #---------- Colorscheme Plugins
         # Solarized light and dark colorscheme
         vim-colors-solarized
+
+        #---------- Language Plugins
+        # Add CoffeeScript support
+        vim-coffee-script
       ];
 
       # Setup vim's configuration file
