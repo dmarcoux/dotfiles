@@ -65,6 +65,6 @@
     ealias oup='osc update'
 
     # Edit the changes file
-    ealias ovc='EDITOR="code --wait" osc vc'
+    ealias ovc='osc vc'
   '';
 }
