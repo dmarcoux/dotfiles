@@ -1,0 +1,184 @@
+{ pkgs, lib, ... }:
+
+{
+  # Script from https://github.com/openSUSE/obs-build/blob/master/vc with minor adjustments to work on NixOS
+  home.file."bin/vc" = {
+    executable = true;
+    text = ''
+      #!${pkgs.bash}/bin/bash
+      # use this script to edit *.changes files
+      #
+      # based on changelog edit script from xqf
+      #
+      # Copyright (C) 2002 Ludwig Nussel
+      # Copyright (C) 2009 SUSE Linux Products GmbH, Nuernberg, Germany.
+      #
+      # This program is free software; you can redistribute it and/or modify
+      # it under the terms of the GNU General Public License as published by
+      # the Free Software Foundation; either version 2 or 3 of the License, or
+      # (at your option) any later version.
+      #
+      # This program is distributed in the hope that it will be useful,
+      # but WITHOUT ANY WARRANTY; without even the implied warranty of
+      # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+      # GNU General Public License for more details.
+      #
+      # You should have received a copy of the GNU General Public License
+      # along with this program; if not, write to the Free Software
+      # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+
+      shopt -s nullglob
+
+      if [ -z "$mailaddr" ]; then
+              domain=`dnsdomainname`
+              [ -z "$domain" ] && domain=localhost
+              mailaddr="$USER@$domain"
+      fi
+
+      if [ -n "$VC_REALNAME" ]; then
+              packager="$VC_REALNAME <''${VC_MAILADDR:-$mailaddr}>"
+      elif [ -x /usr/bin/rpmdev-packager ]; then
+              packager=`rpmdev-packager`
+      else
+              packager="`getent passwd $UID | cut -d: -f5 | cut -d ',' -f 1` <$mailaddr>"
+      fi
+
+      EDITOR=''${EDITOR:-vim}
+      date=`LC_ALL=POSIX TZ=UTC date`
+
+      if ! which mktemp > /dev/null 2>&1; then
+              echo "mktemp is required for this script to work"
+              exit 1
+      fi
+
+      while [ -n "$1" ]; do
+              case "$1" in
+                      -m)
+                              if [ $just_edit ]; then
+                                      echo "You cannot use -m and -e together!"
+                                      exit 1
+                              fi
+                              message="$2"
+                              shift 2
+                              ;;
+                      -e)
+                              if [ -n "''${message}" ]; then
+                                      echo "You cannot use -m and -e together!"
+                                      exit 1
+                              fi
+                              just_edit=true
+                              shift 1
+                              ;;
+                      --help)
+                              echo "Usage: $0 [-m MESSAGE|-e] [filename[.changes]|path [file_with_comment]]"
+                              echo
+                              echo "Will use '$packager' for changelog entries"
+                              echo
+                              echo "Options:"
+                              echo "    -m MESSAGE    add MESSAGE to changes (not open an editor)"
+                              echo "    -e            just open changes (cannot be used with -m)"
+                              exit 0
+                              ;;
+                      *) break ;;
+              esac
+      done
+
+      changelog="$1"
+      content="$2"
+      pkgpath=
+      if [ -n "$changelog" -a -d "$changelog" ]; then
+              pkgpath="$changelog/"
+              changelog=""
+      fi
+
+      if [ -n "$changelog" ]; then
+              if [ "''${changelog%.changes}" = "$changelog" ]; then
+                      changelog="$changelog.changes"
+              fi
+      else
+              changelog=($pkgpath*.changes)
+              if [ "''${#changelog[@]}" -eq 1 ]; then
+                      changelog="$changelog"
+              elif [ -n "$changelog" ]; then
+                      echo "Choose one of ''${changelog[@]}"
+                      exit 1
+              fi
+      fi
+
+      if [ -z "$changelog" ]; then
+              changelog=($pkgpath*.spec)
+              if [ "''${#changelog[@]}" -eq 1 ]; then
+                      changelog=''${changelog%.spec}.changes
+              elif [ -n "$changelog" ]; then
+                      echo "Choose one of ''${changelog[@]}"
+                      exit 1
+              fi
+      fi
+
+      if [ -z "$changelog" ]; then
+              echo "no .changes and no .spec file found"
+              exit 1
+      fi
+
+      if [ ! -e "$changelog" ]; then
+              created_new_changelog=true
+              touch $changelog
+      fi
+
+      tmpfile=`mktemp -q $changelog.vctmp.XXXXXX`
+      if [ $? -ne 0 ]; then
+              echo "$0: Can't create temp file, exiting..."
+              exit 1
+      fi
+      trap "rm -f \"$tmpfile\"" EXIT
+
+      set +e
+
+      {
+              if [ ! $just_edit ]; then
+                      echo "-------------------------------------------------------------------"
+                      echo "$date - $packager"
+                      echo
+              fi
+              if [ -n "$message" ]; then
+                      echo -e "- $message"
+              elif [ -n "$content" ]; then
+                      cat "$content"
+              elif [ ! $just_edit ]; then
+                      echo "- "
+              fi
+              if [ -f "$changelog" ] && [ -s "$changelog" ] && [ ! $just_edit ]; then
+                      # Avoid double newlines at EOF on a new blank .changes file,
+                      # but do provide enough spacing between preexisting log entries.
+                      echo
+              fi
+              cat $changelog
+      } >> "$tmpfile"
+
+      if [ -z "$message" -a -z "$content" ]; then
+              set -- `md5sum "$tmpfile"`
+              chksum="$1"
+              $EDITOR +4 "$tmpfile"
+              set -- `md5sum "$tmpfile"`
+              if [ -z "$content" -a "$chksum" == "$1" ]; then
+                      echo "no changes made"
+                      if [ "$created_new_changelog" = true ]; then
+                              rm -f "$changelog"
+                      fi
+                      exit 0
+              fi
+      fi
+      mode=`stat -c "%a" "$changelog"`
+      user=`stat -c "%u:%g" "$changelog"`
+      mv "$tmpfile" "$changelog"
+      chmod $mode "$changelog"
+      chown $user "$changelog"
+    '';
+  };
+
+  # Change osc's default path to the vc script
+  home.activation.osc_config_general_vc-cmd = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    $DRY_RUN_CMD ${pkgs.python37Packages.osc}/bin/osc config general vc-cmd /home/dany/bin/vc
+  '';
+
+}
