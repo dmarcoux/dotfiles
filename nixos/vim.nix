@@ -52,6 +52,8 @@
         #---------- Language Plugins
         # Add CoffeeScript support
         vim-coffee-script
+        # Add Rust support
+        rust-vim
       ];
 
       # Setup vim's configuration file
