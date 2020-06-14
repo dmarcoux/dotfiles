@@ -9,8 +9,10 @@
     arandr
     atool
     buku
+    galculator
     libreoffice
     mumble
+    mupdf
     openvpn
     openresolv
     p11-kit
@@ -23,6 +25,7 @@
     units
     universal-ctags
     update-resolv-conf
+    viewnior
     x11vnc
     xournal
     xsel
