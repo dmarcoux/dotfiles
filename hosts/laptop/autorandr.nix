@@ -1,6 +1,9 @@
 # User configuration for autorandr
 
 {
+  # If no monitor layout can be detected, fallback to the laptop profile (it's defined below)
+  services.autorandr.defaultTarget = "laptop";
+
   home-manager.users.dany.programs.autorandr = {
     profiles = {
       both = {
