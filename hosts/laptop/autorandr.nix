@@ -31,7 +31,9 @@
           "eDP-1" = "00ffffffffffff000dae61130000000007180104a51d117802ce85a3574e9d2612505400000001010101010101010101010101010101363680a0703820402e1e240025a510000018242480a0703820402e1e240025a510000018000000fe00434d4e0a202020202020202020000000fe004e3133334853452d4541330a2000a1";
         };
       };
-      external = {
+      # With the prefix `1-`, this profile is listed before other possibly detected profiles.
+      # This effectively prioritizes this profile over others.
+      "1-external" = {
         config = {
           "HDMI-1" = {
             enable = true;
