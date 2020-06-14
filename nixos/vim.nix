@@ -42,6 +42,9 @@
         # Change Vim working directory to project root (defined by the presence of a .git directory or anything else, it's configurable)
         vim-rooter
 
+        # Browse the tags of the current file and get an overview of its structure
+        tagbar
+
         #---------- Colorscheme Plugins
         # Solarized light and dark colorscheme
         vim-colors-solarized
@@ -67,6 +70,10 @@
 
         " Set solarized colorscheme if it's installed (otherwise it fails silently)
         silent! colorscheme solarized
+
+        "---------- tagbar
+        " Open tagbar automatically for supported filetypes whenever opening a file
+        autocmd FileType * nested :call tagbar#autoopen(0)
 
         "-------------------- Mappings
         " Mouse can be used in all modes
