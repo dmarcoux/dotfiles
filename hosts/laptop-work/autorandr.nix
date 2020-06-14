@@ -14,7 +14,7 @@
             position = "0x0";
             primary = true;
             rate = "60.00";
-            # TODO: Not possible to set CRTC with home-manager
+            # TODO: This will be possible when the 20.09 is released for home-manager
             # crtc 0
           };
           "eDP-1" = {
@@ -22,7 +22,7 @@
             mode = "1920x1080";
             position = "0x1080";
             rate = "60.00";
-            # TODO: Not possible to set CRTC with home-manager
+            # TODO: This will be possible when the 20.09 is released for home-manager
             # crtc 1
           };
           "DP-1".enable = false;
@@ -44,7 +44,7 @@
             position = "0x0";
             primary = true;
             rate = "60.00";
-            # TODO: Not possible to set CRTC with home-manager
+            # TODO: This will be possible when the 20.09 is released for home-manager
             # crtc 0
           };
           "eDP-1".enable = false;
@@ -65,7 +65,7 @@
             position = "0x0";
             primary = true;
             rate = "60.00";
-            # TODO: Not possible to set CRTC with home-manager
+            # TODO: This will be possible when the 20.09 is released for home-manager
             # crtc 0
           };
           "DP-1".enable = false;
