@@ -19,6 +19,7 @@
     pdftk
     peek
     rake
+    rustup
     shellcheck
     thunderbird-bin
     tigervnc
