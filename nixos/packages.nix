@@ -13,8 +13,8 @@
     libreoffice
     mumble
     mupdf
-    openvpn
     openresolv
+    openvpn
     p11-kit
     pdftk
     peek
