@@ -13,6 +13,7 @@
     libreoffice
     mumble
     mupdf
+    unstable.rust-analyzer
     openresolv
     openvpn
     p11-kit

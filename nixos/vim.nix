@@ -1,7 +1,7 @@
 # System configuration for vim
 # https://nixos.wiki/wiki/Vim
 
-{ pkgs, ... }:
+{ pkgs, unstable, ... }:
 
 {
   # Environment variables set on shell initialisation
@@ -45,6 +45,10 @@
         # Browse the tags of the current file and get an overview of its structure
         tagbar
 
+        # Asynchronously lint files (also act as a Language Server Protocol client)
+        # TODO: ale doesn't support rust-analyzer on the NixOS 20.03 stable branch
+        unstable.vimPlugins.ale
+
         #---------- Colorscheme Plugins
         # Solarized light and dark colorscheme
         vim-colors-solarized
@@ -76,6 +80,13 @@
         "---------- tagbar
         " Open tagbar automatically for supported filetypes whenever opening a file
         autocmd FileType * nested :call tagbar#autoopen(0)
+
+        "---------- ale
+        " Lint Rust files with rust-analyzer
+        let g:ale_linters = {'rust': ['analyzer']}
+
+        " Only run linters defined above in ale_linters settings
+        let g:ale_linters_explicit = 1
 
         "-------------------- Mappings
         " Mouse can be used in all modes
