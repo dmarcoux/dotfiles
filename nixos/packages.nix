@@ -2,7 +2,7 @@
 # They are installed in the system profile
 # Search for packages to install with `nix search package_name`
 
-{ pkgs, ... }:
+{ pkgs, unstable, ... }:
 
 {
   environment.systemPackages = with pkgs; [

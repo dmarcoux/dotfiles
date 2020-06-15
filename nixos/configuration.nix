@@ -3,8 +3,19 @@
 
 { config, pkgs, ... }:
 
+let
+  # Setup nixos-unstable channel to allow installation of the latest available packages if needed
+  # This is useful when needing the newest version of a package which isn't available in the current stable channel
+  # Prerequisites:
+  #   sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
+  #   sudo nix-channel --update
+  # Then install the latest version of a package with `unstable.the_package_name`
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+in
 {
   imports = [
+    # Pass packages from the stable and unstable channels
+    (import ./packages.nix { pkgs = pkgs; unstable = unstable; })
     ../secrets/certificates/work.nix
     ../secrets/vpn/work.nix
     ./chromium.nix
@@ -14,7 +25,6 @@
     ./keyboard.nix
     ./locales.nix
     ./open-build-service.nix
-    ./packages.nix
     ./redshift.nix
     ./unclutter.nix
     ./vim.nix
