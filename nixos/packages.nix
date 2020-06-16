@@ -11,6 +11,7 @@
     buku
     discord
     galculator
+    gcc
     libreoffice
     mumble
     mupdf
