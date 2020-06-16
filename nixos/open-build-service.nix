@@ -4,8 +4,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # For Rust packages (with cargo vendor)
-    cargo
     python37Packages.osc
     # For Ruby packages (by installing the `gem2rpm` gem)
     ruby
