@@ -8,6 +8,7 @@
   environment.systemPackages = with pkgs; [
     arandr
     atool
+    binutils-unwrapped
     buku
     discord
     galculator
