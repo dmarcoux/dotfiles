@@ -83,7 +83,8 @@
 
         "---------- ale
         " Lint Rust files with rust-analyzer
-        let g:ale_linters = {'rust': ['analyzer']}
+        " FIXME: rust-analyzer is using almost 100% of CPU and ~60% of RAM
+        " let g:ale_linters = {'rust': ['analyzer']}
 
         " Only run linters defined above in ale_linters settings
         let g:ale_linters_explicit = 1
