@@ -127,6 +127,7 @@
       assign [class="^Firefox$"] → $WS2
 
       assign [class="^discord$"] → $WS3
+      assign [class="^Mumble$"] → $WS3
 
       assign [class="^Thunderbird$"] → $WS4
 
