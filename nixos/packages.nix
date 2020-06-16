@@ -9,6 +9,7 @@
     arandr
     atool
     buku
+    discord
     galculator
     libreoffice
     mumble
