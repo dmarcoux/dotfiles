@@ -8,6 +8,9 @@
     # pass = opensuse
     alias dosc='osc --apiurl=dosc'
 
+    # Just like `dosc` above, this depends on having a 'dosc' alias in osc's config (~/.config/osc/oscrc)
+    alias isc='osc --apiurl=isc'
+
     # Mark file(s) to be added upon next commit
     ealias oa='osc add'
 
