@@ -25,6 +25,7 @@
     rake
     rustup
     shellcheck
+    tealdeer
     thunderbird-bin
     tigervnc
     units
@@ -34,6 +35,7 @@
     x11vnc
     xournal
     xsel
+    zeal
     zbar
     zip
   ];
