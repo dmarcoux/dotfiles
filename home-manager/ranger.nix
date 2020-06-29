@@ -106,14 +106,14 @@
 
   # List of bookmarks
   xdg.configFile."ranger/bookmarks".text = ''
-    m:/home/dany/Music
-    d:/home/dany/Downloads
+    m:/home/dany/music
+    d:/home/dany/downloads
     c:/home/dany/.config
     p:/home/dany/projets
     P:/home/dany/.config/password-store
     e:/home/dany/projets/documents-emplois
     O:/home/dany/projets/obs
-    v:/home/dany/Videos
+    v:/home/dany/videos
     o:/home/dany/projets/open-build-service
     D:/home/dany/dotfiles
   '';

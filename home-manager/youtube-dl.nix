@@ -20,16 +20,16 @@
     # Restrict filenames to only ASCII characters, and avoid "&" and spaces in filenames
     --restrict-filenames
 
-    # Save videos under "~/Videos/WebsiteName/" with the filename "VideoTitle---FormatNote-VideoId.VideoExtension"
-    --output "~/Videos/%(extractor_key)s/%(title)s---%(format_note)s-%(id)s.%(ext)s"
+    # Save videos under "~/videos/WebsiteName/" with the filename "VideoTitle---FormatNote-VideoId.VideoExtension"
+    --output "~/videos/%(extractor_key)s/%(title)s---%(format_note)s-%(id)s.%(ext)s"
 
     # Select the best audio quality (when extracting audio with -x/--extract-audio)
     --audio-quality 0
   '';
 
   programs.zsh.shellAliases = {
-    # Save music under "~/Music/WebsiteName/" with the filename "MusicTitle---FormatNote-SourceId.AudioExtension"
-    audio-dl = "youtube-dl --output '~/Music/%(extractor_key)s/%(title)s---%(format_note)s-%(id)s.%(ext)s' --extract-audio --audio-format mp3";
+    # Save music under "~/music/WebsiteName/" with the filename "MusicTitle---FormatNote-SourceId.AudioExtension"
+    audio-dl = "youtube-dl --output '~/music/%(extractor_key)s/%(title)s---%(format_note)s-%(id)s.%(ext)s' --extract-audio --audio-format mp3";
   };
 
   programs.zsh.initExtra = ''

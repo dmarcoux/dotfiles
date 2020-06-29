@@ -28,6 +28,7 @@ in
     ./open-build-service.nix
     ./redshift.nix
     ./unclutter.nix
+    ./xdg-user-dirs.nix
     ./zsh.nix
   ];
 
