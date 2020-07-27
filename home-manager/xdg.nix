@@ -8,6 +8,25 @@
   xdg = {
     # Enable management of XDG base directories
     enable = true;
+    # Enable management of XDG user directories
+    userDirs = {
+      enable = true;
+
+      desktop = "$HOME/desktop";
+      documents = "$HOME/documents";
+      download = "$HOME/downloads";
+      templates = "$HOME/templates";
+      publicShare = "$HOME/public";
+      music = "$HOME/music";
+      pictures = "$HOME/pictures";
+      videos = "$HOME/videos";
+
+      extraConfig = {
+        XDG_AUDIO_DIR = "$HOME/audio";
+        XDG_PROJETS_DIR = "$HOME/projets";
+        XDG_TEMPORARY_DIR = "$HOME/tmp";
+      };
+    };
     # Enable management of XDG MIME applications (so default applications)
     # Desktop files are under /run/current-system/sw/share/applications/
     mimeApps = {
