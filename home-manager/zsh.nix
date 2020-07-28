@@ -53,6 +53,8 @@
       chown = "chown --preserve-root";
       chmod = "chmod --preserve-root";
       chgrp = "chgrp --preserve-root";
+      # This prevents issues with certain servers when SSH'ing like backspace not working and more...
+      ssh = "TERM='xterm-256color' ssh";
     };
   };
 }
