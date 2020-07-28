@@ -10,6 +10,7 @@
     ./bat.nix
     ./cbatticon.nix
     ./dircolors.nix
+    ./docker-credential-helpers.nix
     ./exa.nix
     ./fd.nix
     ./firefox.nix
