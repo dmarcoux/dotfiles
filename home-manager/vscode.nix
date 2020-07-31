@@ -11,6 +11,7 @@
     userSettings = {
       "telemetry.enableCrashReporter" = false;
       "telemetry.enableTelemetry" = false;
+      "update.mode" = "none";
     };
   };
 }
