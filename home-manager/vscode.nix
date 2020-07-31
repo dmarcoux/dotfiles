@@ -28,6 +28,7 @@
       "workbench.editor.enablePreview" = false;
       "workbench.editor.enablePreviewFromQuickOpen" = false;
       "workbench.enableExperiments" = false;
+      "workbench.settings.enableNaturalLanguageSearch" = false;
       "workbench.startupEditor" = "none";
     };
   };
