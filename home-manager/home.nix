@@ -5,6 +5,7 @@
 
 {
   imports = [
+    (import ./vscode.nix { pkgs = pkgs; unstable = unstable; })
     ../secrets/ssh/work.nix
     ./autorandr.nix
     ./bat.nix
@@ -31,7 +32,6 @@
     ./scripts.nix
     ./termite.nix
     ./udiskie.nix
-    ./vscode.nix
     ./xcape.nix
     ./xdg.nix
     ./yank.nix

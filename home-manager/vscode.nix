@@ -1,11 +1,13 @@
 # User configuration for VS Code
 
-{ pkgs, ... }:
+{ pkgs, unstable, ... }:
 
 {
   programs.vscode = {
     enable = true;
-    extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [{
+    extensions = [
+      unstable.vscode-extensions.matklad.rust-analyzer
+    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [{
       name = "vscode-icons";
       publisher = "vscode-icons-team";
       version = "10.2.0";
