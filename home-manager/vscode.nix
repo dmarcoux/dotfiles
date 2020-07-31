@@ -9,6 +9,7 @@
       # TODO
     ];
     userSettings = {
+      "extensions.ignoreRecommendations" = true;
       "telemetry.enableCrashReporter" = false;
       "telemetry.enableTelemetry" = false;
       "update.mode" = "none";
