@@ -9,6 +9,7 @@
       # TODO
     ];
     userSettings = {
+      "editor.renderWhitespace" = "all";
       "extensions.ignoreRecommendations" = true;
       "git.enabled" = true;
       "search.quickOpen.includeHistory" = false;
