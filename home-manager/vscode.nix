@@ -9,7 +9,8 @@
       # TODO
     ];
     userSettings = {
-      # TODO
+      "telemetry.enableCrashReporter" = false;
+      "telemetry.enableTelemetry" = false;
     };
   };
 }
