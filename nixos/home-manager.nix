@@ -1,5 +1,7 @@
 # Setup home-manager
 
+{ pkgs, config, unstable, ... }:
+
 {
   imports = [
     <home-manager/nixos> # from home-manager channel
@@ -7,7 +9,7 @@
 
   home-manager = {
     # User configuration with home-manager
-    users.dany = import ../home-manager/home.nix;
+    users.dany = (import ../home-manager/home.nix { pkgs = pkgs; config = config; unstable = unstable; });
     # By default, packages will be installed to `~/.nix-profile`
     # With useUserPackages set to `true`, packages will be installed to `/etc/profiles/per-user/$USER` instead
     useUserPackages = true;
