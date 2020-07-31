@@ -17,11 +17,11 @@ in
     # Pass packages from the stable and unstable channels
     (import ./packages.nix { pkgs = pkgs; unstable = unstable; })
     (import ./vim.nix { pkgs = pkgs; unstable = unstable; })
+    (import ./home-manager.nix { config = config; pkgs = pkgs; unstable = unstable; })
     ../secrets/certificates/work.nix
     ../secrets/vpn/work.nix
     ./chromium.nix
     ./docker.nix
-    ./home-manager.nix
     ./i3.nix
     ./keyboard.nix
     ./locales.nix

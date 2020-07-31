@@ -1,10 +1,11 @@
 # User configuration with home-manager
 # https://rycee.gitlab.io/home-manager/options.html
 
-{ config, pkgs, ... }:
+{ config, pkgs, unstable, ... }:
 
 {
   imports = [
+    (import ./vim.nix { pkgs = pkgs; unstable = unstable; })
     ../secrets/ssh/work.nix
     ./autorandr.nix
     ./bat.nix
