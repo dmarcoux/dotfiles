@@ -19,6 +19,7 @@
       "telemetry.enableTelemetry" = false;
       "update.mode" = "none";
       "workbench.activityBar.visible" = false;
+      "workbench.colorTheme" = "Solarized Light";
       "workbench.commandPalette.history" = 0;
       "workbench.editor.enablePreview" = false;
       "workbench.editor.enablePreviewFromQuickOpen" = false;
