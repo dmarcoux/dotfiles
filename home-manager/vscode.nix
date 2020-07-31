@@ -5,9 +5,12 @@
 {
   programs.vscode = {
     enable = true;
-    extensions = [
-      # TODO
-    ];
+    extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [{
+      name = "vscode-icons";
+      publisher = "vscode-icons-team";
+      version = "10.2.0";
+      sha256 = "13s5jrlj2czwh01bi4dds03hd9hpqk1gs9h0gja0g15d0j4kh39c";
+    }];
     userSettings = {
       "editor.renderWhitespace" = "all";
       "editor.tabCompletion" = "on";
@@ -28,6 +31,7 @@
       "workbench.editor.enablePreview" = false;
       "workbench.editor.enablePreviewFromQuickOpen" = false;
       "workbench.enableExperiments" = false;
+      "workbench.iconTheme" = "vscode-icons";
       "workbench.settings.enableNaturalLanguageSearch" = false;
       "workbench.startupEditor" = "none";
     };
