@@ -20,6 +20,7 @@
       "telemetry.enableCrashReporter" = false;
       "telemetry.enableTelemetry" = false;
       "update.mode" = "none";
+      "update.showReleaseNotes" = false;
       "workbench.activityBar.visible" = false;
       "workbench.colorTheme" = "Solarized Light";
       "workbench.commandPalette.history" = 0;
