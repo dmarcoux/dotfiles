@@ -27,6 +27,7 @@
       "telemetry.enableTelemetry" = false;
       "update.mode" = "none";
       "update.showReleaseNotes" = false;
+      "vsicons.dontShowNewVersionMessage" = true;
       "workbench.activityBar.visible" = false;
       "workbench.colorTheme" = "Solarized Light";
       "workbench.commandPalette.history" = 0;
