@@ -10,6 +10,7 @@
     ];
     userSettings = {
       "editor.renderWhitespace" = "all";
+      "editor.tabCompletion" = "on";
       "extensions.ignoreRecommendations" = true;
       "git.enabled" = true;
       "search.quickOpen.includeHistory" = false;
