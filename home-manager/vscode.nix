@@ -26,6 +26,7 @@
       "workbench.commandPalette.history" = 0;
       "workbench.editor.enablePreview" = false;
       "workbench.editor.enablePreviewFromQuickOpen" = false;
+      "workbench.enableExperiments" = false;
       "workbench.startupEditor" = "none";
     };
   };
