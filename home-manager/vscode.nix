@@ -11,10 +11,12 @@
     userSettings = {
       "extensions.ignoreRecommendations" = true;
       "git.enabled" = true;
+      "search.quickOpen.includeHistory" = false;
       "search.smartCase" = true;
       "telemetry.enableCrashReporter" = false;
       "telemetry.enableTelemetry" = false;
       "update.mode" = "none";
+      "workbench.commandPalette.history" = 0;
       "workbench.editor.enablePreview" = false;
       "workbench.editor.enablePreviewFromQuickOpen" = false;
       "workbench.startupEditor" = "none";
