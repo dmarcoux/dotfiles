@@ -7,7 +7,6 @@
   # Environment variables set on shell initialisation
   environment.variables = {
     EDITOR = "vim"; # Set vim as the default "basic/terminal" editor
-    VISUAL = "vim"; # Set vim as the default "advanced/graphical" editor
   };
 
   # Install and setup vim by customizing the vim_configurable package

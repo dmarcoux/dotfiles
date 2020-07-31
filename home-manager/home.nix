@@ -31,6 +31,7 @@
     ./scripts.nix
     ./termite.nix
     ./udiskie.nix
+    ./vscode.nix
     ./xcape.nix
     ./xdg.nix
     ./yank.nix

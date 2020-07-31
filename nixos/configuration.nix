@@ -28,6 +28,7 @@ in
     ./open-build-service.nix
     ./redshift.nix
     ./unclutter.nix
+    ./vscode.nix
     ./zsh.nix
   ];
 
