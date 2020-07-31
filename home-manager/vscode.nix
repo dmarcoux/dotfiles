@@ -17,6 +17,7 @@
       "extensions.autoCheckUpdates" = false;
       "extensions.autoUpdate" = false;
       "extensions.ignoreRecommendations" = true;
+      "extensions.showRecommendationsOnlyOnDemand" = true;
       "git.enabled" = true;
       "npm.fetchOnlinePackageInfo" = false;
       "search.quickOpen.includeHistory" = false;
