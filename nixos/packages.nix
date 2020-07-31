@@ -12,6 +12,7 @@
     binutils-unwrapped
     buku
     discord
+    docker-credential-helpers
     galculator
     gcc
     libreoffice
