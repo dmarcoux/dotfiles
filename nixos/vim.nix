@@ -54,10 +54,8 @@
         vim-colors-solarized
 
         #---------- Language Plugins
-        # Add CoffeeScript support
-        vim-coffee-script
-        # Add Rust support
-        rust-vim
+        # A collection of language plugins (150+ languages)
+        vim-polyglot
       ];
 
       # Setup vim's configuration file
