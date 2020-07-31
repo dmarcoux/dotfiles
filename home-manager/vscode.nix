@@ -11,6 +11,7 @@
     userSettings = {
       "extensions.ignoreRecommendations" = true;
       "git.enabled" = true;
+      "search.smartCase" = true;
       "telemetry.enableCrashReporter" = false;
       "telemetry.enableTelemetry" = false;
       "update.mode" = "none";
