@@ -14,6 +14,7 @@
     userSettings = {
       "editor.renderWhitespace" = "all";
       "editor.tabCompletion" = "on";
+      "editor.tabSize" = 2;
       "extensions.autoCheckUpdates" = false;
       "extensions.autoUpdate" = false;
       "extensions.ignoreRecommendations" = true;
