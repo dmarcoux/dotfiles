@@ -15,6 +15,7 @@
       "extensions.autoUpdate" = false;
       "extensions.ignoreRecommendations" = true;
       "git.enabled" = true;
+      "npm.fetchOnlinePackageInfo" = false;
       "search.quickOpen.includeHistory" = false;
       "search.smartCase" = true;
       "telemetry.enableCrashReporter" = false;
