@@ -14,6 +14,7 @@
       "telemetry.enableCrashReporter" = false;
       "telemetry.enableTelemetry" = false;
       "update.mode" = "none";
+      "workbench.startupEditor" = "none";
     };
   };
 }
