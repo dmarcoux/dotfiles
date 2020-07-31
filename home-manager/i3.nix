@@ -123,6 +123,7 @@
       #   3. Click on program's window
       #   4. Get value of 'WM_CLASS(STRING)' from xprop's output
       assign [class="^Termite$"] → $WS1
+      assign [class="^Code$"] → $WS1
 
       assign [class="^Firefox$"] → $WS2
 
