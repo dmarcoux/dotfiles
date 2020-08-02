@@ -11,9 +11,6 @@
       " Mouse can be used in all modes
       set mouse=a
 
-      " Backspace can be used over everything in insert mode
-      set backspace=indent,eol,start
-
       " Mappings are recursive, so they will keep evaluating until they hit a dead end (a non-recursive mapping or the last mapping)
       set remap
 
@@ -66,18 +63,9 @@
       cmap w!! w !sudo tee % >/dev/null
 
       "-------------------- UI Settings
-      " Enable syntax highlighting
-      syntax enable
-
       " Set the title of the terminal to the file name (up to maximum 70 characters)
       set title
       set titlestring=neovim:\ %F titlelen=70
-
-      " Show column and line numbers at the bottom
-      set ruler
-
-      " Always show the status line at the bottom
-      set laststatus=2
 
       " Format the status line
       set statusline=\ FILE:\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
@@ -118,16 +106,7 @@
       " Ignore case when searching
       set ignorecase
 
-      " Highlight search results
-      set hlsearch
-
-      " Match search pattern while typing
-      set incsearch
-
       "-------------------- Space, Tabs & Indentation
-      " Copy indent from current line when starting a new line
-      set autoindent
-
       " An indent is automatically inserted:
       "- After a line ending in '{'.
       "- After a line starting with a keyword from this list: if, else, while, do, for, switch
@@ -140,25 +119,8 @@
       " Undo buffers and marks are preserved while the buffer is open
       set hidden
 
-      " Number of commands to remember
-      set history=1000
-
-      " Number of undos to remember
-      set undolevels=1000
-
       " Link to the system clipboard
       set clipboard^=unnamedplus
-
-      " Enable loading of plugins, settings, key mappings based on file types
-      filetype plugin indent on
-
-      " Read again files which were changed outside of vim
-      set autoread
-
-      " Set utf8 as standard encoding
-      set encoding=utf8
-      set fileencoding=utf-8
-      set fileencodings=utf-8
 
       " Use Unix as the standard file format
       set fileformats=unix,dos,mac
@@ -171,9 +133,6 @@
       set noswapfile
 
       "-------------------- Wildmenu
-      " Enable wildmenu, the command-line completion menu
-      set wildmenu
-
       " Ignore case
       set wildignorecase
 
