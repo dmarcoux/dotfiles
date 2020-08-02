@@ -5,6 +5,7 @@
 
 {
   imports = [
+    (import ./neovim.nix { pkgs = pkgs; unstable = unstable; })
     (import ./vscode.nix { pkgs = pkgs; unstable = unstable; })
     ../secrets/ssh/work.nix
     ./autorandr.nix
@@ -22,7 +23,6 @@
     ./i3.nix
     ./i3status.nix
     ./jq.nix
-    ./neovim.nix
     ./network-manager.nix
     ./password-store.nix
     ./pasystray.nix

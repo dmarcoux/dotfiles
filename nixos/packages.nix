@@ -18,6 +18,7 @@
     libreoffice
     mumble
     mupdf
+    unstable.nodejs-14_x
     unstable.rust-analyzer
     openresolv
     openvpn
