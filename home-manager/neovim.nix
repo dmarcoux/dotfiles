@@ -351,6 +351,9 @@
       unstable.vimPlugins.coc-nvim
       unstable.vimPlugins.coc-rust-analyzer
 
+      # Highlight copied/yanked region
+      vim-highlightedyank
+
       #---------- Colorscheme Plugins
       # Solarized light and dark colorscheme
       vim-colors-solarized
