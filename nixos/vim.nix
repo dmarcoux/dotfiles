@@ -28,9 +28,6 @@
         # Try to automatically adjust 'shiftwidth' and 'expandtab' based on the current file or its parents
         vim-sleuth
 
-        # Simple and easy-to-use alignment plugin
-        vim-easy-align
-
         # Lightning fast left-right movement
         quick-scope
 
