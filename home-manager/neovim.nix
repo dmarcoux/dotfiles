@@ -31,9 +31,6 @@
       inoremap <S-Tab> <C-D>
 
       "---------- Normal Mode
-      " Non-recursive mapping for Space to open/close folds
-      nnoremap <Space> za
-
       " Non-recursive mappings for Ctrl + J and Ctrl + K to move the current line(s)
       nnoremap <C-j> :m .+1<CR>==
       nnoremap <C-k> :m .-2<CR>==
