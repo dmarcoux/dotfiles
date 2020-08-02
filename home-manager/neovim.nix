@@ -207,13 +207,20 @@
       " Use Ctrl+Space to trigger completion.
       inoremap <silent><expr> <c-space> coc#refresh()
 
-      " Use Enter to confirm completion, `<C-g>u` means break undo chain at current
+      " If the completion menu is visible, Ctrl + j is mapped to Ctrl + n (default binding) to go to the next entry
+      " If the completion menu isn't visible, <Ctrl + j stays the same
+      inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+      " If the completion menu is visible, Ctrl + k is mapped to Ctrl + p (default binding) to go to the previous entry
+      " If the completion menu isn't visible, <Ctrl + k stays the same
+      inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+
+      " Use Ctrl + l to confirm completion, `<C-g>u` means break undo chain at current
       " position. Coc only does snippet and additional edit on confirm.
-      " Enter could be remapped by other vim plugin, try `:verbose imap <CR>`.
+      " Enter could be remapped by other vim plugin, try `:verbose imap <C-l>`.
       if exists('*complete_info')
-        inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+        inoremap <expr> <C-l> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
       else
-        inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+        inoremap <expr> <C-l> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
       endif
 
       " Use `[g` and `]g` to navigate diagnostics
