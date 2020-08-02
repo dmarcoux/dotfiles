@@ -148,6 +148,7 @@
         "text/x-java" = "nvim.desktop";
         "text/x-lilypond" = "nvim.desktop";
         "text/x-literate-haskell" = "nvim.desktop";
+        "text/x-log" = "nvim.desktop";
         "text/x-makefile" = "nvim.desktop";
         "text/x-matlab" = "nvim.desktop";
         "text/x-moc" = "nvim.desktop";
