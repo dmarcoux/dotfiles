@@ -66,6 +66,9 @@
       cmap w!! w !sudo tee % >/dev/null
 
       "-------------------- UI Settings
+      " Enable true colors
+      set termguicolors
+
       " Set the title of the terminal to the file name (up to maximum 70 characters)
       set title
       set titlestring=neovim:\ %F titlelen=70
@@ -169,12 +172,12 @@
       " Non-recursive mapping in Normal and Visual modes for Ctrl+n to start fzf for buffers
       nnoremap <C-n> :Buffers<CR>
       vnoremap <C-n> :Buffers<CR>
-      "---------- vim-colors-solarized
+      "---------- NeoSolarized
       " Use light version of colorscheme
       set background=light
 
-      " Set solarized colorscheme if it's installed (otherwise it fails silently)
-      silent! colorscheme solarized
+      " Set NeoSolarized colorscheme if it's installed (otherwise it fails silently)
+      silent! colorscheme NeoSolarized
 
       "---------- tagbar
       " Open tagbar automatically for supported filetypes whenever opening a file
@@ -356,7 +359,7 @@
 
       #---------- Colorscheme Plugins
       # Solarized light and dark colorscheme
-      vim-colors-solarized
+      NeoSolarized
 
       #---------- Language Plugins
       # A collection of language plugins (150+ languages)
