@@ -357,6 +357,9 @@
       # Highlight copied/yanked region
       vim-highlightedyank
 
+      # Indicate added/modified/removed lines for current file (if it's managed by a version control system)
+      vim-signify
+
       #---------- Colorscheme Plugins
       # Solarized light and dark colorscheme
       NeoSolarized
