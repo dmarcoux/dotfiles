@@ -213,7 +213,7 @@
     ];
 
     viAlias = true;
-    vimAlias = false; # TODO: Set to true once I got rid of vim
+    vimAlias = true;
     vimdiffAlias = true;
   };
 }

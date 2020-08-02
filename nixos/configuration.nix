@@ -16,7 +16,6 @@ in
   imports = [
     # Pass packages from the stable and unstable channels
     (import ./packages.nix { pkgs = pkgs; unstable = unstable; })
-    (import ./vim.nix { pkgs = pkgs; unstable = unstable; })
     (import ./home-manager.nix { pkgs = pkgs; config = config; unstable = unstable; })
     ../secrets/certificates/work.nix
     ../secrets/vpn/work.nix
@@ -25,6 +24,7 @@ in
     ./i3.nix
     ./keyboard.nix
     ./locales.nix
+    ./neovim.nix
     ./open-build-service.nix
     ./redshift.nix
     ./unclutter.nix

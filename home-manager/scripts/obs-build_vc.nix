@@ -43,7 +43,7 @@
               packager="`getent passwd $UID | cut -d: -f5 | cut -d ',' -f 1` <$mailaddr>"
       fi
 
-      EDITOR=''${EDITOR:-vim}
+      EDITOR=''${EDITOR:-nvim}
       date=`LC_ALL=POSIX TZ=UTC date`
 
       if ! which mktemp > /dev/null 2>&1; then
