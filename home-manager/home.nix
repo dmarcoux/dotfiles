@@ -22,6 +22,7 @@
     ./i3.nix
     ./i3status.nix
     ./jq.nix
+    ./neovim.nix
     ./network-manager.nix
     ./password-store.nix
     ./pasystray.nix
