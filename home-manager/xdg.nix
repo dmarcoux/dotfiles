@@ -37,6 +37,7 @@
         "application/pdf" = "mupdf.desktop";
         "application/x-desktop" = "nvim.desktop";
         "application/x-perl" = "nvim.desktop";
+        "application/x-ruby" = "nvim.desktop";
         "application/x-shellscript" = "nvim.desktop";
         "application/x-zerosize" = "nvim.desktop";
         "image/bmp" = "viewnior.desktop";
