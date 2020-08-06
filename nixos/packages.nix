@@ -33,6 +33,7 @@
     tigervnc
     units
     universal-ctags
+    unzip
     update-resolv-conf
     viewnior
     x11vnc
