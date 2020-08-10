@@ -17,6 +17,7 @@
       "browser.download.folderList" = 2;
       "browser.formfill.enable" = false;
       "browser.search.suggest.enabled" = false;
+      "browser.shell.checkDefaultBrowser" = false;
       "browser.startup.homepage" = "about:blank";
       "browser.urlbar.placeholderName" = "DuckDuckGo";
       "browser.urlbar.placeholderName.private" = "DuckDuckGo";
