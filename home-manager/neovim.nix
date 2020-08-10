@@ -323,6 +323,10 @@
       nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
       " Resume latest coc list.
       nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+      " TODO: Replace this by rust-analyzer.inlayHints.enable false in .config/nvim/coc-settings.json
+      "       See issue https://github.com/fannheyward/coc-rust-analyzer/issues/346
+      " autocmd BufNewFile,BufRead,FileReadPost *.rs :CocCommand rust-analyzer.toggleInlayHints
     '';
 
     # Available plugins: https://github.com/NixOS/nixpkgs/blob/master/pkgs/misc/vim-plugins/vim-plugin-names
