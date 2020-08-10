@@ -39,6 +39,7 @@
         "application/x-perl" = "nvim.desktop";
         "application/x-ruby" = "nvim.desktop";
         "application/x-shellscript" = "nvim.desktop";
+        "application/x-yaml" = "nvim.desktop";
         "application/x-zerosize" = "nvim.desktop";
         "image/bmp" = "viewnior.desktop";
         "image/gif" = "viewnior.desktop";
@@ -81,6 +82,7 @@
         "text/prs.fallenstein.rst" = "nvim.desktop";
         "text/prs.lines.tag" = "nvim.desktop";
         "text/red" = "nvim.desktop";
+        "text/rust" = "nvim.desktop";
         "text/rfc822-headers" = "nvim.desktop";
         "text/richtext" = "nvim.desktop";
         "text/rtf" = "nvim.desktop";
