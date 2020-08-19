@@ -2,7 +2,7 @@
   programs.zsh.shellAliases = {
     #   Pass GITHUB_TOKEN with personal access token to avoid storing GitHub credentials ('man hub' for details)
     #   Generate a personal access token at https://github.com/settings/tokens/new
-    hub = "GITHUB_TOKEN='$(pass pass/me/hub-cli-github-access-token)' hub";
+    hub = "GITHUB_TOKEN='$(pass pass/me/github.com/hub-cli-access-token)' hub";
   };
 
   programs.zsh.initExtra = ''
@@ -28,7 +28,7 @@
 
         # Pass GITHUB_TOKEN with personal access token to avoid storing GitHub credentials ('man hub' for details)
         # Generate a personal access token at https://github.com/settings/tokens/new
-        GITHUB_TOKEN="$(pass pass/me/hub-cli-github-access-token)" hub fork
+        GITHUB_TOKEN='$(pass pass/me/github.com/hub-cli-access-token)' hub fork
 
         # Rename remotes created by hub
         # - origin (repository) is renamed to upstream
