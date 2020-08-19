@@ -5,6 +5,7 @@
 
 {
   imports = [
+    (import ./mellowplayer.nix { pkgs = pkgs; unstable = unstable; })
     (import ./neovim.nix { pkgs = pkgs; unstable = unstable; })
     (import ./vscode.nix { pkgs = pkgs; unstable = unstable; })
     ../secrets/ssh/work.nix

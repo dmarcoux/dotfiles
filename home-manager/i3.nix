@@ -133,6 +133,7 @@
       assign [class="^Thunderbird$"] → $WS4
 
       assign [class="^Chromium-browser$"] → $WS5
+      assign [class="^MellowPlayer3$"] → $WS5
 
       # Applications to start in floating mode in the center of the active workspace
       for_window [class="^Galculator$"] floating enable move position center
