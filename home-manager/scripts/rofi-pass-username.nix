@@ -12,9 +12,9 @@
       if [ -z "$*" ]; then
         # rofi first calls the script with no arguments
 
-        # List full paths of entries stored by pass under $PASSWORD_STORE_DIR/pass
+        # List full paths of entries stored by pass under $PASSWORD_STORE_DIR
         # Keep the relative paths of these entries without the .gpg extension (just like how pass does it)
-        fd ".gpg$" "$PASSWORD_STORE_DIR/pass" | sed -e "s|$PASSWORD_STORE_DIR/\(.*\)\.gpg|\1|g" | sort
+        fd ".gpg$" "$PASSWORD_STORE_DIR" | sed -e "s|$PASSWORD_STORE_DIR/\(.*\)\.gpg|\1|g" | sort
       else
         # Once the user selected an entry, rofi calls the script again with the selected entry as an argument
 

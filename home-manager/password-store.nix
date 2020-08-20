@@ -29,7 +29,7 @@
 
       password_file="$1"
       password_file_without_username=$(echo "$password_file" | sed -e "s|^\(.*\)=.*|\1|g")
-      pass insert "pass/$password_file_without_username"
+      pass insert "$password_file_without_username"
 
       # If no username was provided, we're done
       if [ "$password_file" = "$password_file_without_username" ]; then
@@ -38,9 +38,9 @@
 
       # A username was provided, so we need to overwrite the existing file to add the username
       username=$(echo "$password_file" | sed -e "s|^.*=\(.*\)|\1|g");
-      password=$(pass "pass/$password_file_without_username");
+      password=$(pass "$password_file_without_username");
 
-      pass insert --multiline --force "pass/$password_file_without_username" <<< $(echo -e "$password\nUsername: $username")
+      pass insert --multiline --force "$password_file_without_username" <<< $(echo -e "$password\nUsername: $username")
     }
 
     # Setup new generated password
@@ -55,7 +55,7 @@
       password_file_without_username=$(echo "$password_file" | sed -e "s|^\(.*\)=.*|\1|g")
 
       # Whenever the password length ("$2") wasn't provided, it will default to PASSWORD_STORE_GENERATED_LENGTH
-      pass generate --no-symbols --clip "pass/$password_file_without_username" "$2"
+      pass generate --no-symbols --clip "$password_file_without_username" "$2"
 
       # If no username was provided, we're done
       if [ "$password_file" = "$password_file_without_username" ]; then
@@ -64,23 +64,19 @@
 
       # A username was provided, so we need to overwrite the existing file to add the username
       username=$(echo "$password_file" | sed -e "s|^.*=\(.*\)|\1|g");
-      password=$(pass "pass/$password_file_without_username");
+      password=$(pass "$password_file_without_username");
 
-      pass insert --multiline --force "pass/$password_file_without_username" <<< $(echo -e "$password\nUsername: $username")
+      pass insert --multiline --force "$password_file_without_username" <<< $(echo -e "$password\nUsername: $username")
     }
 
     # Setup new two-factor authentication code from a QR code image
     new_2fa(){
       if [ -z "$1" ] || [ -z "$2" ]; then
-        echo "Usage: ''${funcstack[1]} qr_code.jpg work/some_website.com=account (account is the email/username in the login)"
+        echo "Usage: ''${funcstack[1]} qr_code.jpg work/some_website.com"
         return
       fi
 
-      # TODO
-      # 1. Append to existing password file with `pass otp append` instead
-      # 2. Migrate existing otp files to existing pass files to remove duplication of files
-      # 3. Refactor rofi-pass-otp to read OTP from pass files
-      zbarimg --quiet --raw "$1" | pass otp insert "otp/$2"
+      zbarimg --quiet --raw "$1" | pass otp append "$2"
     }
   '';
 }
