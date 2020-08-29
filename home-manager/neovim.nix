@@ -183,6 +183,11 @@
       " Open tagbar automatically for supported filetypes whenever opening a file
       autocmd FileType * nested :call tagbar#autoopen(0)
 
+      "----------  vim-closetag
+      " Enable vim-closetag for files with the following extensions and types
+      let g:closetag_filenames = '*.html'
+      let g:closetag_filetypes = 'html'
+
       "---------- coc-nvim
       " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable delays and poor user experience.
       set updatetime=300
@@ -363,6 +368,9 @@
 
       # Indicate added/modified/removed lines for current file (if it's managed by a version control system)
       vim-signify
+
+      # Auto close HTML tags
+      vim-closetag
 
       #---------- Colorscheme Plugins
       # Solarized light and dark colorscheme
