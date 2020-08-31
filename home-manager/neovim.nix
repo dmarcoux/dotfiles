@@ -372,6 +372,9 @@
       # Auto close HTML tags
       vim-closetag
 
+      # Insert/Delete brackets, parentheses and quotes in pair
+      auto-pairs
+
       #---------- Colorscheme Plugins
       # Solarized light and dark colorscheme
       NeoSolarized
