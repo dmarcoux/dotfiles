@@ -375,6 +375,9 @@
       # Insert/Delete brackets, parentheses and quotes in pair
       auto-pairs
 
+      # Automatically close certain structures like `if`, `do`, `def` in Ruby (and other languages)
+      vim-endwise
+
       #---------- Colorscheme Plugins
       # Solarized light and dark colorscheme
       NeoSolarized
