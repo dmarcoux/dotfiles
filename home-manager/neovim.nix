@@ -185,8 +185,8 @@
 
       "----------  vim-closetag
       " Enable vim-closetag for files with the following extensions and types
-      let g:closetag_filenames = '*.html'
-      let g:closetag_filetypes = 'html'
+      let g:closetag_filenames = '*.html,*.vue'
+      let g:closetag_filetypes = 'html,vue'
 
       "---------- coc-nvim
       " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable delays and poor user experience.
