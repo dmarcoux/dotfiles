@@ -32,7 +32,6 @@
     tealdeer
     thunderbird-bin
     tigervnc
-    toybox
     units
     universal-ctags
     unzip
