@@ -129,6 +129,7 @@
 
       assign [class="^discord$"] → $WS3
       assign [class="^Mumble$"] → $WS3
+      assign [class="^Microsoft Teams"] → $WS3
 
       assign [class="^Thunderbird$"] → $WS4
 
@@ -144,6 +145,9 @@
 
       # Launch web browser
       exec $BROWSER
+
+      # Launch collaboration and communication platform
+      exec teams
 
       # Launch email client
       exec thunderbird

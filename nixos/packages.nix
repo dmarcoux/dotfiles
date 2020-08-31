@@ -30,6 +30,7 @@
     rustup
     shellcheck
     tealdeer
+    teams
     thunderbird-bin
     tigervnc
     units
