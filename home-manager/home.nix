@@ -27,6 +27,7 @@
     ./network-manager.nix
     ./password-store.nix
     ./pasystray.nix
+    ./picom.nix
     ./ranger.nix
     ./redshift.nix
     ./ripgrep.nix
