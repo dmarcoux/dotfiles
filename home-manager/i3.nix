@@ -136,9 +136,12 @@
       assign [class="^Chromium-browser$"] → $WS5
       assign [class="^MellowPlayer3$"] → $WS5
 
-      # Applications to start in floating mode in the center of the active workspace
-      for_window [class="^Galculator$"] floating enable move position center
-      for_window [class="^Vncviewer$"] floating enable move position center
+      # Applications to start in floating mode
+      for_window [class="^Galculator$"] floating enable
+      for_window [class="^Vncviewer$"] floating enable
+
+      # Center floating windows in the workspace in which they appear
+      for_window [floating] move position center
 
       # Launch terminal
       exec termite
