@@ -38,6 +38,7 @@
     unzip
     update-resolv-conf
     viewnior
+    whois
     x11vnc
     xournal
     xsel
