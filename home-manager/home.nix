@@ -33,6 +33,7 @@
     ./ripgrep.nix
     ./rofi.nix
     ./scripts.nix
+    ./ssh.nix
     ./termite.nix
     ./udiskie.nix
     ./xcape.nix
