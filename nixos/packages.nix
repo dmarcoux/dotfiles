@@ -40,6 +40,7 @@
     viewnior
     whois
     x11vnc
+    xidlehook
     xournal
     xsel
     zeal
