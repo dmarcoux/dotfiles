@@ -1,3 +1,4 @@
+# TODO: 20.09 - Replace with https://cli.github.com (https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/version-management/git-and-tools/gh/default.nix)
 {
   programs.zsh.shellAliases = {
     #   Pass GITHUB_TOKEN with personal access token to avoid storing GitHub credentials ('man hub' for details)
