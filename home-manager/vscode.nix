@@ -10,6 +10,7 @@
     extensions = [
       unstable.vscode-extensions.matklad.rust-analyzer
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      # Icons for VS Code
       {
         name = "vscode-icons";
         publisher = "vscode-icons-team";
