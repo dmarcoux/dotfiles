@@ -24,6 +24,13 @@
         version = "1.9.0";
         sha256 = "0ic0zbv4pja5k4hlixmi6mikk8nzwr8l5w2jigdwx9hc4zhkf713";
       }
+      # Vue.js tooling
+      {
+        name = "vetur";
+        publisher = "octref";
+        version = "0.28.0";
+        sha256 = "01r14f6ynv4pwvi8i9g7hprwhsx6kxjxzs5pqvd9flcvd7kxaks3";
+      }
     ];
     userSettings = {
       "cSpell.language" = "en,fr,de";
