@@ -9,13 +9,23 @@
     # For other extensions, install with `pkgs.vscode-utils.extensionsFromVscodeMarketplace`
     extensions = [
       unstable.vscode-extensions.matklad.rust-analyzer
-    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [{
-      name = "vscode-icons";
-      publisher = "vscode-icons-team";
-      version = "10.2.0";
-      sha256 = "13s5jrlj2czwh01bi4dds03hd9hpqk1gs9h0gja0g15d0j4kh39c";
-    }];
+    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      {
+        name = "vscode-icons";
+        publisher = "vscode-icons-team";
+        version = "10.2.0";
+        sha256 = "13s5jrlj2czwh01bi4dds03hd9hpqk1gs9h0gja0g15d0j4kh39c";
+      }
+      # Spelling Checker
+      {
+        name = "code-spell-checker";
+        publisher = "streetsidesoftware";
+        version = "1.9.0";
+        sha256 = "0ic0zbv4pja5k4hlixmi6mikk8nzwr8l5w2jigdwx9hc4zhkf713";
+      }
+    ];
     userSettings = {
+      "cSpell.language" = "en,fr,de";
       "editor.renderWhitespace" = "all";
       "editor.tabCompletion" = "on";
       "editor.tabSize" = 2;
