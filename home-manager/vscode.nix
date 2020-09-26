@@ -38,34 +38,61 @@
       }
     ];
     userSettings = {
+      # Spell check English, French and German
       "cSpell.language" = "en,fr,de";
       # Automatically rename paired HTML tags
       "editor.renameOnType" = true;
+      # Render all whitespace characters
       "editor.renderWhitespace" = "all";
+      # Enable tab completion
       "editor.tabCompletion" = "on";
+      # Set the number of spaces a tab is equal to
       "editor.tabSize" = 2;
+      # Do not automatically check extensions for updates
       "extensions.autoCheckUpdates" = false;
+      # Do not automatically install updates for extensions
       "extensions.autoUpdate" = false;
+      # Do not show notifications for extension recommendations
       "extensions.ignoreRecommendations" = true;
+      # Do not fetch extension recommendations
       "extensions.showRecommendationsOnlyOnDemand" = true;
+      # Insert a new line at the end of files when saving
       "files.insertFinalNewLine" = true;
+      # Enable git extension
       "git.enabled" = true;
+      # Do not fetch data from npm to provide auto-completion and information about npm dependencies
       "npm.fetchOnlinePackageInfo" = false;
+      # Do not include recently opened files in the "Quick Open" search
       "search.quickOpen.includeHistory" = false;
+      # Search case-insensitively if the pattern is all lowercase, otherwise, search case-sensitively
       "search.smartCase" = true;
+      # Do not send crash reports to Microsoft
       "telemetry.enableCrashReporter" = false;
+      # Do not send usage data and errors to Microsoft
       "telemetry.enableTelemetry" = false;
+      # Do not receive automatic updates
       "update.mode" = "none";
+      # Do not show release notes after an update
       "update.showReleaseNotes" = false;
+      # Do not show new version messages
       "vsicons.dontShowNewVersionMessage" = true;
+      # Hide the activity bar
       "workbench.activityBar.visible" = false;
+      # Set the color theme
       "workbench.colorTheme" = "Solarized Light";
+      # Disable command history in the command palette
       "workbench.commandPalette.history" = 0;
+      # Open files directly without previewing them (previews are reused until opened files are edited)
       "workbench.editor.enablePreview" = false;
+      # Open files directly without previewing them in the "Quick Open" search
       "workbench.editor.enablePreviewFromQuickOpen" = false;
+      # Do not fetch experiments
       "workbench.enableExperiments" = false;
+      # Set the icon theme
       "workbench.iconTheme" = "vscode-icons";
+      # Disable the natural language search mode for settings
       "workbench.settings.enableNaturalLanguageSearch" = false;
+      # Restore editors from the previous session (if there are any)
       "workbench.startupEditor" = "none";
     };
   };
