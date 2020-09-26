@@ -41,6 +41,7 @@
       "extensions.autoUpdate" = false;
       "extensions.ignoreRecommendations" = true;
       "extensions.showRecommendationsOnlyOnDemand" = true;
+      "files.insertFinalNewLine" = true;
       "git.enabled" = true;
       "npm.fetchOnlinePackageInfo" = false;
       "search.quickOpen.includeHistory" = false;
