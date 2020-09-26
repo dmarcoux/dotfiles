@@ -1,15 +1,13 @@
 # User configuration for VS Code
 
-{ pkgs, unstable, ... }:
+{ pkgs, ... }:
 
 {
   programs.vscode = {
     enable = true;
     # Available extensions: https://github.com/NixOS/nixpkgs/blob/master/pkgs/misc/vscode-extensions/default.nix
     # For other extensions, install with `pkgs.vscode-utils.extensionsFromVscodeMarketplace`
-    extensions = [
-      unstable.vscode-extensions.matklad.rust-analyzer
-    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+    extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       # Icons for VS Code
       {
         name = "vscode-icons";
