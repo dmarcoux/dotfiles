@@ -60,6 +60,8 @@
       "files.insertFinalNewLine" = true;
       # Enable git extension
       "git.enabled" = true;
+      # Enable automatic updating of import paths when renaming/moving a file in VS Code
+      "javascript.updateImportsOnFileMove.enabled" = "always";
       # Do not fetch data from npm to provide auto-completion and information about npm dependencies
       "npm.fetchOnlinePackageInfo" = false;
       # Do not include recently opened files in the "Quick Open" search
@@ -70,6 +72,8 @@
       "telemetry.enableCrashReporter" = false;
       # Do not send usage data and errors to Microsoft
       "telemetry.enableTelemetry" = false;
+      # Enable automatic updating of import paths when renaming/moving a file in VS Code
+      "typescript.updateImportsOnFileMove.enabled" = "always";
       # Do not receive automatic updates
       "update.mode" = "none";
       # Do not show release notes after an update
