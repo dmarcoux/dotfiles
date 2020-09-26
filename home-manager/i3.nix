@@ -156,8 +156,8 @@
       exec thunderbird
 
       # Launch user activity monitor to lock screen when inactive
-      #   Screen will lock after 180 seconds (5 minutes)
-      exec xidlehook --not-when-fullscreen --not-when-audio --timer 180 "slock" ""
+      #   Screen will lock after 360 seconds (10 minutes)
+      exec xidlehook --not-when-fullscreen --not-when-audio --timer 360 "slock" ""
 
       #################
       # Key bindings
