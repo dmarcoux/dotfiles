@@ -31,6 +31,13 @@
         version = "0.28.0";
         sha256 = "01r14f6ynv4pwvi8i9g7hprwhsx6kxjxzs5pqvd9flcvd7kxaks3";
       }
+      # Vue.js snippets
+      {
+        name = "vue-vscode-snippets";
+        publisher = "sdras";
+        version = "2.1.5";
+        sha256 = "0vs0li3106sqw3rpi76cr1mvyyqj0iv8ix6jn84ak2i1gynfh72q";
+      }
     ];
     userSettings = {
       "cSpell.language" = "en,fr,de";
