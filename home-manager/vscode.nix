@@ -39,6 +39,8 @@
     ];
     userSettings = {
       "cSpell.language" = "en,fr,de";
+      # Automatically rename paired HTML tags
+      "editor.renameOnType" = true;
       "editor.renderWhitespace" = "all";
       "editor.tabCompletion" = "on";
       "editor.tabSize" = 2;
