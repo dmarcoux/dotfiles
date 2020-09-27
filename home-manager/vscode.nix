@@ -36,6 +36,13 @@
         version = "2.1.5";
         sha256 = "0vs0li3106sqw3rpi76cr1mvyyqj0iv8ix6jn84ak2i1gynfh72q";
       }
+      # Vim emulation
+      {
+        name = "vim";
+        publisher = "vscodevim";
+        version = "1.17.1";
+        sha256 = "10f8jz52gr6k2553awa66m006wszj9z2rnshsic6h2aawxiz3zq1";
+      }
     ];
     # TODO: It's available in 20.09
     # keybindings = [
@@ -111,6 +118,31 @@
       "update.mode" = "none";
       # Do not show release notes after an update
       "update.showReleaseNotes" = false;
+      # Handle (or not) keys in the vim extension
+      "vim.handleKeys" = {
+        # Do not handle "Ctrl + w" in the vim extension, it's used in closing tabs/editors in VS Code
+        "<C-w>" = false;
+        # Do not handle "Ctrl + b" in the vim extension, it's used in hiding the sidebar in VS Code
+        "<C-b>" = false;
+      };
+      # Highlight matches of last search done in the vim extension
+      "vim.hlsearch" = true;
+      # Make undo/redo work with the vim extension
+      "vim.normalModeKeyBindingsNonRecursive" = [
+        {
+          "before" = ["u"];
+          "commands" = ["undo"];
+        }
+        {
+          #           Ctrl + r
+          "before" = ["<C-r>"];
+          "commands" = ["redo"];
+        }
+      ];
+      # Disable vim-surround plugin for vim extension
+      "vim.surround" = false;
+      # Use system clipboard in vim extension
+      "vim.useSystemClipboard" = true;
       # Do not show new version messages
       "vsicons.dontShowNewVersionMessage" = true;
       # Hide the activity bar
