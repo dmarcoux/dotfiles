@@ -76,6 +76,8 @@
       "editor.minimap.enabled" = false;
       # Automatically rename paired HTML tags
       "editor.renameOnType" = true;
+      # Do not render the last line number when it's an empty newline
+      "editor.renderFinalNewline" = false;
       # Render all whitespace characters
       "editor.renderWhitespace" = "all";
       # Enable tab completion
