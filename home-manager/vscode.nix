@@ -44,6 +44,8 @@
       "editor.acceptSuggestionOnEnter" = "off";
       # Set the font family to the one I use in i3
       "editor.fontFamily" = "'DejaVu Sans Mono'";
+      # Do not show the minimap
+      "editor.minimap.enabled" = false;
       # Automatically rename paired HTML tags
       "editor.renameOnType" = true;
       # Render all whitespace characters
