@@ -1,49 +1,24 @@
 # User configuration for VS Code
 
+# Installing VS Code extensions with NixOS is possible, but it's quite cumbersome.
+# Constantly changing the versions and sha256 checksums for frequently updated extensions is really annoying
+# I prefer to install extensions in the command line once, then have them update automatically
+#
+# Install with:
+# code --install-extension PUBLISHER.NAME
+#
+# List of extensions:
+# vscode-icons-team.vscode-icons
+# streetsidesoftware.code-spell-checker
+# octref.vetur
+# sdras.vue-vscode-snippets
+# vscodevim.vim
+
 { pkgs, ... }:
 
 {
   programs.vscode = {
     enable = true;
-    # Available extensions: https://github.com/NixOS/nixpkgs/blob/master/pkgs/misc/vscode-extensions/default.nix
-    # For other extensions, install with `pkgs.vscode-utils.extensionsFromVscodeMarketplace`
-    extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-      # Icons for VS Code
-      {
-        name = "vscode-icons";
-        publisher = "vscode-icons-team";
-        version = "10.2.0";
-        sha256 = "13s5jrlj2czwh01bi4dds03hd9hpqk1gs9h0gja0g15d0j4kh39c";
-      }
-      # Spelling Checker
-      {
-        name = "code-spell-checker";
-        publisher = "streetsidesoftware";
-        version = "1.9.0";
-        sha256 = "0ic0zbv4pja5k4hlixmi6mikk8nzwr8l5w2jigdwx9hc4zhkf713";
-      }
-      # Vue.js tooling
-      {
-        name = "vetur";
-        publisher = "octref";
-        version = "0.28.0";
-        sha256 = "01r14f6ynv4pwvi8i9g7hprwhsx6kxjxzs5pqvd9flcvd7kxaks3";
-      }
-      # Vue.js snippets
-      {
-        name = "vue-vscode-snippets";
-        publisher = "sdras";
-        version = "2.1.5";
-        sha256 = "0vs0li3106sqw3rpi76cr1mvyyqj0iv8ix6jn84ak2i1gynfh72q";
-      }
-      # Vim emulation
-      {
-        name = "vim";
-        publisher = "vscodevim";
-        version = "1.17.1";
-        sha256 = "10f8jz52gr6k2553awa66m006wszj9z2rnshsic6h2aawxiz3zq1";
-      }
-    ];
     # TODO: It's available in 20.09
     # keybindings = [
     #   # Open next editor with "Shift + Right arrow" instead of "Ctrl + Page Down"
