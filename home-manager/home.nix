@@ -7,6 +7,7 @@
   imports = [
     (import ./mellowplayer.nix { pkgs = pkgs; unstable = unstable; })
     (import ./neovim.nix { pkgs = pkgs; unstable = unstable; })
+    (import ./vscode.nix { pkgs = pkgs; unstable = unstable; })
     ../secrets/ssh/work.nix
     ./autorandr.nix
     ./bat.nix
@@ -35,7 +36,6 @@
     ./ssh.nix
     ./termite.nix
     ./udiskie.nix
-    ./vscode.nix
     ./xcape.nix
     ./xdg.nix
     ./yank.nix

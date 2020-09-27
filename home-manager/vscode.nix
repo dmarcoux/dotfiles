@@ -14,11 +14,13 @@
 # sdras.vue-vscode-snippets
 # vscodevim.vim
 
-{ pkgs, ... }:
+{ pkgs, unstable, ... }:
 
 {
   programs.vscode = {
     enable = true;
+    # To always have the latest version available on NixOS
+    package = unstable.vscode;
     # TODO: It's available in 20.09
     # keybindings = [
     #   # Open next editor with "Shift + Right arrow" instead of "Ctrl + Page Down"
