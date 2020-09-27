@@ -40,6 +40,8 @@
     userSettings = {
       # Spell check English, French and German
       "cSpell.language" = "en,fr,de";
+      # Do not accept auto-completion suggestions with Enter (if "editor.tabCompletion" is set to "on", it will only be possible with Tab)
+      "editor.acceptSuggestionOnEnter" = "off";
       # Automatically rename paired HTML tags
       "editor.renameOnType" = true;
       # Render all whitespace characters
