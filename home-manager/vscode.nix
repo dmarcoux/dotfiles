@@ -70,6 +70,8 @@
       "npm.fetchOnlinePackageInfo" = false;
       # Do not include recently opened files in the "Quick Open" search
       "search.quickOpen.includeHistory" = false;
+      # Show line numbers for search results
+      "search.showLineNumbers" = true;
       # Search case-insensitively if the pattern is all lowercase, otherwise, search case-sensitively
       "search.smartCase" = true;
       # Do not send crash reports to Microsoft
