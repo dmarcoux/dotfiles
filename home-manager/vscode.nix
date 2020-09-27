@@ -42,6 +42,8 @@
       "cSpell.language" = "en,fr,de";
       # Do not accept auto-completion suggestions with Enter (if "editor.tabCompletion" is set to "on", it will only be possible with Tab)
       "editor.acceptSuggestionOnEnter" = "off";
+      # Set the font family to the one I use in i3
+      "editor.fontFamily" = "'DejaVu Sans Mono'";
       # Automatically rename paired HTML tags
       "editor.renameOnType" = true;
       # Render all whitespace characters
