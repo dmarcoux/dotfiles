@@ -61,7 +61,7 @@
       # Do not fetch extension recommendations
       "extensions.showRecommendationsOnlyOnDemand" = true;
       # Insert a new line at the end of files when saving
-      "files.insertFinalNewLine" = true;
+      "files.insertFinalNewline" = true;
       # Enable git extension
       "git.enabled" = true;
       # Enable automatic updating of import paths when renaming/moving a file in VS Code
