@@ -106,12 +106,15 @@
       };
       # Highlight matches of last search done in the vim extension
       "vim.hlsearch" = true;
-      # Make undo/redo work with the vim extension
+      # Bind the leader key to comma, then use it in keybindings with <leader>
+      "vim.leader" = ",";
       "vim.normalModeKeyBindingsNonRecursive" = [
+        # Make undo work with the vim extension
         {
           "before" = ["u"];
           "commands" = ["undo"];
         }
+        # Make redo work with the vim extension
         {
           #           Ctrl + r
           "before" = ["<C-r>"];
