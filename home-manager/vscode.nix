@@ -120,6 +120,11 @@
           "before" = ["<C-r>"];
           "commands" = ["redo"];
         }
+        # Turn off search highlighting
+        {
+          "before" = ["<leader>" "<enter>"];
+          "commands" = [":nohl"];
+        }
       ];
       # Disable vim-surround plugin for vim extension
       "vim.surround" = false;
