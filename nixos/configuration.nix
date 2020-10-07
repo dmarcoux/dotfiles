@@ -63,6 +63,11 @@ in
       # home-manager will take over after login in
       desktopManager.xterm.enable = true;
       displayManager.lightdm.enable = true;
+
+      # Disable screensaver and display power manager signaling (DPMS)
+      displayManager.sessionCommands = ''
+        ${pkgs.xorg.xset}/bin/xset s off -dpms
+      '';
     };
   };
 
