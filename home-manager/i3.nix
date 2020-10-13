@@ -155,9 +155,11 @@
       # Launch email client
       exec thunderbird
 
-      # Launch user activity monitor to lock screen when inactive
-      #   Screen will lock after 360 seconds (10 minutes)
-      exec xidlehook --not-when-fullscreen --not-when-audio --timer 360 "slock" ""
+      # Launch user activity monitor
+      #   After 300 seconds (5 minutes):
+      #     Lock the screen
+      #     Enable screensaver and display power manager signaling (DPMS), which will become active after 600 more seconds (10 minutes)
+      exec xidlehook --not-when-fullscreen --not-when-audio --timer 300 "${pkgs.xorg.xset}/bin/xset s on +dpms; slock" "${pkgs.xorg.xset}/bin/xset s off -dpms"
 
       #################
       # Key bindings
