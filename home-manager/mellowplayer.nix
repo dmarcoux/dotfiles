@@ -3,8 +3,7 @@
 { pkgs, unstable, ... }:
 
 {
-  # Install MellowPlayer
-  # TODO: 20.09 - switch to pkgs.mellowplayer
+  # Install MellowPlayer (using unstable since it's often updated)
   home.packages = [ unstable.mellowplayer ];
 
   # Configure MellowPlayer
