@@ -43,21 +43,30 @@
       pass insert --multiline --force "$password_file_without_username" <<< $(echo -e "$password\nUsername: $username")
     }
 
-    # Setup new generated password
-    new_generated_password(){
+    generate_password(){
        if [ -z "$1" ]; then
         # Display usage if no parameters given
-        echo "Usage: ''${funcstack[1]} me/some_website.com=account [password_length] (account is the email/username in the login)"
+        echo "Usage: ''${funcstack[1]} me/some_website.com[=account] [password_length] (Account is the email/username in the login. If not provided, it's keeping the current username)"
         return
       fi
 
       password_file="$1"
       password_file_without_username=$(echo "$password_file" | sed -e "s|^\(.*\)=.*|\1|g")
 
+      echo "$PASSWORD_STORE_DIR/$password_file_without_username"
+      # The password file already exists, so we generate a new password in place and we're done
+      if [ -f "$PASSWORD_STORE_DIR/$password_file_without_username.gpg" ]; then
+        # Whenever the password length ("$2") wasn't provided, it will default to PASSWORD_STORE_GENERATED_LENGTH
+        pass generate --in-place --no-symbols --clip "$password_file_without_username" "$2"
+
+        return
+      fi
+
+      # The password file doesn't exist, so we generate a password
       # Whenever the password length ("$2") wasn't provided, it will default to PASSWORD_STORE_GENERATED_LENGTH
       pass generate --no-symbols --clip "$password_file_without_username" "$2"
 
-      # If no username was provided, we're done
+      # A username was not provided, so we're done
       if [ "$password_file" = "$password_file_without_username" ]; then
         return
       fi
