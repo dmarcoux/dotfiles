@@ -21,27 +21,26 @@
     enable = true;
     # To always have the latest version available on NixOS
     package = unstable.vscode;
-    # TODO: It's available in 20.09
-    # keybindings = [
-    #   # Open next editor with "Shift + Right arrow" instead of "Ctrl + Page Down"
-    #   {
-    #     "key" = "shift+right";
-    #     "command" = "workbench.action.nextEditor";
-    #   }
-    #   {
-    #     "key" = "ctrl+pagedown";
-    #     "command" = "-workbench.action.nextEditor";
-    #   }
-    #   # Open previous editor with "Shift + Left arrow" instead of "Ctrl + Page Up"
-    #   {
-    #     "key" = "shift+left";
-    #     "command" = "workbench.action.previousEditor";
-    #   }
-    #   {
-    #     "key" = "ctrl+pageup";
-    #     "command" = "-workbench.action.previousEditor";
-    #   }
-    # ];
+    keybindings = [
+      # Open next editor with "Shift + Right arrow" instead of "Ctrl + Page Down"
+      {
+        "key" = "shift+right";
+        "command" = "workbench.action.nextEditor";
+      }
+      {
+        "key" = "ctrl+pagedown";
+        "command" = "-workbench.action.nextEditor";
+      }
+      # Open previous editor with "Shift + Left arrow" instead of "Ctrl + Page Up"
+      {
+        "key" = "shift+left";
+        "command" = "workbench.action.previousEditor";
+      }
+      {
+        "key" = "ctrl+pageup";
+        "command" = "-workbench.action.previousEditor";
+      }
+    ];
     userSettings = {
       # Spell check English, French and German
       "cSpell.language" = "en,fr,de";
