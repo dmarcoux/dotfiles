@@ -14,16 +14,14 @@
             position = "0x0";
             primary = true;
             rate = "60.00";
-            # TODO: This will be possible when the 20.09 is released for home-manager
-            # crtc 0
+            crtc = 0;
           };
           "eDP-1" = {
             enable = true;
             mode = "1920x1080";
             position = "0x1080";
             rate = "60.00";
-            # TODO: This will be possible when the 20.09 is released for home-manager
-            # crtc 1
+            crtc = 1;
           };
         };
         fingerprint = {
@@ -39,8 +37,7 @@
             position = "0x0";
             primary = true;
             rate = "60.00";
-            # TODO: This will be possible when the 20.09 is released for home-manager
-            # crtc 0
+            crtc = 0;
           };
           "eDP-1".enable = false;
         };
@@ -58,8 +55,7 @@
             position = "0x0";
             primary = true;
             rate = "60.00";
-            # TODO: This will be possible when the 20.09 is released for home-manager
-            # crtc 0
+            crtc = 0;
           };
         };
         fingerprint = {
