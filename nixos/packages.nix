@@ -15,7 +15,9 @@
     docker-credential-helpers
     galculator
     gcc
+    godot
     libreoffice
+    love_11
     mumble
     mupdf
     unstable.nodePackages."@vue/cli"
