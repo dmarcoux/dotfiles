@@ -47,7 +47,11 @@
   xsession.enable = true;
 
   # Set configuration defaults
-  # Switching to a higher state version typically requires performing some manual steps, such as data conversion or moving files
-  # See release notes for state version changes: https://rycee.gitlab.io/home-manager/release-notes.html
-  home.stateVersion = "20.03";
+  home = {
+    homeDirectory = "/home/dany";
+    # Switching to a higher state version typically requires performing some manual steps, such as data conversion or moving files
+    # See release notes for state version changes: https://rycee.gitlab.io/home-manager/release-notes.html
+    stateVersion = "20.09";
+    username = "dany";
+  };
 }
