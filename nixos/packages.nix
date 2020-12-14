@@ -40,6 +40,7 @@
     unzip
     update-resolv-conf
     viewnior
+    vlc
     whois
     x11vnc
     xidlehook
