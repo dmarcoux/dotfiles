@@ -10,7 +10,7 @@
     ./zsh/general.nix
     ./zsh/git.nix
     ./zsh/history.nix
-    ./zsh/hub.nix
+    ./zsh/github_cli.nix
     ./zsh/nixos.nix
     ./zsh/osc.nix
     ./zsh/prompt.nix

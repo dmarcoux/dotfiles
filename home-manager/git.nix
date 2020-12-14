@@ -6,7 +6,8 @@
   # Install extra packages
   home.packages = with pkgs; [
     git-crypt
-    gitAndTools.hub
+    # GitHub CLI (https://cli.github.com/)
+    gitAndTools.gh
   ];
 
   programs.git = {
@@ -51,4 +52,18 @@
       signByDefault = true;
     };
   };
+
+  # Configure GitHub CLI (programs.gh from home-manager is not working since the config format is JSON... instead of YAML)
+  xdg.configFile."gh/config.yml".text = ''
+    # What protocol to use when performing git operations. Supported values: ssh, https
+    git_protocol: ssh
+    # What editor gh should run when creating issues, pull requests, etc. If blank, will refer to environment.
+    editor:
+    # When to interactively prompt. This is a global config that cannot be overridden by hostname. Supported values: enabled, disabled
+    prompt: enabled
+    # A pager program to send command output to, e.g. "less". Set the value to "cat" to disable the pager.
+    pager:
+    # Aliases allow you to create nicknames for gh commands
+    aliases:
+  '';
 }
