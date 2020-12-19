@@ -27,7 +27,6 @@ in
     ./neovim.nix
     ./open-build-service.nix
     ./redshift.nix
-    ./steam.nix
     ./unclutter.nix
     ./vscode.nix
     ./zsh.nix
