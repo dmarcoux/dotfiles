@@ -11,7 +11,7 @@ be aware that I haven't used my dotfiles on another OS or Linux distribution.
 This repository is structured as follow:
 
 - *home-manager*: User configuration with
-  [home-manager](https://github.com/rycee/home-manager)
+  [home-manager](https://github.com/nix-community/home-manager)
 
 - *hosts*: Host specific configuration
 
@@ -21,4 +21,4 @@ This repository is structured as follow:
 
 The blog post [Migration to NixOS](https://www.malloc47.com/migrating-to-nixos/)
 really helped me in understanding how to setup NixOS and especially
-[home-manager](https://github.com/rycee/home-manager).
+[home-manager](https://github.com/nix-community/home-manager).

@@ -24,7 +24,7 @@ sudo ln --symbolic "$PWD/hosts/CHOOSE_HOST/configuration.nix" /mnt/etc/nixos/con
 Add home-manager Nix channel
 
 ```
-sudo nix-channel --add https://github.com/rycee/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
+sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
 sudo nix-channel --update
 ```
 
@@ -62,7 +62,7 @@ cd secrets
 Add home-manager Nix channel
 
 ```
-sudo nix-channel --add https://github.com/rycee/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
+sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
 sudo nix-channel --update
 ```
 
@@ -90,7 +90,7 @@ sudo ln --symbolic "$PWD/hosts/laptop/configuration.nix" /etc/nixos/configuratio
 Add home-manager Nix channel
 
 ```
-sudo nix-channel --add https://github.com/rycee/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
+sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
 sudo nix-channel --update
 ```
 

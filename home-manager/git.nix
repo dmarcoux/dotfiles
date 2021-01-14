@@ -18,7 +18,7 @@
       branch = { autoSetupRebase = "always"; };
       core = {
         editor = "nvim";
-        # Use the same path as defined upstream: https://github.com/rycee/home-manager/blob/ad8b644de19aca8a7534c9695a7446b258156d06/modules/programs/git.nix#L223
+        # Use the same path as defined upstream: https://github.com/nix-community/home-manager/blob/ad8b644de19aca8a7534c9695a7446b258156d06/modules/programs/git.nix#L223
         excludesFile = "${config.xdg.configHome}/git/ignore";
         fileMode = true;
       };
