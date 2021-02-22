@@ -6,6 +6,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    ansible
     arandr
     atool
     bind
