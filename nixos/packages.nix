@@ -16,6 +16,7 @@
     docker-credential-helpers
     galculator
     gcc
+    gnumake
     godot
     libreoffice
     love_11
