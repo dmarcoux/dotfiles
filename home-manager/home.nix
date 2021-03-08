@@ -24,6 +24,7 @@
     ./i3.nix
     ./i3status.nix
     ./jq.nix
+    ./keyboard.nix
     ./network-manager.nix
     ./password-store.nix
     ./pasystray.nix
