@@ -93,36 +93,6 @@
       echo 'git push'
     }
 
-    # Setup a Git repository for an existing fork. It clones the repository, sets the remotes and HEADs for upstream and the fork.
-    setup_existing_fork() {
-      if [ -z "$1" ]; then
-        # Display usage
-        echo "Usage: ''${funcstack[1]} git@github.com:username/upstream_repo.git"
-        return
-      fi
-
-      UPSTREAM="$1"
-      # replace whatever is between : and / in $UPSTREAM by $GITHUB_USER
-      FORK="$(sed "s|:.*/|:$GITHUB_USER/|g" <<<"$UPSTREAM")"
-      REPOSITORY_NAME="$(basename "$1" .git)"
-
-      # Clone repository
-      git clone "$UPSTREAM"
-
-      # Go into cloned repository and set the remotes and HEADs
-      (
-        cd "$REPOSITORY_NAME" || exit
-
-        git remote add upstream "$UPSTREAM"
-        git fetch --tags upstream
-        git remote set-head upstream master
-
-        git remote set-url origin "$FORK"
-        git fetch --tags origin
-        git remote set-head origin master
-      )
-    }
-
     # Update fork of a Git repository (it has to be setup with fork_repo to follow the remote naming convention)
     update_fork() {
       # Get the default branch (it's not always 'master'... there are other cases like 'gh-pages' for GitHub pages for example)
