@@ -5,6 +5,7 @@
     # List branches
     ealias gbra='git branch'
     # Delete merged branches after confirming (with y)
+    # TODO: Consider default branches which aren't called master
     ealias gbramd='git branch --merged | grep --extended-regexp --invert-match "(^\*|master)" | cut --characters=3- | xargs --no-run-if-empty --interactive git branch --delete'
     ealias gchp='git cherry-pick'
     ealias gcko='git checkout'
@@ -80,6 +81,7 @@
       cd ~/tmp/destination
       git remote add source $SOURCE
 
+      # TODO: Consider default branches which aren't called master
       # Pull source's master in destination's master
       git pull source master --allow-unrelated-histories
 
