@@ -11,6 +11,8 @@
       focus = {
         # Window focus doesn't follow mouse movements
         followMouse = false;
+        # If a window is activated and it requests focus, it will be marked as urgent and not steal the focus
+        newWindow = "urgent";
       };
       fonts = ["DejaVu Sans Mono 13"];
       keybindings = {};
