@@ -142,6 +142,9 @@
       for_window [class="^Galculator$"] floating enable
       for_window [class="^Vncviewer$"] floating enable
 
+      # Prevent Microsoft Teams from stealing focus
+      no_focus [class="^Microsoft Teams"]
+
       # Center floating windows in the workspace in which they appear
       for_window [floating] move position center
 
