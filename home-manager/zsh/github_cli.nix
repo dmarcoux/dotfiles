@@ -2,7 +2,7 @@
   programs.zsh.shellAliases = {
     #   Pass GH_TOKEN with personal access token to avoid storing GitHub credentials ('man gh-auth-login' for details)
     #   Generate a personal access token at https://github.com/settings/tokens/new
-    gh = "GH_TOKEN='$(pass me/github.com/github-cli-access-token)' gh";
+    gh = "GH_TOKEN=\"$(pass me/github.com/github-cli-access-token)\" gh";
   };
 
   programs.zsh.initExtra = ''
