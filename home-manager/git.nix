@@ -14,6 +14,16 @@
     # Install git
     enable = true;
 
+    # Install and setup delta (https://github.com/dandavison/delta)
+    delta = {
+      enable = true;
+      options = {
+        line-numbers = true;
+        # See available themes with `delta --list-syntax-themes`
+        syntax-theme = "Solarized (light)";
+      };
+    };
+
     extraConfig = {
       branch = { autoSetupRebase = "always"; };
       core = {
