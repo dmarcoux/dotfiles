@@ -33,6 +33,7 @@
     ./redshift.nix
     ./ripgrep.nix
     ./rofi.nix
+    ./ruby.nix
     ./scripts.nix
     ./ssh.nix
     ./termite.nix
