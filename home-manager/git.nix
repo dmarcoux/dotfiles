@@ -18,7 +18,6 @@
     delta = {
       enable = true;
       options = {
-        line-numbers = true;
         # See available themes with `delta --list-syntax-themes`
         syntax-theme = "Solarized (light)";
       };
