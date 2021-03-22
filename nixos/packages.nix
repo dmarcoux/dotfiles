@@ -23,7 +23,6 @@
     mumble
     mupdf
     nix-index
-    unstable.nodePackages."@vue/cli"
     unstable.nodejs-14_x
     unstable.rust-analyzer
     openresolv

@@ -11,7 +11,6 @@
 # vscode-icons-team.vscode-icons
 # streetsidesoftware.code-spell-checker
 # octref.vetur
-# sdras.vue-vscode-snippets
 # vscodevim.vim
 
 { pkgs, unstable, ... }:
@@ -60,10 +59,6 @@
       "editor.tabCompletion" = "on";
       # Set the number of spaces a tab is equal to
       "editor.tabSize" = 2;
-      # Enable Emmet for Vue.js
-      "emmet.includeLanguages" = {
-        "vue-html" = "html";
-      };
       # Do not automatically check extensions for updates
       "extensions.autoCheckUpdates" = false;
       # Do not automatically install updates for extensions
