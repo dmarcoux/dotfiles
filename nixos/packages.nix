@@ -32,6 +32,7 @@
     pdftk
     peek
     rake
+    ruby
     rustup
     shellcheck
     tealdeer
