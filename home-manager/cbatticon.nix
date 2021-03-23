@@ -3,10 +3,7 @@
 { pkgs, ... }:
 
 {
-  # Install cbatticon
-  home.packages = [ pkgs.cbatticon ];
-
-  # Configure cbatticon
+  # Install and configure cbatticon
   services.cbatticon = {
     enable = true;
     iconType = "standard";
