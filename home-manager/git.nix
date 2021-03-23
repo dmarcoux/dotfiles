@@ -37,6 +37,7 @@
         wsErrorHighlight = "all";
       };
       fetch = { prune = true; };
+      init = { defaultBranch = "main"; };
       push = {
         default = "current";
         followTags = true;
