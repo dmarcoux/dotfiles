@@ -18,6 +18,7 @@
     gcc
     gnumake
     godot
+    hicolor-icon-theme
     libreoffice
     love_11
     mumble
