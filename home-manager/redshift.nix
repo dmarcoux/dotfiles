@@ -1,10 +1,10 @@
 # User configuration for redshift
 
-{ pkgs, ... }:
+{ pkgs, options, ... }:
 
 {
   # Install redshift
-  home.packages = [ pkgs.redshift ];
+  home.packages = [ options.services.redshift.package.value ];
 
   # Use redshift to adapt screen's color temperature depending on the time of day
   services.redshift = {
