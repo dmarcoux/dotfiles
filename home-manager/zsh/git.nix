@@ -96,7 +96,7 @@
     # Update fork of a Git repository (it has to be setup with fork_repo to follow the remote naming convention)
     update_fork() {
       # Get the default branch (it's not always 'master'... there are other cases like 'gh-pages' for GitHub pages for example)
-      DEFAULT_BRANCH="$(git remote show upstream | sed -n 's| *HEAD branch: ||p')"
+      DEFAULT_BRANCH="$(git remote show origin | sed -n 's| *HEAD branch: ||p')"
 
       # Checkout the default branch or exit if it failed (it could happen when there are changed files which prevent changing branch)
       git checkout "$DEFAULT_BRANCH" || return 1
