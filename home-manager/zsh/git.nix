@@ -70,17 +70,26 @@
       mkdir ~/tmp
       rm --recursive --force ~/tmp/source ~/tmp/destination
 
-      # Clone source and destination Git repositories
+      # Clone source Git repository
       git clone $SOURCE ~/tmp/source
+
+      # Get the default branch (it's not always 'master'... there are other cases like 'gh-pages' for GitHub pages for example)
+      cd ~/tmp/source
+      SOURCE_DEFAULT_BRANCH="$(git remote show origin | sed -n 's| *HEAD branch: ||p')"
+
+      # Clone destination Git repository
       git clone $DESTINATION ~/tmp/destination
 
-      # Add source remote in destination
+      # Get the default branch (it's not always 'master'... there are other cases like 'gh-pages' for GitHub pages for example)
       cd ~/tmp/destination
+      DESTINATION_DEFAULT_BRANCH="$(git remote show origin | sed -n 's| *HEAD branch: ||p')"
+
+      # Add source remote in destination
       git remote add source $SOURCE
 
-      # TODO: Consider default branches which aren't called master
-      # Pull source's master in destination's master
-      git pull source master --allow-unrelated-histories
+      # Pull source's default branch in destination's
+      git checkout $DESTINATION_DEFAULT_BRANCH
+      git pull source $SOURCE_DEFAULT_BRANCH --allow-unrelated-histories
 
       # Remove source remote from destination
       git remote rm source
