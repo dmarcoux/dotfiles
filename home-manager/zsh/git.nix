@@ -4,9 +4,6 @@
     ealias ga='git add'
     # List branches
     ealias gbra='git branch'
-    # Delete merged branches after confirming (with y)
-    # TODO: Consider default branches which aren't called master
-    ealias gbramd='git branch --merged | grep --extended-regexp --invert-match "(^\*|master)" | cut --characters=3- | xargs --no-run-if-empty --interactive git branch --delete'
     ealias gchp='git cherry-pick'
     ealias gcko='git checkout'
     # Create a new branch from current branch
@@ -91,6 +88,14 @@
       echo 'Manual steps to be sure everything is fine'
       echo 'git log'
       echo 'git push'
+    }
+
+    # Delete merged branches after confirming (with y)
+    gbramd() {
+      # Get the default branch (it's not always 'master'... there are other cases like 'gh-pages' for GitHub pages for example)
+      DEFAULT_BRANCH="$(git remote show origin | sed -n 's| *HEAD branch: ||p')"
+
+      git branch --merged | grep --extended-regexp --invert-match "(^\*|$DEFAULT_BRANCH)" | cut --characters=3- | xargs --no-run-if-empty --interactive git branch --delete
     }
 
     # Update fork of a Git repository (it has to be setup with fork_repo to follow the remote naming convention)
