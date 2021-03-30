@@ -198,8 +198,8 @@
       # Start rofi frontend to pass for my passwords
       bindsym $mod+p exec rofi -show pass
 
-      # Start rofi frontend to clipboard manager
-      bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu -p 'clipboard'
+      # Start rofi frontend to clipboard manager (matching clipboard entries case insensitively with `-i` option passed to dmenu)
+      bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu -i -p 'clipboard'
 
       # Change focus
       bindsym $mod+h focus left
