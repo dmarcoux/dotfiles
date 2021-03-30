@@ -1,10 +1,14 @@
 # System configuration for docker
 
-{ pkgs, ... }:
+{ pkgs, unstable, ... }:
 
 {
-  # Install docker and enable it on boot (it's the default)
-  virtualisation.docker.enable = true;
+  virtualisation.docker = {
+    # Enable docker on boot
+    enable = true;
+    # Install docker (from unstable to get the latest version)
+    package = unstable.docker_20_10;
+  };
 
   # Install docker-compose
   environment.systemPackages = [ pkgs.docker-compose ];

@@ -15,12 +15,12 @@ in
 {
   imports = [
     # Pass packages from the stable and unstable channels
+    (import ./docker.nix { pkgs = pkgs; unstable = unstable; })
     (import ./packages.nix { pkgs = pkgs; unstable = unstable; })
     (import ./home-manager.nix { pkgs = pkgs; config = config; unstable = unstable; })
     ../secrets/certificates/work.nix
     ../secrets/vpn/work.nix
     ./chromium.nix
-    ./docker.nix
     ./i3.nix
     ./keyboard.nix
     ./locales.nix
