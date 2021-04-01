@@ -26,6 +26,7 @@ in
     ./locales.nix
     ./neovim.nix
     ./open-build-service.nix
+    ./printing.nix
     ./redshift.nix
     ./unclutter.nix
     ./virtualbox.nix
@@ -49,9 +50,6 @@ in
   hardware.pulseaudio.enable = true;
 
   services = {
-    # Enable CUPS to print documents.
-    printing.enable = true;
-
     xserver = {
       # Enable the X11 windowing system
       enable = true;
