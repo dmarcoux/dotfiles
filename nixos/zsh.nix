@@ -4,11 +4,12 @@
 
 {
 
-  # Enable zsh and leave extra configuration to home-manager
   programs.zsh = {
+    # Install zsh
     enable = true;
-    # This is set per user
+    # This is set per user with home-manager
     enableGlobalCompInit = false;
+    # Remove NixOS default zsh configuration, zsh is configured with home-manager
     promptInit = "";
     setOptions = [];
   };
