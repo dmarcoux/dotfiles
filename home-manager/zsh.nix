@@ -13,7 +13,6 @@
     ./zsh/github_cli.nix
     ./zsh/nixos.nix
     ./zsh/osc.nix
-    ./zsh/prompt.nix
     ./zsh/vnc.nix
     ./zsh/xmllint.nix
     ./zsh/aliases_setup.nix # Last imported file, but first to be processed (others depend on it)

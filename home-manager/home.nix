@@ -7,6 +7,7 @@
   imports = [
     (import ./mellowplayer.nix { pkgs = pkgs; unstable = unstable; })
     (import ./neovim.nix { pkgs = pkgs; unstable = unstable; })
+    (import ./starship.nix { unstable = unstable; })
     (import ./vscode.nix { pkgs = pkgs; unstable = unstable; })
     ../secrets/ssh/work.nix
     ./autorandr.nix
