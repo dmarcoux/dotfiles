@@ -38,7 +38,6 @@ in
   };
 
   programs.zsh.initExtra = ''
-    # TODO: Fix minor bug which doesn't display VCS info
     function cd_to_ranger_bookmark() {
       local directory
       directory=$(cat "${config.xdg.configHome}/ranger/bookmarks" | sed -n "s/.*:\(.*\)$/\1/p" | sort | fzf)
