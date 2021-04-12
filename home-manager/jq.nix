@@ -7,7 +7,7 @@
   programs.jq = {
     enable = true;
     # For details, see https://stedolan.github.io/jq/manual/#Colors
-    # TODO: Remove colors once this PR is merged: https://github.com/nix-community/home-manager/pull/1870
+    # TODO 21.05: Remove colors since my PR is now merged: https://github.com/nix-community/home-manager/pull/1870
     colors = {
       null    = "1;30";
       false   = "0;37";
