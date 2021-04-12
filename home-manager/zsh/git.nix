@@ -52,8 +52,6 @@
     ealias gstal='git stash list'
     ealias gsu='git submodule update'
 
-    GITHUB_USER="dmarcoux"
-
     # Add a Git repository (source) with its complete history to another one (destination). It doesn't overwrite the destination, the source's history is simply added
     # - "source" and "destination" have to be the URL to a repo. Example: git@github.com:dmarcoux/dotfiles.git
     add_repo() {
