@@ -132,20 +132,20 @@
         return
       fi
 
-      USER="$(echo "$1" | cut --delimiter=':' --fields=1)"
+      GITHUB_USERNAME="$(echo "$1" | cut --delimiter=':' --fields=1)"
       BRANCH="$(echo "$1" | cut --delimiter=':' --fields=2)"
-      REMOTE="$(git config remote.origin.url | sed -e "s|:.*/|:$USER/|g")"
+      REMOTE="$(git config remote.origin.url | sed -e "s|:.*/|:$GITHUB_USERNAME/|g")"
 
       # Add a remote for the fork (if one with the same name doesn't already exist)
-      if ! git remote get-url "$USER" > /dev/null 2>&1; then
-        git remote add "$USER" "$REMOTE"
+      if ! git remote get-url "$GITHUB_USERNAME" > /dev/null 2>&1; then
+        git remote add "$GITHUB_USERNAME" "$REMOTE"
       fi
 
       # Fetch branches of the fork
-      git fetch --tags "$USER"
+      git fetch --tags "$GITHUB_USERNAME"
 
       # Checkout the fork's branch
-      git checkout "$USER"/"$BRANCH"
+      git checkout "$GITHUB_USERNAME"/"$BRANCH"
 
       # Create a local copy of the fork's branch
       git checkout -b "$BRANCH"
