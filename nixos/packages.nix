@@ -24,6 +24,7 @@
     mumble
     mupdf
     nix-index
+    unstable.anki-bin # TODO 21.05 anki-bin is not available in 20.09
     unstable.nodejs-14_x
     unstable.rust-analyzer
     openresolv
