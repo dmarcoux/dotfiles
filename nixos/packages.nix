@@ -14,6 +14,7 @@
     buku
     discord
     docker-credential-helpers
+    element-desktop
     galculator
     gcc
     gnumake
