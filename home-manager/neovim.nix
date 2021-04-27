@@ -149,9 +149,6 @@
       set wildmode=longest,list,full
 
       "-------------------- Autocommands
-      " Remove all trailing whitespaces right before saving
-      autocmd BufWritePre * :%s/\s\+$//e
-
       autocmd BufNewFile,BufReadPost *.md call SetMarkdownOptions()
       function SetMarkdownOptions()
           " Force Markdown type for all files with the .md extension (from tpope/vim-markdown)
@@ -187,6 +184,10 @@
       " Enable vim-closetag for files with the following extensions and types
       let g:closetag_filenames = '*.html, *.html.erb'
       let g:closetag_filetypes = 'html, *.html.erb'
+
+      "---------- wstrip-vim
+      " Enable wstrip-vim on all filetypes to remove trailing whitespaces only on changed lines
+      let g:wstrip_auto = 1
 
       "---------- coc-nvim
       " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable delays and poor user experience.
@@ -335,6 +336,7 @@
     '';
 
     # Available plugins: https://github.com/NixOS/nixpkgs/blob/master/pkgs/misc/vim-plugins/vim-plugin-names
+    # Any dot in the vim plugin names is replaced by a dash when listed below. Example: `fzf.vim` becomes `fzf-vim`.
     plugins = with pkgs.vimPlugins; [
       #---------- Efficiency Plugins
       # Remaps . in a way that plugins can tap into it
@@ -377,6 +379,9 @@
 
       # Automatically close certain structures like `if`, `do`, `def` in Ruby (and other languages)
       vim-endwise
+
+      # Remove trailing whitespaces only on changed lines
+      unstable.vimPlugins.wstrip-vim # TODO: 21.05 This should be available now, so stop using unstable.vimPlugins
 
       #---------- Colorscheme Plugins
       # Solarized light and dark colorscheme
