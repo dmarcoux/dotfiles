@@ -31,6 +31,7 @@ in
     ./unclutter.nix
     ./virtualbox.nix
     ./vscode.nix
+    ./wacom.nix
     ./zsh.nix
   ];
 
