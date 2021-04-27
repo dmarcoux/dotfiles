@@ -3,6 +3,9 @@
     ealias doc='docker'
     ealias doccom='docker-compose'
 
+    # Start a Docker container for projects without a Docker setup (ports are mapped directly on the host, so anything running inside the container is accessible on the host)
+    ealias drunb='docker run -v "$PWD:/app" --net="host" -it ruby:"$(cat .ruby-version)" bash'
+
     # Select a locally available image and run a new container based on it
     ealias drunf='docker image ls | fzf --header-lines=1 | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty docker run'
 
