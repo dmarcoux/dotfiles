@@ -20,6 +20,7 @@
     gnumake
     godot
     hicolor-icon-theme
+    krita
     libreoffice
     love_11
     mumble
