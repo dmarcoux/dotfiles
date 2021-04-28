@@ -22,4 +22,9 @@
 
   # Enable touchpad support
   services.xserver.libinput.enable = true;
+
+  # Enable bluetooth support
+  hardware.bluetooth.enable = true;
+  # Install blueman, a GUI to manage Bluetooth devices
+  services.blueman.enable = true;
 }
