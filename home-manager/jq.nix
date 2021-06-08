@@ -3,21 +3,8 @@
 { pkgs, ... }:
 
 {
-  # Install and configure jq
-  programs.jq = {
-    enable = true;
-    # For details, see https://stedolan.github.io/jq/manual/#Colors
-    # TODO 21.05: Remove colors since my PR is now merged: https://github.com/nix-community/home-manager/pull/1870
-    colors = {
-      null    = "1;30";
-      false   = "0;37";
-      true    = "0;37";
-      numbers = "0;37";
-      strings = "0;32";
-      arrays  = "1;37";
-      objects = "1;37";
-    };
-  };
+  # Install jq
+  programs.jq.enable = true;
 
   # Aliases
   programs.zsh.initExtra = ''

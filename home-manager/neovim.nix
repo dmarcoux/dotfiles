@@ -373,7 +373,7 @@
       vim-endwise
 
       # Remove trailing whitespaces only on changed lines
-      unstable.vimPlugins.wstrip-vim # TODO: 21.05 This should be available now, so stop using unstable.vimPlugins
+      wstrip-vim
 
       #---------- Colorscheme Plugins
       # Solarized light and dark colorscheme
