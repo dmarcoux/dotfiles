@@ -14,7 +14,10 @@
         # If a window is activated and it requests focus, it will be marked as urgent and not steal the focus
         newWindow = "urgent";
       };
-      fonts = ["DejaVu Sans Mono 13"];
+      fonts = {
+        names = ["DejaVu Sans Mono"];
+        size = 13.0;
+      };
       keybindings = {};
       modes = {};
       # Modifier key is the Windows Key
