@@ -163,6 +163,9 @@
       " Non-recursive mapping in Normal and Visual modes for Ctrl+n to start fzf for buffers
       nnoremap <C-n> :Buffers<CR>
       vnoremap <C-n> :Buffers<CR>
+      " Display the fzf window at the bottom of the screen with 40% of the available height
+      let g:fzf_layout = { 'down': '40%' }
+
       "---------- NeoSolarized
       " Use light version of colorscheme
       set background=light
