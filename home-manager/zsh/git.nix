@@ -147,6 +147,9 @@
 
       # Create a local copy of the fork's branch
       git checkout -b "$BRANCH"
+
+      # Set upstream of the branch to be able to pull changes
+      git branch --set-upstream-to="$GITHUB_USERNAME"/"$BRANCH" "$BRANCH"
     }
   '';
 }
