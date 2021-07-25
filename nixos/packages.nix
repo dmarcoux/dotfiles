@@ -21,6 +21,7 @@
     gnumake
     godot
     hicolor-icon-theme
+    unstable.hugo
     krita
     libreoffice
     love_11
