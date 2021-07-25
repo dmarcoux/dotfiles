@@ -29,6 +29,7 @@
     };
     # Enable management of XDG MIME applications (so default applications)
     # Desktop files are under /run/current-system/sw/share/applications/
+    # Find the MIME type of a file with `xdg-mime query filetype path/to/file`
     mimeApps = {
       enable = true;
       defaultApplications = {
