@@ -6,25 +6,20 @@
 
 {
   environment.systemPackages = with pkgs; [
-    anki-bin
     ansible
     arandr
     atool
     bind
-    binutils-unwrapped
-    buku
     discord
     docker-credential-helpers
     element-desktop
     galculator
     gcc
     gnumake
-    godot
     hicolor-icon-theme
     unstable.hugo
     krita
     libreoffice
-    love_11
     mumble
     mupdf
     ngrok-2
@@ -37,7 +32,6 @@
     peek
     rake
     ruby
-    rustup
     shellcheck
     tealdeer
     teams
@@ -54,7 +48,6 @@
     xidlehook
     xournal
     xsel
-    zeal
     zbar
     zip
   ];
