@@ -6,49 +6,93 @@
 
 {
   environment.systemPackages = with pkgs; [
+    # Deployment tool for work
     ansible
+    # Frontend to XRandR to manage multiple monitors
     arandr
+    # Various commands to manage file archives of various types, such as tar and Zip archives
     atool
+    # For DNS commands dig and nslookup
     bind
+    # Voice, video, and text chat
     discord
+    # Keep Docker login credentials in pass
     docker-credential-helpers
+    # IRC client through Matrix bridges
     element-desktop
+    # Simple calculator
     galculator
+    # Compiler
     gcc
+    # For the command make
     gnumake
+    # Without this package, redshift-gtk doesn't have an icon.
     hicolor-icon-theme
+    # Static site generator
     unstable.hugo
+    # Digital painting
     krita
+    # Office suite for spreadsheets, presentations and more...
     libreoffice
+    # Voice chat for work
     mumble
+    # PDF viewer
     mupdf
+    # Expose localhost to the Internet (useful for web development)
     ngrok-2
+    # Generate a database index of all files in my channels, then locate with nix-locate which packages contain these files
     nix-index
+    # For coc.nvim, which provides auto-completion in Neovim
     unstable.nodejs-14_x
+    # Manage resolv.conf for DNS settings
     openresolv
+    # VPN client
     openvpn
+    # Cryptography for various applications
     p11-kit
+    # Edit PDF documents
     pdftk
+    # Simple animated GIF screen recorder
     peek
+    # To run various rake tasks for work
     rake
+    # Beside work when I need to quickly test something in IRB, I also have Ruby to install gems without relying on the usual Nix way
     ruby
+    # Static analysis tool for shell scripts
     shellcheck
+    # Collaborative cheatsheets for console commands
     tealdeer
+    # Communication platform for work
     teams
+    # Emails and agenda
     thunderbird-bin
+    # Remote desktop viewer
     tigervnc
+    # Convert between two units of measure
     units
+    # Generate an index file of language objects found in source files for programming languages (used in text editors)
     universal-ctags
+    # Extract files from Zip archives
     unzip
+    # Script updating DNS settings pushed by OpenVPN servers
     update-resolv-conf
+    # Image viewer
     viewnior
+    # Multimedia player
     vlc
+    # Provides command for WHOIS (RFC 3912) protocol
     whois
+    # Server for remote desktop viewers
     x11vnc
+    # Execute commands when computer is idle for a specified amount of time
     xidlehook
+    # Create digital signatures which can be applied to PDF documents
     xournal
+    # Get and set the X selection (like changing the clipboard)
     xsel
+    # Barcode and QR code reader
     zbar
+    # Compress files in Zip archives
     zip
   ];
 }
