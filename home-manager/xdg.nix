@@ -163,6 +163,7 @@
         "text/x-perl" = "nvim.desktop";
         "text/x-psp" = "nvim.desktop";
         "text/x-python" = "nvim.desktop";
+        "text/x-ruby" = "nvim.desktop";
         "text/x-scala" = "nvim.desktop";
         "text/x-server-parsed-html" = "nvim.desktop";
         "text/x-setext" = "nvim.desktop";
