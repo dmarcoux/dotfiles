@@ -30,6 +30,8 @@
       kb-row-down = "Control+j,Down";
       # Quit rofi
       kb-cancel = "Escape";
+      # Display rofi on top of the focused window
+      monitor = "-2";
     };
   };
 }
