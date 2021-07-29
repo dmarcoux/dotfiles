@@ -76,6 +76,8 @@
     unzip
     # Script updating DNS settings pushed by OpenVPN servers
     update-resolv-conf
+    # Build and manage virtual machine (VM) environments
+    vagrant
     # Image viewer
     viewnior
     # Multimedia player
