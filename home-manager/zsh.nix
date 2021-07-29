@@ -54,6 +54,8 @@
       chgrp = "chgrp --preserve-root";
       # This prevents issues with certain servers when SSH'ing like backspace not working and more...
       ssh = "TERM='xterm-256color' ssh";
+      # This prevents issues with vagrant when SSH'ing into VMs like backspace not working and more...
+      vagrant = "TERM='xterm-256color' vagrant";
     };
     initExtra = ''
       # Add $HOME/.npm-packages to $PATH to install npm packages globally with:
