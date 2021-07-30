@@ -50,6 +50,8 @@
     openvpn
     # Cryptography for various applications
     p11-kit
+    # For PCI commands like lspci and setpci
+    pciutils
     # Edit PDF documents
     pdftk
     # Simple animated GIF screen recorder
