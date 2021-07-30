@@ -28,6 +28,7 @@ in
     ./open-build-service.nix
     ./printing.nix
     ./redshift.nix
+    ./steam.nix
     ./unclutter.nix
     ./virtualbox.nix
     ./vscode.nix
