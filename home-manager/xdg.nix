@@ -1,6 +1,6 @@
 # User configuration for XDG base directories
 
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = [ pkgs.xdg-user-dirs ];

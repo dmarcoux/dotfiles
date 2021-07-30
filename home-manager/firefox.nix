@@ -1,7 +1,5 @@
 # User configuration for firefox
 
-{ pkgs, ... }:
-
 {
   # Set firefox as the default browser
   home.sessionVariables = { BROWSER = "firefox"; };

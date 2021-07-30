@@ -13,7 +13,7 @@
 # octref.vetur
 # vscodevim.vim
 
-{ pkgs, unstable, ... }:
+{ unstable, ... }:
 
 {
   programs.vscode = {

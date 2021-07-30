@@ -1,6 +1,6 @@
 # User configuration for fzf
 
-{ pkgs, config, ... }:
+{ config, ... }:
 
 let
   # Colors, Solarized Light

@@ -1,7 +1,5 @@
 # User configuration for i3status
 
-{ pkgs, ... }:
-
 {
   # Install and configure i3status
   programs.i3status = {

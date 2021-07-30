@@ -1,7 +1,5 @@
 # User configuration for cbatticon
 
-{ pkgs, ... }:
-
 {
   # Install and configure cbatticon
   services.cbatticon = {

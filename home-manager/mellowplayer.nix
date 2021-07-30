@@ -1,6 +1,6 @@
 # User configuration for MellowPlayer
 
-{ pkgs, unstable, ... }:
+{ unstable, ... }:
 
 {
   # Install MellowPlayer (using unstable since it's often updated)

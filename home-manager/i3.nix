@@ -1,6 +1,6 @@
 # User configuration for i3
 
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
   xsession.windowManager.i3 = {

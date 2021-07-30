@@ -1,7 +1,5 @@
 # User configuration for termite
 
-{ pkgs, ... }:
-
 {
   # Install and configure termite
   programs.termite = {

@@ -1,7 +1,5 @@
 # User configuration for jq
 
-{ pkgs, ... }:
-
 {
   # Install jq
   programs.jq.enable = true;
