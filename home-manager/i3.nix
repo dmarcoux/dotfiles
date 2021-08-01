@@ -158,11 +158,15 @@
       # Launch web browser
       exec $BROWSER
 
-      # Launch collaboration and communication platform
-      exec teams
+      # On work days, launch collaboration and communication platform.
+      #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
+      #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
+      exec test $(date +'%u') -lt 5 && teams
 
-      # Launch email client
-      exec thunderbird
+      # On work days, launch email client.
+      #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
+      #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
+      exec test $(date +'%u') -lt 5 && thunderbird
 
       # Launch user activity monitor
       #   After 300 seconds (5 minutes):
