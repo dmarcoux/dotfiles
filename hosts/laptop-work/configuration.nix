@@ -21,7 +21,15 @@
   };
 
   # Enable touchpad support
-  services.xserver.libinput.enable = true;
+  services.xserver.libinput = {
+    enable = true;
+
+    touchpad = {
+      disableWhileTyping = true;
+      # Disables tap-to-click behavior
+      tapping = false;
+    };
+  };
 
   # Enable bluetooth support
   hardware.bluetooth.enable = true;
