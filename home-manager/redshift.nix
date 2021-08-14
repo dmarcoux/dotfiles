@@ -10,7 +10,7 @@
   services.redshift = {
     enable = true;
 
-    # Use geoclue2 as location provider
+    # Use GeoClue2 as location provider
     provider = "geoclue2";
 
     # Colour temperature to use at day/night, between 1000 and 25000 K

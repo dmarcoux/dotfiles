@@ -4,6 +4,6 @@
   # Start GeoClue2 daemon
   services.geoclue2.enable = true;
 
-  # Enable location with geoclue2
+  # Enable location with GeoClue2
   location.provider = "geoclue2";
 }
