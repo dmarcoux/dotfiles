@@ -22,6 +22,8 @@
       "browser.urlbar.suggest.history" = false;
       "browser.urlbar.suggest.openpage" = false;
       "extensions.pocket.enabled" = false;
+      # Do not autoplay audio and video content on websites
+      "media.autoplay.default" = 5;
       # Prevent websites from requesting permission to send desktop notifications
       "permissions.default.desktop-notification" = 2;
     };
