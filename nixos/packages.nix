@@ -80,6 +80,8 @@
     unzip
     # Script updating DNS settings pushed by OpenVPN servers
     update-resolv-conf
+    # List USB devices with lsusb
+    usbutils
     # Build and manage virtual machine (VM) environments
     vagrant
     # Image viewer
