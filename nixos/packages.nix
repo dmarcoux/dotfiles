@@ -14,6 +14,8 @@
     atool
     # For DNS commands dig and nslookup
     bind
+    # Manage eBook library
+    calibre
     # Voice, video, and text chat
     discord
     # Keep Docker login credentials in pass
