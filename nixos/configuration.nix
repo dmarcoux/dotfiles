@@ -25,6 +25,7 @@ in
     ./keyboard.nix
     ./locales.nix
     ./neovim.nix
+    ./nixFlakes.nix
     ./open-build-service.nix
     ./printing.nix
     ./redshift.nix
