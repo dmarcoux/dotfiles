@@ -64,6 +64,8 @@
     ruby
     # Static analysis tool for shell scripts
     shellcheck
+    # Chat for work
+    slack
     # Collaborative cheatsheets for console commands
     tealdeer
     # Communication platform for work
