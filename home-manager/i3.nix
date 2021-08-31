@@ -132,6 +132,7 @@
       assign [class="^Steam$"] → $WS1
 
       assign [class="^Firefox$"] → $WS2
+      assign [class="^Slack$"] → $WS2
 
       assign [class="^discord$"] → $WS3
       assign [class="^Mumble$"] → $WS3
