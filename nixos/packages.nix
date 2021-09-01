@@ -96,8 +96,8 @@
     x11vnc
     # Execute commands when computer is idle for a specified amount of time
     xidlehook
-    # Create digital signatures which can be applied to PDF documents
-    xournal
+    # Edit PDF documents and create digital signatures which can be applied to PDF documents
+    xournalpp
     # Get and set the X selection (like changing the clipboard)
     xsel
     # Barcode and QR code reader
