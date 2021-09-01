@@ -164,12 +164,12 @@
       #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
       exec test $(date +'%u') -lt 5 && slack
 
-      # On work days, launch collaboration and communication platform.
+      # On work days, launch Microsoft Teams.
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
       #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
       exec test $(date +'%u') -lt 5 && teams
 
-      # On work days, launch email client.
+      # On work days, launch Thunderbird.
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
       #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
       exec test $(date +'%u') -lt 5 && thunderbird
