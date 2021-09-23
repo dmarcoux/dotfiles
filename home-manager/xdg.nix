@@ -36,6 +36,8 @@
         "application/javascript" = "nvim.desktop";
         "application/json" = "nvim.desktop";
         "application/pdf" = "mupdf.desktop";
+        # .odt - Libre Office Writer
+        "application/vnd.oasis.opendocument.text" = "writer.desktop";
         "application/x-desktop" = "nvim.desktop";
         "application/x-perl" = "nvim.desktop";
         "application/x-ruby" = "nvim.desktop";
