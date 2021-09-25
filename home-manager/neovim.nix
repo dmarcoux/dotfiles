@@ -355,7 +355,7 @@
       tagbar
 
       # Autocompletion
-      unstable.vimPlugins.coc-nvim
+      coc-nvim
 
       # Highlight copied/yanked region
       vim-highlightedyank
