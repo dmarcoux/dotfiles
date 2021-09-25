@@ -19,6 +19,8 @@
     ealias gcoem='git commit --edit --message'
     ealias gcoma='git commit --amend'
     ealias gdi='git diff'
+    # Quickly edit changed files with `vim $(gdino)`
+    ealias gdino='git diff --name-only'
     ealias gdis='git diff --staged'
     ealias gf='git fetch --tags'
     ealias gfu='git fetch --tags upstream'
