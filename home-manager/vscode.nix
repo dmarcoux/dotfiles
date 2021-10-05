@@ -7,11 +7,11 @@
 # Install with:
 # code --install-extension PUBLISHER.NAME
 #
-# List of extensions:
-# vscode-icons-team.vscode-icons
-# streetsidesoftware.code-spell-checker
-# octref.vetur
-# vscodevim.vim
+# List of extensions with their identifier, name and description
+# vscode-icons-team.vscode-icons | vscode-icons | Icons
+# streetsidesoftware.code-spell-checker | Code Spell Checker | Spell checking
+# vscodevim.vim | Vim | Vim emulation
+# vayan.haml | Ruby Haml | Syntax highlighting for Haml files
 
 { unstable, ... }:
 
