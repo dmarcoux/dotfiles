@@ -27,6 +27,7 @@ in
     ./neovim.nix
     ./nixFlakes.nix
     ./open-build-service.nix
+    ./podman.nix
     ./printing.nix
     ./redshift.nix
     ./steam.nix
