@@ -61,6 +61,9 @@
       # Add $HOME/.npm-packages to $PATH to install npm packages globally with:
       # npm config set prefix "$HOME/.npm-packages"
       export PATH="$HOME/.npm-packages/bin:$PATH"
+
+      # Do not print an error message like "zsh: no matches found: something?" if a command with a globbing expression doesn't match anything
+      unsetopt nomatch
     '';
   };
 }
