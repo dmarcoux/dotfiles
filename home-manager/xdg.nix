@@ -38,6 +38,8 @@
         "application/pdf" = "mupdf.desktop";
         # .odt - Libre Office Writer
         "application/vnd.oasis.opendocument.text" = "writer.desktop";
+        # .docx - Libre Office Writer
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = "writer.desktop";
         "application/x-desktop" = "nvim.desktop";
         "application/x-perl" = "nvim.desktop";
         "application/x-ruby" = "nvim.desktop";
