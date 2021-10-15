@@ -35,7 +35,7 @@
       defaultApplications = {
         "application/javascript" = "nvim.desktop";
         "application/json" = "nvim.desktop";
-        "application/pdf" = "mupdf.desktop";
+        "application/pdf" = "org.gnome.Evince.desktop";
         # .odt - Libre Office Writer
         "application/vnd.oasis.opendocument.text" = "writer.desktop";
         # .docx - Libre Office Writer

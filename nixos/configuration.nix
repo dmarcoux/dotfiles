@@ -21,6 +21,7 @@ in
     ../secrets/certificates/work.nix
     ../secrets/vpn/work.nix
     ./chromium.nix
+    ./evince.nix
     ./i3.nix
     ./keyboard.nix
     ./locales.nix

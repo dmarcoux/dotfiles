@@ -38,8 +38,6 @@
     libreoffice
     # Voice chat for work
     mumble
-    # PDF viewer
-    mupdf
     # Expose localhost to the Internet (useful for web development)
     ngrok-2
     # Generate a database index of all files in my channels, then locate with nix-locate which packages contain these files
