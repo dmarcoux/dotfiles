@@ -14,7 +14,7 @@
     ealias prunf='podman image ls | fzf --header="Select a Podman image to run a Podman container based on it" --header-lines=1 | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty podman run'
 
     # Tip: The following aliases are even better when fzf is using this as a default option: --bind ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all
-    #      We can quickly select one, multiple or all container(s)
+    #      We can quickly select one, multiple or all option(s)
 
     # Select Docker/Podman containers and remove them (with their volumes)
     ealias drmf='docker ps --all | fzf --header="Select Docker containers to remove (with their volumes)" --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty docker rm --volumes'
