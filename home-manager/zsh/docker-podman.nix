@@ -20,6 +20,9 @@
     ealias drmf='docker ps --all | fzf --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty docker rm --volumes'
     ealias prmf='podman ps --all | fzf --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty podman rm --volumes'
 
+    # Select Podman pods and remove them (with their containers)
+    ealias pprmf='podman pod ps | fzf --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty podman pod rm --force'
+
     # Select Docker/Podman containers and stop them
     ealias dstopf='docker ps | fzf --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty docker stop'
     ealias pstopf='podman ps | fzf --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty podman stop'
