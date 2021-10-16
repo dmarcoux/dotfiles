@@ -36,7 +36,7 @@
       cbc = "xsel --clipboard --input"; # Copy to clipboard
       cbp = "xsel --clipboard --output"; # Paste from clipboard
       # With fzf, select a command from the command history and put it without its numeral part in the clipboard
-      cbcf = "fc -rl 1 | fzf --tiebreak=index | sed -E \"s/^ *\([0-9]*\*\?\) *//g\" | cbc";
+      cbcf = "fc -rl 1 | fzf --header='Select command to copy to clipboard' --tiebreak=index | sed -E \"s/^ *\([0-9]*\*\?\) *//g\" | cbc";
       #----- Confirmation
       # Prompt before overwrite
       mv = "mv --interactive";
