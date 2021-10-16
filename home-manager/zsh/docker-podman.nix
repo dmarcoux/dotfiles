@@ -10,29 +10,29 @@
     ealias prunb='podman run -v "$PWD:/app" --net="host" -it ruby:"$(cat .ruby-version)" bash'
 
     # Select a locally available Docker/Podman image and run a new Docker/Podman container based on it
-    ealias drunf='docker image ls | fzf --header-lines=1 | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty docker run'
-    ealias prunf='podman image ls | fzf --header-lines=1 | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty podman run'
+    ealias drunf='docker image ls | fzf --header="Select a Docker image to run a Docker container based on it" --header-lines=1 | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty docker run'
+    ealias prunf='podman image ls | fzf --header="Select a Podman image to run a Podman container based on it" --header-lines=1 | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty podman run'
 
     # Tip: The following aliases are even better when fzf is using this as a default option: --bind ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all
     #      We can quickly select one, multiple or all container(s)
 
     # Select Docker/Podman containers and remove them (with their volumes)
-    ealias drmf='docker ps --all | fzf --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty docker rm --volumes'
-    ealias prmf='podman ps --all | fzf --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty podman rm --volumes'
+    ealias drmf='docker ps --all | fzf --header="Select Docker containers to remove (with their volumes)" --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty docker rm --volumes'
+    ealias prmf='podman ps --all | fzf --header="Select Podman containers to remove (with their volumes)" --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty podman rm --volumes'
 
     # Select Podman pods and remove them (with their containers)
-    ealias pprmf='podman pod ps | fzf --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty podman pod rm --force'
+    ealias pprmf='podman pod ps | fzf --header="Select Podman pods to remove (with their containers)" --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty podman pod rm --force'
 
     # Select Docker/Podman containers and stop them
-    ealias dstopf='docker ps | fzf --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty docker stop'
-    ealias pstopf='podman ps | fzf --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty podman stop'
+    ealias dstopf='docker ps | fzf --header="Select Docker containers to stop" --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty docker stop'
+    ealias pstopf='podman ps | fzf --header="Select Podman containers to stop" --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty podman stop'
 
     # Select a Docker/Podman container and start shell in it
-    ealias dexecf='docker ps | fzf --header-lines=1 --multi | tr --squeeze-repeats " " | rev | cut --delimiter=" " --fields=1 | rev | xargs --no-run-if-empty -I % bash -c "</dev/tty docker exec --interactive --tty % bash --login"'
-    ealias pexecf='podman ps | fzf --header-lines=1 --multi | tr --squeeze-repeats " " | rev | cut --delimiter=" " --fields=1 | rev | xargs --no-run-if-empty -I % bash -c "</dev/tty podman exec --interactive --tty % bash --login"'
+    ealias dexecf='docker ps | fzf --header="Select a Docker container and start shell in it" --header-lines=1 --multi | tr --squeeze-repeats " " | rev | cut --delimiter=" " --fields=1 | rev | xargs --no-run-if-empty -I % bash -c "</dev/tty docker exec --interactive --tty % bash --login"'
+    ealias pexecf='podman ps | fzf --header="Select a Podman container and start shell in it" --header-lines=1 --multi | tr --squeeze-repeats " " | rev | cut --delimiter=" " --fields=1 | rev | xargs --no-run-if-empty -I % bash -c "</dev/tty podman exec --interactive --tty % bash --login"'
 
     # Select Docker/Podman images and remove them
-    ealias drmif='docker image ls | fzf --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=3 | xargs --no-run-if-empty docker rmi --force'
-    ealias prmif='podman image ls | fzf --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=3 | xargs --no-run-if-empty podman rmi --force'
+    ealias drmif='docker image ls | fzf --header="Select Docker images to remove" --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=3 | xargs --no-run-if-empty docker rmi --force'
+    ealias prmif='podman image ls | fzf --header="Select Podman images to remove" --header-lines=1 --multi | tr --squeeze-repeats " " | cut --delimiter=" " --fields=3 | xargs --no-run-if-empty podman rmi --force'
   '';
 }
