@@ -7,7 +7,7 @@
       #!${pkgs.bash}/bin/bash
       # Backup GPG and SSH keys under dotfiles/backup/$HOSTNAME/
 
-      # -e: Exit on commands not found
+      # -e: Exit immediately if a command exits with a non-zero status
       # -u: Exit on unset variables
       # -x: Write to standard error a trace for each command after it expands the command and before it executes it
       set -eux
