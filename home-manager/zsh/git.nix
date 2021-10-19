@@ -132,26 +132,26 @@
         return
       fi
 
-      GITHUB_USERNAME="$(echo "$1" | cut --delimiter=':' --fields=1)"
+      GIT_USERNAME="$(echo "$1" | cut --delimiter=':' --fields=1)"
       BRANCH="$(echo "$1" | cut --delimiter=':' --fields=2)"
-      REMOTE="$(git config remote.origin.url | sed -e "s|:.*/|:$GITHUB_USERNAME/|g")"
+      REMOTE="$(git config remote.origin.url | sed -e "s|:.*/|:$GIT_USERNAME/|g")"
 
       # Add a remote for the fork (if one with the same name doesn't already exist)
-      if ! git remote get-url "$GITHUB_USERNAME" > /dev/null 2>&1; then
-        git remote add "$GITHUB_USERNAME" "$REMOTE"
+      if ! git remote get-url "$GIT_USERNAME" > /dev/null 2>&1; then
+        git remote add "$GIT_USERNAME" "$REMOTE"
       fi
 
       # Fetch branches of the fork
-      git fetch --tags "$GITHUB_USERNAME"
+      git fetch --tags "$GIT_USERNAME"
 
       # Checkout the fork's branch
-      git checkout "$GITHUB_USERNAME"/"$BRANCH"
+      git checkout "$GIT_USERNAME"/"$BRANCH"
 
       # Create a local copy of the fork's branch
       git checkout -b "$BRANCH"
 
       # Set upstream of the branch to be able to pull changes
-      git branch --set-upstream-to="$GITHUB_USERNAME"/"$BRANCH" "$BRANCH"
+      git branch --set-upstream-to="$GIT_USERNAME"/"$BRANCH" "$BRANCH"
     }
   '';
 }
