@@ -38,4 +38,9 @@
 
   # Disable Nvidia Quadro graphics card. This improves the battery life.
   hardware.nvidiaOptimus.disable = true;
+
+  # Fix screen flickering
+  boot.kernelParams = [
+    "i915.enable_psr=0"
+  ];
 }
