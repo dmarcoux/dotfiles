@@ -17,6 +17,10 @@ This repository is structured as follow:
 
 - *nixos*: System configuration which applies to all users and hosts
 
+### Install From Scratch on a New NixOS System
+
+Refer to [INSTALL.md](INSTALL.md).
+
 ### Credits
 
 The blog post [Migration to NixOS](https://www.malloc47.com/migrating-to-nixos/)
