@@ -21,6 +21,10 @@ This repository is structured as follow:
 
 Refer to [INSTALL.md](INSTALL.md).
 
+### How to Update to a New NixOS Version
+
+Refer to [UPDATE.md](UPDATE.md).
+
 ### Credits
 
 The blog post [Migration to NixOS](https://www.malloc47.com/migrating-to-nixos/)
