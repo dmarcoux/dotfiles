@@ -48,6 +48,10 @@ in
   # Install xkbcomp
   environment.systemPackages = [ pkgs.xorg.xkbcomp ];
 
+  # Symlink custom keyboard layout file to /etc/custom-keyboard-layout
+  # Looking for the Nix store path isn't needed when using this file, it's much more convenient
+  environment.etc."custom-keyboard-layout".source = "${customKeyboardLayout}";
+
   # Load custom keyboard layout on boot/resume
   services.xserver.displayManager.sessionCommands = "${pkgs.xorg.xkbcomp}/bin/xkbcomp ${customKeyboardLayout} $DISPLAY";
 
