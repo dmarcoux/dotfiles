@@ -128,6 +128,7 @@
       #   3. Click on program's window
       #   4. Get value of 'WM_CLASS(STRING)' from xprop's output
       assign [class="^Termite$"] → $WS1
+      assign [class="^Alacritty$"] → $WS1
       assign [class="^Code$"] → $WS1
       assign [class="^Steam$"] → $WS1
 
@@ -154,7 +155,7 @@
       for_window [floating] move position center
 
       # Launch terminal
-      exec termite
+      exec alacritty
 
       # Launch web browser
       exec $BROWSER
@@ -192,7 +193,7 @@
       bindsym --release $mod+Shift+C exec --no-startup-id "slock"
 
       # Start a terminal
-      bindsym $mod+Return exec termite
+      bindsym $mod+Return exec alacritty
 
       # Kill the focused window
       bindsym $mod+Shift+Escape kill
