@@ -44,7 +44,7 @@
   # https://github.com/thestinger/termite/issues/1#issuecomment-5973525
   programs.zsh.initExtra = ''
     case "$TERM" in
-      vte*|xterm*)
+      vte*)
         precmd() { print -Pn '\e];zsh: %n@%~\a' } ;;
     esac
   '';
