@@ -50,19 +50,5 @@
     sedp() {
       sed -n "s/^.*\($1\).*$/\1/p"
     }
-
-    # TODO: Have this in a ranger custom command
-    # Combination of touch and mkdir
-    #
-    # $1: path to the new file
-    #
-    # Example: tmk test/1234.txt
-    #          # result:
-    #          #
-    #          # test
-    #          # └── 1234.txt
-    tmk() {
-      mkdir --parents "$(dirname "$1")" > /dev/null 2>&1 && touch "$1"
-    }
   '';
 }
