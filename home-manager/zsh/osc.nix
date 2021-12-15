@@ -34,7 +34,7 @@
 
     # Copy a package from a project to another
     ealias ocp='osc copypac'
-    # TODO: Snippet to copy a package to my local OBS instance 'osc --apiurl=http://localhost:3000 copypac openSUSE.org:home:REMOTE_OBS_USER REMOTE_PACKAGE home:LOCAL_OBS_USER' (this depends on the interconnect)
+    # Snippet to copy a package to my local OBS instance 'osc --apiurl=http://localhost:3000 copypac openSUSE.org:home:REMOTE_OBS_USER REMOTE_PACKAGE home:LOCAL_OBS_USER' (this depends on the interconnect)
 
     # Generates a diff, comparing local changes against the repository server
     ealias odi='osc diff'
@@ -56,7 +56,7 @@
 
     # Submit request to a project
     ealias osr='osc submitrequest'
-    # TODO: Snippet to submit request to openSUSE:Factory 'osr devel:project:abc/the_package openSUSE:Factory'
+    # Snippet to submit request to openSUSE:Factory 'osr devel:project:abc/the_package openSUSE:Factory'
 
     # Show status of files
     ealias ost='osc status'
