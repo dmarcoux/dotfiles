@@ -88,10 +88,6 @@ in
   # `sudo` asks for the root password
   security.sudo.extraConfig = "Defaults rootpw";
 
-  # TODO: Use this with hashedPassword
-  # Prevent adding users/groups with `useradd` and `groupadd`
-  # users.mutableUsers = false;
-
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
