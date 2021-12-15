@@ -16,9 +16,6 @@
         for i in $(seq 1 ''${VALUE}); do
           cd ../
         done
-      else
-        # The value is a directory name
-        # TODO: Find directory in PWD if possible, then cd to it
       fi
     }
 
