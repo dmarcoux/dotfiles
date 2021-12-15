@@ -42,6 +42,8 @@
         # The cursor blinks every 750 milliseconds (this is the default interval)
         style = { blinking = "On"; };
       };
+      # A bit smaller than the default font size of 11.0
+      font = { size = 10.0; };
       key_bindings = [
         # Spawn new instance in the current directory with Ctrl+Shift+T
         { key = "T"; mods = "Control|Shift"; action = "SpawnNewInstance"; }
