@@ -64,6 +64,8 @@
     shellcheck
     # Chat for work
     slack
+    # Instant messaging
+    signal-desktop
     # Collaborative cheatsheets for console commands
     tealdeer
     # Communication platform for work
