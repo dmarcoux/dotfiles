@@ -55,6 +55,13 @@ in
   # Load custom keyboard layout on boot/resume
   services.xserver.displayManager.sessionCommands = "${pkgs.xorg.xkbcomp}/bin/xkbcomp ${customKeyboardLayout} $DISPLAY";
 
+  # FIXME: Load custom keyboard layout when my keyboard is plugged in
+  #   To find the idVendor and idProduct, look for my keyboard in the output of `lsusb`. Connecting and disconnecting the keyboard can help by comparing the output to see what changed.
+  #   Once this is clear, take the two values after `ID`. In this example `Bus 001 Device 012: ID 04d9:a096 Holtek Semiconductor, Inc. Keyboard`, the idVendor and idProduct would be `04d9` and `a096` respectively.
+  # services.udev.extraRules = ''
+  #   ACTION=="add", ATTRS{idVendor}=="04d9", ATTRS{idProduct}=="a096", RUN+="${pkgs.xorg.xkbcomp}/bin/xkbcomp ${customKeyboardLayout} $DISPLAY", OWNER="root"
+  # '';
+
   # Configure the console keymap from the xserver keyboard settings
   console.useXkbConfig = true;
 }
