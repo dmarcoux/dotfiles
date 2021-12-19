@@ -10,5 +10,9 @@
   services.geoclue2.enable = true;
 
   # Enable location with GeoClue2
+  services.geoclue2.appConfig.redshift = {
+    isAllowed = true;
+    isSystem = false;
+  };
   location.provider = "geoclue2";
 }
