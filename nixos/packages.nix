@@ -28,8 +28,6 @@
     gcc
     # For the command make
     gnumake
-    # Without this package, redshift-gtk doesn't have an icon.
-    hicolor-icon-theme
     # Static site generator
     unstable.hugo
     # Digital painting
