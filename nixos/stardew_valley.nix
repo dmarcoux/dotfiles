@@ -12,4 +12,7 @@
       ];
     };
   };
+
+  # To develop Stardew Valley mods (as explained on https://stardewvalleywiki.com/Modding:Modder_Guide/Get_Started#Requirements)
+  environment.systemPackages = [ pkgs.dotnet-sdk_5 ];
 }
