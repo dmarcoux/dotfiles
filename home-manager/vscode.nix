@@ -12,6 +12,7 @@
 # streetsidesoftware.code-spell-checker | Code Spell Checker | Spell checking
 # vscodevim.vim | Vim | Vim emulation
 # vayan.haml | Ruby Haml | Syntax highlighting for Haml files
+# ms-dotnettools.csharp | C# | C# for Visual Studio Code
 
 { unstable, ... }:
 
