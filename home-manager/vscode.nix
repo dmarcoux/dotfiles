@@ -1,19 +1,5 @@
 # User configuration for VS Code
 
-# Installing VS Code extensions with NixOS is possible, but it's quite cumbersome.
-# Constantly changing the versions and sha256 checksums for frequently updated extensions is really annoying
-# I prefer to install extensions in the command line once, then have them update automatically
-#
-# Install with:
-# code --install-extension PUBLISHER.NAME
-#
-# List of extensions with their identifier, name and description
-# vscode-icons-team.vscode-icons | vscode-icons | Icons
-# streetsidesoftware.code-spell-checker | Code Spell Checker | Spell checking
-# vscodevim.vim | Vim | Vim emulation
-# vayan.haml | Ruby Haml | Syntax highlighting for Haml files
-# ms-dotnettools.csharp | C# | C# for Visual Studio Code
-
 { unstable, ... }:
 
 {
@@ -21,6 +7,20 @@
     enable = true;
     # To always have the latest version available on NixOS
     package = unstable.vscode;
+    # Installing a VS Code extension with NixOS is possible if there's a Nix package for it here: https://github.com/NixOS/nixpkgs/blob/master/pkgs/misc/vscode-extensions/default.nix.
+    # If not, it's quite cumbersome due to the constantly changing versions and sha256 checksums for frequently updated extensions.
+    # In this case, I prefer to install extensions in the command line once, then have them update automatically
+    #
+    # Install an extension manually with:
+    # code --install-extension PUBLISHER.NAME
+    #
+    # List of extensions to install manually with their identifier, name and description
+    # vscode-icons-team.vscode-icons | vscode-icons | Icons
+    # vayan.haml | Ruby Haml | Syntax highlighting for Haml files
+    extensions = with unstable.vscode-extensions; [
+      vscodevim.vim # Vim emulation
+      streetsidesoftware.code-spell-checker # Spell checking
+    ];
     keybindings = [
       # Open next editor with "Shift + Right arrow" instead of "Ctrl + Page Down"
       {
