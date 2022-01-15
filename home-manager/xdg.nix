@@ -147,6 +147,7 @@
         "text/x-component" = "nvim.desktop";
         "text/x-crontab" = "nvim.desktop";
         "text/x-csh" = "nvim.desktop";
+        "text/x-csharp" = "nvim.desktop";
         "text/x-csrc" = "nvim.desktop";
         "text/x-csv" = "nvim.desktop";
         "text/x-diff" = "nvim.desktop";
