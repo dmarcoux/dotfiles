@@ -11,9 +11,6 @@
       " Mouse can be used in all modes
       set mouse=a
 
-      " Mappings are recursive, so they will keep evaluating until they hit a dead end (a non-recursive mapping or the last mapping)
-      set remap
-
       " Define extra key combinations with a map leader. For example, to save the current file, define: map <leader>w
       let mapleader=","
 
