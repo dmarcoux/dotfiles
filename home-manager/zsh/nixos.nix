@@ -9,6 +9,7 @@
     # Build, activate and update boot default
     ealias nrs='sudo nixos-rebuild switch'
     # Search for a package
+    ealias ns='nix search'
     ealias nsu='nix search --update-cache'
   '';
 }
