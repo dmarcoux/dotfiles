@@ -15,6 +15,7 @@
       let mapleader=","
 
       " Left and right movements will go to the previous or next line when at start or end of line
+      " https://vim.fandom.com/wiki/Automatically_wrap_left_and_right
       set whichwrap+=<,>,h,l
 
       "---------- Insert Mode
