@@ -18,7 +18,7 @@
     # Create a git commit with a message and open the editor (it skips any git commit message template set in config)
     ealias gcoem='git commit --edit --message'
     ealias gcoma='git commit --amend'
-    ealias gdi='git diff'
+    ealias gdi='git diff --relative' # show diffs relative to the current directory
     # Quickly edit changed files with `vim $(gdino)`
     ealias gdino='git diff --name-only'
     ealias gdis='git diff --staged'
