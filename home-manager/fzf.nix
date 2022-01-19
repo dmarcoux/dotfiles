@@ -38,17 +38,18 @@ in
   };
 
   programs.zsh.initExtra = ''
-    function cd_to_ranger_bookmark() {
+    function cd_to_ranger_bookmark_and_projet_directories() {
       local directory
-      directory=$(cat "${config.xdg.configHome}/ranger/bookmarks" | sed -n "s/.*:\(.*\)$/\1/p" | sort | fzf)
+      # Take the ranger bookmarks, format them before adding all directories under ~/projets to the list of directories to be procesed by fzf
+      directory=$(cat "${config.xdg.configHome}/ranger/bookmarks" | { sed -n "s/.*:\(.*\)$/\1/p"; \ls --directory ~/projets/* } | sort | uniq | fzf)
 
       cd "$directory" || exit
 
       zle && zle reset-prompt
     }
 
-    # Define keybind CTRL+G to cd to ranger bookmark
-    zle -N cd_to_ranger_bookmark
-    bindkey '^g' cd_to_ranger_bookmark
+    # Define keybind CTRL+G to call the function
+    zle -N cd_to_ranger_bookmark_and_projet_directories
+    bindkey '^g' cd_to_ranger_bookmark_and_projet_directories
   '';
 }
