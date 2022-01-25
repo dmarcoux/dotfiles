@@ -58,6 +58,8 @@
     rake
     # Beside work when I need to quickly test something in IRB, I also have Ruby to install gems without relying on the usual Nix way
     ruby
+    # Rust toolchain installer
+    rustup
     # Static analysis tool for shell scripts
     shellcheck
     # Chat for work
