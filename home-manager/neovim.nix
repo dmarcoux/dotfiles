@@ -121,6 +121,10 @@
       set cursorcolumn
       set cursorline
 
+      " Always display the sign column (signs appear when lines are added/modified/deleted, some plugins like also LSP use signs)
+      " Without this setting, it's pretty annoying to always have the text shift to the right whenever the first sign appears
+      set signcolumn=yes
+
       " Show the line number where the cursor is located
       set number
 
