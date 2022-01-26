@@ -40,7 +40,7 @@ in
   programs.zsh.initExtra = ''
     function cd_to_ranger_bookmark_and_projet_directories() {
       local directory
-      # Take the ranger bookmarks, format them before adding all directories under ~/projets to the list of directories to be procesed by fzf
+      # Take the ranger bookmarks, format them before adding all directories under ~/projets to the list of directories to be processed by fzf
       directory=$(cat "${config.xdg.configHome}/ranger/bookmarks" | { sed -n "s/.*:\(.*\)$/\1/p"; \ls --directory ~/projets/* } | sort | uniq | fzf)
 
       cd "$directory" || exit
