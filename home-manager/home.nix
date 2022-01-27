@@ -15,6 +15,7 @@
     ./bat.nix
     ./cbatticon.nix
     ./dircolors.nix
+    ./daps2docker.nix
     ./exa.nix
     ./fd.nix
     ./firefox.nix
