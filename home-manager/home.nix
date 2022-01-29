@@ -39,7 +39,6 @@
     ./ruby.nix
     ./scripts.nix
     ./ssh.nix
-    ./termite.nix
     ./udiskie.nix
     ./xcape.nix
     ./xdg.nix
