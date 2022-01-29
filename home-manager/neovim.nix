@@ -236,6 +236,10 @@
       "---------- wstrip-vim
       " Enable wstrip-vim on all filetypes to remove trailing whitespaces only on changed lines
       let g:wstrip_auto = 1
+
+      "---------- vim-rooter
+      " A root directory will have a `.git` directory
+      let g:rooter_patterns = ['.git']
     '';
 
     # Available plugins: https://github.com/NixOS/nixpkgs/blob/master/pkgs/misc/vim-plugins/vim-plugin-names
