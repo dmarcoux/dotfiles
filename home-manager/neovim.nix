@@ -228,10 +228,21 @@
       " Open tagbar automatically for supported filetypes whenever opening a file
       autocmd FileType * nested :call tagbar#autoopen(0)
 
-      "----------  vim-closetag
-      " Enable vim-closetag for files with the following extensions and types
-      let g:closetag_filenames = '*.html, *.html.erb'
-      let g:closetag_filetypes = 'html, *.html.erb'
+      "---------- pear-tree
+      " Auto-pair backticks (`) in addition to defaults like parentheses and quotes
+      let g:pear_tree_pairs = {
+                  \ '(': {'closer': ')'},
+                  \ '[': {'closer': ']'},
+                  \ '{': {'closer': '}'},
+                  \ "'": {'closer': "'"},
+                  \ '"': {'closer': '"'},
+                  \ '`': {'closer': '`'}
+                  \ }
+
+      " Enable smart pairing (https://github.com/tmsvg/pear-tree/blob/3bb209d9637d6bd7506040b2fcd158c9a7917db3/README.md#smart-pairing)
+      let g:pear_tree_smart_openers = 1
+      let g:pear_tree_smart_closers = 1
+      let g:pear_tree_smart_backspace = 1
 
       "---------- wstrip-vim
       " Enable wstrip-vim on all filetypes to remove trailing whitespaces only on changed lines
@@ -286,11 +297,8 @@
       # Indicate added/modified/removed lines for current file (if it's managed by a version control system)
       vim-signify
 
-      # Auto close HTML tags
-      vim-closetag
-
-      # Insert/Delete brackets, parentheses and quotes in pair
-      auto-pairs
+      # Auto-pair brackets, parentheses, HTML tags, quotes, etc...
+      pear-tree
 
       # Automatically close certain structures like `if`, `do`, `def` in Ruby (and other languages)
       vim-endwise
