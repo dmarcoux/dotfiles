@@ -49,7 +49,6 @@
         };
         fingerprint = {
           "HDMI-1" = "*";
-          "eDP-1" = "*";
         };
       };
       laptop = {
