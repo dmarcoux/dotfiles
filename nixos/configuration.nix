@@ -1,7 +1,7 @@
 # System configuration which applies to all users
 # https://nixos.org/nixos/manual/options.html
 
-{ config, pkgs, ... }:
+{ config, pkgs, options, ... }:
 
 let
   # Setup nixos-unstable channel to allow installation of the latest available packages if needed
@@ -17,7 +17,7 @@ in
     # Pass packages from the stable and unstable channels
     (import ./docker.nix { pkgs = pkgs; unstable = unstable; })
     (import ./packages.nix { pkgs = pkgs; unstable = unstable; })
-    (import ./home-manager.nix { pkgs = pkgs; config = config; unstable = unstable; })
+    (import ./home-manager.nix { pkgs = pkgs; config = config; unstable = unstable; nixos_options = options; })
     ../secrets/certificates/work.nix
     ../secrets/vpn/work.nix
     ./chromium.nix

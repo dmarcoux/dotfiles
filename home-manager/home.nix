@@ -1,7 +1,7 @@
 # User configuration with home-manager
 # https://nix-community.github.io/home-manager/options.html
 
-{ config, pkgs, unstable, ... }:
+{ config, pkgs, unstable, nixos_options, ... }:
 
 {
   imports = [
@@ -24,7 +24,7 @@
     ./git.nix
     ./gnupg.nix
     ./gtk.nix
-    ./i3.nix
+    (import ./i3.nix { pkgs = pkgs; nixos_options = nixos_options; })
     ./i3status.nix
     ./jq.nix
     ./keyboard.nix
