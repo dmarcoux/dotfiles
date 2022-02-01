@@ -41,6 +41,61 @@
         "key" = "ctrl+pageup";
         "command" = "-workbench.action.previousEditor";
       }
+      # Unbind "Ctrl + n" (it normally creates a new untitled file)
+      {
+        "key" = "ctrl+n";
+        "command" = "-workbench.action.files.newUntitledFile";
+      }
+      # Switch to a file (just like buffers in Vim) with "Ctrl + n" (in addition to the default "Ctrl + p")
+      {
+        "key" = "ctrl+n";
+        "command" = "workbench.action.quickOpen";
+      }
+      # Unbind "Ctrl + Tab" (it normally allows switching to another editor/tab)
+      {
+        "key" = "ctrl+tab";
+        "command" = "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup";
+      }
+      # Unbind "Ctrl + j" (it normally toggle the bottom panel, so displaying the problems/output/terminal)
+      {
+        "key" = "ctrl+j";
+        "command" = "-workbench.action.togglePanel";
+      }
+      # Toggle the bottom panel, so displaying the problems/output/terminal with "Ctrl + /"
+      {
+        "key" = "ctrl+/";
+        "command" = "workbench.action.togglePanel";
+      }
+      # Select next auto-completion suggestion with "Ctrl + j"
+      {
+        "key" = "ctrl+j";
+        "command" = "selectNextSuggestion";
+        "when" = "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus";
+      }
+      # Select previous auto-completion suggestion with "Ctrl + k"
+      {
+        "key" = "ctrl+k";
+        "command" = "selectPrevSuggestion";
+        "when" = "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus";
+      }
+      # Accept selected auto-completion suggestion with "Ctrl + l"
+      {
+        "key" = "ctrl+l";
+        "command" = "acceptSelectedSuggestion";
+        "when" = "suggestWidgetVisible && textInputFocus";
+      }
+      # Select next option in "Quick Open" menu with "Ctrl + j"
+      {
+        "key" = "ctrl+j";
+        "command" = "workbench.action.quickOpenSelectNext";
+        "when" = "inQuickOpen";
+      }
+      # Select previous option in "Quick Open" menu with "Ctrl + k"
+      {
+        "key" = "ctrl+k";
+        "command" = "workbench.action.quickOpenSelectPrevious";
+        "when" = "inQuickOpen";
+      }
     ];
     userSettings = {
       # Spell check English, French and German
