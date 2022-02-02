@@ -60,7 +60,9 @@
     initExtra = ''
       # Add $HOME/.npm-packages to $PATH to install npm packages globally with:
       # npm config set prefix "$HOME/.npm-packages"
-      export PATH="$HOME/.npm-packages/bin:$PATH"
+      # Add $HOME/.cargo/bin to $PATH to install cargo packages globally with:
+      # cargo install
+      export PATH="$HOME/.npm-packages/bin:$HOME/.cargo/bin:$PATH"
 
       # Do not print an error message like "zsh: no matches found: something?" if a command with a globbing expression doesn't match anything
       unsetopt nomatch
