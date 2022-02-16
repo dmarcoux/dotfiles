@@ -228,22 +228,6 @@
       " Open tagbar automatically for supported filetypes whenever opening a file
       autocmd FileType * nested :call tagbar#autoopen(0)
 
-      "---------- pear-tree
-      " Auto-pair backticks (`) in addition to defaults like parentheses and quotes
-      let g:pear_tree_pairs = {
-                  \ '(': {'closer': ')'},
-                  \ '[': {'closer': ']'},
-                  \ '{': {'closer': '}'},
-                  \ "'": {'closer': "'"},
-                  \ '"': {'closer': '"'},
-                  \ '`': {'closer': '`'}
-                  \ }
-
-      " Enable smart pairing (https://github.com/tmsvg/pear-tree/blob/3bb209d9637d6bd7506040b2fcd158c9a7917db3/README.md#smart-pairing)
-      let g:pear_tree_smart_openers = 1
-      let g:pear_tree_smart_closers = 1
-      let g:pear_tree_smart_backspace = 1
-
       "---------- wstrip-vim
       " Enable wstrip-vim on all filetypes to remove trailing whitespaces only on changed lines
       let g:wstrip_auto = 1
@@ -298,10 +282,8 @@
       vim-signify
 
       # Auto-pair brackets, parentheses, HTML tags, quotes, etc...
-      pear-tree
-
       # Automatically close certain structures like `if`, `do`, `def` in Ruby (and other languages)
-      vim-endwise
+      lexima-vim
 
       # Remove trailing whitespaces only on changed lines
       wstrip-vim
