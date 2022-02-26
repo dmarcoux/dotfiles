@@ -1,7 +1,7 @@
 {
   programs.zsh.initExtra = ''
-    # Delete all old generations of all profiles
-    ealias ncgd='sudo nix-collect-garbage --delete-old'
+    # Delete all generations older than 14 days for all profiles
+    ealias ncgd='sudo nix-collect-garbage --delete-older-than 14d'
     # List subscribed channels
     ealias ncl='sudo nix-channel --list'
     # Update and activate channels
