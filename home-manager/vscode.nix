@@ -21,6 +21,7 @@
       vscodevim.vim # Vim emulation
       streetsidesoftware.code-spell-checker # Spell checking
       matklad.rust-analyzer # Language Server Protocol for Rust (auto-completion)
+      bradlc.vscode-tailwindcss # IntelliSense for Tailwind CSS
     ];
     keybindings = [
       # Open next editor with "Shift + Right arrow" instead of "Ctrl + Page Down"
