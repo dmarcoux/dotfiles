@@ -7,7 +7,7 @@
     enable = true;
     # To always have the latest version available on NixOS
     package = unstable.vscode;
-    # Installing a VS Code extension with NixOS is possible if there's a Nix package for it here: https://github.com/NixOS/nixpkgs/blob/master/pkgs/misc/vscode-extensions/default.nix.
+    # Installing a VS Code extension with NixOS is possible if there's a Nix package for it here: https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/editors/vscode/extensions/default.nix
     # If not, it's quite cumbersome due to the constantly changing versions and sha256 checksums for frequently updated extensions.
     # In this case, I prefer to install extensions in the command line once, then have them update automatically
     #
