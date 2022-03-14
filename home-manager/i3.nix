@@ -138,6 +138,7 @@
       assign [class="^Firefox$"] → $WS2
       assign [class="^Slack$"] → $WS2
       assign [class="^Element$"] → $WS2
+      assign [class="^Chromium-browser$"] → $WS2
 
       assign [class="^discord$"] → $WS3
       assign [class="^Mumble$"] → $WS3
@@ -146,7 +147,6 @@
 
       assign [class="^Thunderbird$"] → $WS4
 
-      assign [class="^Chromium-browser$"] → $WS5
       assign [class="^MellowPlayer3$"] → $WS5
 
       # Applications to start in floating mode
