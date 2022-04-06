@@ -40,6 +40,9 @@
         default = "current";
         followTags = true;
       };
+      rebase = {
+        autoSquash = true;
+      };
       stash = { showPatch = true; };
       status = { showUntrackedFiles = "all"; };
       user = {
