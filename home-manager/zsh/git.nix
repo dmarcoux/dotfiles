@@ -13,6 +13,8 @@
     ealias gclo='git clone'
     # Create a git commit (it will use any git commit message template set in config)
     ealias gco='git commit'
+    # Select a commit with fzf for which a commit fixup is going to be created with the current staged changes
+    ealias gcof='glo | fzf --ansi --no-sort | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty git commit --fixup'
     # Create a git commit with message (it skips any git commit message template set in config)
     ealias gcom='git commit --message'
     # Create a git commit with a message and open the editor (it skips any git commit message template set in config)
