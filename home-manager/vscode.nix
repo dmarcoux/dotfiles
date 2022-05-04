@@ -152,9 +152,9 @@
       # Do not show release notes after an update
       "update.showReleaseNotes" = false;
       # Highlight copied/yanked region in red for 1 second
-      vim.highlightedyank.enable = true;
-      vim.highlightedyank.duration = 1000; # milliseconds
-      vim.highlightedyank.textColor = "red";
+      "vim.highlightedyank.enable" = true;
+      "vim.highlightedyank.duration" = 1000; # milliseconds
+      "vim.highlightedyank.textColor" = "red";
       # Handle (or not) keys in the vim extension
       "vim.handleKeys" = {
         # Do not handle "Ctrl + w" in the vim extension, it's used in closing tabs/editors in VS Code
