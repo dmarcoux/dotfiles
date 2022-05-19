@@ -144,6 +144,7 @@
       assign [class="^Mumble$"] → $WS3
       assign [class="^Microsoft Teams - Preview"] → $WS3
       assign [class="^Signal$"] → $WS3
+      assign [class="^Zulip$"] → $WS3
 
       assign [class="^Thunderbird$"] → $WS4
 

@@ -108,5 +108,7 @@
     zeal
     # Compress files in Zip archives
     zip
+    # Chat often used by opensource projects
+    zulip
   ];
 }
