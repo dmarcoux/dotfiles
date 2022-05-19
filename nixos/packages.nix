@@ -14,6 +14,8 @@
     atool
     # For DNS commands dig and nslookup
     bind
+    # For the command `ar`, which creates, modifies, and extracts from archives
+    bintools-unwrapped
     # Manage eBook library
     calibre
     # Voice, video, and text chat
