@@ -18,6 +18,8 @@
     bintools-unwrapped
     # Manage eBook library
     calibre
+    # Cross-platform build automation system
+    cmake
     # Voice, video, and text chat
     discord
     # Keep Docker login credentials in pass
