@@ -135,7 +135,7 @@
       assign [class="^Code$"] → $WS1
       assign [class="^Steam$"] → $WS1
 
-      assign [class="^Firefox$"] → $WS2
+      assign [class="^firefox$"] → $WS2
       assign [class="^Slack$"] → $WS2
       assign [class="^Element$"] → $WS2
       assign [class="^Chromium-browser$"] → $WS2
