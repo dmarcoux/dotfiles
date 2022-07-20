@@ -104,8 +104,6 @@
     xournalpp
     # Get and set the X selection (like changing the clipboard)
     xsel
-    # Provides ykman CLI for configuring any YubiKey over all USB interfaces
-    yubikey-manager
     # Barcode and QR code reader
     zbar
     # Offline documentation browser for software engineers
