@@ -153,6 +153,7 @@
       # Applications to start in floating mode
       for_window [class="^Galculator$"] floating enable
       for_window [class="^Vncviewer$"] floating enable
+      for_window [class="^Yubico Authenticator$"] floating enable
 
       # Prevent certain applications from stealing focus
       no_focus [class="^Microsoft Teams"]
