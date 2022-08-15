@@ -16,9 +16,9 @@
         disabledTrayIcon = false;
         drawColor = "#ff0000";
         drawThickness = 1;
+        saveAsFileExtension = "png";
         savePath = "/home/dany/pictures";
         savePathFixed = "false";
-        setSaveAsFileExtension = "Portable Network Graphic file (PNG) (*.png)";
         showStartupLaunchMessage = "false";
       };
     };
