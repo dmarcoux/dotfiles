@@ -10,7 +10,7 @@
   services.clipmenu.enable = true;
 
   # Add font-awesome to fonts for icons in workspace names
-  fonts.fonts = with pkgs; [ font-awesome-ttf ];
+  fonts.fonts = with pkgs; [ font-awesome ];
 
   services.autorandr = {
     # Handle hotplug and sleep events for monitors with autorandr

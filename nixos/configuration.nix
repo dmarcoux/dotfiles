@@ -46,7 +46,7 @@ in
 
   # Install documentation targeted at developers
   documentation.dev.enable = true;
-  environment.systemPackages = [ pkgs.manpages ];
+  environment.systemPackages = [ pkgs.man-pages ];
 
   # Enable a basic set of fonts providing several font styles and families and reasonable coverage of Unicode
   fonts.enableDefaultFonts = true;
@@ -95,4 +95,7 @@ in
   # servers. You should change this only after NixOS release notes say you
   # should
   system.stateVersion = "19.09";
+
+  # TODO: https://github.com/NixOS/nixpkgs/issues/180175
+  systemd.services.NetworkManager-wait-online.enable = false;
 }
