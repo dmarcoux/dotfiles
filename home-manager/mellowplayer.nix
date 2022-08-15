@@ -1,10 +1,10 @@
 # User configuration for MellowPlayer
 
-{ unstable, ... }:
+{ pkgs, ... }:
 
 {
-  # Install MellowPlayer (using unstable since it's often updated)
-  home.packages = [ unstable.mellowplayer ];
+  # Install MellowPlayer
+  home.packages = [ pkgs.mellowplayer ];
 
   # Configure MellowPlayer
   xdg.configFile."MellowPlayer/MellowPlayer3.conf".text = ''

@@ -5,7 +5,6 @@
 
 {
   imports = [
-    (import ./mellowplayer.nix { unstable = unstable; })
     (import ./neovim.nix { pkgs = pkgs; unstable = unstable; })
     (import ./starship.nix { unstable = unstable; })
     (import ./vscode.nix { unstable = unstable; })
@@ -28,6 +27,7 @@
     ./i3status.nix
     ./jq.nix
     ./keyboard.nix
+    ./mellowplayer.nix
     ./network-manager.nix
     ./password-store.nix
     ./pasystray.nix
