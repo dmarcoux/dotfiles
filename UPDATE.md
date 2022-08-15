@@ -1,9 +1,14 @@
 ### How to Update to a New NixOS Version
 
-Change Nix channels by overwriting them (replace `VERSION_NUMBER` with the new version):
+Change Nix channels by overwriting them (replace `VERSION_NUMBER` with the new version).
 
+- home-manager:
 ```
 sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
+```
+
+- nixos:
+```
 sudo nix-channel --add https://nixos.org/channels/nixos-VERSION_NUMBER nixos
 ```
 
