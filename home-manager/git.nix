@@ -11,6 +11,7 @@
   programs.git = {
     # Install git
     enable = true;
+    package = pkgs.gitFull;
 
     # Install and setup delta (https://github.com/dandavison/delta)
     delta = {
