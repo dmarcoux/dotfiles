@@ -7,7 +7,7 @@
 
     # Start a Docker/Podman container for projects without a Docker/Podman setup (ports are mapped directly on the host, so anything running inside the container is accessible on the host)
     ealias drunb='docker run -v "$PWD:/app" --net="host" -it ruby:"$(cat .ruby-version)" bash'
-    ealias prunb='podman run -v "$PWD:/app" --net="host" -it ruby:"$(cat .ruby-version)" bash'
+    ealias prunb='podman run --userns=keep-id -v "$PWD:/app" --env HOME=/app --workdir=/app --rm --net="host" -it ruby:"$(cat .ruby-version)" bash'
 
     # Select a locally available Docker/Podman image and run a new Docker/Podman container based on it
     ealias drunf='docker image ls | fzf --header="Select a Docker image to run a Docker container based on it" --header-lines=1 | tr --squeeze-repeats " " | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty docker run'
