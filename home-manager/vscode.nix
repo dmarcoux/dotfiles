@@ -20,9 +20,7 @@
     extensions = with unstable.vscode-extensions; [
       vscodevim.vim # Vim emulation
       streetsidesoftware.code-spell-checker # Spell checking
-      matklad.rust-analyzer # Language Server Protocol for Rust (auto-completion)
-      # TODO: NixOS 22.05 - Replace line with `matklad.rust-analyzer` by the line below
-      # rust-lang.rust-analyzer # Language Server Protocol for Rust (auto-completion)
+      rust-lang.rust-analyzer # Language Server Protocol for Rust (auto-completion)
       bradlc.vscode-tailwindcss # IntelliSense for Tailwind CSS
     ];
     keybindings = [
