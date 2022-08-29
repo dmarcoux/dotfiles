@@ -53,7 +53,7 @@
     };
 
     # List of paths that should be globally ignored
-    ignores = [ "*.swp" "shell.nix" ];
+    ignores = [ "*.swp" "shell.nix" ".bash_history" ];
 
     # Install and setup git-lfs
     lfs.enable = true;
