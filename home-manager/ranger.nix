@@ -113,13 +113,14 @@
 
   # List of bookmarks
   xdg.configFile."ranger/bookmarks".text = ''
-    m:/home/dany/music
+    a:/home/dany/.config
+    b:/home/dany/.config/password-store
+    c:/home/dany/dotfiles
     d:/home/dany/downloads
-    c:/home/dany/.config
-    p:/home/dany/pictures
-    P:/home/dany/.config/password-store
-    v:/home/dany/videos
-    D:/home/dany/dotfiles
+    e:/home/dany/music
+    f:/home/dany/pictures
+    g:/home/dany/projets
+    h:/home/dany/videos
   '';
 
   programs.zsh.initExtra = ''
