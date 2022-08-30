@@ -50,6 +50,14 @@
 
     # Do not store the last directory in the bookmarks
     set save_backtick_bookmark false
+
+    # Setting this to `true` helps in keeping bookmarks synchronized
+    # between ranger instances, but I don't need this feature since I
+    # never update bookmarks inside ranger itself. They are instead
+    # configured with Nix.
+    #
+    # Save bookmarks only when ranger exits
+    set autosave_bookmarks false
   '';
 
   # Custom ranger commands
@@ -108,12 +116,9 @@
     m:/home/dany/music
     d:/home/dany/downloads
     c:/home/dany/.config
-    p:/home/dany/projets
+    p:/home/dany/pictures
     P:/home/dany/.config/password-store
-    e:/home/dany/projets/documents-emplois
-    O:/home/dany/projets/obs
     v:/home/dany/videos
-    o:/home/dany/projets/open-build-service
     D:/home/dany/dotfiles
   '';
 
