@@ -31,6 +31,7 @@
     ./password-store.nix
     ./pasystray.nix
     ./picom.nix
+    ./playerctl.nix
     ./ranger.nix
     ./redshift.nix
     ./ripgrep.nix

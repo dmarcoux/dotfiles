@@ -231,6 +231,13 @@
       # Start rofi frontend to clipboard manager (matching clipboard entries case insensitively with `-i` option passed to dmenu)
       bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu -i -p 'clipboard'
 
+      # Control media players with media keys
+      bindsym XF86AudioPlay exec playerctl play-pause
+      bindsym XF86AudioPause exec playerctl play-pause
+      bindsym XF86AudioStop exec playerctl stop
+      bindsym XF86AudioNext exec playerctl next
+      bindsym XF86AudioPrev exec playerctl previous
+
       # Change focus
       bindsym $mod+h focus left
       bindsym $mod+j focus down
