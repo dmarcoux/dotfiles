@@ -70,6 +70,8 @@
     slack
     # Instant messaging
     signal-desktop
+    # Client for Spotify
+    spotify
     # Collaborative cheatsheets for console commands
     tealdeer
     # Communication platform for work

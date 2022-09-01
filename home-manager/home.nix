@@ -27,7 +27,6 @@
     ./i3status.nix
     ./jq.nix
     ./keyboard.nix
-    ./mellowplayer.nix
     ./network-manager.nix
     ./password-store.nix
     ./pasystray.nix
