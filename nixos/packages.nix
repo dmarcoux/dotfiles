@@ -26,6 +26,8 @@
     docker-credential-helpers
     # IRC client through Matrix bridges
     element-desktop
+    # Functional, meta-programming aware language built on top of the Erlang VM
+    elixir_1_14
     # Simple calculator
     galculator
     # Compiler
