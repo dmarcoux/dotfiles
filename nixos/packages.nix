@@ -16,8 +16,6 @@
     bind
     # For the command `ar`, which creates, modifies, and extracts from archives
     bintools-unwrapped
-    # Manage eBook library
-    calibre
     # Cross-platform build automation system
     cmake
     # Voice, video, and text chat
@@ -28,6 +26,8 @@
     element-desktop
     # Functional, meta-programming aware language built on top of the Erlang VM
     elixir_1_14
+    # Ebook reader
+    foliate
     # Simple calculator
     galculator
     # Compiler
