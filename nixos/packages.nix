@@ -24,7 +24,7 @@
     docker-credential-helpers
     # IRC client through Matrix bridges
     element-desktop
-    # Functional, meta-programming aware language built on top of the Erlang VM
+    # Functional, meta-programming aware language built on top of the Erlang VM. Useful wehn I need to quickly test something in IEx
     elixir_1_14
     # Ebook reader
     foliate
