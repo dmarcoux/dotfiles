@@ -31,8 +31,6 @@ in
     ./podman.nix
     ./printing.nix
     ./redshift.nix
-    ./stardew_valley.nix
-    ./steam.nix
     ./unclutter.nix
     ./virtualbox.nix
     ./vscode.nix

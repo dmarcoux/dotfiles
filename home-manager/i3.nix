@@ -133,7 +133,6 @@
       #   4. Get value of 'WM_CLASS(STRING)' from xprop's output
       assign [class="^Alacritty$"] → $WS1
       assign [class="^Code$"] → $WS1
-      assign [class="^Steam$"] → $WS1
 
       assign [class="^firefox$"] → $WS2
       assign [class="^Slack$"] → $WS2
@@ -159,7 +158,6 @@
 
       # Prevent certain applications from stealing focus
       no_focus [class="^Microsoft Teams"]
-      no_focus [class="^Steam$"]
 
       # Center floating windows in the workspace in which they appear
       for_window [floating] move position center
