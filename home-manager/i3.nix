@@ -145,7 +145,7 @@
       assign [class="^Signal$"] → $WS3
       assign [class="^Zulip$"] → $WS3
 
-      assign [class="^Thunderbird$"] → $WS4
+      assign [class="^thunderbird$"] → $WS4
 
       # "assign" doesn't work for the Spotify client since it's not correctly setting the hints when mapping the window
       # https://github.com/i3/i3/issues/2060
