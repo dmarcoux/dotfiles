@@ -53,6 +53,7 @@
     };
 
     # List of paths that should be globally ignored
+    # While those files are usually never tracked, adding them is still possible with `git add --force filename`
     ignores = [ "*.swp" "shell.nix" ".bash_history" ];
 
     # Install and setup git-lfs
