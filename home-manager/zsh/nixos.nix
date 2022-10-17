@@ -11,5 +11,7 @@
     # Search for a package
     ealias ns='nix search'
     ealias nsu='nix search --update-cache'
+    # Start a pure nix-shell
+    ealias nsp='nix-shell --pure'
   '';
 }
