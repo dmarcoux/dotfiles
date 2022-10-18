@@ -152,6 +152,7 @@
         "text/x-csv" = "nvim.desktop";
         "text/x-diff" = "nvim.desktop";
         "text/x-dsrc" = "nvim.desktop";
+        "text/x-elixir" = "nvim.desktop";
         "text/x-fortran" = "nvim.desktop";
         "text/x-haskell" = "nvim.desktop";
         "text/x-java-source" = "nvim.desktop";
