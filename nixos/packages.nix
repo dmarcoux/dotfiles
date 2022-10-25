@@ -79,7 +79,8 @@
     # Communication platform for work
     teams
     # Emails and agenda
-    thunderbird-bin
+    # Using unstable for the TbSync plugin to work (it needs at least Thunderbird 102.0.3)
+    unstable.thunderbird-bin
     # Remote desktop viewer
     tigervnc
     # Convert between two units of measure
