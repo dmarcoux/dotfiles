@@ -17,6 +17,8 @@
       "browser.search.suggest.enabled" = false;
       "browser.shell.checkDefaultBrowser" = false;
       "browser.startup.homepage" = "about:blank";
+      # Disable the Firefox View feature
+      "browser.tabs.firefox-view" = false;
       "browser.urlbar.placeholderName" = "DuckDuckGo";
       "browser.urlbar.placeholderName.private" = "DuckDuckGo";
       "browser.urlbar.suggest.history" = false;
