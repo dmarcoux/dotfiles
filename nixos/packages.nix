@@ -70,8 +70,6 @@
     shellcheck
     # Chat for work
     slack
-    # Instant messaging
-    signal-desktop
     # Client for Spotify
     spotify
     # Collaborative cheatsheets for console commands
@@ -93,8 +91,6 @@
     update-resolv-conf
     # List USB devices with lsusb
     usbutils
-    # Build and manage virtual machine (VM) environments
-    vagrant
     # Image viewer
     viewnior
     # Multimedia player
@@ -115,7 +111,5 @@
     zeal
     # Compress files in Zip archives
     zip
-    # Chat often used by opensource projects
-    zulip
   ];
 }
