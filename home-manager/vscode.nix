@@ -22,6 +22,8 @@
       streetsidesoftware.code-spell-checker # Spell checking
       rust-lang.rust-analyzer # Language Server Protocol for Rust (auto-completion)
       bradlc.vscode-tailwindcss # IntelliSense for Tailwind CSS
+      elixir-lsp.vscode-elixir-ls # Elixir support with debugger, autocomplete, and more. Powered by ElixirLS
+      phoenixframework.phoenix # Syntax highlighting support for HEEx / Phoenix templates
     ];
     keybindings = [
       # Open next editor with "Shift + Right arrow" instead of "Ctrl + Page Down"
