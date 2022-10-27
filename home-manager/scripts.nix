@@ -7,6 +7,5 @@
     ./scripts/rofi-pass-username.nix
     ./scripts/rofi-pass.nix
     ./scripts/set-custom-keyboard-layout.nix
-    ./scripts/set-display-to-grayscale.nix
   ];
 }
