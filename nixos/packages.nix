@@ -76,6 +76,8 @@
     tealdeer
     # Communication platform for work
     teams
+    # For the `tree` command which shows the contents of the current directory as a tree
+    tree
     # Emails and agenda
     # Using unstable for the TbSync plugin to work (it needs at least Thunderbird 102.0.3)
     unstable.thunderbird-bin
