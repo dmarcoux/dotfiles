@@ -157,13 +157,6 @@
       " Ignore case when searching
       set ignorecase
 
-      "-------------------- Space, Tabs & Indentation
-      " An indent is automatically inserted:
-      "- After a line ending in '{'.
-      "- After a line starting with a keyword from this list: if, else, while, do, for, switch
-      "- Before a line starting with '}' (only with the 'O' command).
-      set smartindent
-
       "-------------------- History, Backup & System
       " Hide buffers, instead of closing them.
       " Having unwritten changes in a file and opening a new file using :e, won't force saving or undoing changes first.
