@@ -20,7 +20,8 @@ in
 {
   programs.fzf = {
     enable = true;
-    # Default command for the ALT+C key binding (using the default 'fd' command)
+    # Default command for the ALT+C key binding
+    # Only list directories which aren't ignored by VCS. The `.git` directory is always ignored.
     changeDirWidgetCommand = "command fd --hidden --type directory --exclude .git";
     # Default command to use when input is tty (using the default 'fd' command)
     defaultCommand = "command fd --hidden --type file --no-ignore-vcs --exclude .git";
