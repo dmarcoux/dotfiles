@@ -230,7 +230,7 @@
       let g:rooter_patterns = ['.git']
     '';
 
-    # Available plugins: https://github.com/NixOS/nixpkgs/blob/master/pkgs/misc/vim-plugins/vim-plugin-names
+    # Available plugins: https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/editors/vim/plugins/vim-plugin-names
     # Any dot in the vim plugin names is replaced by a dash when listed below. Example: `fzf.vim` becomes `fzf-vim`.
     plugins = with pkgs.vimPlugins; [
       #---------- Efficiency Plugins
