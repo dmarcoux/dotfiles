@@ -153,6 +153,7 @@
       for_window [class="^Galculator$"] floating enable
       for_window [class="^Vncviewer$"] floating enable
       for_window [class="^Yubico Authenticator$"] floating enable
+      for_window [class="^Erlang$"] floating enable # Example of a window with the Erlang class is the Erlang Observer
 
       # Prevent certain applications from stealing focus
       no_focus [class="^Microsoft Teams"]
