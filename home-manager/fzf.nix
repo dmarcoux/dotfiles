@@ -23,11 +23,14 @@ in
     # Default command for the ALT+C key binding
     # Only list directories which aren't ignored by VCS. The `.git` directory is always ignored.
     changeDirWidgetCommand = "command fd --hidden --type directory --exclude .git";
-    # Default command to use when input is tty (using the default 'fd' command)
-    defaultCommand = "command fd --hidden --type file --no-ignore-vcs --exclude .git";
+    # Default command to use when input is tty
+    # Only list files which aren't ignored by VCS. Files under the `.git` directory are always ignored.
+    defaultCommand = "command fd --hidden --type file --exclude .git";
     defaultOptions = [
       # Keybinds to select, deselect and toggle all results
       "--bind ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all"
+      # When fzf is opened, press Ctrl-f to show all files, even those ignored by VCS. Press Ctrl-g to revert this.
+      "--bind 'ctrl-f:reload(${config.programs.fzf.defaultCommand} --no-ignore-vcs),ctrl-g:reload(${config.programs.fzf.defaultCommand})'"
       # Default layout (fullscreen and input from top)
       "--min-height=100 --reverse"
       # Default colors
