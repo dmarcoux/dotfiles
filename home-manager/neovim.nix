@@ -216,12 +216,12 @@
       " Display the fzf window at the bottom of the screen with 40% of the available height
       let g:fzf_layout = { 'down': '40%' }
 
-      "---------- NeoSolarized
+      "---------- nvim-solarized-lua
       " Use light version of colorscheme
       set background=light
 
-      " Set NeoSolarized colorscheme if it's installed (otherwise it fails silently)
-      silent! colorscheme NeoSolarized
+      " Set colorscheme if it's installed (otherwise it fails silently)
+      silent! colorscheme solarized
 
       "---------- tagbar
       " Open tagbar automatically for supported filetypes whenever opening a file
@@ -289,7 +289,7 @@
 
       #---------- Colorscheme Plugins
       # Solarized light and dark colorscheme
-      NeoSolarized
+      nvim-solarized-lua
 
       #---------- Language Plugins
       # A collection of language plugins (150+ languages)
