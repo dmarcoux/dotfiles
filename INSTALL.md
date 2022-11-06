@@ -47,7 +47,7 @@ Set my GPG and SSH keys with `restore-backup-keys` script
 Clone the dotfiles repository
 
 ```
-git clone git@github.com:dmarcoux/dotfiles-nixos.git ~/dotfiles
+git clone git@github.com:dmarcoux/dotfiles.git ~/dotfiles
 ```
 
 Setup `secrets` gitsubmodule
@@ -71,7 +71,7 @@ sudo nix-channel --update
 Clone the dotfiles repository
 
 ```
-git clone http://github.com/dmarcoux/dotfiles-nixos ~/dotfiles
+git clone http://github.com/dmarcoux/dotfiles ~/dotfiles
 ```
 
 Go to the dotfiles directory

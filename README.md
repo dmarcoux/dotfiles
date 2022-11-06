@@ -1,4 +1,4 @@
-# <a href="https://github.com/dmarcoux/dotfiles-nixos">dmarcoux/dotfiles-nixos</a>
+# <a href="https://github.com/dmarcoux/dotfiles">dmarcoux/dotfiles</a>
 
 I decided to create this repo to backup my dotfiles, but also to share what I
 use. Sharing my dotfiles is important to me as it is a way to give back to the
