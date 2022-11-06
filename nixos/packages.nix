@@ -72,6 +72,8 @@
     shellcheck
     # Chat for work
     slack
+    # Ruby Language Server
+    unstable.rubyPackages.solargraph
     # Client for Spotify
     spotify
     # Collaborative cheatsheets for console commands
