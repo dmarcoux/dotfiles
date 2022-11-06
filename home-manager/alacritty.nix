@@ -45,8 +45,8 @@
       # A bit smaller than the default font size of 11.0
       font = { size = 10.0; };
       key_bindings = [
-        # Spawn new instance in the current directory with Ctrl+Shift+T
-        { key = "T"; mods = "Control|Shift"; action = "SpawnNewInstance"; }
+        # Create new window in the current directory with Ctrl+Shift+T
+        { key = "T"; mods = "Control|Shift"; action = "CreateNewWindow"; }
       ];
       # The mouse cursor is temporarily hidden when typing
       mouse = { hide_when_typing = true; };
