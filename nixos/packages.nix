@@ -26,7 +26,7 @@
     element-desktop
     # Functional, meta-programming aware language built on top of the Erlang VM. Useful wehn I need to quickly test something in IEx
     elixir_1_14
-    # Elixir Language Server provides a server that runs in the background, providing IDEs, editors, and other tools with information about Elixir Mix projects
+    # Elixir Language Server
     unstable.elixir_ls
     # Ebook reader
     foliate
