@@ -4,6 +4,8 @@
     ealias ga='git add'
     # List branches
     ealias gbra='git branch'
+    # Delete a branch
+    ealias gbrad='git branch -D'
     ealias gchp='git cherry-pick'
     ealias gcko='git checkout'
     # Create a new branch from current branch
