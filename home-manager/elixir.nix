@@ -4,6 +4,8 @@
   home.sessionVariables = {
     # In IEx, use Neovim whenever opening files with `open` (see `h open` for details)
     ELIXIR_EDITOR = "nvim +__LINE__ __FILE__";
+    # Persist history of the IEx (Elixir) and erl (Erlang) shells
+    ERL_AFLAGS = "-kernel shell_history enabled";
   };
 
   # Configure IEx - https://hexdocs.pm/iex/IEx.html#configure/1
