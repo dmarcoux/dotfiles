@@ -7,7 +7,7 @@
 
   programs.zsh.initExtra = ''
     # For the current branch, open the web browser to create a pull request on GitHub
-    ealias ghpr = "gh pr create --web"
+    ealias ghpr='gh pr create --web'
 
     # Fork a Git repository. It clones the repository, creates the fork on GitHub and sets remotes
     # This is function is only to have something more convenient to type and be consistent in how I setup forks
