@@ -36,8 +36,6 @@
     gcc
     # For the command make
     gnumake
-    # Static site generator
-    unstable.hugo
     # Interface to inotify, which can be used to monitor and act upon filesystem events
     inotify-tools
     # Digital painting
