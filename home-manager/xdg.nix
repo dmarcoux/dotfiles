@@ -36,6 +36,7 @@
         "application/javascript" = "nvim.desktop";
         "application/json" = "nvim.desktop";
         "application/pdf" = "org.gnome.Evince.desktop";
+        "application/toml" = "nvim.desktop";
         # .odt - Libre Office Writer
         "application/vnd.oasis.opendocument.text" = "writer.desktop";
         # .docx - Libre Office Writer
