@@ -28,6 +28,8 @@
     elixir_1_14
     # Elixir Language Server
     unstable.elixir_ls
+    # CLI for https://exercism.org - Solve coding exercises and get mentored to gain true fluency in your chosen programming languages
+    unstable.exercism
     # Ebook reader
     foliate
     # Simple calculator
