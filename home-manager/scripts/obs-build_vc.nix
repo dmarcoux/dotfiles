@@ -176,10 +176,9 @@
     '';
   };
 
-  # TODO The osc package doesn't build anymore in NixOS 22.11
   # Change osc's default path to the vc script
-  # home.activation.osc_config_general_vc-cmd = lib.hm.dag.entryAfter ["writeBoundary"] ''
-  #   $DRY_RUN_CMD ${pkgs.python37Packages.osc}/bin/osc config general vc-cmd /home/dany/bin/vc
-  # '';
+  home.activation.osc_config_general_vc-cmd = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    $DRY_RUN_CMD ${pkgs.python310Packages.osc}/bin/osc config general vc-cmd /home/dany/bin/vc
+  '';
 
 }
