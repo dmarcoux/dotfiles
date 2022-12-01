@@ -47,7 +47,7 @@
     # Voice chat for work
     mumble
     # Expose localhost to the Internet (useful for web development)
-    ngrok-2
+    ngrok
     # Generate a database index of all files in my channels, then locate with nix-locate which packages contain these files
     nix-index
     # For coc.nvim, which provides auto-completion in Neovim

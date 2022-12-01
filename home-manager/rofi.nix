@@ -20,8 +20,9 @@
       matching = "fuzzy";
       # Unbind this as it is normally Control+k, which I need for vim keybindings
       kb-remove-to-eol = "";
-      # Unbind this as it is normally Tab, which I need to select an entry
+      # Unbind these as they are normally Tab, which I need to select an entry
       kb-row-tab = "";
+      kb-element-next = "";
       # Select entry
       kb-accept-entry = "Return,Tab";
       # Go to previous entry

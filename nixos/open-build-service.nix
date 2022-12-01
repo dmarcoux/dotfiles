@@ -4,7 +4,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    python37Packages.osc
+    # TODO This package doesn't build anymore in NixOS 22.11
+    # python37Packages.osc
     # TODO Package this - https://pypi.org/project/spec_cleaner/
     # spec-cleaner
   ];
