@@ -1,6 +1,11 @@
+# User configuration for maintaining the Open Build Service
+
 { pkgs, lib, ... }:
 
 {
+  # Install osc (when updating this, do not forget to change other package reference below in `home.activation`)
+  home.packages = [ pkgs.python310Packages.osc ];
+
   # Script from https://github.com/openSUSE/obs-build/blob/master/vc with minor adjustments to work on NixOS
   home.file."bin/vc" = {
     executable = true;

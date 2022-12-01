@@ -29,6 +29,7 @@
     ./jq.nix
     ./keyboard.nix
     ./network-manager.nix
+    ./open-build-service.nix
     ./password-store.nix
     ./pasystray.nix
     ./picom.nix
