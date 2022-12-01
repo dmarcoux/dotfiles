@@ -1,28 +1,39 @@
 ### How to Update to a New NixOS Version
 
-Change Nix channels by overwriting them (replace `VERSION_NUMBER` with the new version).
+1. Change Nix channels by overwriting them (replace `VERSION_NUMBER` with the new version)
 
-- home-manager:
-```
-sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
-```
+    - NixOS:
 
-- nixos:
-```
-sudo nix-channel --add https://nixos.org/channels/nixos-VERSION_NUMBER nixos
-```
+      ```bash
+      sudo nix-channel --add https://nixos.org/channels/nixos-VERSION_NUMBER nixos
+      ```
 
-Activate channels:
+    - Home Manager:
 
-```
-sudo nix-channel --update
-```
+      ```bash
+      sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
+      ```
 
-In [home-manager/home.nix](home-manager/home.nix), set `stateVersion` to the new
-version. Check home-manager's release notes if something needs to be changed.
+2. Activate channels
 
-Build the NixOS system with the new NixOS version:
+   ```bash
+   sudo nix-channel --update
+   ```
 
-```
-sudo nixos-rebuild switch
-```
+3. Update state version for NixOS and Home Manager
+
+   3.1 Check the release notes if something needs to be changed.
+     - [NixOS](https://nixos.org/manual/nixos/stable/release-notes.html#ch-release-notes)
+     - [Home Manager](https://nix-community.github.io/home-manager/release-notes.html)
+
+   3.2 Apply the changes if needed.
+
+   3.3 Update state version.
+     - NixOS: `system.stateVersion` in [nixos/configuration.nix](nixos/configuration.nix)
+     - Home Manager: `home.stateVersion` in [home-manager/home.nix](home-manager/home.nix)
+
+4. Build the NixOS system with the new NixOS version
+
+   ```bash
+   sudo nixos-rebuild switch
+   ```
