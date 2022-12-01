@@ -1,6 +1,6 @@
 ### How to Update to a New NixOS Version
 
-1. Change Nix channels by overwriting them (replace `VERSION_NUMBER` with the new version)
+1. Change Nix channels by overwriting them (replace `VERSION_NUMBER` with the new version, like `22.11`)
 
     - NixOS:
 
