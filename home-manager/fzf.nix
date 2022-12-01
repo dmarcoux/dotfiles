@@ -49,7 +49,7 @@ in
 
       cd "$directory" || exit
 
-      zle && zle reset-prompt
+      zle && zle accept-line
     }
 
     # Define keybind CTRL+G to call the function
