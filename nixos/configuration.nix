@@ -41,6 +41,9 @@ in
   # Allow installation of unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Enable all experimental features of the `nix` command without having to always do `nix --extra-experimental-features nix-command some_experimental_command`
+  nix.settings.experimental-features = [ "nix-command" ];
+
   # Install documentation targeted at developers
   documentation.dev.enable = true;
   environment.systemPackages = [ pkgs.man-pages ];
