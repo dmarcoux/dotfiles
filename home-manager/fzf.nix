@@ -36,6 +36,8 @@ in
       # Default colors
       "--color fg:${grey},bg:${light_beige},hl:${blue},fg+:${light_beige},bg+:${green},hl+:${blue}"
       "--color info:${yellow},prompt:${yellow},pointer:${light_beige},marker:${light_beige},spinner:${yellow}"
+      # Disable the default horizontal line separator between the typing area and the matches
+      "--no-separator"
     ];
     # Default command for the CTRL+T key binding
     fileWidgetCommand = "${config.programs.fzf.defaultCommand}";
