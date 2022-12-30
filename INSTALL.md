@@ -21,10 +21,21 @@ Symlink one of the host configurations to `/mnt/etc/nixos/configuration.nix`
 sudo ln --symbolic "$PWD/hosts/CHOOSE_HOST/configuration.nix" /mnt/etc/nixos/configuration.nix
 ```
 
-Add home-manager Nix channel
+Add [home-manager](https://github.com/nix-community/home-manager) Nix channel
 
 ```
 sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
+```
+
+Add [nixos-hardware](https://github.com/NixOS/nixos-hardware) Nix channel
+
+```
+sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
+```
+
+Update Nix channels
+
+```
 sudo nix-channel --update
 ```
 
@@ -59,10 +70,21 @@ cd secrets
 # See following instructions in secrets' README in the `Setup` section
 ```
 
-Add home-manager Nix channel
+Add [home-manager](https://github.com/nix-community/home-manager) Nix channel
 
 ```
 sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
+```
+
+Add [nixos-hardware](https://github.com/NixOS/nixos-hardware) Nix channel
+
+```
+sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
+```
+
+Update Nix channels
+
+```
 sudo nix-channel --update
 ```
 
