@@ -26,6 +26,7 @@
     element-desktop
     # Functional, meta-programming aware language built on top of the Erlang VM. Useful wehn I need to quickly test something in IEx
     elixir_1_14
+    erlangR25 # Only for the command `escript`, it's not necessary to explicitly install Erlang for Elixir
     # Elixir Language Server
     unstable.elixir_ls
     # CLI for https://exercism.org - Solve coding exercises and get mentored to gain true fluency in your chosen programming languages
