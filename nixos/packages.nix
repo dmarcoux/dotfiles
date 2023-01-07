@@ -65,6 +65,8 @@
     pdftk
     # Simple animated GIF screen recorder
     peek
+    # Batch rename files/directories according to a Perl expression
+    rename
     # Beside work when I need to quickly test something in IRB, I also have Ruby to install gems without relying on the usual Nix way
     ruby
     # Rust toolchain installer
