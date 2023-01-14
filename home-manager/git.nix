@@ -54,7 +54,14 @@
 
     # List of paths that should be globally ignored
     # While those files are usually never tracked, adding them is still possible with `git add --force filename`
-    ignores = [ "*.swp" ".bash_history" ];
+    ignores = [
+      "*.swp"
+      ".bash_history"
+      # Local nix-shell whenever a project doesn't have a development environment
+      "shell.local.nix"
+      ".nix-mix.local"
+      ".nix-hex.local"
+    ];
 
     # Install and setup git-lfs
     lfs.enable = true;

@@ -18,6 +18,8 @@
 
     # Start a pure nix-shell
     ealias nsp='nix-shell --pure'
+    # Start a pure nix-shell, but this is one is globally ignored by Git. Useful for projects in which having a nix-shell isn't an option
+    ealias nspl='nix-shell --pure shell.local.nix'
 
     # Show differences between two NixOS generations
     nixos_generation_diffs(){
