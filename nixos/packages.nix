@@ -31,8 +31,6 @@
     unstable.elixir_ls
     # CLI for https://exercism.org - Solve coding exercises and get mentored to gain true fluency in your chosen programming languages
     unstable.exercism
-    # CLI for https://fly.io/ - Hosting web applications close to their users
-    unstable.flyctl
     # Ebook reader
     foliate
     # Simple calculator
