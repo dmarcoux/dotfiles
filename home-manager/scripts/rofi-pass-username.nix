@@ -5,7 +5,7 @@
     executable = true;
     text = ''
       #!${pkgs.bash}/bin/bash
-      # A rofi frontend to pass (username in filenames; everything after =)
+      # A rofi frontend to pass (username/identifier in files)
       #
       # Use with: rofi -modi "pass-username:rofi-pass-username" -show pass-username
 
@@ -18,9 +18,9 @@
       else
         # Once the user selected an entry, rofi calls the script again with the selected entry as an argument
 
-        # Retrieve the username for the selected entry and type it out in the focused window
+        # Retrieve the username/identifier for the selected entry and type it out in the focused window
         # Note: coproc starts the command group ({ ... }) as a background job (so it doesn't freeze rofi)
-        coproc { pass show "$*" | sed -n 's/^Username: \(.*\)$/\1/p' | xdotool type --clearmodifiers --file - > /dev/null & }
+        coproc { pass show "$*" | sed -n 's/^.*: \(.*\)$/\1/p' | xdotool type --clearmodifiers --file - > /dev/null & }
       fi
     '';
   };
