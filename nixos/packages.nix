@@ -90,6 +90,8 @@
     unstable.thunderbird-bin
     # Remote desktop viewer
     tigervnc
+    # Traceroute to a host
+    traceroute
     # Convert between two units of measure
     units
     # Generate an index file of language objects found in source files for programming languages (used in text editors)
