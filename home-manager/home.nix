@@ -12,6 +12,7 @@
     ./alacritty.nix
     ./autorandr.nix
     ./bat.nix
+    ./beets.nix
     ./cbatticon.nix
     ./dircolors.nix
     ./daps2docker.nix
