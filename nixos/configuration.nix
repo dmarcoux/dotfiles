@@ -30,6 +30,7 @@ in
     ./podman.nix
     ./printing.nix
     ./redshift.nix
+    ./udiskie.nix
     ./unclutter.nix
     ./virtualbox.nix
     ./vscode.nix
