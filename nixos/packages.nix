@@ -12,6 +12,8 @@
     arandr
     # Various commands to manage file archives of various types, such as tar and Zip archives
     atool
+    # Music player
+    audacious
     # For DNS commands dig and nslookup
     bind
     # For the command `ar`, which creates, modifies, and extracts from archives
