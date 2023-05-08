@@ -30,6 +30,26 @@
         singleton = "$format/Non-Album/$artist/$title"; # Single tracks
         comp = "$format/Compilations/$album%aunique{}/$track $title"; # Compilations
       };
+
+      plugins = "fetchart";
+
+      # https://beets.readthedocs.io/en/stable/plugins/fetchart.html
+      fetchart = {
+        # Pick only trusted album art by ignoring filenames that do not contain one of the keywords in `cover_names`
+        cautious = true;
+        # Prioritize images containing words in this list
+        cover_names = "cover front art album folder";
+        # Try to fetch album art from various sources. They are searched in the given order
+        sources = [
+          # Use images inside the album folders, only if the image filenames match one of the names in `cover_names`
+          "filesystem"
+          # Use images from https://coverartarchive.org/ for an exact release of an album or its release group
+          # See https://musicbrainz.org/doc/Release and https://musicbrainz.org/doc/Release_Group
+          { coverart = "release releasegroup"; }
+          # From iTunes Store
+          "itunes"
+        ];
+      };
     };
   };
 }
