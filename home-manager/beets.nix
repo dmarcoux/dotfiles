@@ -31,9 +31,13 @@
         comp = "$format/Compilations/$album%aunique{}/$track $title"; # Compilations
       };
 
-      plugins = "fetchart";
+      plugins = [
+        # https://beets.readthedocs.io/en/stable/plugins/fetchart.html
+        "fetchart"
+        # https://beets.readthedocs.io/en/stable/plugins/info.html
+        "info"
+      ];
 
-      # https://beets.readthedocs.io/en/stable/plugins/fetchart.html
       fetchart = {
         # Pick only trusted album art by ignoring filenames that do not contain one of the keywords in `cover_names`
         cautious = true;
