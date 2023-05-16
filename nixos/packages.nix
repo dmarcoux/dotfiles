@@ -75,6 +75,8 @@
     ruby
     # Rust toolchain installer
     rustup
+    # Command Line Interface for Scaleway
+    unstable.scaleway-cli
     # Static analysis tool for shell scripts
     shellcheck
     # Chat for work
