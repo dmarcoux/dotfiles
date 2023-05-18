@@ -112,6 +112,8 @@
     viewnior
     # Multimedia player
     vlc
+    # CD ripper aiming for accuracy over speed. Uses cdparanoia, MusicBrainz, AccurateRip.
+    whipper
     # Provides command for WHOIS (RFC 3912) protocol
     whois
     # Server for remote desktop viewers
