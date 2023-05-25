@@ -46,7 +46,7 @@
     ./xcape.nix
     ./xdg.nix
     ./yank.nix
-    ./youtube-dl.nix
+    ./yt-dlp.nix
     ./zsh.nix
   ];
 
