@@ -40,6 +40,7 @@
     ./ripgrep.nix
     ./rofi.nix
     ./ruby.nix
+    ./scaleway.nix
     ./scripts.nix
     ./ssh.nix
     ./udiskie.nix

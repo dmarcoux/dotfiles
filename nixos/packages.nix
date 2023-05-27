@@ -14,8 +14,6 @@
     atool
     # Music player
     audacious
-    # Command Line Interface for AWS and AWS-compatible services like Scaleway Storage
-    awscli2
     # For DNS commands dig and nslookup
     bind
     # For the command `ar`, which creates, modifies, and extracts from archives
