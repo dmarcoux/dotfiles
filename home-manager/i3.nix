@@ -172,25 +172,25 @@
       # Launch web browser
       exec $BROWSER
 
-      # On work days, launch Slack.
+      # If I'm not on holidays and today is on a work day, launch Slack.
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
       #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
-      exec test $(date +'%u') -lt 5 && slack
+      exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -lt 5 && slack
 
-      # On work days, launch Element.
+      # If I'm not on holidays and today is on a work day, launch Element.
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
       #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
-      exec test $(date +'%u') -lt 5 && element-desktop
+      exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -lt 5 && element-desktop
 
-      # On work days, launch Microsoft Teams.
+      # If I'm not on holidays and today is on a work day, launch Microsoft Teams.
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
       #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
-      exec test $(date +'%u') -lt 5 && teams
+      exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -lt 5 && teams
 
-      # On work days, launch Thunderbird.
+      # If I'm not on holidays and today is on a work day, launch Microsoft Teams.
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
       #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
-      exec test $(date +'%u') -lt 5 && thunderbird
+      exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -lt 5 && thunderbird
 
       # Launch user activity monitor
       #   After 300 seconds (5 minutes):
