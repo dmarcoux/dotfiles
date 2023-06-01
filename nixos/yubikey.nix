@@ -14,6 +14,6 @@
     # Provides ykman CLI for configuring any YubiKey over all USB interfaces
     yubikey-manager
     # Use Yubico Authenticator to store OATH credentials on YubiKeys
-    yubioath-desktop
+    yubioath-flutter
   ];
 }
