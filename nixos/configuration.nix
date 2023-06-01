@@ -50,7 +50,7 @@ in
   environment.systemPackages = [ pkgs.man-pages ];
 
   # Delete all files in /tmp during boot
-  boot.cleanTmpDir = true;
+  boot.tmp.cleanOnBoot = true;
 
   # Enable a basic set of fonts providing several font styles and families and reasonable coverage of Unicode
   fonts.enableDefaultFonts = true;
