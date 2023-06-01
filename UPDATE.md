@@ -32,8 +32,9 @@
      - NixOS: `system.stateVersion` in [nixos/configuration.nix](nixos/configuration.nix)
      - Home Manager: `home.stateVersion` in [home-manager/home.nix](home-manager/home.nix)
 
-4. Build the NixOS system with the new NixOS version
+4. Build the NixOS system with the new NixOS version, then reboot
 
    ```bash
-   sudo nixos-rebuild switch
+   sudo nixos-rebuild boot
+   reboot
    ```

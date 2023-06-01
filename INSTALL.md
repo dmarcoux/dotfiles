@@ -125,8 +125,9 @@ cd secrets
 # See following instructions in secrets' README in the `Setup` section
 ```
 
-Build the NixOS system
+Build the NixOS system, then reboot
 
 ```
-sudo nixos-rebuild switch
+sudo nixos-rebuild boot
+reboot
 ```

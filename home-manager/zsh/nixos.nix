@@ -9,8 +9,8 @@
     # Update and activate channels
     ealias ncu='sudo nix-channel --update'
 
-    # Build, activate and update boot default
-    ealias nrs='sudo nixos-rebuild switch'
+    # Build the configuration and make it the default boot option, but don't activate it until the next reboot
+    ealias nrb='sudo nixos-rebuild boot'
 
     # Search for a package
     ealias ns='nix search'
