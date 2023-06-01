@@ -8,15 +8,7 @@
     enable = true;
 
     # Configure yt-dlp
-    # TODO: NixOS 23.05 - Remove settings. Only use extraConfig since it's clearer what the options really are when comments are written in the config file. For now though, due to
-    #       this line (https://github.com/nix-community/home-manager/blob/58eb968c21d309a6c2b020ea8d64e25c38ceebba/modules/programs/yt-dlp.nix#L69),
-    #       I need to have at least one setting. Otherwise, extraConfig is simply ignored.
-    #       My PR (https://github.com/nix-community/home-manager/pull/4018) was merged, so this will be fixed in the home-manager for NixOS 23.05
-    settings = {
-      # Download subtitles for English, French and German
-      sub-langs = "en,fr,de";
-    };
-
+    # Only use `extraConfig` instead of `settings` since it's clearer what the options really are when comments are written in the config file
     extraConfig = ''
       # Do not overwrite files
       --no-overwrites
@@ -37,8 +29,7 @@
       --output "~/videos/%(extractor_key)s/%(title)s---%(format_note)s-%(id)s.%(ext)s"
 
       # Download subtitles for English, French and German
-      # TODO: NixOS 23.05 - Uncomment the line below
-      #--sub-langs en,fr,de
+      --sub-langs en,fr,de
 
       # Embed subtitles in the video (only possible with mp4, webm and mkv files)
       --embed-subs
