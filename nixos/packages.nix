@@ -20,6 +20,8 @@
     bintools-unwrapped
     # Cross-platform build automation system
     cmake
+    # Fully featured CD ripping program able to take out most of the tedium. Uses cdparanoia, MusicBrainz, AccurateRip.
+    cyanrip
     # Voice, video, and text chat
     discord
     # Keep Docker login credentials in pass
@@ -112,8 +114,6 @@
     viewnior
     # Multimedia player
     vlc
-    # CD ripper aiming for accuracy over speed. Uses cdparanoia, MusicBrainz, AccurateRip.
-    whipper
     # Provides command for WHOIS (RFC 3912) protocol
     whois
     # Server for remote desktop viewers
