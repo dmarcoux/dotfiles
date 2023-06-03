@@ -276,7 +276,8 @@
       nvim-cmp # core plugin
       cmp-nvim-lsp # language server client completions
       cmp-buffer # buffer completions
-      cmp-vsnip # snippets completions (nvim-cmp needs to have a snippets plugin)
+      # TODO: This breaks git just like this issue: https://github.com/neovim/neovim/issues/20675
+      # cmp-vsnip # snippets completions (nvim-cmp needs to have a snippets plugin)
 
       # Highlight copied/yanked region
       vim-highlightedyank
