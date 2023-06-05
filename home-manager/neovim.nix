@@ -277,6 +277,7 @@
       cmp-nvim-lsp # language server client completions
       cmp-buffer # buffer completions
       # TODO: This breaks git just like this issue: https://github.com/neovim/neovim/issues/20675
+      #       This started to happen with the update from 2022-11-14 to 2023-03-12
       # cmp-vsnip # snippets completions (nvim-cmp needs to have a snippets plugin)
 
       # Highlight copied/yanked region
