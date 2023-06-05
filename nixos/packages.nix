@@ -23,7 +23,7 @@
     # Fully featured CD ripping program able to take out most of the tedium. Uses cdparanoia, MusicBrainz, AccurateRip.
     cyanrip
     # Voice, video, and text chat
-    discord
+    unstable.discord
     # Keep Docker login credentials in pass
     docker-credential-helpers
     # IRC client through Matrix bridges
