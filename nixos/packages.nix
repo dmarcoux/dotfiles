@@ -20,8 +20,6 @@
     bintools-unwrapped
     # Cross-platform build automation system
     cmake
-    # Fully featured CD ripping program able to take out most of the tedium. Uses cdparanoia, MusicBrainz, AccurateRip.
-    cyanrip
     # Voice, video, and text chat
     unstable.discord
     # Keep Docker login credentials in pass
