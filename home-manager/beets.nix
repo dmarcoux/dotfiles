@@ -1,5 +1,7 @@
 # User configuration for beets
 
+{ pkgs, ... }:
+
 {
   programs.beets = {
     enable = true;
@@ -47,6 +49,9 @@
         # https://beets.readthedocs.io/en/stable/plugins/scrub.html
         # Remove extraneous metadata tags from files
         "scrub"
+        # https://beets.readthedocs.io/en/stable/plugins/replaygain.html
+        # Add support for ReplayGain, a technique for normalizing audio playback levels
+        "replaygain"
       ];
 
       fetchart = {
@@ -64,6 +69,12 @@
           # From iTunes Store
           "itunes"
         ];
+      };
+
+      replaygain = {
+        # Use ffmpeg as the backend, but specify its path in command
+        backend = "ffmpeg";
+        command = "${pkgs.ffmpeg_6-headless}/bin/ffmpeg";
       };
     };
   };
