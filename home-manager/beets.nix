@@ -46,9 +46,6 @@
         # https://beets.readthedocs.io/en/stable/plugins/missing.html
         # With the `missing` command, find and list which or how many tracks are missing in albums of my music collection
         "missing"
-        # https://beets.readthedocs.io/en/stable/plugins/scrub.html
-        # Remove extraneous metadata tags from files
-        "scrub"
         # https://beets.readthedocs.io/en/stable/plugins/replaygain.html
         # Add support for ReplayGain, a technique for normalizing audio playback levels
         "replaygain"
