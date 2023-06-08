@@ -38,6 +38,8 @@
         "info"
         # https://beets.readthedocs.io/en/stable/plugins/lastgenre.html
         "lastgenre"
+        # https://beets.readthedocs.io/en/stable/plugins/missing.html
+        "missing"
       ];
 
       fetchart = {
