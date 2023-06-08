@@ -44,6 +44,9 @@
         # https://beets.readthedocs.io/en/stable/plugins/missing.html
         # With the `missing` command, find and list which or how many tracks are missing in albums of my music collection
         "missing"
+        # https://beets.readthedocs.io/en/stable/plugins/scrub.html
+        # Remove extraneous metadata tags from files
+        "scrub"
       ];
 
       fetchart = {
