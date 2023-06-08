@@ -33,12 +33,16 @@
 
       plugins = [
         # https://beets.readthedocs.io/en/stable/plugins/fetchart.html
+        # Retrieve album art images from various sources on the web and stores them as image files
         "fetchart"
         # https://beets.readthedocs.io/en/stable/plugins/info.html
+        # Provide the `info` command that dumps the current tag values for any file format supported by beets
         "info"
         # https://beets.readthedocs.io/en/stable/plugins/lastgenre.html
+        # Fetch tags from Last.fm and assign them as genres to your albums and tracks
         "lastgenre"
         # https://beets.readthedocs.io/en/stable/plugins/missing.html
+        # With the `missing` command, find and list which or how many tracks are missing in albums of my music collection
         "missing"
       ];
 
