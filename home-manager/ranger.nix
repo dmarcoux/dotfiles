@@ -121,6 +121,7 @@
     f:/home/dany/pictures
     g:/home/dany/projets
     h:/home/dany/videos
+    i:/home/dany/music-to-import
   '';
 
   programs.zsh.initExtra = ''
