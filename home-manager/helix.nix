@@ -19,6 +19,8 @@
         cursor-shape.normal = "bar";
         # Display LSP progress messages below statusline
         lsp.display-messages = true;
+        # Number of lines of padding around the edge of the screen when scrolling
+        scrolloff = 10;
       };
     };
   };
