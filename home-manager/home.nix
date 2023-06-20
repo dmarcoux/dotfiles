@@ -25,6 +25,7 @@
     ./git.nix
     ./gnupg.nix
     ./gtk.nix
+    ./helix.nix
     (import ./i3.nix { pkgs = pkgs; nixos_options = nixos_options; })
     ./i3status.nix
     ./jq.nix
