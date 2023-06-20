@@ -21,6 +21,10 @@
         lsp.display-messages = true;
         # Number of lines of padding around the edge of the screen when scrolling
         scrolloff = 10;
+        # Display tabs as >·
+        whitespace.render.tab = "all";
+        whitespace.characters.tab = ">";
+        whitespace.characters.tabpad = "·";          
       };
     };
   };
