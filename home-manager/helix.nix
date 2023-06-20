@@ -22,6 +22,7 @@
         # Number of lines of padding around the edge of the screen when scrolling
         scrolloff = 10;
         # Display tabs as >·
+        # TODO: Also display trailing whitespaces as ·, see https://github.com/helix-editor/helix/issues/2719
         whitespace.render.tab = "all";
         whitespace.characters.tab = ">";
         whitespace.characters.tabpad = "·";          
