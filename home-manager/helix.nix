@@ -21,8 +21,13 @@
           normal = "block";
           select = "underline";
         };
-        # Show hidden files (those starting with a dot) in the file picker
-        file-picker.hidden = false;
+        # Configure file picker
+        file-picker = {
+          # Show hidden files (those starting with a dot) in the file picker
+          hidden = false;
+          # Do not ignore symlinks that point at files already shown in the file picker
+          deduplicate-links = false;
+        };
         # Display LSP progress messages below statusline
         lsp.display-messages = true;
         # Number of lines of padding around the edge of the screen when scrolling
