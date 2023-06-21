@@ -15,8 +15,12 @@
         # Highlight all lines and columns with a cursor (there can be multiple cursors in Helix)
         cursorline = true;
         cursorcolumn = true;
-        # Set cursor shape to a bar in insert mode (the default is a block)
-        cursor-shape.insert = "bar";
+        # Set cursor shape for the various modes
+        cursor-shape = {
+          insert = "bar";
+          normal = "block";
+          select = "underline";
+        };
         # Display LSP progress messages below statusline
         lsp.display-messages = true;
         # Number of lines of padding around the edge of the screen when scrolling
