@@ -67,6 +67,8 @@
     pdftk
     # Simple animated GIF screen recorder
     peek
+    # Official ProtonVPN app
+    protonvpn-gui
     # CLI program to copy/sync/move files and directories to and from many cloud services
     rclone
     # Batch rename files/directories according to a Perl expression
