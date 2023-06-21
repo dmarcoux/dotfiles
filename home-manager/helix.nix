@@ -45,6 +45,23 @@
         whitespace.characters.tab = ">";
         whitespace.characters.tabpad = "·";          
       };
+
+      # Configure extra keymaps
+      keys = {
+        # For the insert mode
+        insert = {
+        };
+        # For the normal mode
+        normal = {
+          # Hard-wrap the current selection of lines to a given width, it differs based on the context
+          g.q = ":reflow";
+        };
+        # For the select mode
+        select = {
+          # Hard-wrap the current selection of lines to a given width, it differs based on the context
+          g.q = ":reflow";
+        };
+      };
     };
   };
 }
