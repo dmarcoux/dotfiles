@@ -27,6 +27,13 @@
         lsp.display-messages = true;
         # Number of lines of padding around the edge of the screen when scrolling
         scrolloff = 10;
+        # Configure statusline
+        statusline = {
+          # Display modes with full names, instead of NOR, INS and SEL
+          mode.normal = "NORMAL";
+          mode.insert = "INSERT";
+          mode.select = "SELECT";
+        };
         # Display tabs as >·
         # TODO: Also display trailing whitespaces as ·, see https://github.com/helix-editor/helix/issues/2719
         whitespace.render.tab = "all";
