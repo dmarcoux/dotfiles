@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   home.file."bin/backup-keys" = {
@@ -12,7 +12,7 @@
       # -x: Write to standard error a trace for each command after it expands the command and before it executes it
       set -eux
 
-      BACKUP_DIR="$HOME/dotfiles/backup/$HOSTNAME/keys"
+      BACKUP_DIR="${config.home.homeDirectory}/dotfiles/backup/$HOSTNAME/keys"
 
       mkdir --parents "$BACKUP_DIR"
 

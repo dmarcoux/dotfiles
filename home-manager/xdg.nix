@@ -1,6 +1,6 @@
 # User configuration for XDG base directories
 
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   home.packages = [ pkgs.xdg-user-dirs ];
@@ -12,19 +12,19 @@
     userDirs = {
       enable = true;
 
-      desktop = "$HOME/desktop";
-      documents = "$HOME/documents";
-      download = "$HOME/downloads";
-      templates = "$HOME/templates";
-      publicShare = "$HOME/public";
-      music = "$HOME/music";
-      pictures = "$HOME/pictures";
-      videos = "$HOME/videos";
+      desktop = "${config.home.homeDirectory}/desktop";
+      documents = "${config.home.homeDirectory}/documents";
+      download = "${config.home.homeDirectory}/downloads";
+      templates = "${config.home.homeDirectory}/templates";
+      publicShare = "${config.home.homeDirectory}/public";
+      music = "${config.home.homeDirectory}/music";
+      pictures = "${config.home.homeDirectory}/pictures";
+      videos = "${config.home.homeDirectory}/videos";
 
       extraConfig = {
-        XDG_AUDIO_DIR = "$HOME/audio";
-        XDG_PROJETS_DIR = "$HOME/projets";
-        XDG_TEMPORARY_DIR = "$HOME/tmp";
+        XDG_AUDIO_DIR = "${config.home.homeDirectory}/audio";
+        XDG_PROJETS_DIR = "${config.home.homeDirectory}/projets";
+        XDG_TEMPORARY_DIR = "${config.home.homeDirectory}/tmp";
       };
     };
     # Enable management of XDG MIME applications (so default applications)

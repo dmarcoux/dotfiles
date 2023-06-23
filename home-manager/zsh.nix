@@ -60,7 +60,7 @@
       # npm config set prefix "$HOME/.npm-packages"
       # Add $HOME/.cargo/bin to $PATH to install cargo packages globally with:
       # cargo install
-      export PATH="$HOME/.npm-packages/bin:$HOME/.cargo/bin:$PATH"
+      export PATH="${config.home.homeDirectory}/.npm-packages/bin:${config.home.homeDirectory}/.cargo/bin:$PATH"
 
       # Do not print an error message like "zsh: no matches found: something?" if a command with a globbing expression doesn't match anything
       unsetopt nomatch
