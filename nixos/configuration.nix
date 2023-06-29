@@ -25,6 +25,7 @@ in
     ./i3.nix
     ./keyboard.nix
     ./locales.nix
+    ./lollypop.nix
     ./nixFlakes.nix
     ./podman.nix
     ./printing.nix
