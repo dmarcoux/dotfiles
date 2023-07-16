@@ -26,5 +26,10 @@
     enable = true;
     # Enable the mDNS NSS (Name Service Switch) plug-in to allow applications to resolve names in the `.local' domain by transparently querying the Avahi daemon
     nssmdns = true;
+    # TODO check if this is needed
+    # openFirewall = true;
   };
+
+  # TODO Setup printers in CUPS
+  # https://github.com/NixOS/nixpkgs/blob/nixos-23.05/nixos/modules/hardware/printers.nix
 }
