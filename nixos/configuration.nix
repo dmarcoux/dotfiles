@@ -34,7 +34,6 @@ in
     ./unclutter.nix
     ./virtualbox.nix
     ./vscode.nix
-    ./wacom.nix
     ./yubikey.nix
     ./zsh.nix
   ];
