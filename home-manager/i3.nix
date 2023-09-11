@@ -149,7 +149,6 @@
 
       assign [class="^thunderbird$"] → $WS4
 
-      assign [class="^Audacious$"] → $WS5
       assign [class="^Lollypop$"] → $WS5
       # "assign" doesn't work for the Spotify client since it's not correctly setting the hints when mapping the window
       # https://github.com/i3/i3/issues/2060
