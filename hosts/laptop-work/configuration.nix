@@ -4,6 +4,7 @@
 
 {
   imports = [
+    <nixos-hardware/dell/precision/5530> # From the nixos-hardware channel, its source is https://github.com/NixOS/nixos-hardware
     ./autorandr.nix
     ./hardware-configuration.nix # Include the results of the hardware scan
     ../../nixos/configuration.nix # System configuration
@@ -38,9 +39,4 @@
 
   # Disable Nvidia Quadro graphics card. This improves the battery life.
   hardware.nvidiaOptimus.disable = true;
-
-  # Fix screen flickering
-  boot.kernelParams = [
-    "i915.enable_psr=0"
-  ];
 }
