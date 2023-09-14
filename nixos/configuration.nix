@@ -47,8 +47,18 @@ in
   documentation.dev.enable = true;
   environment.systemPackages = [ pkgs.man-pages ];
 
-  # Use latest Linux kernel instead of the latest LTS Linux kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # Pin Linux kernel to latest LTS version which is bootable. Versions 6.1.46+ aren't bootable.
+  # TODO: Remove this once the bug is fixed - https://github.com/NixOS/nixpkgs/issues/253418
+  boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_1.override {
+    argsOverride = rec {
+      src = pkgs.fetchurl {
+            url = "mirror://kernel/linux/kernel/v6.x/linux-${version}.tar.xz";
+            sha256 = "vSNDOW592tiXTzaJpaBn7JMfSt55PnKxBwqFzRnx8ZI=";
+      };
+      version = "6.1.45";
+      modDirVersion = "6.1.45";
+      };
+  });
 
   # Delete all files in /tmp during boot
   boot.tmp.cleanOnBoot = true;
