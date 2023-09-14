@@ -48,6 +48,9 @@ in
   documentation.dev.enable = true;
   environment.systemPackages = [ pkgs.man-pages ];
 
+  # Use latest Linux kernel instead of the latest LTS Linux kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # Delete all files in /tmp during boot
   boot.tmp.cleanOnBoot = true;
 
