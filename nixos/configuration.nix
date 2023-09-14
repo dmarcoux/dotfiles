@@ -32,7 +32,6 @@ in
     ./redshift.nix
     ./udiskie.nix
     ./unclutter.nix
-    ./virtualbox.nix
     ./vscode.nix
     ./yubikey.nix
     ./zsh.nix
