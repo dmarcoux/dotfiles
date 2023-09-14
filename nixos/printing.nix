@@ -28,6 +28,17 @@
     nssmdns = true;
   };
 
-  # TODO Setup printers in CUPS
-  # https://github.com/NixOS/nixpkgs/blob/nixos-23.05/nixos/modules/hardware/printers.nix
+  # Configure printers available to print documents
+  hardware.printers.ensurePrinters = [
+    {
+      name = "Samsung_M2070_Series";
+      description = "Samsung M2070 Series";
+      location = "Home";
+      deviceUri = "socket://192.168.1.10";
+      model = "Samsung_M2070_Series.ppd.gz"; # Search available models with `lpinfo -m | less`
+      ppdOptions = {
+        PageSize = "A4";
+      };
+    }
+  ];
 }
