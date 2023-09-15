@@ -172,22 +172,22 @@
       # Launch web browser
       exec $BROWSER
 
-      # If I'm not on holidays and today is on a work day, launch Slack.
+      # If I'm not on holidays and today is a work day, launch Slack.
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
       #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
       exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -lt 5 && slack
 
-      # If I'm not on holidays and today is on a work day, launch Element.
+      # If I'm not on holidays and today is a work day, launch Element.
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
       #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
       exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -lt 5 && element-desktop
 
-      # If I'm not on holidays and today is on a work day, launch Microsoft Teams.
+      # If I'm not on holidays and today is a work day, launch Microsoft Teams.
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
       #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
       exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -lt 5 && teams
 
-      # If I'm not on holidays and today is on a work day, launch Microsoft Teams.
+      # If I'm not on holidays and today is a work day, launch Microsoft Teams.
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
       #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
       exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -lt 5 && thunderbird
