@@ -91,6 +91,9 @@
     tealdeer
     # Communication platform for work
     teams
+    # Help transcribe recorded music while also being useful for play-along practice
+    # TODO: NixOS 23.11 - Remove unstable since the update to 9.30.2 will have landed in the stable channel
+    unstable.transcribe
     # For the `tree` command which shows the contents of the current directory as a tree
     tree
     # Emails and agenda
