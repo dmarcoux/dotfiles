@@ -9,7 +9,6 @@
     # Set neovim as the default "basic/terminal" editor by setting the EDITOR environment variable
     defaultEditor = true;
 
-    # TODO: Convert rest of config to Lua
     extraConfig = ''
       lua << EOF
         -------------------- Plugins Settings
