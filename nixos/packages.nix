@@ -121,6 +121,8 @@
     vlc
     # Provides command for WHOIS (RFC 3912) protocol
     whois
+    # Create bootable USB disks from Windows ISO images
+    woeusb
     # Server for remote desktop viewers
     x11vnc
     # Execute commands when computer is idle for a specified amount of time
