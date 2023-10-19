@@ -140,7 +140,6 @@
 
       assign [class="^firefox$"] → $WS2
       assign [class="^Slack$"] → $WS2
-      assign [class="^Element$"] → $WS2
       assign [class="^Chromium-browser$"] → $WS2
 
       assign [class="^discord$"] → $WS3
@@ -176,11 +175,6 @@
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
       #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
       exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -lt 5 && slack
-
-      # If I'm not on holidays and today is a work day, launch Element.
-      #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
-      #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
-      exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -lt 5 && element-desktop
 
       # If I'm not on holidays and today is a work day, launch Microsoft Teams.
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
