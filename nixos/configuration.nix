@@ -18,8 +18,6 @@ in
     (import ./docker.nix { pkgs = pkgs; unstable = unstable; })
     (import ./packages.nix { pkgs = pkgs; unstable = unstable; })
     (import ./home-manager.nix { pkgs = pkgs; config = config; unstable = unstable; nixos_options = options; })
-    ../secrets/certificates/work.nix
-    ../secrets/vpn/work.nix
     ./chromium.nix
     ./evince.nix
     ./i3.nix

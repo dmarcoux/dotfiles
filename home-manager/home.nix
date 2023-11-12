@@ -8,7 +8,6 @@
     (import ./neovim.nix { pkgs = pkgs; unstable = unstable; })
     (import ./starship.nix { unstable = unstable; })
     (import ./vscode.nix { unstable = unstable; })
-    ../secrets/ssh/work.nix
     ./alacritty.nix
     ./autorandr.nix
     ./bat.nix
