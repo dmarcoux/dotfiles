@@ -73,6 +73,7 @@ git clone git@github.com:dmarcoux/dotfiles.git ~/dotfiles
 Setup `secrets` gitsubmodule
 
 ```
+cd dotfiles
 git submodule init
 git submodule update
 cd secrets
@@ -137,6 +138,7 @@ sudo nix-channel --update
 Setup `secrets` gitsubmodule
 
 ```
+cd dotfiles
 git submodule init
 git submodule update
 cd secrets
