@@ -87,8 +87,6 @@
     spotify
     # Collaborative cheatsheets for console commands
     tealdeer
-    # Communication platform for work
-    teams
     # For the `tree` command which shows the contents of the current directory as a tree
     tree
     # Emails and agenda
