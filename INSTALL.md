@@ -2,15 +2,15 @@
 
 Set [partitions and filesystems](https://nixos.org/nixos/manual/index.html#sec-installation-partitioning)
 
-Generate the initial NixOS configuration
+Download this repository as a ZIP archive and extract its content in /mnt/etc/nixos/dotfiles
 
 ```
-sudo nixos-generate-config --root /mnt
+cd /mnt/etc/nixos
+# With -L, curl follows redirects
+sudo curl -L https://github.com/dmarcoux/dotfiles/archive/refs/heads/main.zip --output dotfiles.zip
+sudo unzip dotfiles.zip
+sudo mv dotfiles-main dotfiles
 ```
-
-Download this repository as a ZIP archive
-
-Extract the ZIP archive in /mnt/etc/nixos/dotfiles
 
 Remove the various `secrets` imports in the root `home-manager` and `NixOS` Nix files
 (Secrets cannot be decrypted since GPG keys are not installed)
@@ -18,12 +18,15 @@ Remove the various `secrets` imports in the root `home-manager` and `NixOS` Nix 
 Symlink one of the host configurations to `/mnt/etc/nixos/configuration.nix`
 
 ```
-sudo ln --symbolic "$PWD/hosts/CHOOSE_HOST/configuration.nix" /mnt/etc/nixos/configuration.nix
+cd /mnt/etc/nixos
+sudo rm configuration.nix
+sudo ln --symbolic dotfiles/hosts/CHOOSE_HOST/configuration.nix configuration.nix
 ```
 
 Add [home-manager](https://github.com/nix-community/home-manager) Nix channel
 
 ```
+# Example of a value for VERSION_NUMBER: 23.05
 sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
 ```
 
@@ -31,6 +34,12 @@ Add [nixos-hardware](https://github.com/NixOS/nixos-hardware) Nix channel
 
 ```
 sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
+```
+
+Add nixos-unstable Nix channel:
+
+```
+sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
 ```
 
 Update Nix channels
@@ -73,6 +82,7 @@ cd secrets
 Add [home-manager](https://github.com/nix-community/home-manager) Nix channel
 
 ```
+# Example of a value for VERSION_NUMBER: 23.05
 sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
 ```
 
@@ -81,6 +91,13 @@ Add [nixos-hardware](https://github.com/NixOS/nixos-hardware) Nix channel
 ```
 sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
 ```
+
+Add nixos-unstable Nix channel:
+
+```
+sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
+```
+
 
 Update Nix channels
 
@@ -112,6 +129,7 @@ sudo ln --symbolic "$PWD/hosts/laptop/configuration.nix" /etc/nixos/configuratio
 Add home-manager Nix channel
 
 ```
+# Example of a value for VERSION_NUMBER: 23.05
 sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
 sudo nix-channel --update
 ```
