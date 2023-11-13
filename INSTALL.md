@@ -1,4 +1,4 @@
-### Install From Scratch on a New NixOS System
+### Install From Scratch on a NixOS System
 
 Set [partitions and filesystems](https://nixos.org/nixos/manual/index.html#sec-installation-partitioning)
 
@@ -99,19 +99,10 @@ Add nixos-unstable Nix channel:
 sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
 ```
 
-
 Update Nix channels
 
 ```
 sudo nix-channel --update
-```
-
-### Install on an Existing NixOS System
-
-Clone the dotfiles repository
-
-```
-git clone http://github.com/dmarcoux/dotfiles ~/dotfiles
 ```
 
 Go to the dotfiles directory
@@ -121,28 +112,11 @@ cd ~/dotfiles
 ```
 
 Symlink one of the host configurations to `/etc/nixos/configuration.nix` (the
-default path to the main NixOS configuration module)
+default path to the main NixOS configuration module). Create one if not already
+done. The generated hardware-configuration.nix is under /etc/nixos.
 
 ```
-sudo ln --symbolic "$PWD/hosts/laptop/configuration.nix" /etc/nixos/configuration.nix
-```
-
-Add home-manager Nix channel
-
-```
-# Example of a value for VERSION_NUMBER: 23.05
-sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
-sudo nix-channel --update
-```
-
-Setup `secrets` git submodule
-
-```
-cd dotfiles
-git submodule init
-git submodule update
-cd secrets
-# See following instructions in secrets' README in the `Setup` section
+sudo ln --symbolic "$PWD/hosts/CHOOSE_HOST/configuration.nix" /etc/nixos/configuration.nix
 ```
 
 Build the NixOS system, then reboot
@@ -151,3 +125,5 @@ Build the NixOS system, then reboot
 sudo nixos-rebuild boot
 reboot
 ```
+
+Clean up /etc/nixos to remove everything but /etc/nixos/configuration.nix
