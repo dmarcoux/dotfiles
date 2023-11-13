@@ -135,7 +135,7 @@ sudo nix-channel --add https://github.com/nix-community/home-manager/archive/rel
 sudo nix-channel --update
 ```
 
-Setup `secrets` gitsubmodule
+Setup `secrets` git submodule
 
 ```
 cd dotfiles
