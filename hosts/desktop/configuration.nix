@@ -1,4 +1,4 @@
-# Host-specific configuration for my laptop at work
+# Host-specific configuration for my desktop computer
 
 { config, pkgs, ... }:
 
