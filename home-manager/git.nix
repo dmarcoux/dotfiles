@@ -47,7 +47,7 @@
       stash = { showPatch = true; };
       status = { showUntrackedFiles = "all"; };
       user = {
-        email = "dmarcoux@posteo.de";
+        email = "git@dmarcoux.com";
         name = "Dany Marcoux";
       };
     };
