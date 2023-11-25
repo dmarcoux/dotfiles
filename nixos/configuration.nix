@@ -3,28 +3,37 @@
 
 { config, pkgs, options, ... }:
 
-let
-  # Setup nixos-unstable channel to allow installation of the latest available packages if needed
-  # This is useful when needing the newest version of a package which isn't available in the current stable channel
-  # Prerequisites:
-  #   sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
-  #   sudo nix-channel --update
-  # Then install the latest version of a package with `unstable.the_package_name`
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
-in
 {
+  # Pull nixos-unstable channel to allow installation of the latest available packages if needed
+  # It's pinned to a revision to have reproducible builds
+  # Use `pkgs.unstable.package_name` to install a package from the unstable channel
+  nixpkgs.config = {
+    packageOverrides = pkgs: {
+      unstable = import (builtins.fetchTarball {
+        # Descriptive name to make the store path easier to identify
+        name = "nixos-unstable-25-11-2023";
+        # Find the hash of the latest commit for nixos-unstable with
+        # git ls-remote https://github.com/nixos/nixpkgs nixos-unstable
+        url = "https://github.com/nixos/nixpkgs/archive/19cbff58383a4ae384dea4d1d0c823d72b49d614.tar.gz";
+        # Obtained using `nix-prefetch-url --unpack <url>`
+        sha256 = "0dzvnjccsnc2661yks0xypj2px335k6abysm335z1yh3qfi3rd6a";
+      }) {
+        config = config.nixpkgs.config;
+      };
+    };
+  };
+
   imports = [
-    # Pass packages from the stable and unstable channels
-    (import ./docker.nix { pkgs = pkgs; unstable = unstable; })
-    (import ./packages.nix { pkgs = pkgs; unstable = unstable; })
-    (import ./home-manager.nix { pkgs = pkgs; config = config; unstable = unstable; nixos_options = options; })
+    (import ./home-manager.nix { pkgs = pkgs; config = config; nixos_options = options; })
     ./chromium.nix
+    ./docker.nix
     ./evince.nix
     ./i3.nix
     ./keyboard.nix
     ./locales.nix
     ./lollypop.nix
     ./nixFlakes.nix
+    ./packages.nix
     ./podman.nix
     ./printing.nix
     ./redshift.nix

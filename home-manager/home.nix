@@ -1,13 +1,10 @@
 # User configuration with home-manager
 # https://nix-community.github.io/home-manager/options.html
 
-{ config, pkgs, unstable, nixos_options, ... }:
+{ config, pkgs, nixos_options, ... }:
 
 {
   imports = [
-    (import ./neovim.nix { pkgs = pkgs; unstable = unstable; })
-    (import ./starship.nix { unstable = unstable; })
-    (import ./vscode.nix { unstable = unstable; })
     ./alacritty.nix
     ./autorandr.nix
     ./bat.nix
@@ -29,6 +26,7 @@
     ./i3status.nix
     ./jq.nix
     ./keyboard.nix
+    ./neovim.nix
     ./network-manager.nix
     ./open-build-service.nix
     ./password-store.nix
@@ -43,7 +41,9 @@
     ./scaleway.nix
     ./scripts.nix
     ./ssh.nix
+    ./starship.nix
     ./udiskie.nix
+    ./vscode.nix
     ./xcape.nix
     ./xdg.nix
     ./yank.nix

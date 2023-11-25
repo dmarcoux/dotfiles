@@ -1,12 +1,12 @@
 # User configuration for starship
 
-{ unstable, ... }:
+{ pkgs, ... }:
 
 {
   programs.starship = {
     enable = true;
     # Install starship (using unstable since it's often updated)
-    package = unstable.starship;
+    package = pkgs.unstable.starship;
     settings = {
       # Do not insert blank line between shell prompts.
       add_newline = false;

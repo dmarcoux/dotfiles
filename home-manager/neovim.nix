@@ -1,6 +1,6 @@
 # User configuration for neovim
 
-{ pkgs, unstable, ... }:
+{ pkgs, ... }:
 
 {
   programs.neovim = {
@@ -53,7 +53,7 @@
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
         -- Setup elixir_ls - https://github.com/elixir-lsp/elixir-ls
         require("lspconfig")["elixirls"].setup({
-          cmd = { "${unstable.elixir_ls}/lib/language_server.sh" },
+          cmd = { "${pkgs.unstable.elixir_ls}/lib/language_server.sh" },
           capabilities = capabilities,
           settings = {
             elixirLS = {

@@ -36,12 +36,6 @@ Add [nixos-hardware](https://github.com/NixOS/nixos-hardware) Nix channel
 sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
 ```
 
-Add nixos-unstable Nix channel:
-
-```
-sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
-```
-
 Update Nix channels
 
 ```
@@ -91,12 +85,6 @@ Add [nixos-hardware](https://github.com/NixOS/nixos-hardware) Nix channel
 
 ```
 sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
-```
-
-Add nixos-unstable Nix channel:
-
-```
-sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
 ```
 
 Update Nix channels
