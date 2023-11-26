@@ -55,6 +55,8 @@
     nixfmt
     # For coc.nvim, which provides auto-completion in Neovim
     unstable.nodejs-18_x
+    # Personal knowledge base and note-taking application that operates on Markdown files
+    unstable.obsidian
     # Manage resolv.conf for DNS settings
     openresolv
     # VPN client
