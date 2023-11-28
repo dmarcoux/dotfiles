@@ -12,10 +12,11 @@
     dataDir = "/home/dany/syncs";
     # Peers/devices which Syncthing should communicate with
     devices = {
-      phone = {
-        id = "Y4ZDZAR-P6X4LVU-5YCZSXG-5JOMAZR-KCQLBGL-PSTB53G-MDE5VFK-44VSGQY";
-        name = "Phone";
-      };
+      # TODO: My phone's Android version prevents the Syncthing from syncing with other devices... the phone can only send data, not receive.
+      # phone = {
+      #   id = "Y4ZDZAR-P6X4LVU-5YCZSXG-5JOMAZR-KCQLBGL-PSTB53G-MDE5VFK-44VSGQY";
+      #   name = "Phone";
+      # };
       server = {
         id = "STQSHMX-WFT5HRH-PY52L6N-RNYHONI-PTVGHUI-HGWCCDH-37EENYG-FNXDHA7";
         name = "files.dmarcoux.com";
@@ -30,14 +31,14 @@
         # Path of the folder to sync
         path = "~/obsidian";
         # Sharing with the following devices
-        devices = [ "phone" "server" ];
+        devices = [ "server" ];
       };
       # My music collection
       "music" = {
         # Path of the folder to sync
         path = "~/music";
         # Sharing with the following devices
-        devices = [ "phone" "server" ];
+        devices = [ "server" ];
       };
     };
     # Override any folder added through the web UI, only those defined above persist
