@@ -37,6 +37,7 @@
     ./podman.nix
     ./printing.nix
     ./redshift.nix
+    ./syncthing.nix
     ./udiskie.nix
     ./unclutter.nix
     ./vscode.nix
