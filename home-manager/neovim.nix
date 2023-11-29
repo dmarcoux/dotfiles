@@ -62,6 +62,11 @@
             }
           }
         })
+        -- Setup gopls - https://github.com/golang/tools/tree/master/gopls
+        require("lspconfig")["gopls"].setup({
+          cmd = { "${pkgs.unstable.gopls}/bin/gopls" },
+          capabilities = capabilities
+        })
       EOF
 
       "-------------------- Mappings
