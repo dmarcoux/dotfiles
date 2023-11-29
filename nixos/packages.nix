@@ -39,6 +39,10 @@
     galculator
     # Compiler
     gcc
+    # Statically typed, compiled high-level programming language
+    go_1_20
+    # Go Language Server
+    unstable.gopls
     # For the command make
     gnumake
     # Interface to inotify, which can be used to monitor and act upon filesystem events
