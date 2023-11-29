@@ -59,8 +59,9 @@
       ".bash_history"
       # Local nix-shell whenever a project doesn't have a development environment
       "shell.local.nix"
-      ".nix-mix.local"
-      ".nix-hex.local"
+      ".nix-mix.local" # Elixir
+      ".nix-hex.local" # Elixir
+      ".bundle" # Ruby, this is almost always included in .gitignore, but just in case I ignored it too...
     ];
 
     # Install and setup git-lfs
