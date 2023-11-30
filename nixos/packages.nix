@@ -51,8 +51,6 @@
     krita
     # Office suite for spreadsheets, presentations and more...
     libreoffice
-    # Voice chat for work
-    mumble
     # Expose localhost to the Internet (useful for web development)
     ngrok
     # Generate a database index of all files in my channels, then locate with nix-locate which packages contain these files
