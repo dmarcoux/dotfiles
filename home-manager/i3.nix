@@ -144,7 +144,6 @@
 
       assign [class="^discord$"] → $WS3
       assign [class="^Mumble$"] → $WS3
-      assign [class="^Microsoft Teams - Preview"] → $WS3
 
       assign [class="^thunderbird$"] → $WS4
 
@@ -160,7 +159,8 @@
       for_window [class="^Erlang$"] floating enable # Example of a window with the Erlang class is the Erlang Observer
 
       # Prevent certain applications from stealing focus
-      no_focus [class="^Microsoft Teams"]
+      # Example...
+      # no_focus [class="^SomeApp123"]
 
       # Center floating windows in the workspace in which they appear
       for_window [floating] move position center
@@ -175,11 +175,6 @@
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
       #   2 to 5 are work days (Tuesday to Friday), so if "date" outputs between 2 and 5, it's a work day.
       exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -ge 2 && test $(date +'%u') -le 5 && slack
-
-      # If I'm not on holidays and today is a work day, launch Microsoft Teams.
-      #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
-      #   2 to 5 are work days (Tuesday to Friday), so if "date" outputs between 2 and 5, it's a work day.
-      exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -ge 2 && test $(date +'%u') -le 5 && teams
 
       # If I'm not on holidays and today is a work day, launch Microsoft Teams.
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.

@@ -186,7 +186,6 @@
         "text/x-vcard" = "nvim.desktop";
         "text/xml-external-parsed-entity" = "nvim.desktop";
         "text/xml" = "nvim.desktop";
-        "x-scheme-handler/msteams" = "teams.desktop";
         "x-scheme-handler/slack" = "slack.desktop";
       };
     };
