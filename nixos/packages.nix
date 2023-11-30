@@ -49,8 +49,6 @@
     krita
     # Office suite for spreadsheets, presentations and more...
     libreoffice
-    # Expose localhost to the Internet (useful for web development)
-    ngrok
     # Generate a database index of all files in my channels, then locate with nix-locate which packages contain these files
     nix-index
     # Formatter for Nix code
