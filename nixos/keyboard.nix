@@ -30,8 +30,8 @@ let
       xkb_types    { include "complete" };
       xkb_compat   { include "complete" };
       partial
-      xkb_symbols "ca-multi-custom" {
-          include "pc+ca(multi)+inet(evdev)+ctrl(swapcaps)+eurosign(e)+nbsp(none)"
+      xkb_symbols "ca-multix-custom" {
+          include "pc+ca(multix)+inet(evdev)+ctrl(swapcaps)+eurosign(e)+nbsp(none)"
 
           key <AC02>  { [s, S, ssharp, ssharp] };
       };
