@@ -13,7 +13,7 @@
     ./dircolors.nix
     ./daps2docker.nix
     ./elixir.nix
-    ./exa.nix
+    ./eza.nix
     ./fd.nix
     ./firefox.nix
     ./flameshot.nix
@@ -59,7 +59,7 @@
     homeDirectory = "/home/dany";
     # Switching to a higher state version typically requires performing some manual steps, such as data conversion or moving files
     # See release notes for state version changes: https://nix-community.github.io/home-manager/release-notes.html
-    stateVersion = "23.05";
+    stateVersion = "23.11";
     username = "dany";
   };
 }

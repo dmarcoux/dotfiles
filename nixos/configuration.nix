@@ -72,7 +72,7 @@
   boot.tmp.cleanOnBoot = true;
 
   # Enable a basic set of fonts providing several font styles and families and reasonable coverage of Unicode
-  fonts.enableDefaultFonts = true;
+  fonts.enableDefaultPackages = true;
 
   time.timeZone = "Europe/Berlin";
 
@@ -117,7 +117,7 @@
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
   # should
-  system.stateVersion = "23.05";
+  system.stateVersion = "23.11";
 
   # TODO: https://github.com/NixOS/nixpkgs/issues/180175
   systemd.services.NetworkManager-wait-online.enable = false;

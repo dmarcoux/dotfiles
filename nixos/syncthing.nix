@@ -11,7 +11,7 @@
     # The path where synchronised directories will exist
     dataDir = "/home/dany/syncs";
     # Peers/devices which Syncthing should communicate with
-    devices = {
+    settings.devices = {
       # TODO: My phone's Android version prevents the Syncthing from syncing with other devices... the phone can only send data, not receive.
       # phone = {
       #   id = "Y4ZDZAR-P6X4LVU-5YCZSXG-5JOMAZR-KCQLBGL-PSTB53G-MDE5VFK-44VSGQY";
@@ -25,7 +25,7 @@
     # Override any device added through the web UI, only those defined above persist
     overrideDevices = true;
     # Folders which should be shared by Syncthing
-    folders = {
+    settings.folders = {
       # Sync for https://obsidian.md/
       "obsidian" = {
         # Path of the folder to sync
