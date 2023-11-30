@@ -100,8 +100,6 @@
     # Emails and agenda
     # Using unstable for the TbSync plugin to work (it needs at least Thunderbird 102.0.3)
     unstable.thunderbird-bin
-    # Remote desktop viewer
-    tigervnc
     # Traceroute to a host
     traceroute
     # Convert between two units of measure
