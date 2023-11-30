@@ -6,8 +6,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # Reliable MTP client with minimalistic UI to transfer files from Android phones and other devices supporting the Media Transfer Protocol
-    android-file-transfer
     # Deployment tool for work
     ansible
     # Frontend to XRandR to manage multiple monitors
