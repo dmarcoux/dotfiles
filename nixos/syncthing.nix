@@ -39,6 +39,8 @@
         path = "~/music";
         # Sharing with the following devices
         devices = [ "server" ];
+        # https://docs.syncthing.net/v1.26.0/users/config.html#config-option-folder.type
+        type = "sendonly";
       };
     };
     # Override any folder added through the web UI, only those defined above persist
