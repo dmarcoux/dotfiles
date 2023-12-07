@@ -122,6 +122,7 @@
     g:/home/dany/projets
     h:/home/dany/videos
     i:/home/dany/music-to-import
+    j:/home/dany/ebooks
   '';
 
   programs.zsh.initExtra = ''

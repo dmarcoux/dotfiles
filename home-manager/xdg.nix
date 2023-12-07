@@ -23,6 +23,7 @@
 
       extraConfig = {
         XDG_AUDIO_DIR = "${config.home.homeDirectory}/audio";
+        XDG_EBOOKS_DIR = "${config.home.homeDirectory}/ebooks";
         XDG_PROJETS_DIR = "${config.home.homeDirectory}/projets";
         XDG_TEMPORARY_DIR = "${config.home.homeDirectory}/tmp";
       };

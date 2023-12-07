@@ -15,6 +15,7 @@
       "file:///home/dany/audio"
       "file:///home/dany/projets"
       "file:///home/dany/tmp"
+      "file:///home/dany/ebooks"
     ];
   };
 }
