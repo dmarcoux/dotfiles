@@ -153,8 +153,8 @@
       " Minimal number of screen lines to keep above and below the cursor when moving vertically (if possible...)
       set scrolloff=10
 
-      " Display tabs as >· and trailing spaces as ·
-      set list listchars=tab:\>·,trail:·
+      " Display tabs as │· (longer pipe) and trailing spaces as ·
+      set list listchars=tab:\│·,trail:·
 
       " Disable word wrapping
       set nowrap
