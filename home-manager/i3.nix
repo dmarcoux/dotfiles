@@ -173,13 +173,13 @@
 
       # If I'm not on holidays and today is a work day, launch Slack.
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
-      #   2 to 5 are work days (Tuesday to Friday), so if "date" outputs between 2 and 5, it's a work day.
-      exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -ge 2 && test $(date +'%u') -le 5 && slack
+      #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
+      exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -le 5 && slack
 
       # If I'm not on holidays and today is a work day, launch Thunderbird.
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
-      #   2 to 5 are work days (Tuesday to Friday), so if "date" outputs between 2 and 5, it's a work day.
-      exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -ge 2 && test $(date +'%u') -le 5 && thunderbird
+      #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
+      exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -le 5 && thunderbird
 
       # Launch user activity monitor
       #   After 300 seconds (5 minutes):
