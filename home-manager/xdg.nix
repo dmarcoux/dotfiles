@@ -47,6 +47,7 @@
         "application/x-ruby" = "nvim.desktop";
         "application/x-shellscript" = "nvim.desktop";
         "application/x-yaml" = "nvim.desktop";
+        "application/yaml" = "nvim.desktop";
         "application/x-zerosize" = "nvim.desktop";
         "image/bmp" = "viewnior.desktop";
         "image/gif" = "viewnior.desktop";
