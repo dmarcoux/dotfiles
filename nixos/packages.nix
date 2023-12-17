@@ -31,6 +31,8 @@
     unstable.elixir_ls
     # CLI for https://exercism.org - Solve coding exercises and get mentored to gain true fluency in your chosen programming languages
     unstable.exercism
+    # Audio and video conversion tool
+    ffmpeg_6-headless
     # Ebook reader
     foliate
     # Simple calculator
