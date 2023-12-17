@@ -71,6 +71,8 @@
     pdftk
     # Simple animated GIF screen recorder
     peek
+    # Music tagger to fix music files with wrong metadata tags
+    picard
     # Official ProtonVPN CLI app
     protonvpn-cli
     # CLI program to copy/sync/move files and directories to and from many cloud services
