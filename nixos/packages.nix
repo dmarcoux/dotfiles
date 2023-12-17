@@ -106,6 +106,8 @@
     universal-ctags
     # CLI to create and manipulate disk partition tables
     unixtools.fdisk
+    # RAR archive tool
+    unrar
     # Extract files from Zip archives
     unzip
     # Script updating DNS settings pushed by OpenVPN servers
