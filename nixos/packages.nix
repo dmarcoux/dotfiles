@@ -40,7 +40,7 @@
     # Compiler
     gcc
     # Statically typed, compiled high-level programming language
-    go_1_20
+    go_1_21
     # Go Language Server
     unstable.gopls
     # For the command make
