@@ -4,7 +4,7 @@
 
 {
   xsession.windowManager.i3 = {
-    enable = true; # Enable i3 window manager to replace Xfwm
+    enable = true;
     # Empty settings are instead set below in extraConfig
     config = {
       bars = [];
