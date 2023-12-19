@@ -24,6 +24,8 @@
               vim.fn["vsnip#anonymous"](args.body)
             end,
           },
+          -- Do not preselect a suggestion in the completion menu when it opens
+          preselect = cmp.PreselectMode.None,
           mapping = {
             -- Select next suggestion with Ctrl + j
             ["<C-j>"] = cmp.mapping.select_next_item(),
