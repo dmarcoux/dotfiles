@@ -10,8 +10,6 @@
     ansible
     # Frontend to XRandR to manage multiple monitors
     arandr
-    # Hard disk recorder and digital audio workstation (DAW)
-    ardour
     # Various commands to manage file archives of various types, such as tar and Zip archives
     atool
     # For DNS commands dig and nslookup
