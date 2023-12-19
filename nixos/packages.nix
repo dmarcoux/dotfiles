@@ -6,6 +6,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    (callPackage ./teamus.nix {})
     # Deployment tool for work
     ansible
     # Frontend to XRandR to manage multiple monitors
