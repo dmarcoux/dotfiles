@@ -44,6 +44,8 @@
     unstable.gopls
     # For the command make
     gnumake
+    # Tool for glamorous shell scripts
+    unstable.gum
     # Interface to inotify, which can be used to monitor and act upon filesystem events
     inotify-tools
     # Digital painting
