@@ -49,7 +49,7 @@
     '';
   };
 
-
+  # TODO: Convert the functions below into scripts to be able to eventually turn them into password-store extensions
   # Helper functions for common tasks
   programs.zsh.initExtra = ''
     generate_password(){
@@ -87,6 +87,7 @@
       pass insert --multiline --force "$password_file_without_username" <<< $(echo -e "$password\nUsername: $username")
     }
 
+    # TODO: Selecting the image could be done with `gum file .`
     # Setup new two-factor authentication code from a QR code image
     new_2fa(){
       if [ -z "$1" ] || [ -z "$2" ]; then
