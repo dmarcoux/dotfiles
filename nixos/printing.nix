@@ -34,7 +34,7 @@
       name = "Samsung_M2070_Series";
       description = "Samsung M2070 Series";
       location = "Home";
-      deviceUri = "socket://192.168.1.10";
+      deviceUri = "socket://31.1.90.10";
       model = "Samsung_M2070_Series.ppd.gz"; # Search available models with `lpinfo -m | less`
       ppdOptions = {
         PageSize = "A4";
