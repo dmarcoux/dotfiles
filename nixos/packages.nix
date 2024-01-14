@@ -86,6 +86,8 @@
     rustup
     # Command Line Interface for Scaleway
     unstable.scaleway-cli
+    # Terminal multiplexer, useful to perform long-running tasks
+    screen
     # Static analysis tool for shell scripts
     shellcheck
     # Chat for work
