@@ -11,7 +11,6 @@
     ./beets.nix
     ./cbatticon.nix
     ./dircolors.nix
-    ./daps2docker.nix
     ./elixir.nix
     ./eza.nix
     ./fd.nix
