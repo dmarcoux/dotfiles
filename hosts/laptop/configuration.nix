@@ -22,7 +22,7 @@
   };
 
   networking = {
-    hostName = "DM-Laptop-Work";
+    hostName = "DM-Laptop";
     networkmanager.enable = true;
   };
 
