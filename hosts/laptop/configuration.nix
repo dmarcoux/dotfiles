@@ -9,9 +9,9 @@
     ./hardware-configuration.nix # Include the results of the hardware scan
     ../../nixos/configuration.nix # System configuration
     # Secrets for work
-    ../../secrets/certificates/work.nix
-    ../../secrets/vpn/work.nix
-    ../../secrets/ssh/work.nix
+    # ../../secrets/certificates/work.nix
+    # ../../secrets/vpn/work.nix
+    # ../../secrets/ssh/work.nix
 
   ];
 
