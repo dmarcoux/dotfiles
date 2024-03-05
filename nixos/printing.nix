@@ -21,13 +21,6 @@
   # Install GUI for CUPS administration
   programs.system-config-printer.enable = true;
 
-  services.avahi = {
-    # Enable Avahi daemon to use Avahi's service discovery (so finding printers!)
-    enable = true;
-    # Enable the mDNS NSS (Name Service Switch) plug-in to allow applications to resolve names in the `.local' domain by transparently querying the Avahi daemon
-    nssmdns = true;
-  };
-
   # Configure printers available to print documents
   hardware.printers.ensurePrinters = [
     {
