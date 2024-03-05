@@ -32,6 +32,7 @@
     ./keyboard.nix
     ./locales.nix
     ./lollypop.nix
+    ./mullvad.nix
     ./networking.nix
     ./nixFlakes.nix
     ./packages.nix
