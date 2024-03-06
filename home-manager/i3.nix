@@ -25,6 +25,7 @@
       # New containers on workspace starts in tabbed mode
       workspaceLayout = "tabbed";
     };
+    # Testing changes without rebuild NixOS is possible with `i3-msg -t command SOME_I3_COMMAND` (example: `i3-msg -t command exec alacritty`)
     extraConfig = ''
       #################
       # Variables
