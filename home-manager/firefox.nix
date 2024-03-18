@@ -16,6 +16,10 @@
       "browser.download.dir" = "/home/dany/downloads";
       # Remember and suggest the location of the most recent download before downloading a file
       "browser.download.folderList" = 2;
+      # Prevent searches for addresses ending with `.home`, those are part of my local network
+      # Without this setting, I would have to either always prefix the domain with http:// or https://.
+      # Another option would be to always add a slash after the domain, so it would be something.home/, then the search isn't triggered.
+      "browser.fixup.domainsuffixwhitelist.home" = true;
       # Do not automatically fill in forms
       "browser.formfill.enable" = false;
       # Disable suggestions in the search bar
