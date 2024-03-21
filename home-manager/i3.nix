@@ -154,6 +154,7 @@
       for_window [class="^Vncviewer$"] floating enable
       for_window [class="^Yubico Authenticator$"] floating enable
       for_window [class="^Erlang$"] floating enable # Example of a window with the Erlang class is the Erlang Observer
+      for_window [class="^Gpick$"] floating enable
 
       # Prevent certain applications from stealing focus
       # Example...
