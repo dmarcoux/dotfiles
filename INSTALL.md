@@ -24,9 +24,9 @@ sudo ln --symbolic dotfiles/hosts/CHOOSE_HOST/configuration.nix configuration.ni
 ```
 
 Add [home-manager](https://github.com/nix-community/home-manager) Nix channel
+(`VERSION_NUMBER` should be in this format: `23.05`)
 
 ```
-# Example of a value for VERSION_NUMBER: 23.05
 sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
 ```
 
@@ -75,9 +75,9 @@ cd secrets
 ```
 
 Add [home-manager](https://github.com/nix-community/home-manager) Nix channel
+(`VERSION_NUMBER` should be in this format: `23.05`)
 
 ```
-# Example of a value for VERSION_NUMBER: 23.05
 sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
 ```
 
