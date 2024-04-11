@@ -2,6 +2,15 @@
 
 Set [partitions and filesystems](https://nixos.org/nixos/manual/index.html#sec-installation-partitioning)
 
+Mount partitions and create directory for NixOS configuration files
+
+```
+sudo mount /dev/disk/by-label/nixos /mnt
+sudo mkdir -p /mnt/boot
+sudo mount /dev/disk/by-label/boot /mnt/boot
+sudo mkdir -p /mnt/etc/nixos
+```
+
 Download this repository as a ZIP archive and extract its content in /mnt/etc/nixos/dotfiles
 
 ```
