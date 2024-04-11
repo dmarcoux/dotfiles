@@ -48,13 +48,17 @@ Install NixOS
 sudo nixos-install
 ```
 
-Set password for my user
-
-```
-sudo passwd dany
-```
-
 Reboot
+
+Log in as `root` with the password set in the NixOS installation
+
+Open a terminal and set password for my user
+
+```
+passwd dany
+```
+
+Log out, then log back in as my user
 
 Set my GPG and SSH keys with `restore-backup-keys` script
 
