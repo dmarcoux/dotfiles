@@ -5,19 +5,18 @@
 2. Mount partitions and create directory for NixOS configuration files
 
 ```
-sudo mount /dev/disk/by-label/nixos /mnt
-sudo mkdir -p /mnt/boot
+sudo mount /dev/disk/by-label/nixos /mnt &&
+sudo mkdir -p /mnt/boot /mnt/etc/nixos &&
 sudo mount /dev/disk/by-label/boot /mnt/boot
-sudo mkdir -p /mnt/etc/nixos
 ```
 
 3. Download this repository as a ZIP archive and extract its content in /mnt/etc/nixos/dotfiles
+   (with `-L`, `curl` follows redirects)
 
 ```
-cd /mnt/etc/nixos
-# With -L, curl follows redirects
-sudo curl -L https://github.com/dmarcoux/dotfiles/archive/refs/heads/main.zip --output dotfiles.zip
-sudo unzip dotfiles.zip
+cd /mnt/etc/nixos &&
+sudo curl -L https://github.com/dmarcoux/dotfiles/archive/refs/heads/main.zip --output dotfiles.zip &&
+sudo unzip dotfiles.zip &&
 sudo mv dotfiles-main dotfiles
 ```
 
@@ -31,9 +30,8 @@ grep -rni "secrets" *
 5. Symlink one of the host configurations to `/mnt/etc/nixos/configuration.nix`
 
 ```
-cd /mnt/etc/nixos
-sudo rm configuration.nix
-sudo ln --symbolic dotfiles/hosts/CHOOSE_HOST/configuration.nix configuration.nix
+sudo rm /mnt/etc/nixos/configuration.nix &&
+sudo ln --symbolic /mnt/etc/nixos/dotfiles/hosts/CHOOSE_HOST/configuration.nix /mnt/etc/nixos/configuration.nix
 ```
 
 6. Add [home-manager](https://github.com/nix-community/home-manager) Nix channel
@@ -96,11 +94,11 @@ git clone git@github.com:dmarcoux/dotfiles.git ~/dotfiles
 7. Setup `secrets` gitsubmodule
 
 ```
-cd dotfiles
-git submodule init
-git submodule update
-cd secrets
-# See following instructions in secrets' README in the `Setup` section
+cd dotfiles &&
+git submodule init &&
+git submodule update &&
+cd secrets &&
+echo "Follow instructions from the Setup section in secrets' README"
 ```
 
 8. Add [home-manager](https://github.com/nix-community/home-manager) Nix channel
