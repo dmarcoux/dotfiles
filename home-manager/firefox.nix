@@ -1,14 +1,14 @@
-# User configuration for firefox
+# User configuration for Firefox
 
 {
-  # Set firefox as the default browser
+  # Set Firefox as the default browser
   home.sessionVariables = { BROWSER = "firefox"; };
 
   programs.firefox = {
-    # Install firefox
+    # Install Firefox
     enable = true;
 
-    # Setup firefox
+    # Setup Firefox
     profiles.default = {
       search = {
         # Default search engine
@@ -22,7 +22,7 @@
         ];
       };
 
-      # Settings are from the about:config page in firefox
+      # Settings are from the about:config page in Firefox
       settings = {
         # Do not show the warning when opening the `about:config` page
         "browser.aboutConfig.showWarning" = false;
