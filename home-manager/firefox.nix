@@ -30,6 +30,10 @@
       "browser.startup.homepage" = "about:blank";
       # Disable the Firefox View feature
       "browser.tabs.firefox-view" = false;
+      # Do not show the translations popup
+      "browser.translations.automaticallyPopup" = false;
+      # Do not show the translations feature icon in the address bar
+      "browser.translations.panelShown" = false;
       # Set the default text in the address bar to "Search with DuckDuckGo or enter address"
       "browser.urlbar.placeholderName" = "DuckDuckGo";
       # Same as the line above, but for private tabs
