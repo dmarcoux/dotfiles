@@ -14,17 +14,17 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/974b9233-14b4-497d-9541-23c68bea9443";
+    { device = "/dev/disk/by-label/nixos";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/146E-1A47";
+    { device = "/dev/disk/by-label/boot";
       fsType = "vfat";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/8d542e39-6c5e-4952-8ae8-f156eb09b2d2"; }
+    [ { device = "/dev/disk/by-label/swap"; }
     ];
 
   nix.settings.max-jobs = lib.mkDefault 8;
