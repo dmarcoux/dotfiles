@@ -12,8 +12,12 @@ sudo unzip dotfiles.zip
 sudo mv dotfiles-main dotfiles
 ```
 
-Remove the various `secrets` imports in the root `home-manager` and `NixOS` Nix files
+Find and comment out the various `secrets` imports in the root `home-manager` and `NixOS` Nix files
 (Secrets cannot be decrypted since GPG keys are not installed)
+
+```
+grep -rni "secrets" *
+```
 
 Symlink one of the host configurations to `/mnt/etc/nixos/configuration.nix`
 
