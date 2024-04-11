@@ -1,8 +1,8 @@
 ### Install From Scratch on a NixOS System
 
-Set [partitions and filesystems](https://nixos.org/nixos/manual/index.html#sec-installation-partitioning)
+1. Set [partitions and filesystems](https://nixos.org/nixos/manual/index.html#sec-installation-partitioning)
 
-Mount partitions and create directory for NixOS configuration files
+2. Mount partitions and create directory for NixOS configuration files
 
 ```
 sudo mount /dev/disk/by-label/nixos /mnt
@@ -11,7 +11,7 @@ sudo mount /dev/disk/by-label/boot /mnt/boot
 sudo mkdir -p /mnt/etc/nixos
 ```
 
-Download this repository as a ZIP archive and extract its content in /mnt/etc/nixos/dotfiles
+3. Download this repository as a ZIP archive and extract its content in /mnt/etc/nixos/dotfiles
 
 ```
 cd /mnt/etc/nixos
@@ -21,14 +21,14 @@ sudo unzip dotfiles.zip
 sudo mv dotfiles-main dotfiles
 ```
 
-Find and comment out the various `secrets` imports in the root `home-manager` and `NixOS` Nix files
+4. Find and comment out the various `secrets` imports in the root `home-manager` and `NixOS` Nix files
 (Secrets cannot be decrypted since GPG keys are not installed)
 
 ```
 grep -rni "secrets" *
 ```
 
-Symlink one of the host configurations to `/mnt/etc/nixos/configuration.nix`
+5. Symlink one of the host configurations to `/mnt/etc/nixos/configuration.nix`
 
 ```
 cd /mnt/etc/nixos
@@ -36,52 +36,64 @@ sudo rm configuration.nix
 sudo ln --symbolic dotfiles/hosts/CHOOSE_HOST/configuration.nix configuration.nix
 ```
 
-Add [home-manager](https://github.com/nix-community/home-manager) Nix channel
+6. Add [home-manager](https://github.com/nix-community/home-manager) Nix channel
 (`VERSION_NUMBER` should be in this format: `23.05`)
 
 ```
 sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
 ```
 
-Add [nixos-hardware](https://github.com/NixOS/nixos-hardware) Nix channel
+7. Add [nixos-hardware](https://github.com/NixOS/nixos-hardware) Nix channel
 
 ```
 sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
 ```
 
-Update Nix channels
+8. Update Nix channels
 
 ```
 sudo nix-channel --update
 ```
 
-Install NixOS
+9. Install NixOS
 
 ```
 sudo nixos-install
 ```
 
-Reboot
+10. Reboot
 
-Log in as `root` with the password set in the NixOS installation
+```
+reboot
+```
 
-Open a terminal and set password for my user
+-----
+
+1. Log in as `root` with the password set in the NixOS installation
+
+2. Open a terminal and set password for my user
 
 ```
 passwd dany
 ```
 
-Log out, then log back in as my user
+3. Log out
 
-Set my GPG and SSH keys with `restore-backup-keys` script
+```
+logout
+```
 
-Clone the dotfiles repository
+4. Log in as my user
+
+5. Set my GPG and SSH keys with `restore-backup-keys` script
+
+6. Clone the dotfiles repository
 
 ```
 git clone git@github.com:dmarcoux/dotfiles.git ~/dotfiles
 ```
 
-Setup `secrets` gitsubmodule
+7. Setup `secrets` gitsubmodule
 
 ```
 cd dotfiles
@@ -91,44 +103,44 @@ cd secrets
 # See following instructions in secrets' README in the `Setup` section
 ```
 
-Add [home-manager](https://github.com/nix-community/home-manager) Nix channel
+8. Add [home-manager](https://github.com/nix-community/home-manager) Nix channel
 (`VERSION_NUMBER` should be in this format: `23.05`)
 
 ```
 sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
 ```
 
-Add [nixos-hardware](https://github.com/NixOS/nixos-hardware) Nix channel
+9. Add [nixos-hardware](https://github.com/NixOS/nixos-hardware) Nix channel
 
 ```
 sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
 ```
 
-Update Nix channels
+10. Update Nix channels
 
 ```
 sudo nix-channel --update
 ```
 
-Go to the dotfiles directory
-
-```
-cd ~/dotfiles
-```
-
-Symlink one of the host configurations to `/etc/nixos/configuration.nix` (the
+11. Symlink one of the host configurations to `/etc/nixos/configuration.nix` (the
 default path to the main NixOS configuration module). Create one if not already
 done. The generated hardware-configuration.nix is under /etc/nixos.
 
 ```
-sudo ln --symbolic "$PWD/hosts/CHOOSE_HOST/configuration.nix" /etc/nixos/configuration.nix
+sudo rm /etc/nixos/configuration.nix &&
+sudo ln --symbolic "/home/dany/dotfiles/hosts/CHOOSE_HOST/configuration.nix" /etc/nixos/configuration.nix
 ```
 
-Build the NixOS system, then reboot
+12. Build the NixOS system
 
 ```
 sudo nixos-rebuild boot
+```
+
+13. Reboot
+
+```
 reboot
 ```
 
-Clean up /etc/nixos to remove everything but /etc/nixos/configuration.nix
+14. Clean up `/etc/nixos` to remove everything but `/etc/nixos/configuration.nix`
