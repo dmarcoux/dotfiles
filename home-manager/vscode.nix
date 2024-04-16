@@ -15,7 +15,6 @@
     # code --install-extension PUBLISHER.NAME
     #
     # List of extensions to install manually with their identifier, name and description
-    # vscode-icons-team.vscode-icons | vscode-icons | Icons
     # vayan.haml | Ruby Haml | Syntax highlighting for Haml files
     extensions = with pkgs.unstable.vscode-extensions; [
       vscodevim.vim # Vim emulation
@@ -24,6 +23,7 @@
       bradlc.vscode-tailwindcss # IntelliSense for Tailwind CSS
       elixir-lsp.vscode-elixir-ls # Elixir support with debugger, autocomplete, and more. Powered by ElixirLS
       phoenixframework.phoenix # Syntax highlighting support for HEEx / Phoenix templates
+      vscode-icons-team.vscode-icons # Icons
     ];
     keybindings = [
       # Open next editor with "Shift + Right arrow" instead of "Ctrl + Page Down"
