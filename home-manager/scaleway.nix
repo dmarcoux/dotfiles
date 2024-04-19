@@ -1,13 +1,19 @@
 # User configuration for Scaleway
 
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   # Install Command Line Interface for AWS and S3-compatible services like Scaleway Storage
   home.packages = [ pkgs.awscli2 ];
 
+  # Do not pollute $HOME with config files
+  home.sessionVariables = {
+    AWS_SHARED_CREDENTIALS_FILE = "${config.xdg.configHome}/aws/credentials";
+    AWS_CONFIG_FILE = "${config.xdg.configHome}/aws/config";
+  };
+
   # Configure AWS CLI to be used with Scaleway Storage
-  home.file.".aws/config".text = ''
+  xdg.configFile."aws/config".text = ''
     [default]
     region = fr-par
     s3 =
