@@ -49,6 +49,9 @@
   # Allow installation of unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Nix will conform to the XDG Base Directory Specification for files in $HOME
+  nix.settings.use-xdg-base-directories = true;
+
   # Enable all experimental features of the `nix` command without having to always do `nix --extra-experimental-features nix-command some_experimental_command`
   nix.settings.experimental-features = [ "nix-command" ];
 
