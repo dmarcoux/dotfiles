@@ -10,7 +10,7 @@
   programs.zsh.shellAliases = { fd = "fd --hidden"; };
 
   # Configure fd
-  home.file.".fdignore".text = ''
+  xdg.configFile."fd/ignore".text = ''
     # fd ignores anything matching this
     .git/
   '';
