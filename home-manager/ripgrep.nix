@@ -26,10 +26,13 @@
 
     # Searches case insensitively if the pattern is all lowercase. Search case sensitively otherwise.
     --smart-case
+
+    # Global ignore file
+    --ignore-file=${config.xdg.configHome}/ripgrep/ignore
   '';
 
   # ripgrep ignores anything matching this
-  home.file.".ignore".text = ''
+  xdg.configFile."ripgrep/ignore".text = ''
     .git/
 
     *.swp
