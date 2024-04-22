@@ -57,6 +57,7 @@
     # List of paths that should be globally ignored
     # While those files are usually never tracked, adding them is still possible with `git add --force filename`
     ignores = [
+      "nohup.out" # From nohup
       "*.swp"
       ".bash_history"
       # Local nix-shell whenever a project doesn't have a development environment
