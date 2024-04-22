@@ -138,6 +138,7 @@
       #   4. Get value of 'WM_CLASS(STRING)' from xprop's output
       assign [class="^Alacritty$"] → $WS1
       assign [class="^Code$"] → $WS1
+      assign [class="^jetbrains-rider$"] → $WS1
 
       assign [class="^firefox$"] → $WS2
       assign [class="^Slack$"] → $WS2
