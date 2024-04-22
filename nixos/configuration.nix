@@ -12,8 +12,8 @@
       unstable = import (builtins.fetchTarball {
         # Descriptive name to make the store path easier to identify
         name = "nixos-unstable-06-03-2024";
-        # Find the hash of the latest commit for nixos-unstable with the command below (The delimiter in `cut` is a Tab character)
-        # git ls-remote https://github.com/nixos/nixpkgs nixos-unstable | cut --delimiter="      " --fields=1 | xargs --no-run-if-empty -I % echo "https://github.com/nixos/nixpkgs/archive/%.tar.gz"
+        # Find the hash of the latest commit for nixos-unstable with the command below
+        # git ls-remote https://github.com/nixos/nixpkgs nixos-unstable | cut --fields=1 | xargs --no-run-if-empty -I % echo "https://github.com/nixos/nixpkgs/archive/%.tar.gz"
         url = "https://github.com/nixos/nixpkgs/archive/b8697e57f10292a6165a20f03d2f42920dfaf973.tar.gz";
         # Obtained using `nix-prefetch-url --unpack <url>`
         sha256 = "1pamq9g3z031sqpy0xi1kv954l5b7m89f3xncp9mkshmqngp98cz";
