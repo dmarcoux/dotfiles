@@ -51,7 +51,7 @@
     # Interface to inotify, which can be used to monitor and act upon filesystem events
     inotify-tools
     # .NET IDE based on the IntelliJ platform and ReSharper
-    jetbrains.rider
+    unstable.jetbrains.rider
     # Digital painting
     krita
     # Office suite for spreadsheets, presentations and more...
