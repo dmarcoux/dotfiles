@@ -173,11 +173,6 @@
       set ignorecase
 
       "-------------------- History, Backup & System
-      " Hide buffers, instead of closing them.
-      " Having unwritten changes in a file and opening a new file using :e, won't force saving or undoing changes first.
-      " Undo buffers and marks are preserved while the buffer is open
-      set hidden
-
       " Link to the system clipboard
       set clipboard^=unnamedplus
 
