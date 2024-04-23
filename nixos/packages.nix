@@ -96,8 +96,6 @@
     slack
     # Ruby Language Server
     unstable.rubyPackages.solargraph
-    # Collaborative cheatsheets for console commands
-    tealdeer
     # For the `tree` command which shows the contents of the current directory as a tree
     tree
     # Emails and agenda

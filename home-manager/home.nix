@@ -40,6 +40,7 @@
     ./scripts.nix
     ./ssh.nix
     ./starship.nix
+    ./tldr.nix
     ./udiskie.nix
     ./vscode.nix
     ./xcape.nix
