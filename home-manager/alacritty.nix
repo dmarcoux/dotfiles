@@ -7,7 +7,7 @@
 
     # Configure alacritty
     settings = {
-      # "Solarized Light" taken from https://github.com/alacritty/alacritty/wiki/Color-schemes
+      # "Solarized Light" taken from https://github.com/alacritty/alacritty-theme
       colors = {
         primary = {
           background = "#fdf6e3";
