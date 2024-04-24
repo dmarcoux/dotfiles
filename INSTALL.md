@@ -2,6 +2,8 @@
 
 1. Set [partitions and filesystems](https://nixos.org/nixos/manual/index.html#sec-installation-partitioning)
 
+   TODO: Give [disko](https://github.com/nix-community/disko) a try.
+
 2. Mount partitions and create directory for NixOS configuration files
 
 ```
