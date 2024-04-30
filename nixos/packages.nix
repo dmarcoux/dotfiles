@@ -129,6 +129,8 @@
     x11vnc
     # Execute commands when computer is idle for a specified amount of time
     xidlehook
+    # Shell script to check $HOME for unwanted files and directories
+    unstable.xdg-ninja
     # Edit PDF documents and create digital signatures which can be applied to PDF documents
     xournalpp
     # Get and set the X selection (like changing the clipboard)
