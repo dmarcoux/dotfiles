@@ -169,8 +169,10 @@
       set lazyredraw
 
       "-------------------- Search Settings
-      " Ignore case when searching
+      " Use case-insensitive search by default
       set ignorecase
+      " Use case-sensitive search if any of the search characters are uppercase
+      set smartcase
 
       "-------------------- History, Backup & System
       " Link to the system clipboard
