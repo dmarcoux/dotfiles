@@ -24,6 +24,7 @@
     ./helix.nix
     (import ./i3.nix { pkgs = pkgs; nixos_options = nixos_options; })
     ./i3status.nix
+    ./jetbrains.nix
     ./jq.nix
     ./keyboard.nix
     ./neovim.nix
