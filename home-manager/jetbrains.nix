@@ -34,5 +34,7 @@
     set ideajoin
     " Highlight copied/yanked region
     set highlightedyank
+    " Lightning fast left-right movement - https://plugins.jetbrains.com/plugin/19417-ideavim-quickscope
+    set quickscope
   '';
 }
