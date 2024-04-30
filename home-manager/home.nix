@@ -11,6 +11,7 @@
     ./beets.nix
     ./cbatticon.nix
     ./dircolors.nix
+    ./dotnet.nix
     ./elixir.nix
     ./eza.nix
     ./fd.nix
