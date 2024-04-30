@@ -8,6 +8,8 @@
 
   # Configure IdeaVim, a plugin emulating Vim inside JetBrains IDEs
   # https://github.com/JetBrains/ideavim
+  #
+  # List of Supported Set Commands: https://github.com/JetBrains/ideavim/blob/master/doc/set-commands.md
   xdg.configFile."ideavim/ideavimrc".text = ''
     "---------- UI Settings
     " Minimal number of screen lines to keep above and below the cursor when moving vertically (if possible...)
