@@ -14,6 +14,9 @@
   # Reload IdeaVim settings with `:source ~/.config/ideavim/ideavimrc`
   xdg.configFile."ideavim/ideavimrc".text = ''
     "---------- Mappings
+    " TODO: Use sethandler to configure which shortcuts are to be used by Vim in case of conflicts with IDE
+    "       https://github.com/JetBrains/ideavim/wiki/sethandler
+
     "----- Normal Mode
     " Non-recursive mappings for Ctrl + J and Ctrl + K to move the current line(s) up / down
     nnoremap <C-j> :m .+1<CR>==
