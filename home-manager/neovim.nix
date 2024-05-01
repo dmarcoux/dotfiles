@@ -87,12 +87,12 @@
       inoremap <S-Tab> <C-D>
 
       "---------- Normal Mode
-      " Non-recursive mappings for Ctrl + J and Ctrl + K to move the current line(s)
+      " Non-recursive mappings for Ctrl + J and Ctrl + K to move the current line(s) up / down
       nnoremap <C-j> :m .+1<CR>==
       nnoremap <C-k> :m .-2<CR>==
 
       "---------- Visual and Select Modes
-      " Non-recursive mappings for Ctrl + J and Ctrl + K to move selected line(s)
+      " Non-recursive mappings for Ctrl + J and Ctrl + K to move selected line(s) up / down
       vnoremap <C-j> :m '>+1<CR>gv=gv
       vnoremap <C-k> :m '<-2<CR>gv=gv
 
