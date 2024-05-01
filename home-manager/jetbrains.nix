@@ -24,8 +24,8 @@
 
     "----- Normal Mode
     " Non-recursive mappings for Ctrl + J and Ctrl + K to move the current line(s) up / down
-    nnoremap <C-j> :m .+1<CR>==
-    nnoremap <C-k> :m .-2<CR>==
+    nnoremap <C-j> :action MoveLineDown<CR>
+    nnoremap <C-k> :action MoveLineUp<CR>
 
     "------ Visual and Select Modes
     " TODO: This doesn't always keep the selection after moving, it's behaving in a weird way
