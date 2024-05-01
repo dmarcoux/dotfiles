@@ -30,8 +30,8 @@
     "------ Visual and Select Modes
     " TODO: This doesn't always keep the selection after moving, it's behaving in a weird way
     " Non-recursive mappings for Ctrl + J and Ctrl + K to move selected line(s) up / down
-    vnoremap <C-j> :m '>+1<CR>gv=gv
-    vnoremap <C-k> :m '<-2<CR>gv=gv
+    "vnoremap <C-j> :m '>+1<CR>gv=gv
+    "vnoremap <C-k> :m '<-2<CR>gv=gv
 
     "---------- UI Settings
     " Minimal number of screen lines to keep above and below the cursor when moving vertically (if possible...)
