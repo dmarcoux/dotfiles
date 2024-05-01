@@ -10,6 +10,8 @@
   # https://github.com/JetBrains/ideavim
   #
   # List of Supported Set Commands: https://github.com/JetBrains/ideavim/blob/master/doc/set-commands.md
+  #
+  # Reload IdeaVim settings with `:source ~/.config/ideavim/ideavimrc`
   xdg.configFile."ideavim/ideavimrc".text = ''
     "---------- UI Settings
     " Minimal number of screen lines to keep above and below the cursor when moving vertically (if possible...)
@@ -36,5 +38,7 @@
     set highlightedyank
     " Lightning fast left-right movement - https://plugins.jetbrains.com/plugin/19417-ideavim-quickscope
     set quickscope
+    " Comment stuff out - https://github.com/tpope/vim-commentary
+    set commentary
   '';
 }
