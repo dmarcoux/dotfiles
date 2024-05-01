@@ -16,6 +16,11 @@
     "---------- Mappings
     " TODO: Use sethandler to configure which shortcuts are to be used by Vim in case of conflicts with IDE
     "       https://github.com/JetBrains/ideavim/wiki/sethandler
+    "----- Insert Mode
+    " Non-recursive mappings to select and enter choice in an IDE list/lookup, like when autocompletion triggers"
+    inoremap <C-k> :action EditorUp<CR>
+    inoremap <C-l> :action EditorChooseLookupItem<CR>
+    inoremap <C-j> :action EditorDown<CR>
 
     "----- Normal Mode
     " Non-recursive mappings for Ctrl + J and Ctrl + K to move the current line(s) up / down
