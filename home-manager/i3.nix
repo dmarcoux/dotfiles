@@ -161,6 +161,7 @@
       # Prevent certain applications from stealing focus
       # Example...
       # no_focus [class="^SomeApp123"]
+      no_focus [class="^jetbrains-rider$"]
       no_focus [class="^jetbrains-idea$"]
 
       # Center floating windows in the workspace in which they appear
