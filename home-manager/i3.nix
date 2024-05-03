@@ -139,6 +139,7 @@
       assign [class="^Alacritty$"] → $WS1
       assign [class="^Code$"] → $WS1
       assign [class="^jetbrains-rider$"] → $WS1
+      assign [class="^jetbrains-idea$"] → $WS1
 
       assign [class="^firefox$"] → $WS2
       assign [class="^Slack$"] → $WS2
@@ -160,6 +161,7 @@
       # Prevent certain applications from stealing focus
       # Example...
       # no_focus [class="^SomeApp123"]
+      no_focus [class="^jetbrains-idea$"]
 
       # Center floating windows in the workspace in which they appear
       for_window [floating] move position center

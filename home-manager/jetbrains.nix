@@ -4,7 +4,8 @@
 
 {
   # Install JetBrains Rider, a .NET IDE based on the IntelliJ platform and ReSharper
-  home.packages = [ pkgs.unstable.jetbrains.rider ];
+  # Install JetBrains IntelliJ IDEA, an IDE for Java, Kotlin, Groovy and Scala
+  home.packages = [ pkgs.unstable.jetbrains.rider pkgs.unstable.jetbrains.idea-ultimate ];
 
   # Configure IdeaVim, a plugin emulating Vim inside JetBrains IDEs
   # https://github.com/JetBrains/ideavim
