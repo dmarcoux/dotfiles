@@ -65,6 +65,7 @@
       ".nix-mix.local" # Elixir
       ".nix-hex.local" # Elixir
       ".bundle" # Ruby, this is almost always included in .gitignore, but just in case I ignored it too...
+      ".idea" # JetBrains IDEs
     ];
 
     # Install and setup git-lfs
