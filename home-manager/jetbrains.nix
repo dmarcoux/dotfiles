@@ -15,8 +15,21 @@
   # Reload IdeaVim settings with `:source ~/.config/ideavim/ideavimrc`
   xdg.configFile."ideavim/ideavimrc".text = ''
     "---------- Mappings
-    " TODO: Use sethandler to configure which shortcuts are to be used by Vim in case of conflicts with IDE
-    "       https://github.com/JetBrains/ideavim/wiki/sethandler
+    "----- Handlers, configure which mappings are to be used by IdeaVim or the IDE in case of conflicts
+    "      https://github.com/JetBrains/ideavim/wiki/sethandler
+    "
+    "      n - normal mode
+    "      i - insert mode
+    "      x - visual mode
+    "      v - visual and select modes
+    "      a - all modes
+    sethandler <C-j> a:vim
+    sethandler <C-k> a:vim
+    sethandler <C-l> a:vim
+
+    sethandler <C-p> a:ide
+    sethandler <C-n> a:ide
+
     "----- Insert Mode
     " Non-recursive mappings to select and enter choice in an IDE list/lookup, like when autocompletion triggers"
     inoremap <C-k> :action EditorUp<CR>
