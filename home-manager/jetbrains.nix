@@ -15,6 +15,8 @@
   # Reload IdeaVim settings with `:source ~/.config/ideavim/ideavimrc`
   xdg.configFile."ideavim/ideavimrc".text = ''
     "---------- Mappings
+    let mapleader=","
+
     "----- Handlers, configure which mappings are to be used by IdeaVim or the IDE in case of conflicts
     "      https://github.com/JetBrains/ideavim/wiki/sethandler
     "
@@ -46,6 +48,10 @@
     " Non-recursive mappings for Ctrl + J and Ctrl + K to move selected line(s) up / down
     "vnoremap <C-j> :m '>+1<CR>gv=gv
     "vnoremap <C-k> :m '<-2<CR>gv=gv
+
+    "------ Normal, Visual and Operator Pending Modes
+    " Non-recursive mapping for leader + Enter to disable text highlighting
+    noremap <silent> <leader><CR> :noh<CR>
 
     "---------- UI Settings
     " Minimal number of screen lines to keep above and below the cursor when moving vertically (if possible...)
