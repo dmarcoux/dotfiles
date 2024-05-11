@@ -31,6 +31,8 @@
 
     sethandler <C-p> a:ide
     sethandler <C-n> a:ide
+    " Ctrl + q displays the quick documentation
+    sethandler <C-q> a:ide
 
     "----- Insert Mode
     " Non-recursive mappings to select and enter choice in an IDE list/lookup, like when autocompletion triggers"
