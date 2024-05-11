@@ -29,7 +29,9 @@
     sethandler <C-k> a:vim
     sethandler <C-l> a:vim
 
+    " Ctrl + p to open files via a fuzzy search
     sethandler <C-p> a:ide
+    " Ctrl + n displays the recent files
     sethandler <C-n> a:ide
     " Ctrl + q displays the quick documentation
     sethandler <C-q> a:ide
