@@ -3,6 +3,7 @@
 { pkgs, ... }:
 
 {
+  # TODO: Think about replacing ranger with yazi (https://github.com/sxyazi/yazi) once it's on a stable release
   # Install ranger without `highlight` to rely on `bat` for syntax highlighting in file previews
   home.packages = [ (pkgs.ranger.override { highlight = null; }) ];
 
