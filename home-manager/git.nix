@@ -8,6 +8,7 @@
     git-crypt
   ];
 
+  # TODO: Configure git to use a separate user/config for work projects, see https://stackoverflow.com/a/4220493
   programs.git = {
     # Install git
     enable = true;
