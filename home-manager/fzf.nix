@@ -20,6 +20,8 @@ in
 {
   programs.fzf = {
     enable = true;
+    # TODO: NixOS 24.05
+    # enableZshIntegration = true;
     # Default command for the ALT+C key binding
     # Only list directories which aren't ignored by VCS. The `.git` directory is always ignored.
     changeDirWidgetCommand = "command fd --hidden --type directory --exclude .git";
