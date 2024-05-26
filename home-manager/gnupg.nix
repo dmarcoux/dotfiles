@@ -5,6 +5,7 @@
 
   services.gpg-agent = {
     enable = true;
+    enableZshIntegration = true;
     # Use GnuPG agent with SSH support
     enableSshSupport = true;
     # Cache the GPG key for 4 hours

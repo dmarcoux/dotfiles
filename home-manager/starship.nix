@@ -5,6 +5,7 @@
 {
   programs.starship = {
     enable = true;
+    enableZshIntegration = true;
     # Install starship (using unstable since it's often updated)
     package = pkgs.unstable.starship;
     settings = {
