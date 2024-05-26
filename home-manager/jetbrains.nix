@@ -12,6 +12,8 @@
   #
   # List of Supported Set Commands: https://github.com/JetBrains/ideavim/blob/master/doc/set-commands.md
   #
+  # See list of actions and search for a specific action with `:actionlist <something>`
+  #
   # Reload IdeaVim settings with `:source ~/.config/ideavim/ideavimrc`
   xdg.configFile."ideavim/ideavimrc".text = ''
     "---------- Mappings
