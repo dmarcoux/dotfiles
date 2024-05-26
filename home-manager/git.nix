@@ -26,9 +26,8 @@
     extraConfig = {
       branch = { autoSetupRebase = "always"; };
       core = {
-        # -u NORC is needed to prevent the "Waiting for your editor to close the file (...)" error which happens due to an unknown setting in my Neovim configuration
-        # It skips initialization from files and environment variables, but load plugins. This is enough anyway.
-        editor = "nvim -u NORC -c \"set clipboard^=unnamedplus\"";
+        # Load a minimal Neovim configuration for Git to prevent the "Waiting for your editor to close the file (...)" error which happens due to an unknown setting in my main Neovim configuration
+        editor = "nvim -u '${config.xdg.configHome}/nvim/git.vim'";
         # Use the same path as defined upstream: https://github.com/nix-community/home-manager/blob/ad8b644de19aca8a7534c9695a7446b258156d06/modules/programs/git.nix#L223
         excludesFile = "${config.xdg.configHome}/git/ignore";
         fileMode = true;
