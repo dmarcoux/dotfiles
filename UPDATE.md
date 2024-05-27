@@ -24,7 +24,7 @@
 
    3.1 Check the release notes if something needs to be changed.
      - [NixOS](https://nixos.org/manual/nixos/stable/release-notes.html#ch-release-notes)
-     - [Home Manager](https://nix-community.github.io/home-manager/release-notes.html)
+     - [Home Manager](https://nix-community.github.io/home-manager/release-notes.xhtml)
 
    3.2 Apply the changes if needed.
 
