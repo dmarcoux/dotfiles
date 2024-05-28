@@ -145,6 +145,7 @@
       assign [class="^Chromium-browser$"] → $WS2
 
       assign [class="^discord$"] → $WS3
+      assign [class="^bruno$"] → $WS3
 
       assign [class="^thunderbird$"] → $WS4
 
