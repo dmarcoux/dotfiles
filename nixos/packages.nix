@@ -17,6 +17,8 @@
     bind
     # For the command `ar`, which creates, modifies, and extracts from archives
     bintools-unwrapped
+    # Tool to help building and using APIs
+    unstable.bruno
     # Cross-platform build automation system
     cmake
     # Voice, video, and text chat
