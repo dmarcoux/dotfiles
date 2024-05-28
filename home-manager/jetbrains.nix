@@ -34,6 +34,8 @@
     sethandler <C-k> a:vim
     " Ctrl + l is mapped below
     sethandler <C-l> a:vim
+    " Ctrl + o is the opposite of the `gd` mapping in Normal mode. `gd` goes to the declaration of what's under the cursor, Ctrl + o goes back to where I came from
+    sethandler <C-o> a:vim
 
     " Ctrl + p to open files via a fuzzy search
     sethandler <C-p> a:ide
