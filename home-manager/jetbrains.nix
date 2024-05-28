@@ -27,8 +27,12 @@
     "      x - visual mode
     "      v - visual and select modes
     "      a - all modes
+
+    " Ctrl + j is mapped below
     sethandler <C-j> a:vim
+    " Ctrl + k is mapped below
     sethandler <C-k> a:vim
+    " Ctrl + l is mapped below
     sethandler <C-l> a:vim
 
     " Ctrl + p to open files via a fuzzy search
