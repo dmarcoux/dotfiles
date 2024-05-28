@@ -74,8 +74,6 @@
     peek
     # Music tagger to fix music files with wrong metadata tags
     picard
-    # Official ProtonVPN CLI app
-    protonvpn-cli
     # CLI program to copy/sync/move files and directories to and from many cloud services
     rclone
     # Batch rename files/directories according to a Perl expression
