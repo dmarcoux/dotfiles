@@ -44,7 +44,7 @@
       };
       # A bit smaller than the default font size of 11.0
       font = { size = 10.0; };
-      key_bindings = [
+      keyboard.bindings = [
         # Create new window in the current directory with Ctrl+Shift+T
         { key = "T"; mods = "Control|Shift"; action = "CreateNewWindow"; }
       ];
