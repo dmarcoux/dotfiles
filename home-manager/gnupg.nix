@@ -1,5 +1,7 @@
 # User configuration for GnuPG
 
+{ pkgs, ... }:
+
 {
   programs.gpg.enable = true;
 
@@ -12,5 +14,7 @@
     defaultCacheTtl = 14400; # number of seconds
     # Cache the SSH key for 4 hours
     defaultCacheTtlSsh = 14400; # number of seconds
+    # Set the pinentry interface to use
+    pinentryPackage = pkgs.pinentry-gtk2;
   };
 }
