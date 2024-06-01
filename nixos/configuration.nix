@@ -11,12 +11,12 @@
     packageOverrides = pkgs: {
       unstable = import (builtins.fetchTarball {
         # Descriptive name to make the store path easier to identify
-        name = "nixos-unstable-27-05-2024";
+        name = "nixos-unstable-01-06-2024";
         # Find the hash of the latest commit for nixos-unstable with the command below
         # git ls-remote https://github.com/nixos/nixpkgs nixos-unstable | cut --fields=1 | xargs --no-run-if-empty -I % echo "https://github.com/nixos/nixpkgs/archive/%.tar.gz"
-        url = "https://github.com/nixos/nixpkgs/archive/bfb7a882678e518398ce9a31a881538679f6f092.tar.gz";
+        url = "https://github.com/nixos/nixpkgs/archive/ad57eef4ef0659193044870c731987a6df5cf56b.tar.gz";
         # Obtained using `nix-prefetch-url --unpack <url>`
-        sha256 = "0zyny8h62hqfix4mrk6nf3qdvmhs49v9pkrnq80q28ji4j2qhd73";
+        sha256 = "1fz2yjr8as12g9qhixwc8vzd294v3q5jzmrk5dwp8w44qz3clc2b";
       }) {
         config = config.nixpkgs.config;
       };
@@ -120,7 +120,7 @@
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
   # should
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.05";
 
   # TODO: https://github.com/NixOS/nixpkgs/issues/180175
   systemd.services.NetworkManager-wait-online.enable = false;

@@ -59,7 +59,7 @@
     # Generate a database index of all files in my channels, then locate with nix-locate which packages contain these files
     nix-index
     # Formatter for Nix code
-    nixfmt
+    nixfmt-classic
     # For coc.nvim, which provides auto-completion in Neovim
     unstable.nodejs-18_x
     # Manage resolv.conf for DNS settings

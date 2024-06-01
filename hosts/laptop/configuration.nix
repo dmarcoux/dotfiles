@@ -27,7 +27,7 @@
   };
 
   # Enable touchpad support
-  services.xserver.libinput = {
+  services.libinput = {
     enable = true;
 
     touchpad = {
