@@ -34,7 +34,6 @@
     ./lollypop.nix
     ./mullvad.nix
     ./networking.nix
-    ./nixFlakes.nix
     ./packages.nix
     ./podman.nix
     ./printing.nix
