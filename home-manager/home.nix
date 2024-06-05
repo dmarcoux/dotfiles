@@ -21,6 +21,7 @@
     ./git.nix
     # TODO: Remove this after GNOME migration
     #./gnupg.nix
+    ./gnome.nix
     ./gtk.nix
     ./helix.nix
     # TODO: Remove those imports and the files once I fully migrated to GNOME

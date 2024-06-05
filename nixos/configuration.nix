@@ -30,7 +30,8 @@
     ./gnome.nix
     ./gnupg.nix
     ./i3.nix
-    ./keyboard.nix
+    # TODO: Remove this after keyboard layout fully works on GNOME
+    # ./keyboard.nix
     ./locales.nix
     ./lollypop.nix
     ./mullvad.nix
