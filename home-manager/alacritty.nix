@@ -48,8 +48,6 @@
         # Create new window in the current directory with Ctrl+Shift+T
         { key = "T"; mods = "Control|Shift"; action = "CreateNewWindow"; }
       ];
-      # The mouse cursor is temporarily hidden when typing
-      mouse = { hide_when_typing = true; };
     };
   };
 
