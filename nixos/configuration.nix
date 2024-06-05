@@ -27,7 +27,8 @@
     (import ./home-manager.nix { pkgs = pkgs; config = config; nixos_options = options; })
     ./chromium.nix
     ./docker.nix
-    ./evince.nix
+    ./gnome.nix
+    ./gnupg.nix
     ./i3.nix
     ./keyboard.nix
     ./locales.nix
@@ -37,7 +38,8 @@
     ./packages.nix
     ./podman.nix
     ./printing.nix
-    ./redshift.nix
+    # TODO: Remove this after GNOME migration
+    # ./redshift.nix
     ./udiskie.nix
     ./unclutter.nix
     ./vscode.nix
@@ -94,7 +96,6 @@
       # Enable minimal desktop/display manager setup to have a login screen
       # home-manager will take over after login in
       desktopManager.xterm.enable = true;
-      displayManager.lightdm.enable = true;
 
       # Disable screensaver and display power manager signaling (DPMS)
       displayManager.sessionCommands = ''
