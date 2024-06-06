@@ -53,16 +53,18 @@
     ################################
 
     "org/gnome/desktop/wm/keybindings" = {
-      # Switch to workspace X with Windows/Super key + {1,2,3,4}
+      # Switch to workspace X with Windows/Super key + {1,2,3,4,5}
       switch-to-workspace-1 = [ "<Super>1" ];
       switch-to-workspace-2 = [ "<Super>2" ];
       switch-to-workspace-3 = [ "<Super>3" ];
       switch-to-workspace-4 = [ "<Super>4" ];
-      # Move a window to workspace X with Shift + Windows/Super key + {1,2,3,4}
+      switch-to-workspace-5 = [ "<Super>5" ];
+      # Move a window to workspace X with Shift + Windows/Super key + {1,2,3,4,5}
       move-to-workspace-1 = [ "<Shift><Super>1" ];
       move-to-workspace-2 = [ "<Shift><Super>2" ];
       move-to-workspace-3 = [ "<Shift><Super>3" ];
       move-to-workspace-4 = [ "<Shift><Super>4" ];
+      move-to-workspace-5 = [ "<Shift><Super>5" ];
       # Switch to another application from any workspace with (Shift) Windows/Super key + Tab
       switch-applications = [ "<Super>Tab" ];
       switch-applications-backward = [ "<Shift><Super>Tab" ];
@@ -81,6 +83,7 @@
       switch-to-application-2 = [];
       switch-to-application-3 = [];
       switch-to-application-4 = [];
+      switch-to-application-5 = [];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
@@ -110,6 +113,16 @@
     "org/gnome/desktop/interface" = {
       # Do not open the Activities Overview when the mouse cursor touches the top-left corner of the screen
       enable-hot-corners = false;
+    };
+
+    "org/gnome/mutter" = {
+      # Do not automatically remove empty workspaces
+      dynamic-workspaces = false;
+    };
+
+    "org/gnome/desktop/wm/preferences" = {
+      # Set the number of workspaces to 5
+      num-workspaces = 5;
     };
 
     ################################
