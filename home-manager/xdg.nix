@@ -191,6 +191,7 @@
         "text/xml-external-parsed-entity" = "nvim.desktop";
         "text/xml" = "nvim.desktop";
         "x-scheme-handler/slack" = "slack.desktop";
+        "x-scheme-handler/mailto" = "thunderbird.desktop";
       };
     };
   };
