@@ -104,6 +104,15 @@
     };
 
     ################################
+    # UI
+    ################################
+
+    "org/gnome/desktop/interface" = {
+      # Do not open the Activities Overview when the mouse cursor touches the top-left corner of the screen
+      enable-hot-corners = false;
+    };
+
+    ################################
     # Notifications
     ################################
 
