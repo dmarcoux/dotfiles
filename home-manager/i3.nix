@@ -186,21 +186,6 @@
       # Kill the focused window
       bindsym $mod+Shift+Escape kill
 
-      # Start program launcher
-      bindsym $mod+d exec rofi -show drun # Only list applications shipping a .desktop file
-
-      # Start rofi frontend to pass for my usernames
-      bindsym $mod+u exec rofi -show pass-username
-
-      # Start rofi frontend to pass-otp for my two-factor authentication (2FA) codes
-      bindsym $mod+o exec rofi -show pass-otp
-
-      # Start rofi frontend to pass for my passwords
-      bindsym $mod+p exec rofi -show pass
-
-      # Start rofi frontend to clipboard manager (matching clipboard entries case insensitively with `-i` option passed to dmenu)
-      bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu -i -p 'clipboard'
-
       # Move the focused window
       bindsym $mod+Shift+h move left
       bindsym $mod+Shift+j move down

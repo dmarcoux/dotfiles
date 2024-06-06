@@ -11,6 +11,9 @@
     desktopManager.gnome.enable = true;
   };
 
+  # Enable clipmenu, the clipboard management daemon.
+  services.clipmenu.enable = true;
+
   # TODO: Go through all the GNOME apps and add the ones I don't need in the list below
   # Exclude packages which are otherwise pre-installed in GNOME
   environment.gnome.excludePackages = (with pkgs; [

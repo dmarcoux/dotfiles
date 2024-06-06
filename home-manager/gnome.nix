@@ -87,8 +87,20 @@
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
+      # See details of the custom keybindings below
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/"
+      ];
       # Lock the screen with Shift + Windows/Super key + c
       screensaver = [ "<Shift><Super>c" ];
+      # By default, Windows/Super key + o is the keybinding to lock the display orientation
+      # It's removed to prevent conflict with the custom `Launch rofi pass-otp` keyboard shortcut.
+      rotate-video-lock-static = [ "XF86RotationLockToggle" ];
       # Keybindings for media-keys to control music/video players
       next = [ "AudioNext" ];
       play = [ "AudioPlay" ];
@@ -104,6 +116,47 @@
       binding = "<Super>Return";
       command = "alacritty";
       name = "Launch terminal";
+    };
+
+    # Launch rofi frontend to my pass usernames with Windows/Super key + u
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+      binding = "<Super>u";
+      command = "rofi -show pass-username";
+      name = "Launch rofi pass-username";
+    };
+
+    # Launch rofi frontend to pass-otp for my two-factor authentication (2FA) codes with Windows/Super key + o
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
+      binding = "<Super>o";
+      command = "rofi -show pass-otp";
+      name = "Launch rofi pass-otp";
+    };
+
+    # Launch rofi frontend to pass for my passwords with Windows/Super key + p
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
+      binding = "<Super>p";
+      command = "rofi -show pass";
+      name = "Launch rofi pass";
+    };
+
+    # By default, Windows/Super key + p is the keybinding to switch monitors in the Mutter compositor.
+    # It's removed to prevent conflict with `Launch rofi pass` above.
+    "org/gnome/mutter/keybindings" = {
+      switch-monitor = [];
+    };
+
+    # Launch rofi frontend to clipboard manager (matching clipboard entries case insensitively with `-i` option passed to dmenu)
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" = {
+      binding = "<Super>c";
+      command = "env CM_LAUNCHER=rofi clipmenu -i -p 'clipboard'";
+      name = "Launch rofi clipmenu";
+    };
+
+    # With rofi, select an application to launch (It only lists applications shipping a .desktop file)
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5" = {
+      binding = "<Super>d";
+      command = "rofi -show drun";
+      name = "Launch rofi drun";
     };
 
     ################################
