@@ -107,6 +107,15 @@
     };
 
     ################################
+    # Default Applications
+    ################################
+
+    # Set alacritty as the default terminal
+    "org/gnome/desktop/applications/terminal" = {
+      exec = "alacritty";
+    };
+
+    ################################
     # UI
     ################################
 
