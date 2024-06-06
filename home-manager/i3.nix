@@ -144,7 +144,6 @@
       assign [class="^Lollypop$"] → $WS5
 
       # Applications to start in floating mode
-      for_window [class="^Galculator$"] floating enable
       for_window [class="^Vncviewer$"] floating enable
       for_window [class="^Yubico Authenticator$"] floating enable
       for_window [class="^Erlang$"] floating enable # Example of a window with the Erlang class is the Erlang Observer
