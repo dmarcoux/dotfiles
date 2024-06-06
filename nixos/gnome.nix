@@ -17,6 +17,7 @@
     gedit # Text editor
     gnome-photos
     gnome-tour # Guided tour and greeter for GNOME
+    gnome-console # Terminal
   ]) ++ (with pkgs.gnome; [
     cheese # Webcam tool
     gnome-music # Music player
