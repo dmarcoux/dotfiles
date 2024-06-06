@@ -122,14 +122,6 @@
       # Applications
       #################
 
-      # Load the first profile detected by autorandr to setup monitors
-      # TODO: When this is executed, the screen flickers once. I wonder if running this in a systemd service when the graphical session starts would prevent this.
-      exec ${pkgs.autorandr}/bin/autorandr --change --default ${nixos_options.services.autorandr.defaultTarget.value};
-
-      # Make headphones the default audio output
-      # 0 is the sink number. `analog-output-headphones` is the port. List sinks and their ports with `pactl list sinks`.
-      # exec pacmd set-sink-port 0 analog-output-headphones
-
       # Assign applications to workspaces to have them start on a specific workspace
       # - To find the class for the assign statement:
       #   1. Start program
@@ -192,24 +184,11 @@
       # Key bindings
       #################
 
-      # Restart i3 (preserves your layout/session, can be used to upgrade i3)
-      bindsym $mod+Shift+r restart
-
-      # Lock the screen
-      # --release is needed when using slock (see https://github.com/i3/i3/issues/3298)
-      bindsym --release $mod+Shift+C exec --no-startup-id "slock"
-
-      # Start a terminal
-      bindsym $mod+Return exec alacritty
-
       # Kill the focused window
       bindsym $mod+Shift+Escape kill
 
       # Start program launcher
       bindsym $mod+d exec rofi -show drun # Only list applications shipping a .desktop file
-
-      # Start window switcher
-      bindsym $mod+s exec rofi -show window
 
       # Start rofi frontend to pass for my usernames
       bindsym $mod+u exec rofi -show pass-username
@@ -223,30 +202,11 @@
       # Start rofi frontend to clipboard manager (matching clipboard entries case insensitively with `-i` option passed to dmenu)
       bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu -i -p 'clipboard'
 
-      # Control media players with media keys
-      bindsym XF86AudioPlay exec playerctl play-pause
-      bindsym XF86AudioPause exec playerctl play-pause
-      bindsym XF86AudioStop exec playerctl stop
-      bindsym XF86AudioNext exec playerctl next
-      bindsym XF86AudioPrev exec playerctl previous
-
-      # Change focus
-      bindsym $mod+h focus left
-      bindsym $mod+j focus down
-      bindsym $mod+k focus up
-      bindsym $mod+l focus right
-
       # Move the focused window
       bindsym $mod+Shift+h move left
       bindsym $mod+Shift+j move down
       bindsym $mod+Shift+k move up
       bindsym $mod+Shift+l move right
-
-      # Move the focused workspace between monitors
-      bindsym $mod+Control+h move workspace to output left
-      bindsym $mod+Control+j move workspace to output down
-      bindsym $mod+Control+k move workspace to output up
-      bindsym $mod+Control+l move workspace to output right
 
       # Enter fullscreen mode for the focused container
       bindsym $mod+f fullscreen toggle
@@ -255,36 +215,8 @@
       bindsym $mod+w layout tabbed
       bindsym $mod+e layout toggle split
 
-      # Focus the parent container
-      bindsym $mod+Shift+a focus parent
-
-      # Focus the child container
-      bindsym $mod+a focus child
-
-      # Switch to workspace
-      bindsym $mod+1 workspace $WS1
-      bindsym $mod+2 workspace $WS2
-      bindsym $mod+3 workspace $WS3
-      bindsym $mod+4 workspace $WS4
-      bindsym $mod+5 workspace $WS5
-      bindsym $mod+6 workspace $WS6
-
-      # Move focused container to workspace
-      bindsym $mod+Shift+1 move container to workspace $WS1
-      bindsym $mod+Shift+2 move container to workspace $WS2
-      bindsym $mod+Shift+3 move container to workspace $WS3
-      bindsym $mod+Shift+4 move container to workspace $WS4
-      bindsym $mod+Shift+5 move container to workspace $WS5
-      bindsym $mod+Shift+6 move container to workspace $WS6
-
       # Toggle the floating mode for the window
       bindsym $mod+Tab floating toggle
-
-      # Resize focused container's width/height
-      bindsym $mod+Left resize shrink width 5 px or 5 ppt
-      bindsym $mod+Right resize grow width 5 px or 5 ppt
-      bindsym $mod+Down resize shrink height 5 px or 5 ppt
-      bindsym $mod+Up resize grow height 5 px or 5 ppt
     '';
   };
 }
