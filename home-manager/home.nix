@@ -34,7 +34,6 @@
     ./network-manager.nix
     ./password-store.nix
     ./pasystray.nix
-    ./picom.nix
     ./playerctl.nix
     ./ranger.nix
     # TODO: Remove this after GNOME migration
