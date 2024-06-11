@@ -67,6 +67,9 @@
       enabled-extensions = with pkgs.gnomeExtensions; [
         auto-move-windows.extensionUuid
       ];
+
+      # Do not pin applications in the bottom/dash panel
+      favorite-apps = [];
     };
 
     # Assign windows to a specific workspace
