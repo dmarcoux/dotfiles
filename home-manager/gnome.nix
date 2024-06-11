@@ -222,6 +222,8 @@
     "org/gnome/mutter" = {
       # Do not automatically remove empty workspaces
       dynamic-workspaces = false;
+      # Use workspaces only on the primary monitor
+      workspaces-only-on-primary = true;
     };
 
     "org/gnome/desktop/wm/preferences" = {
