@@ -21,6 +21,7 @@
     gnome-photos
     gnome-tour # Guided tour and greeter for GNOME
     gnome-console # Terminal
+    gnome-connections # Remote desktop client
   ]) ++ (with pkgs.gnome; [
     cheese # Webcam tool
     gnome-music # Music player
@@ -32,5 +33,7 @@
     iagno # Go game
     hitori # Sudoku game
     atomix # Puzzle game
+    gnome-weather # Weather forecasts
+    gnome-maps # OpenStreetMap, but locally
   ]);
 }
