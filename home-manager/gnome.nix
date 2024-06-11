@@ -217,6 +217,10 @@
     "org/gnome/desktop/interface" = {
       # Do not open the Activities Overview when the mouse cursor touches the top-left corner of the screen
       enable-hot-corners = false;
+      # Show seconds in the top panel clock
+      clock-show-seconds = true;
+      # Show the day of the week in the top panel clock
+      clock-show-weekday = true;
     };
 
     "org/gnome/mutter" = {
