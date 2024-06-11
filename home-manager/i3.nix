@@ -3,44 +3,12 @@
 { pkgs, nixos_options, ... }:
 
 {
-  xsession.windowManager.i3 = {
-    enable = true;
-    # Empty settings are instead set below in extraConfig
-    config = {
-      bars = [];
-      focus = {
-        # Window focus doesn't follow mouse movements
-        followMouse = false;
-        # If a window is activated and it requests focus, it will be marked as urgent and not steal the focus
-        newWindow = "urgent";
-      };
-      fonts = {
-        names = ["DejaVu Sans Mono"];
-        size = 13.0;
-      };
-      keybindings = {};
-      modes = {};
-      # Modifier key is the Windows Key
-      modifier = "Mod4";
-      # New containers on workspace starts in tabbed mode
-      workspaceLayout = "tabbed";
-    };
-    # Testing changes without rebuild NixOS is possible with `i3-msg -t command SOME_I3_COMMAND` (example: `i3-msg -t command exec alacritty`)
-    extraConfig = ''
-      #################
-      # Variables
-      #################
-
-      # Modifier key is the Windows Key
-      set $mod Mod4
-
       # Workspaces (names include Font Awesome icons)
       set $WS1 "1: 1"
       set $WS2 "2: 2"
       set $WS3 "3: 3"
       set $WS4 "4: 4"
       set $WS5 "5: 5"
-      set $WS6 "6: 6"
 
       #################
       # Colorscheme
@@ -71,35 +39,6 @@
       # Settings
       #################
 
-      # Put workspaces on specific screens
-      workspace $WS3 output primary
-
-      # Window focus doesn't follow mouse movements
-      focus_follows_mouse no
-
-      # Focus stays in the same parent container
-      force_focus_wrapping yes
-
-      # New containers on workspace starts in tabbed mode
-      workspace_layout tabbed
-
-      # Font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
-      font pango:DejaVu Sans Mono 13
-
-      # Use LeftMouse+$mod on a floating window to drag it to the wanted position
-      # Use RightMouse+$mod on a floating window to resize it
-      floating_modifier $mod
-
-      bar {
-          status_command i3status
-          position top
-          font pango:DejaVu Sans Mono 13
-          strip_workspace_numbers yes
-
-          # The first available output will be used. It will be the primary output, otherwise the laptop's output.
-          tray_output primary
-          tray_output eDP-1-1
-
           # Disable switching workspace by scrolling the mouse wheel up/down
           bindsym button4 nop
           bindsym button5 nop
@@ -121,20 +60,6 @@
       #################
       # Applications
       #################
-
-      # Applications to start in floating mode
-      for_window [class="^Vncviewer$"] floating enable
-      for_window [class="^Yubico Authenticator$"] floating enable
-      for_window [class="^Erlang$"] floating enable # Example of a window with the Erlang class is the Erlang Observer
-      for_window [class="^Gpick$"] floating enable
-
-      # Prevent certain applications from stealing focus
-      # Example...
-      # no_focus [class="^SomeApp123"]
-      no_focus [class="^jetbrains-.*"]
-
-      # Center floating windows in the workspace in which they appear
-      for_window [floating] move position center
 
       # Launch terminal
       exec alacritty
@@ -164,22 +89,6 @@
 
       # Kill the focused window
       bindsym $mod+Shift+Escape kill
-
-      # Move the focused window
-      bindsym $mod+Shift+h move left
-      bindsym $mod+Shift+j move down
-      bindsym $mod+Shift+k move up
-      bindsym $mod+Shift+l move right
-
-      # Enter fullscreen mode for the focused container
-      bindsym $mod+f fullscreen toggle
-
-      # Change container layout (tabbed, toggle split)
-      bindsym $mod+w layout tabbed
-      bindsym $mod+e layout toggle split
-
-      # Toggle the floating mode for the window
-      bindsym $mod+Tab floating toggle
     '';
   };
 }
