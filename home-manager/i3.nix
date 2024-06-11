@@ -82,13 +82,6 @@
       #     Lock the screen
       #     Enable screensaver and display power manager signaling (DPMS), which will become active after 600 more seconds (10 minutes)
       exec xidlehook --not-when-fullscreen --not-when-audio --timer 300 "${pkgs.xorg.xset}/bin/xset s on +dpms; slock" "${pkgs.xorg.xset}/bin/xset s off -dpms"
-
-      #################
-      # Key bindings
-      #################
-
-      # Kill the focused window
-      bindsym $mod+Shift+Escape kill
     '';
   };
 }

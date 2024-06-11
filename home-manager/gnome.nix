@@ -98,6 +98,8 @@
     ################################
 
     "org/gnome/desktop/wm/keybindings" = {
+      # Close a window with Shift + Windows/Super key + q
+      close = [ "<Shift><Super>q" ];
       # Switch to workspace X with Windows/Super key + {1,2,3,4,5}
       switch-to-workspace-1 = [ "<Super>1" ];
       switch-to-workspace-2 = [ "<Super>2" ];
