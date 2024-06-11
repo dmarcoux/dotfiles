@@ -133,6 +133,11 @@
       switch-to-application-5 = [];
     };
 
+    "org/gnome/mutter/wayland/keybindings" = {
+      # Remove keybinding to restore the keyboard shortcuts
+      restore-shortcuts = [];
+    };
+
     "org/gnome/settings-daemon/plugins/media-keys" = {
       # See details of the custom keybindings below
       custom-keybindings = [
