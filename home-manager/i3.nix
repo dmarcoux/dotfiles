@@ -122,27 +122,6 @@
       # Applications
       #################
 
-      # Assign applications to workspaces to have them start on a specific workspace
-      # - To find the class for the assign statement:
-      #   1. Start program
-      #   2. Start xprop
-      #   3. Click on program's window
-      #   4. Get value of 'WM_CLASS(STRING)' from xprop's output
-      assign [class="^Alacritty$"] → $WS1
-      assign [class="^Code$"] → $WS1
-      assign [class="^jetbrains-.*"] → $WS1
-
-      assign [class="^firefox$"] → $WS2
-      assign [class="^Slack$"] → $WS2
-      assign [class="^Chromium-browser$"] → $WS2
-
-      assign [class="^discord$"] → $WS3
-      assign [class="^bruno$"] → $WS3
-
-      assign [class="^thunderbird$"] → $WS4
-
-      assign [class="^Lollypop$"] → $WS5
-
       # Applications to start in floating mode
       for_window [class="^Vncviewer$"] floating enable
       for_window [class="^Yubico Authenticator$"] floating enable

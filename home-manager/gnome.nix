@@ -4,7 +4,13 @@
 
 {
   # Install dconf2nix (https://github.com/nix-community/dconf2nix)
-  home.packages = [ pkgs.dconf2nix ];
+  home.packages = ([
+    pkgs.dconf2nix
+  # Install GNOME extensions
+  ]) ++ (with pkgs.gnomeExtensions; [
+    # Move windows to a specific workspace when they open
+    auto-move-windows
+  ]);
 
   # With dconf, everything in GNOME can be configured.
   #
@@ -46,6 +52,42 @@
       # - AltGr + Space produces a normal space instead of a non-breakable space
       xkb-options = [ "ctrl:swapcaps" "nbsp:none" ];
       # TODO: AltGr + s for ß (this is an extra configuration which isn't available in xkb-options)
+    };
+
+    ################################
+    # Extensions
+    ################################
+
+    # To configure extensions through the UI, open the `Extensions` application.
+    # Changes can then be declared here with dconf2nix as explained above.
+
+    "org/gnome/shell" = {
+      # Enable user extensions, which are installed at the top of this configuration file
+      disable-user-extensions = false;
+      enabled-extensions = with pkgs.gnomeExtensions; [
+        auto-move-windows.extensionUuid
+      ];
+    };
+
+    # Assign windows to a specific workspace
+    "org/gnome/shell/extensions/auto-move-windows" = {
+      # Format is: "Application:Workspace number"
+      application-list = [
+        "rider.desktop:1" # JetBrains Rider
+        "Alacritty.desktop:1"
+        "code.desktop:1" # Visual Studio Code
+
+        "firefox.desktop:2"
+        "slack.desktop:2"
+        "chromium-browser.desktop:2"
+
+        "bruno.desktop:3"
+        "discord.desktop:3"
+
+        "thunderbird.desktop:4"
+
+        "org.gnome.Lollypop.desktop:5"
+      ];
     };
 
     ################################
