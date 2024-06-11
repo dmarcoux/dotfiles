@@ -117,6 +117,8 @@
       switch-windows = [ "<Super>l" ];
       # Switch to previous window in the current workspace with Windows/Super key + h
       switch-windows-backward = [ "<Super>h" ];
+      # Toggle maximization of a window with Windows/Super + f
+      toggle-maximized = [ "<Super>f" ];
       # All keybindings which are now disabled
       move-to-workspace-last = [];
       minimize = [];
