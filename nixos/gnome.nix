@@ -14,6 +14,9 @@
   # Enable clipmenu, the clipboard management daemon.
   services.clipmenu.enable = true;
 
+  # Add font-awesome to fonts for icons in PaperWM workspace names
+  fonts.packages = with pkgs; [ font-awesome ];
+
   # TODO: Go through all the GNOME apps and add the ones I don't need in the list below
   # Exclude packages which are otherwise pre-installed in GNOME
   environment.gnome.excludePackages = (with pkgs; [

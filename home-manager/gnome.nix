@@ -96,6 +96,58 @@
       ];
     };
 
+    "org/gnome/shell/extensions/paperwm" = {
+      animation-time = 0.0; # seconds
+      # Enable topbar styling
+      disable-topbar-styling = false;
+      # Disable touchpad to control PaperWM
+      gesture-enabled = false;
+      # Set the size at which windows are shown during navigation, in relation to their actual size.
+      minimap-scale = 0.25; # percentage in relation to 1.0
+      # Open new windows to the right of the existing windows
+      open-window-position = 0;
+      # Translate to the selected window if it's not in view after exiting the GNOME overview
+      overview-ensure-viewport-animation = 1;
+      # Do not have a border around the selected window
+      selection-border-size = 0;
+      # Use the PaperWM color overlay for the GNOME top bar to show which window is selected and know its position in relation to other windows
+      show-window-position-bar = true;
+      # Replace GNOME workspace indicator with the one from PaperWM
+      show-workspace-indicator = true;
+      # Do not have margin between the windows and the screen edges
+      horizontal-margin = 0;
+      vertical-margin = 0;
+      vertical-margin-bottom = 0;
+      # Set the gap between windows
+      window-gap = 10; # pixels
+    };
+
+    "org/gnome/shell/extensions/paperwm/workspaces" = {
+      list = [ "1" "2" "3" "4" "5" ];
+    };
+
+    # Workspace names include Font Awesome icons
+    "org/gnome/shell/extensions/paperwm/workspaces/1" = {
+      index = 0;
+      name = "1: ";
+    };
+    "org/gnome/shell/extensions/paperwm/workspaces/2" = {
+      index = 1;
+      name = "2:";
+    };
+    "org/gnome/shell/extensions/paperwm/workspaces/3" = {
+      index = 2;
+      name = "3: ";
+    };
+    "org/gnome/shell/extensions/paperwm/workspaces/4" = {
+      index = 3;
+      name = "4:";
+    };
+    "org/gnome/shell/extensions/paperwm/workspaces/5" = {
+      index = 4;
+      name = "5:";
+    };
+
     ################################
     # Keyboard shortcuts
     ################################
