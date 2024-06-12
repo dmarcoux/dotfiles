@@ -10,6 +10,8 @@
   ]) ++ (with pkgs.gnomeExtensions; [
     # Move windows to a specific workspace when they open
     auto-move-windows
+    # Tiled scrollable window manager
+    paperwm
   ]);
 
   # With dconf, everything in GNOME can be configured.
@@ -66,6 +68,7 @@
       disable-user-extensions = false;
       enabled-extensions = with pkgs.gnomeExtensions; [
         auto-move-windows.extensionUuid
+        paperwm.extensionUuid
       ];
 
       # Do not pin applications in the bottom/dash panel
