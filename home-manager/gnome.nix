@@ -153,8 +153,6 @@
     ################################
 
     "org/gnome/desktop/wm/keybindings" = {
-      # Close a window with Shift + Windows/Super key + q
-      close = [ "<Shift><Super>q" ];
       # Switch to workspace X with Windows/Super key + {1,2,3,4,5}
       switch-to-workspace-1 = [ "<Super>1" ];
       switch-to-workspace-2 = [ "<Super>2" ];
@@ -170,15 +168,14 @@
       # Switch to another application from any workspace with (Shift) Windows/Super key + Tab
       switch-applications = [ "<Super>Tab" ];
       switch-applications-backward = [ "<Shift><Super>Tab" ];
-      # Switch to next window in the current workspace with Windows/Super key + l
-      switch-windows = [ "<Super>l" ];
-      # Switch to previous window in the current workspace with Windows/Super key + h
-      switch-windows-backward = [ "<Super>h" ];
-      # Toggle maximization of a window with Windows/Super + f
-      toggle-maximized = [ "<Super>f" ];
-      # All keybindings which are now disabled
+      # All keybindings which are now disabled, some would be useful if I didn't use PaperWM
       move-to-workspace-last = [];
       minimize = [];
+      toggle-maximized = []; # Toggle maximization of a window
+      close = []; # Close a window
+      switch-windows = []; # Switch to next window in the current workspace
+      switch-windows-backward = []; # Switch to previous window in the current workspace
+
     };
 
     "org/gnome/shell/keybindings" = {
@@ -198,7 +195,6 @@
     "org/gnome/settings-daemon/plugins/media-keys" = {
       # See details of the custom keybindings below
       custom-keybindings = [
-        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/"
@@ -218,13 +214,6 @@
       volume-down = [ "AudioLowerVolume" ];
       volume-mute = [ "AudioMute" ];
       volume-up = [ "AudioRaiseVolume" ];
-    };
-
-    # Launch terminal with Windows/Super key + Enter
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      binding = "<Super>Return";
-      command = "alacritty";
-      name = "Launch terminal";
     };
 
     # Launch rofi frontend to my pass usernames with Windows/Super key + u
@@ -267,6 +256,38 @@
       command = "rofi -show drun";
       name = "Launch rofi drun";
     };
+
+    "org/gnome/shell/extensions/paperwm/keybindings" = {
+      # Toggle maximization of a window
+      toggle-maximize-width = [ "<Super>f" ];
+      # Toggle fullscreen
+      paper-toggle-fullscreen = [ "<Shift><Super>f" ];
+      # Open a new instance of the active window
+      new-window = [ "<Super>Return" ];
+      # Merge the window to the right in the active column
+      slurp-in = [ "<Super>t" ];
+      # Expel the window at the bottom of the active column into its own column
+      barf-out = [ "<Super>y" ];
+      # Close the active window
+      close-window = [ "<Shift><Super>q" ];
+      # Switch to the window below (with wrap-around, so it goes back to the top)
+      switch-down-loop = [ "<Super>j" ];
+      # Switch to the window above (with wrap-around, so it goes back to the bottom)
+      switch-up-loop = [ "<Super>k" ];
+      # Switch to the window to the left (with wrap-around, so it goes back to the right)
+      switch-left-loop = [ "<Super>h" ];
+      # Switch to the window to the right (with wrap-around, so it goes back to the left)
+      switch-right-loop = [ "<Super>l" ];
+      # All keybindings which are now disabled
+      switch-next = [ "" ];
+      switch-previous = [ "" ];
+      switch-down = [ "" ];
+      switch-up = [ "" ];
+      switch-left = [ "" ];
+      switch-right = [ "" ];
+      center-horizontally = [ "" ];
+    };
+
 
     ################################
     # Default Applications
