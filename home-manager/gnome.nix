@@ -262,21 +262,23 @@
       toggle-maximize-width = [ "<Super>f" ];
       # Toggle fullscreen
       paper-toggle-fullscreen = [ "<Shift><Super>f" ];
+
       # Open a new instance of the active window
       new-window = [ "<Super>Return" ];
+
       # Merge the window to the right in the active column
       slurp-in = [ "<Super>t" ];
       # Expel the window at the bottom of the active column into its own column
       barf-out = [ "<Super>y" ];
+
       # Close the active window
       close-window = [ "<Shift><Super>q" ];
-      # Switch to the window below (with wrap-around, so it goes back to the top)
+
+      # Switch to the window below/above (with wrap-around, so it goes back to the top/bottom)
       switch-down-loop = [ "<Super>j" ];
-      # Switch to the window above (with wrap-around, so it goes back to the bottom)
       switch-up-loop = [ "<Super>k" ];
-      # Switch to the window to the left (with wrap-around, so it goes back to the right)
+      # Switch to the window to the left/right (with wrap-around, so it goes back to the right/left)
       switch-left-loop = [ "<Super>h" ];
-      # Switch to the window to the right (with wrap-around, so it goes back to the left)
       switch-right-loop = [ "<Super>l" ];
 
       # Move workspace to monitor up/down
@@ -292,6 +294,7 @@
       # Move window down/up
       move-up = [ "<Shift><Super>k" ];
       move-down = [ "<Shift><Super>j" ];
+
       # All keybindings which are now disabled
       switch-next = [ "" ];
       switch-previous = [ "" ];
