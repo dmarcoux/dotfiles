@@ -278,6 +278,20 @@
       switch-left-loop = [ "<Super>h" ];
       # Switch to the window to the right (with wrap-around, so it goes back to the left)
       switch-right-loop = [ "<Super>l" ];
+
+      # Move workspace to monitor up/down
+      move-space-monitor-above = [ "<Control><Super>k" ];
+      move-space-monitor-below = [ "<Control><Super>j" ];
+      # Move workspace to monitor to the left/right
+      move-space-monitor-left = [ "<Control><Super>h" ];
+      move-space-monitor-right = [ "<Control><Super>l" ];
+
+      # Move window to the left / right
+      move-left = [ "<Shift><Super>h" ];
+      move-right = [ "<Shift><Super>l" ];
+      # Move window down/up
+      move-up = [ "<Shift><Super>k" ];
+      move-down = [ "<Shift><Super>j" ];
       # All keybindings which are now disabled
       switch-next = [ "" ];
       switch-previous = [ "" ];
@@ -286,6 +300,7 @@
       switch-left = [ "" ];
       switch-right = [ "" ];
       center-horizontally = [ "" ];
+      take-window = [ "" ];
     };
 
 
