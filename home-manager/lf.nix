@@ -43,6 +43,8 @@
       # Mappings
       ###############
 
+      map e # Remove default mapping for opening a file with $VISUAL
+
       map r push :open_with<space>
 
       map y # Remove defaut mapping for copy
