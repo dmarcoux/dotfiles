@@ -176,11 +176,14 @@
       #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
       exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -lt 5 && thunderbird
 
-      # Launch user activity monitor
-      #   After 300 seconds (5 minutes):
-      #     Lock the screen
-      #     Enable screensaver and display power manager signaling (DPMS), which will become active after 600 more seconds (10 minutes)
-      exec xidlehook --not-when-fullscreen --not-when-audio --timer 300 "${pkgs.xorg.xset}/bin/xset s on +dpms; slock" "${pkgs.xorg.xset}/bin/xset s off -dpms"
+      # After 300 seconds (5 minutes) of inactivity (when audio isn't playing), put the
+      # screen on standby (~1 second recovery time). After 30 more seconds, lock the screen
+      # and suspend the system.
+      #
+      # `--detect-sleep` resets the inactivity timer once the system wakes up from suspend
+      exec --no-startup-id xidlehook --detect-sleep --not-when-audio \
+        --timer 300 "xset dpms force standby" "" \
+        --timer 30 "slock systemctl suspend --check-inhibitors=no" ""
 
       #################
       # Key bindings
@@ -189,9 +192,9 @@
       # Restart i3 (preserves your layout/session, can be used to upgrade i3)
       bindsym $mod+Shift+r restart
 
-      # Lock the screen
+      # Put the screen on standby (~1 second recovery time) to save power, lock the screen, then suspend the system
       # --release is needed when using slock (see https://github.com/i3/i3/issues/3298)
-      bindsym --release $mod+Shift+C exec --no-startup-id "slock"
+      bindsym --release $mod+Shift+C exec --no-startup-id "xset dpms force standby && slock systemctl suspend --check-inhibitors=no"
 
       # Start a terminal
       bindsym $mod+Return exec alacritty
