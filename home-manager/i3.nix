@@ -74,9 +74,6 @@
       # Put workspaces on specific screens
       workspace $WS3 output primary
 
-      # Window focus doesn't follow mouse movements
-      focus_follows_mouse no
-
       # Focus stays in the same parent container
       force_focus_wrapping yes
 
