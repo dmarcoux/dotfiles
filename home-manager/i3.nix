@@ -77,9 +77,6 @@
       # Focus stays in the same parent container
       force_focus_wrapping yes
 
-      # New containers on workspace starts in tabbed mode
-      workspace_layout tabbed
-
       # Font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
       font pango:DejaVu Sans Mono 13
 
