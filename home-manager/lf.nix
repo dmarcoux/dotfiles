@@ -24,6 +24,12 @@
       # Environment Variables
       # https://github.com/gokcehan/lf/blob/master/doc.md#environment-variables
 
+      # Open file with xdg-open
+      cmd open $xdg-open $f
+
+      # Open file with a given command (use `$*` to pass all command arguments)
+      cmd open_with $$* $f
+
       # Create one/multiple directory(ies)
       cmd mkdir $mkdir $*
 
@@ -36,6 +42,8 @@
       ###############
       # Mappings
       ###############
+
+      map r push :open_with<space>
 
       map y # Remove defaut mapping for copy
       map y. yank-basename-without-extension
