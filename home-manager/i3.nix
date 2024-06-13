@@ -276,12 +276,6 @@
 
       # Toggle the floating mode for the window
       bindsym $mod+Tab floating toggle
-
-      # Resize focused container's width/height
-      bindsym $mod+Left resize shrink width 5 px or 5 ppt
-      bindsym $mod+Right resize grow width 5 px or 5 ppt
-      bindsym $mod+Down resize shrink height 5 px or 5 ppt
-      bindsym $mod+Up resize grow height 5 px or 5 ppt
     '';
   };
 }
