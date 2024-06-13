@@ -1,5 +1,7 @@
 # User configuration for lf
 
+{ config, ... }:
+
 {
   programs.lf = {
     # Install lf
@@ -29,6 +31,9 @@
 
       # Open file with a given command (use `$*` to pass all command arguments)
       cmd open_with $$* $f
+
+      # Put a file in the trash
+      cmd trash %trash $fx
 
       # Create one/multiple directory(ies)
       cmd mkdir $mkdir $*
@@ -60,7 +65,7 @@
       map d # Remove default mapping for cut
       map dd cut
       map dD delete
-      # TODO: Add mappings to use trash-cli
+      map dT trash
 
       map g. cd ~/dotfiles
       map g/ cd /
@@ -72,6 +77,7 @@
       map gpa cd ~/.config/password-store
       map gpi cd ~/pictures
       map gpr cd ~/projets
+      map gt cd ${config.xdg.dataHome}/Trash
       map gv cd ~/videos
 
       ###############

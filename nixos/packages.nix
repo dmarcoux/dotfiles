@@ -102,7 +102,7 @@
     # Traceroute to a host
     traceroute
     # CLI to the freedesktop.org trashcan
-    trash-cli
+    trashy
     # Convert between two units of measure
     units
     # Generate an index file of language objects found in source files for programming languages (used in text editors)
