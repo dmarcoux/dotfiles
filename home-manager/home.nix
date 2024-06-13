@@ -27,6 +27,7 @@
     ./jetbrains.nix
     ./jq.nix
     ./keyboard.nix
+    ./lf.nix
     ./neovim.nix
     ./network-manager.nix
     ./password-store.nix
