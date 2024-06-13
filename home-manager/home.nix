@@ -19,14 +19,11 @@
     ./flameshot.nix
     ./fzf.nix
     ./git.nix
-    # TODO: Remove this after GNOME migration
-    #./gnupg.nix
-    ./gnome.nix
+    ./gnupg.nix
     ./gtk.nix
     ./helix.nix
-    # TODO: Remove those imports and the files once I fully migrated to GNOME
-    # (import ./i3.nix { pkgs = pkgs; nixos_options = nixos_options; })
-    # ./i3status.nix
+    (import ./i3.nix { pkgs = pkgs; nixos_options = nixos_options; })
+    ./i3status.nix
     ./jetbrains.nix
     ./jq.nix
     ./keyboard.nix
@@ -34,10 +31,10 @@
     ./network-manager.nix
     ./password-store.nix
     ./pasystray.nix
+    ./picom.nix
     ./playerctl.nix
     ./ranger.nix
-    # TODO: Remove this after GNOME migration
-    #./redshift.nix
+    ./redshift.nix
     ./ripgrep.nix
     ./rofi.nix
     ./ruby.nix

@@ -36,6 +36,8 @@
     ffmpeg_6-headless
     # Ebook reader
     foliate
+    # Simple calculator
+    galculator
     # Compiler
     gcc
     # Statically typed, compiled high-level programming language

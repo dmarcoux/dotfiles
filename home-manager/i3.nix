@@ -3,6 +3,45 @@
 { pkgs, nixos_options, ... }:
 
 {
+  xsession.windowManager.i3 = {
+    enable = true;
+    # Empty settings are instead set below in extraConfig
+    config = {
+      bars = [];
+      focus = {
+        # Window focus doesn't follow mouse movements
+        followMouse = false;
+        # If a window is activated and it requests focus, it will be marked as urgent and not steal the focus
+        newWindow = "urgent";
+      };
+      fonts = {
+        names = ["DejaVu Sans Mono"];
+        size = 13.0;
+      };
+      keybindings = {};
+      modes = {};
+      # Modifier key is the Windows Key
+      modifier = "Mod4";
+      # New containers on workspace starts in tabbed mode
+      workspaceLayout = "tabbed";
+    };
+    # Testing changes without rebuild NixOS is possible with `i3-msg -t command SOME_I3_COMMAND` (example: `i3-msg -t command exec alacritty`)
+    extraConfig = ''
+      #################
+      # Variables
+      #################
+
+      # Modifier key is the Windows Key
+      set $mod Mod4
+
+      # Workspaces (names include Font Awesome icons)
+      set $WS1 "1: 1"
+      set $WS2 "2: 2"
+      set $WS3 "3: 3"
+      set $WS4 "4: 4"
+      set $WS5 "5: 5"
+      set $WS6 "6: 6"
+
       #################
       # Colorscheme
       #################
@@ -32,6 +71,35 @@
       # Settings
       #################
 
+      # Put workspaces on specific screens
+      workspace $WS3 output primary
+
+      # Window focus doesn't follow mouse movements
+      focus_follows_mouse no
+
+      # Focus stays in the same parent container
+      force_focus_wrapping yes
+
+      # New containers on workspace starts in tabbed mode
+      workspace_layout tabbed
+
+      # Font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
+      font pango:DejaVu Sans Mono 13
+
+      # Use LeftMouse+$mod on a floating window to drag it to the wanted position
+      # Use RightMouse+$mod on a floating window to resize it
+      floating_modifier $mod
+
+      bar {
+          status_command i3status
+          position top
+          font pango:DejaVu Sans Mono 13
+          strip_workspace_numbers yes
+
+          # The first available output will be used. It will be the primary output, otherwise the laptop's output.
+          tray_output primary
+          tray_output eDP-1-1
+
           # Disable switching workspace by scrolling the mouse wheel up/down
           bindsym button4 nop
           bindsym button5 nop
@@ -54,6 +122,50 @@
       # Applications
       #################
 
+      # Load the first profile detected by autorandr to setup monitors
+      # TODO: When this is executed, the screen flickers once. I wonder if running this in a systemd service when the graphical session starts would prevent this.
+      exec ${pkgs.autorandr}/bin/autorandr --change --default ${nixos_options.services.autorandr.defaultTarget.value};
+
+      # Make headphones the default audio output
+      # 0 is the sink number. `analog-output-headphones` is the port. List sinks and their ports with `pactl list sinks`.
+      # exec pacmd set-sink-port 0 analog-output-headphones
+
+      # Assign applications to workspaces to have them start on a specific workspace
+      # - To find the class for the assign statement:
+      #   1. Start program
+      #   2. Start xprop
+      #   3. Click on program's window
+      #   4. Get value of 'WM_CLASS(STRING)' from xprop's output
+      assign [class="^Alacritty$"] → $WS1
+      assign [class="^Code$"] → $WS1
+      assign [class="^jetbrains-.*"] → $WS1
+
+      assign [class="^firefox$"] → $WS2
+      assign [class="^Slack$"] → $WS2
+      assign [class="^Chromium-browser$"] → $WS2
+
+      assign [class="^discord$"] → $WS3
+      assign [class="^bruno$"] → $WS3
+
+      assign [class="^thunderbird$"] → $WS4
+
+      assign [class="^Lollypop$"] → $WS5
+
+      # Applications to start in floating mode
+      for_window [class="^Galculator$"] floating enable
+      for_window [class="^Vncviewer$"] floating enable
+      for_window [class="^Yubico Authenticator$"] floating enable
+      for_window [class="^Erlang$"] floating enable # Example of a window with the Erlang class is the Erlang Observer
+      for_window [class="^Gpick$"] floating enable
+
+      # Prevent certain applications from stealing focus
+      # Example...
+      # no_focus [class="^SomeApp123"]
+      no_focus [class="^jetbrains-.*"]
+
+      # Center floating windows in the workspace in which they appear
+      for_window [floating] move position center
+
       # Launch terminal
       exec alacritty
 
@@ -75,6 +187,104 @@
       #     Lock the screen
       #     Enable screensaver and display power manager signaling (DPMS), which will become active after 600 more seconds (10 minutes)
       exec xidlehook --not-when-fullscreen --not-when-audio --timer 300 "${pkgs.xorg.xset}/bin/xset s on +dpms; slock" "${pkgs.xorg.xset}/bin/xset s off -dpms"
+
+      #################
+      # Key bindings
+      #################
+
+      # Restart i3 (preserves your layout/session, can be used to upgrade i3)
+      bindsym $mod+Shift+r restart
+
+      # Lock the screen
+      # --release is needed when using slock (see https://github.com/i3/i3/issues/3298)
+      bindsym --release $mod+Shift+C exec --no-startup-id "slock"
+
+      # Start a terminal
+      bindsym $mod+Return exec alacritty
+
+      # Kill the focused window
+      bindsym $mod+Shift+Escape kill
+
+      # Start program launcher
+      bindsym $mod+d exec rofi -show drun # Only list applications shipping a .desktop file
+
+      # Start window switcher
+      bindsym $mod+s exec rofi -show window
+
+      # Start rofi frontend to pass for my usernames
+      bindsym $mod+u exec rofi -show pass-username
+
+      # Start rofi frontend to pass-otp for my two-factor authentication (2FA) codes
+      bindsym $mod+o exec rofi -show pass-otp
+
+      # Start rofi frontend to pass for my passwords
+      bindsym $mod+p exec rofi -show pass
+
+      # Start rofi frontend to clipboard manager (matching clipboard entries case insensitively with `-i` option passed to dmenu)
+      bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu -i -p 'clipboard'
+
+      # Control media players with media keys
+      bindsym XF86AudioPlay exec playerctl play-pause
+      bindsym XF86AudioPause exec playerctl play-pause
+      bindsym XF86AudioStop exec playerctl stop
+      bindsym XF86AudioNext exec playerctl next
+      bindsym XF86AudioPrev exec playerctl previous
+
+      # Change focus
+      bindsym $mod+h focus left
+      bindsym $mod+j focus down
+      bindsym $mod+k focus up
+      bindsym $mod+l focus right
+
+      # Move the focused window
+      bindsym $mod+Shift+h move left
+      bindsym $mod+Shift+j move down
+      bindsym $mod+Shift+k move up
+      bindsym $mod+Shift+l move right
+
+      # Move the focused workspace between monitors
+      bindsym $mod+Control+h move workspace to output left
+      bindsym $mod+Control+j move workspace to output down
+      bindsym $mod+Control+k move workspace to output up
+      bindsym $mod+Control+l move workspace to output right
+
+      # Enter fullscreen mode for the focused container
+      bindsym $mod+f fullscreen toggle
+
+      # Change container layout (tabbed, toggle split)
+      bindsym $mod+w layout tabbed
+      bindsym $mod+e layout toggle split
+
+      # Focus the parent container
+      bindsym $mod+Shift+a focus parent
+
+      # Focus the child container
+      bindsym $mod+a focus child
+
+      # Switch to workspace
+      bindsym $mod+1 workspace $WS1
+      bindsym $mod+2 workspace $WS2
+      bindsym $mod+3 workspace $WS3
+      bindsym $mod+4 workspace $WS4
+      bindsym $mod+5 workspace $WS5
+      bindsym $mod+6 workspace $WS6
+
+      # Move focused container to workspace
+      bindsym $mod+Shift+1 move container to workspace $WS1
+      bindsym $mod+Shift+2 move container to workspace $WS2
+      bindsym $mod+Shift+3 move container to workspace $WS3
+      bindsym $mod+Shift+4 move container to workspace $WS4
+      bindsym $mod+Shift+5 move container to workspace $WS5
+      bindsym $mod+Shift+6 move container to workspace $WS6
+
+      # Toggle the floating mode for the window
+      bindsym $mod+Tab floating toggle
+
+      # Resize focused container's width/height
+      bindsym $mod+Left resize shrink width 5 px or 5 ppt
+      bindsym $mod+Right resize grow width 5 px or 5 ppt
+      bindsym $mod+Down resize shrink height 5 px or 5 ppt
+      bindsym $mod+Up resize grow height 5 px or 5 ppt
     '';
   };
 }
