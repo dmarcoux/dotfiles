@@ -38,6 +38,12 @@
       # Create one/multiple directory(ies)
       cmd mkdir $mkdir $*
 
+      # Extract archives
+      cmd extract ''${{
+          set -f # Disable pathname expansion
+          atool --extract $f
+      }}
+
       # Yank paths into the clipboard
       cmd yank-dirname $dirname -- "$f" | head -c-1 | xsel --clipboard --input
       cmd yank-basename $basename -a -- $fx | head -c-1 | xsel --clipboard --input
