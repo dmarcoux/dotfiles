@@ -69,7 +69,7 @@
 
       map g. cd ~/dotfiles
       map g/ cd /
-      map gco ~/.config
+      map gc cd ~/.config
       map gd cd ~/downloads
       map ge cd ~/ebooks
       map gmi cd ~/music-to-import
