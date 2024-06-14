@@ -73,18 +73,18 @@
       map dD delete
       map dT trash
 
-      map g. cd ~/dotfiles
+      map g. cd /home/dany/dotfiles
       map g/ cd /
-      map gc cd ~/.config
-      map gd cd ~/downloads
-      map ge cd ~/ebooks
-      map gmi cd ~/music-to-import
-      map gmu cd ~/music
-      map gpa cd ~/.config/password-store
-      map gpi cd ~/pictures
-      map gpr cd ~/projets
+      map gc cd ${config.xdg.configHome}
+      map gd cd /home/dany/downloads
+      map ge cd /home/dany/ebooks
+      map gmi cd /home/dany/music-to-import
+      map gmu cd /home/dany/music
+      map gpa cd ${config.xdg.configHome}/password-store
+      map gpi cd /home/dany/pictures
+      map gpr cd /home/dany/projets
       map gt cd ${config.xdg.dataHome}/Trash
-      map gv cd ~/videos
+      map gv cd /home/dany/videos
 
       ###############
       # Options
