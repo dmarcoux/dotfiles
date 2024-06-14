@@ -45,10 +45,10 @@ in
   };
 
   programs.zsh.initExtra = ''
-    function cd_to_ranger_bookmark_and_projet_directories() {
+    function cd_to_lf_g_mappings_and_project_directories() {
       local directory
-      # Take the ranger bookmarks, format them before adding all directories under ~/projets to the list of directories to be processed by fzf
-      directory=$(cat "${config.xdg.configHome}/ranger/bookmarks" | { sed -n "s/.*:\(.*\)$/\1/p"; \ls --directory ~/projets/* } | sort | uniq | fzf)
+      # Take the lf g mappings, format them before adding all directories under ~/projets to the list of directories to be processed by fzf
+      directory=$(cat ${config.xdg.configHome}/lf/lfrc | { sed -n -e "s|\s*map g.* cd \(.*\)|\1|gp"; \ls --directory ~/projets/* } | sort | uniq | fzf)
 
       cd "$directory" || exit
 
@@ -56,7 +56,7 @@ in
     }
 
     # Define keybind CTRL+G to call the function
-    zle -N cd_to_ranger_bookmark_and_projet_directories
-    bindkey '^g' cd_to_ranger_bookmark_and_projet_directories
+    zle -N cd_to_lf_g_mappings_and_project_directories
+    bindkey '^g' cd_to_lf_g_mappings_and_project_directories
   '';
 }

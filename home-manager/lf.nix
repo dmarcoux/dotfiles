@@ -73,6 +73,7 @@
       map dD delete
       map dT trash
 
+      # Every mapping starting with g is also used in fzf to quickly cd to those directories outside of lf
       map g. cd /home/dany/dotfiles
       map g/ cd /
       map gc cd ${config.xdg.configHome}
