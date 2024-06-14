@@ -67,7 +67,7 @@
         "image/x-portable-pixmap" = "viewnior.desktop";
         "image/x-tga" = "viewnior.desktop";
         "image/x-xbitmap" = "viewnior.desktop";
-        "inode/directory" = "ranger.desktop";
+        "inode/directory" = "lf.desktop";
         "inode/x-empty" = "nvim.desktop";
         "text/cache-manifest" = "nvim.desktop";
         "text/calendar" = "nvim.desktop";
