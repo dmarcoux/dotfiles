@@ -110,7 +110,7 @@
       # Show 10 offset lines at all times at the top and bottom of the screen when scrolling
       set scrolloff 10
 
-      # Show hidden files
+      # Show hidden files (toggle with `zh`)
       set hidden
     '';
   };
