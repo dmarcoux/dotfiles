@@ -86,6 +86,10 @@
       map gt cd ${config.xdg.dataHome}/Trash
       map gv cd /home/dany/videos
 
+      map m # Remove default mapping for mark-save
+      map \' # Remove default mapping for mark-load (' has to be escaped since it's a special character)
+      map \" # Remove default mapping for mark-remove (" has to be escaped since it's a special character)
+
       ###############
       # Options
       ###############
