@@ -30,10 +30,10 @@
       # https://github.com/gokcehan/lf/blob/master/doc.md#environment-variables
 
       # Open file with xdg-open
-      cmd open $xdg-open $f
+      cmd open $xdg-open "$f"
 
       # Open file with a given command (use `$*` to pass all command arguments)
-      cmd open_with $$* $f
+      cmd open_with $$* "$f"
 
       # Put a file in the trash
       cmd trash %trash $fx
@@ -44,7 +44,7 @@
       # Extract archives
       cmd extract ''${{
           set -f # Disable pathname expansion
-          atool --extract $f
+          atool --extract "$f"
       }}
 
       # Yank paths into the clipboard
