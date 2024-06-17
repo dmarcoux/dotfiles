@@ -1,5 +1,7 @@
 # User configuration for rofi
 
+{ pkgs, ... }:
+
 {
   programs.rofi = {
     enable = true;
@@ -35,4 +37,8 @@
       monitor = "-4";
     };
   };
+
+  # Install rofimoji - Emoji, unicode and general character picker for rofi
+  # https://github.com/fdw/rofimoji
+  home.packages = [ pkgs.rofimoji ];
 }
