@@ -94,6 +94,15 @@
       map \' # Remove default mapping for mark-load (' has to be escaped since it's a special character)
       map \" # Remove default mapping for mark-remove (" has to be escaped since it's a special character)
 
+      # Remove default mappings for find, I prefer to use search
+      map f # find
+      map F # find-back
+      map ; # find-next
+      map , # find-prev
+
+      # Open the command prompt
+      map ; read
+
       ###############
       # Options
       ###############
