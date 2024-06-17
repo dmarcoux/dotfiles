@@ -62,6 +62,8 @@
     nixfmt-classic
     # For coc.nvim, which provides auto-completion in Neovim
     unstable.nodejs-18_x
+    # Knowledge base that works on top of a local folder of plain text Markdown files
+    unstable.obsidian
     # Manage resolv.conf for DNS settings
     openresolv
     # VPN client

@@ -140,6 +140,7 @@
 
       assign [class="^discord$"] → $WS3
       assign [class="^bruno$"] → $WS3
+      assign [class="^obsidian$"] → $WS3
 
       assign [class="^thunderbird$"] → $WS4
 
