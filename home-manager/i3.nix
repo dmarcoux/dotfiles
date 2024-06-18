@@ -137,10 +137,10 @@
       assign [class="^firefox$"] → $WS2
       assign [class="^Slack$"] → $WS2
       assign [class="^Chromium-browser$"] → $WS2
+      assign [class="^obsidian$"] → $WS2
 
       assign [class="^discord$"] → $WS3
       assign [class="^bruno$"] → $WS3
-      assign [class="^obsidian$"] → $WS3
 
       assign [class="^thunderbird$"] → $WS4
 
