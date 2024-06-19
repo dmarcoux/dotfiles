@@ -26,8 +26,10 @@
       # $* -> pass all arguments to the shell command
       # $1, $2, $3, etc... -> pass the first, second, third, X argument to the shell command
       #
-      # Environment Variables
-      # https://github.com/gokcehan/lf/blob/master/doc.md#environment-variables
+      # Environment Variables (https://github.com/gokcehan/lf/blob/master/doc.md#environment-variables)
+      # $f -> Current file selection as a full path
+      # $fs -> Selected file(s) separated with the value of `filesep` option as full path(s)
+      # $fx -> `$fs` if multiple files selected, otherwise `$f`
 
       # Open file with xdg-open
       cmd open $xdg-open "$f"
