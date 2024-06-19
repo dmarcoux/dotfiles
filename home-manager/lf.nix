@@ -85,7 +85,9 @@
       map g. cd /home/dany/dotfiles
       map g/ cd /
       map gc cd ${config.xdg.configHome}
-      map gd cd /home/dany/downloads
+      map gdc cd /home/dany/documents
+      map gdv cd /home/dany/documents/obsidian/
+      map gdw cd /home/dany/downloads
       map ge cd /home/dany/ebooks
       map gmi cd /home/dany/music-to-import
       map gmu cd /home/dany/music
