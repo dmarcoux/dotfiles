@@ -162,7 +162,11 @@
       for_window [floating] move position center
 
       # Launch terminal
-      exec alacritty
+      # Somehow, this alacritty instance has a bigger font size due to the `Window Scale Factor` being wrong.
+      # This issue started to happen when I upgraded to NixOS 24.05 and I don't know why... following alacritty instances
+      # are fine. It's probably something with autorandr being executed just before alacritty. I don't want to use postswitch hooks
+      # in autorandr to fix this issue... it's a lot of code/setup for something easily fix with an environment variable.
+      exec WINIT_X11_SCALE_FACTOR=1 alacritty
 
       # Launch web browser
       exec $BROWSER
