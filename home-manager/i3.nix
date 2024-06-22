@@ -133,11 +133,11 @@
       assign [class="^Alacritty$"] → $WS1
       assign [class="^Code$"] → $WS1
       assign [class="^jetbrains-.*"] → $WS1
+      assign [class="^obsidian$"] → $WS1
 
       assign [class="^firefox$"] → $WS2
       assign [class="^Slack$"] → $WS2
       assign [class="^Chromium-browser$"] → $WS2
-      assign [class="^obsidian$"] → $WS2
 
       assign [class="^discord$"] → $WS3
       assign [class="^bruno$"] → $WS3
