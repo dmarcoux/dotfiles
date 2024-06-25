@@ -21,6 +21,8 @@
     unstable.bruno
     # Cross-platform build automation system
     cmake
+    # CLI for development containers (https://containers.dev)
+    unstable.devcontainer
     # Voice, video, and text chat
     unstable.discord
     # Keep Docker login credentials in pass
