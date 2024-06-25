@@ -28,6 +28,7 @@
     ./chromium.nix
     ./docker.nix
     ./evince.nix
+    ./gnome-keyring.nix
     ./i3.nix
     ./keyboard.nix
     ./locales.nix
