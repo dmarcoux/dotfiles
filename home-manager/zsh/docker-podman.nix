@@ -1,5 +1,7 @@
 {
   programs.zsh.initExtra = ''
+    ealias dc='devcontainer'
+
     ealias doc='docker'
     ealias pod='podman'
     ealias doccom='docker-compose'
