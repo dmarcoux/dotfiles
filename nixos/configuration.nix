@@ -11,12 +11,12 @@
     packageOverrides = pkgs: {
       unstable = import (builtins.fetchTarball {
         # Descriptive name to make the store path easier to identify
-        name = "nixos-unstable-01-06-2024";
+        name = "nixos-unstable-25-06-2024";
         # Find the hash of the latest commit for nixos-unstable with the command below
         # git ls-remote https://github.com/nixos/nixpkgs nixos-unstable | cut --fields=1 | xargs --no-run-if-empty -I % echo "https://github.com/nixos/nixpkgs/archive/%.tar.gz"
-        url = "https://github.com/nixos/nixpkgs/archive/ad57eef4ef0659193044870c731987a6df5cf56b.tar.gz";
+        url = "https://github.com/nixos/nixpkgs/archive/a71e967ef3694799d0c418c98332f7ff4cc5f6af.tar.gz";
         # Obtained using `nix-prefetch-url --unpack <url>`
-        sha256 = "1fz2yjr8as12g9qhixwc8vzd294v3q5jzmrk5dwp8w44qz3clc2b";
+        sha256 = "02n8ikvaxhhydfx8irhz7f9gar486wz5phakyy45szq5xjyb2b0b";
       }) {
         config = config.nixpkgs.config;
       };
