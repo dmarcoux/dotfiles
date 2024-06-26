@@ -4,7 +4,13 @@
 
 {
   imports = [
-    <nixos-hardware/dell/precision/5530> # From the nixos-hardware channel, its source is https://github.com/NixOS/nixos-hardware
+    # Declaratively import nixos-hardware to avoid relying on Nix channels
+    # Pin nixos-hardware to a revision to have reproducible builds
+    "${builtins.fetchGit {
+      url = "https://github.com/NixOS/nixos-hardware.git";
+      name = "nixos-hardware-26-06-2024";
+      rev = "aab67495e34365045f9dfbe58725cc6fa03607b7";
+    }}/dell/precision/5530"
     ./autorandr.nix
     ./hardware-configuration.nix # Include the results of the hardware scan
     ../../nixos/configuration.nix # System configuration

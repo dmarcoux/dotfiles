@@ -36,25 +36,13 @@ sudo rm /mnt/etc/nixos/configuration.nix &&
 sudo ln --symbolic /mnt/etc/nixos/dotfiles/hosts/CHOOSE_HOST/configuration.nix /mnt/etc/nixos/configuration.nix
 ```
 
-6. Add [nixos-hardware](https://github.com/NixOS/nixos-hardware) Nix channel
-
-```
-sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
-```
-
-7. Update Nix channels
-
-```
-sudo nix-channel --update
-```
-
-8. Install NixOS
+6. Install NixOS
 
 ```
 sudo nixos-install
 ```
 
-9. Reboot
+7. Reboot
 
 ```
 reboot
@@ -96,19 +84,7 @@ cd secrets &&
 echo "Follow instructions from the Setup section in secrets' README"
 ```
 
-8. Add [nixos-hardware](https://github.com/NixOS/nixos-hardware) Nix channel
-
-```
-sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
-```
-
-9. Update Nix channels
-
-```
-sudo nix-channel --update
-```
-
-10. Symlink one of the host configurations to `/etc/nixos/configuration.nix` (the
+8. Symlink one of the host configurations to `/etc/nixos/configuration.nix` (the
 default path to the main NixOS configuration module). Create one if not already
 done. The generated hardware-configuration.nix is under /etc/nixos.
 
@@ -117,16 +93,16 @@ sudo rm /etc/nixos/configuration.nix &&
 sudo ln --symbolic "/home/dany/dotfiles/hosts/CHOOSE_HOST/configuration.nix" /etc/nixos/configuration.nix
 ```
 
-11. Build the NixOS system
+9. Build the NixOS system
 
 ```
 sudo nixos-rebuild boot
 ```
 
-12. Reboot
+10. Reboot
 
 ```
 reboot
 ```
 
-13. Clean up `/etc/nixos` to remove everything but `/etc/nixos/configuration.nix`
+11. Clean up `/etc/nixos` to remove everything but `/etc/nixos/configuration.nix`
