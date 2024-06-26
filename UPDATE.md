@@ -1,26 +1,20 @@
 ### How to Update to a New NixOS Version
 
-1. Change Nix channels by overwriting them (replace `VERSION_NUMBER` with the new version, like `22.11`)
+1. Change `nixos` channel by overwriting it (replace `VERSION_NUMBER` with the new version, like `22.11`)
 
-    - NixOS:
+   ```bash
+   sudo nix-channel --add https://nixos.org/channels/nixos-VERSION_NUMBER nixos
+   ```
 
-      ```bash
-      sudo nix-channel --add https://nixos.org/channels/nixos-VERSION_NUMBER nixos
-      ```
+2. Change the version of the home-manager import in [nixos/home-manager.nix](nixos/home-manager.nix)
 
-    - Home Manager:
-
-      ```bash
-      sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-VERSION_NUMBER.tar.gz home-manager
-      ```
-
-2. Activate channels
+3. Activate channels
 
    ```bash
    sudo nix-channel --update
    ```
 
-3. Update state version for NixOS and Home Manager
+4. Update state version for NixOS and Home Manager
 
    3.1 Check the release notes if something needs to be changed.
      - [NixOS](https://nixos.org/manual/nixos/stable/release-notes.html#ch-release-notes)
@@ -32,7 +26,7 @@
      - NixOS: `system.stateVersion` in [nixos/configuration.nix](nixos/configuration.nix)
      - Home Manager: `home.stateVersion` in [home-manager/home.nix](home-manager/home.nix)
 
-4. Build the NixOS system with the new NixOS version, then reboot
+5. Build the NixOS system with the new NixOS version, then reboot
 
    ```bash
    sudo nixos-rebuild boot

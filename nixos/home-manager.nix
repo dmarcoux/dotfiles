@@ -4,7 +4,9 @@
 
 {
   imports = [
-    <home-manager/nixos> # from home-manager channel
+    # Declaratively import home-manager to avoid relying on Nix channels
+    # For updates, simply replace the version number, like 24.05, by the new one
+    (import "${builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz}/nixos")
   ];
 
   home-manager = {
