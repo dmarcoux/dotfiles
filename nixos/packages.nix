@@ -141,8 +141,6 @@
     xsel
     # Barcode and QR code reader
     zbar
-    # Offline documentation browser for software engineers
-    zeal
     # Compress files in Zip archives
     zip
   ];
