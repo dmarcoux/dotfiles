@@ -7,4 +7,7 @@
 
   # Install Seahorse to view/manage encryption keys and passwords in the GNOME Keyring
   programs.seahorse.enable = true;
+
+  # For GNOME Keyring to unlock by default
+  services.xserver.updateDbusEnvironment = true;
 }
