@@ -8,7 +8,7 @@
 
 2. Change the version of the home-manager import in [nixos/home-manager.nix](nixos/home-manager.nix)
 
-3. Activate channels
+3. Update channels
 
    ```bash
    sudo nix-channel --update
