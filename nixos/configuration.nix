@@ -38,7 +38,6 @@
     ./packages.nix
     ./podman.nix
     ./printing.nix
-    ./redshift.nix
     ./udiskie.nix
     ./unclutter.nix
     ./vscode.nix
