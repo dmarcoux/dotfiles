@@ -33,6 +33,7 @@
     ./pasystray.nix
     ./picom.nix
     ./playerctl.nix
+    ./redshift.nix
     ./ripgrep.nix
     ./rofi.nix
     ./ruby.nix

@@ -46,8 +46,6 @@
     go_1_21
     # Go Language Server
     unstable.gopls
-    # Control color temperature of the screen based on location and time
-    go-sct
     # For the command make
     gnumake
     # Color picker

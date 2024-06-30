@@ -161,9 +161,6 @@
       # Center floating windows in the workspace in which they appear
       for_window [floating] move position center
 
-      # Launc sct to control color temperature of the screen
-      exec --no-startup-id sct -dayTemp 5500 -nightTemp 3500
-
       # Launch terminal
       # Somehow, this alacritty instance has a bigger font size due to the `Window Scale Factor` being wrong.
       # This issue started to happen when I upgraded to NixOS 24.05 and I don't know why... following alacritty instances
