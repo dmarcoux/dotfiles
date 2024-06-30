@@ -45,6 +45,7 @@
     ./vscode.nix
     ./xcape.nix
     ./xdg.nix
+    ./xidlehook.nix
     ./xorg.nix
     ./yank.nix
     ./yt-dlp.nix
