@@ -27,6 +27,7 @@
     (import ./home-manager.nix { pkgs = pkgs; config = config; nixos_options = options; })
     ./chromium.nix
     ./docker.nix
+    ./dotnet.nix
     ./evince.nix
     ./gnome-keyring.nix
     ./i3.nix
