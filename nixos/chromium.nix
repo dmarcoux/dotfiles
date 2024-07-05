@@ -9,6 +9,86 @@
   # Install chromium with WideVine to play DRM-protected content
   environment.systemPackages = [ (pkgs.chromium.override { enableWideVine = true; }) ];
 
-  # Enable chromium policies
-  programs.chromium.enable = true;
+  programs.chromium = {
+    # Configure Chromium through policies
+    # A list of available policies is available at https://chromeenterprise.google/policies/
+    enable = true;
+    extraOpts = {
+      # Disable the password manager
+      "PasswordManagerEnabled" = false;
+      # Spellcheck for French, English (American) and German
+      "SpellcheckEnabled" = true;
+      "SpellcheckLanguage" = [
+        "fr"
+        "en-US"
+        "de"
+      ];
+      # Spellcheck only through the help of the local dictionaries, not Google
+      "SpellCheckServiceEnabled" = false;
+      # Disable user profiles
+      "BrowserAddPersonEnabled" = false;
+      # Disable guest mode
+      "BrowserGuestModeEnabled" = false;
+      # Restore the last session
+      "RestoreOnStartup" = 1;
+      # Allow cookies / local data for all websites
+      "DefaultCookiesSetting" = 1;
+      # Do not import anything
+      "ImportAutofillFormData" = false;
+      "ImportBookmarks" = false;
+      "ImportHistory" = false;
+      "ImportHomepage" = false;
+      "ImportSavedPasswords" = false;
+      "ImportSearchEngine" = false;
+      # Do not offer to translate a website
+      "TranslateEnabled" = false;
+      # Do not automatically play medias
+      "AutoplayAllowed" = false;
+      # Disable tabs with promotions, user help or requests to set Chromium as the default browser
+      "PromotionalTabsEnabled" = false;
+      # Always show the bookmark bar
+      "BookmarkBarEnabled" = true;
+      # Do not save browser history between sessions
+      "SavingBrowserHistoryDisabled" = true;
+      # On launch, do not check if Chromium is the default browser
+      "DefaultBrowserSettingEnabled" = false;
+      # Do not autofill address and credit card
+      "AutofillAddressEnabled" = false;
+      "AutofillCreditCardEnabled" = false;
+      # Set DuckDuckGo as the search provider
+      # To customize this further, refer to https://duckduckgo.com/duckduckgo-help-pages/settings/params/
+      "DefaultSearchProviderEnabled" = true;
+      "DefaultSearchProviderName" = "DuckDuckGo";
+      "DefaultSearchProviderSearchURL" = "https://duckduckgo.com/?q={searchTerms}";
+      # Disable search suggestions
+      "SearchSuggestEnabled" = false;
+      # Allow logins to Google account
+      "BrowserSignin" = 1;
+      # Clear all browser data on exit
+      "ClearBrowsingDataOnExitList" = [
+        "browsing_history"
+        "download_history"
+        "cookies_and_other_site_data"
+        "cached_images_and_files"
+        "password_signin"
+        "autofill"
+        "site_settings"
+        "hosted_app_data"
+      ];
+    };
+
+    # Install the following extensions
+    extensions = [
+      "cjpalhdlnbpafiamejdnhcphjbkeiagm" # uBlock Origin
+      "edibdbjcniadpccecjdfdjjppcpchdlm" # I still don't care about cookies
+      "mnjggcdmjocbbbhaepdhchncahnbgone" # SponsorBlock for YouTube
+      "ldgfbffkinooeloadekpmfoklnobpien" # Raindrop.io
+      "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" # Privacy Badger
+      "khncfooichmfjbepaaaebmommgaepoid" # Unhook for YouTube
+      "blaaajhemilngeeffpbfkdjjoefldkok" # LeechBlock NG
+      "cdfcbpndhmollmcmlehepbodcleebfen" # vim-scroll
+      "beakmhbijpdhipnjhnclmhgjlddhidpe" # linkding extension
+      "jbbplnpkjmmeebjpijfedlgcdilocofh" # WAVE Evaluation Tool
+    ];
+  };
 }
