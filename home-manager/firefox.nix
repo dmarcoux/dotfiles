@@ -1,9 +1,6 @@
 # User configuration for Firefox
 
 {
-  # Set Firefox as the default browser
-  home.sessionVariables = { BROWSER = "firefox"; };
-
   programs.firefox = {
     # Install Firefox
     enable = true;

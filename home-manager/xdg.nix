@@ -192,6 +192,8 @@
         "text/xml" = "nvim.desktop";
         "x-scheme-handler/slack" = "slack.desktop";
         "x-scheme-handler/mailto" = "thunderbird.desktop";
+        "x-scheme-handler/https" = "chromium-browser.desktop";
+        "x-scheme-handler/http" = "chromium-browser.desktop";
       };
     };
   };

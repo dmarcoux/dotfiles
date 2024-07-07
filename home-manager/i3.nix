@@ -36,7 +36,7 @@
 
       # Workspaces (names include Font Awesome icons)
       set $WS1 "1: 1"
-      set $WS2 "2: 2"
+      set $WS2 "2: 2"
       set $WS3 "3: 3"
       set $WS4 "4: 4"
       set $WS5 "5: 5"
