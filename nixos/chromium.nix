@@ -75,6 +75,8 @@
         "site_settings"
         "hosted_app_data"
       ];
+      # Disable notifications for all websites
+      "DefaultNotificationsSetting" = 2;
     };
 
     # Install the following extensions
