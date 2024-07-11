@@ -56,6 +56,8 @@
   nix.settings.experimental-features = [
     # Enable all experimental features of the `nix` command without having to always do `nix --extra-experimental-features nix-command some_experimental_command`
     "nix-command"
+    # Enable flakes (https://nixos.wiki/wiki/Flakes)
+    "flakes"
   ];
 
   # Install documentation targeted at developers
