@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   services.xidlehook = {
     enable = true;
@@ -12,13 +14,13 @@
       # After 300 seconds (5 minutes) of inactivity (when audio isn't playing), put the screen on standby (~1 second recovery time)
       {
         delay = 300; # seconds
-        command = "xset dpms force standby";
+        command = "${pkgs.xorg.xset}/bin/xset dpms force standby";
         canceller = "";
       }
       # After 30 more seconds, lock the screen and suspend the system
       {
         delay = 30; # seconds
-        command = "slock systemctl suspend --check-inhibitors=no";
+        command = "${pkgs.slock}/bin/slock systemctl suspend --check-inhibitors=no";
         canceller = "";
       }
     ];
