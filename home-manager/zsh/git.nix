@@ -46,6 +46,7 @@
     ealias gref='git reflog' # then: git reset HEAD@{index}
     ealias gres='git reset'
     ealias grev='git revert'
+    ealias grst='git restore --staged'
     # Select a commit with fzf and revert it
     alias grevf='glo | fzf --ansi --no-sort | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty git revert'
     ealias gsh='git show'
