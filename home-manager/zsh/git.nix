@@ -47,8 +47,8 @@
     ealias gres='git reset'
     ealias grev='git revert'
     ealias grst='git restore --staged'
-    # Select a commit with fzf and revert it
-    alias grevf='glo | fzf --ansi --no-sort | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty git revert'
+    # Select commit(s) with fzf and revert it
+    alias grevf='glo | fzf --ansi --no-sort --multi | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty git revert'
     ealias gsh='git show'
     # Select a commit with fzf and show it
     alias gshf='glo | fzf --ansi --no-sort --preview "echo {} | cut --delimiter=\" \" --fields=1 | xargs git show" | cut --delimiter=" " --fields=1 | xargs --no-run-if-empty git show'
