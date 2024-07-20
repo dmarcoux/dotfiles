@@ -40,6 +40,7 @@
     ./podman.nix
     ./printing.nix
     ./redshift.nix
+    ./steam.nix
     ./udiskie.nix
     ./unclutter.nix
     ./vscode.nix
