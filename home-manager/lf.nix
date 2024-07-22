@@ -94,6 +94,7 @@
       map gpa cd ${config.xdg.configHome}/password-store
       map gpi cd /home/dany/pictures
       map gpr cd /home/dany/projets
+      map gsv cd "/home/dany/.steam/steam/steamapps/common/Stardew Valley"
       map gt cd ${config.xdg.dataHome}/Trash
       map gv cd /home/dany/videos
 
