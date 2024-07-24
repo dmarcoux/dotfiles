@@ -25,6 +25,7 @@
 
   imports = [
     (import ./home-manager.nix { pkgs = pkgs; config = config; nixos_options = options; })
+    ./1password.nix
     ./chromium.nix
     ./docker.nix
     ./dotnet.nix

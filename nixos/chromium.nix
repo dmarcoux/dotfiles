@@ -91,6 +91,7 @@
       "cdfcbpndhmollmcmlehepbodcleebfen" # vim-scroll
       "beakmhbijpdhipnjhnclmhgjlddhidpe" # linkding extension
       "jbbplnpkjmmeebjpijfedlgcdilocofh" # WAVE Evaluation Tool
+      "aeblfdkhhhdcdjpifhhbdiojplfjncoa" # 1Password
     ];
   };
 }
