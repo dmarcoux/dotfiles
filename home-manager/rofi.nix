@@ -8,10 +8,7 @@
     extraConfig = {
       # window: Window switcher
       # drun: Launch application (from list of .desktop files)
-      # pass-username:: Frontend to pass (username in filenames)
-      # pass: Frontend to pass
-      # pass-otp: Frontend to pass-otp
-      modi = "window,drun,pass-username:rofi-pass-username,pass:rofi-pass,pass-otp:rofi-pass-otp";
+      modi = "window,drun";
       font = "DejaVu Sans Mono 13";
       show-icons = true;
       # Sort entries by matches

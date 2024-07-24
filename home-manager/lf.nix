@@ -91,7 +91,6 @@
       map ge cd /home/dany/ebooks
       map gmi cd /home/dany/music-to-import
       map gmu cd /home/dany/music
-      map gpa cd ${config.xdg.configHome}/password-store
       map gpi cd /home/dany/pictures
       map gpr cd /home/dany/projets
       map gsv cd "/home/dany/.steam/steam/steamapps/common/Stardew Valley"

@@ -29,7 +29,6 @@
     ./lf.nix
     ./neovim.nix
     ./network-manager.nix
-    ./password-store.nix
     ./pasystray.nix
     ./picom.nix
     ./playerctl.nix

@@ -56,6 +56,6 @@
   #     scw s3 sync s3://<bucket_name> s3://<bucket_name_2> --storage-class GLACIER
   #     scw s3 sync s3://<bucket_name> s3://<bucket_name_2> --storage-class ONEZONE_IA
   programs.zsh.initExtra = ''
-    alias scw='AWS_ACCESS_KEY_ID=$(pass show me/scaleway.com+storage-bucket | sed -n "s/^Username: \(.*\)$/\1/p") AWS_SECRET_ACCESS_KEY=$(pass show me/scaleway.com+storage-bucket | head --lines=1) aws --endpoint-url https://s3.fr-par.scw.cloud'
+    alias scw='AWS_ACCESS_KEY_ID=$(op read "op://Personal/scaleway.com/API Key - Object Storage/Access Key ID") AWS_SECRET_ACCESS_KEY=$(op read "op://Personal/scaleway.com/API Key - Object Storage/Secret Key") aws --endpoint-url https://s3.fr-par.scw.cloud'
   '';
 }

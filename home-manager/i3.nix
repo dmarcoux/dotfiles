@@ -216,14 +216,14 @@
       # Start window switcher
       bindsym $mod+s exec rofi -show window
 
-      # Start rofi frontend to pass for my usernames
-      bindsym $mod+u exec rofi -show pass-username
-
-      # Start rofi frontend to pass-otp for my two-factor authentication (2FA) codes
-      bindsym $mod+o exec rofi -show pass-otp
-
-      # Start rofi frontend to pass for my passwords
-      bindsym $mod+p exec rofi -show pass
+      # Show 1Password's quick access
+      #
+      # In the quick access, these keyboard shorcuts are available (https://support.1password.com/keyboard-shortcuts/)
+      # Ctrl + C | Copy the username or primary field of the selected item
+      # Ctrl + Shift + C | Copy the password of the selected item
+      # Ctrl + Alt + C | Copy the one-time password of the selected item
+      # Alt + Enter | Open the website for the login in your browser and fill your username and password
+      bindsym $mod+p exec 1password --quick-access
 
       # Start rofimoji
       bindsym $mod+m exec rofimoji

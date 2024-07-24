@@ -25,8 +25,6 @@
     unstable.devcontainer
     # Voice, video, and text chat
     unstable.discord
-    # Keep Docker login credentials in pass
-    docker-credential-helpers
     # Functional, meta-programming aware language built on top of the Erlang VM. Useful wehn I need to quickly test something in IEx
     elixir_1_16
     erlangR26 # Only for the command `escript`, it's not necessary to explicitly install Erlang for Elixir
