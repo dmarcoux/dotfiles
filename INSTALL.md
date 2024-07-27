@@ -23,7 +23,7 @@ sudo mv dotfiles-main dotfiles
 ```
 
 4. Find and comment out the various `secrets` imports in the root `home-manager` and `NixOS` Nix files
-(Secrets cannot be decrypted since GPG keys are not installed)
+(The repository with secrets isn't cloned yet)
 
 ```
 grep -rni "secrets" *
@@ -66,15 +66,13 @@ logout
 
 4. Log in as my user
 
-5. Set my GPG and SSH keys with `restore-backup-keys` script
-
-6. Clone the dotfiles repository
+5. Clone the dotfiles repository
 
 ```
 git clone git@github.com:dmarcoux/dotfiles.git ~/dotfiles
 ```
 
-7. Setup `secrets` gitsubmodule
+6. Setup `secrets` gitsubmodule
 
 ```
 cd dotfiles &&
@@ -84,7 +82,7 @@ cd secrets &&
 echo "Follow instructions from the Setup section in secrets' README"
 ```
 
-8. Symlink one of the host configurations to `/etc/nixos/configuration.nix` (the
+7. Symlink one of the host configurations to `/etc/nixos/configuration.nix` (the
 default path to the main NixOS configuration module). Create one if not already
 done. The generated hardware-configuration.nix is under /etc/nixos.
 
@@ -93,16 +91,16 @@ sudo rm /etc/nixos/configuration.nix &&
 sudo ln --symbolic "/home/dany/dotfiles/hosts/CHOOSE_HOST/configuration.nix" /etc/nixos/configuration.nix
 ```
 
-9. Build the NixOS system
+8. Build the NixOS system
 
 ```
 sudo nixos-rebuild boot
 ```
 
-10. Reboot
+9. Reboot
 
 ```
 reboot
 ```
 
-11. Clean up `/etc/nixos` to remove everything but `/etc/nixos/configuration.nix`
+10. Clean up `/etc/nixos` to remove everything but `/etc/nixos/configuration.nix`
