@@ -29,4 +29,8 @@
   hardware.bluetooth.enable = true;
   # Install blueman, a GUI to manage Bluetooth devices
   services.blueman.enable = true;
+
+  # System clock might be incorrect after booting Windows and going back to the NixOS
+  # This sets RTC time standard to localtime, compatible with Windows in its default configuration
+  time.hardwareClockInLocalTime = true;
 }
