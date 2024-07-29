@@ -14,10 +14,21 @@
 
   ];
 
-  # Use the systemd-boot EFI boot loader
+  # Use the GRUB boot loader to dual-boot Windows and NixOS
   boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
+    efi = {
+      canTouchEfiVariables = true;
+      # # /boot is the mount point of the EFI partition in NixOS (as the installation documentation recommends)
+      # efiSysMountPoint = "/boot";
+    };
+
+    grub = {
+      enable = true;
+      devices = [ "nodev" ];
+      efiSupport = true;
+      # Detect other systems present on the computer and add a menu entry for each of them
+      useOSProber = true;
+    };
   };
 
   networking = {
