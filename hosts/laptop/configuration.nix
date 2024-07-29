@@ -25,6 +25,8 @@
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
+    # Timeout (in seconds) until loader boots the default menu item (the latest NixOS generation)
+    timeout = 20;
   };
 
   networking = {

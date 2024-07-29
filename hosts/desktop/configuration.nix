@@ -22,6 +22,9 @@
       # efiSysMountPoint = "/boot";
     };
 
+    # Timeout (in seconds) until loader boots the default menu item (the latest NixOS generation)
+    timeout = 20;
+
     grub = {
       enable = true;
       devices = [ "nodev" ];
