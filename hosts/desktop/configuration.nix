@@ -31,6 +31,8 @@
       efiSupport = true;
       # Detect other systems present on the computer and add a menu entry for each of them
       useOSProber = true;
+      # Remember the last accessed menu entry. Useful when selecting one menu entry most of the time
+      default = "saved";
     };
   };
 
