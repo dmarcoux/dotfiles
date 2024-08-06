@@ -76,6 +76,8 @@
     pdftk
     # Simple animated GIF screen recorder
     peek
+    # G-code generator for 3D printers
+    prusa-slicer
     # Music tagger to fix music files with wrong metadata tags
     picard
     # CLI program to copy/sync/move files and directories to and from many cloud services
