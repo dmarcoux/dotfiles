@@ -23,7 +23,8 @@
       # & -> executes the shell command asynchronously / in the background
       #
       # Arguments
-      # $* -> pass all arguments to the shell command
+      # $* -> pass all arguments to the shell command (inside quotes, all arguments are passed as one)
+      # $@ -> pass all arguments to the shell command (inside quotes, all arguments are passed separately)
       # $1, $2, $3, etc... -> pass the first, second, third, X argument to the shell command
       #
       # Environment Variables (https://github.com/gokcehan/lf/blob/master/doc.md#environment-variables)
