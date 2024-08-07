@@ -41,11 +41,11 @@
       # Put a file in the trash
       cmd trash %trash $fx
 
-      # Create file(s)
-      cmd touch %touch $*
+      # Create one/multiple file(s)
+      cmd touch %touch "$@"
 
       # Create one/multiple directory(ies)
-      cmd mkdir $mkdir $*
+      cmd mkdir $mkdir "$@"
 
       # Extract archives
       cmd extract ''${{
