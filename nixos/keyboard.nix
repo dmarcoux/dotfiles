@@ -1,3 +1,8 @@
+# TODO:
+#   Verify what can be kept/deleted after migrating to my ZSA keyboard.
+#   I believe going back to using the `services.xserver` block in the comments below should be enough.
+#   The extra mapping I do in `xkb_symbols` shouldn't be needed anymore with the ZSA keyboard, so I can stick to the default Canadian Multilingual layout.
+
 # System configuration for keyboard layout
 #
 #  Canadian Multilingual custom keyboard layout:

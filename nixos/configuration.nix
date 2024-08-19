@@ -46,6 +46,7 @@
     ./unclutter.nix
     ./vscode.nix
     ./yubikey.nix
+    ./zsa_keyboards.nix
     ./zsh.nix
   ];
 

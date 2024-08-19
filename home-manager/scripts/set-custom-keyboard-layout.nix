@@ -1,3 +1,4 @@
+# TODO: Delete this file once I switched to my ZSA keyboard
 { pkgs, ... }:
 
 {
