@@ -13,6 +13,8 @@
     arandr
     # Various commands to manage file archives of various types, such as tar and Zip archives
     atool
+    # CLI for the Azure cloud computing platform from Microsoft
+    azure-cli
     # For DNS commands dig and nslookup
     bind
     # For the command `ar`, which creates, modifies, and extracts from archives
