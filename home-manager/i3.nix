@@ -225,8 +225,8 @@
       # Alt + Enter | Open the website for the login in your browser and fill your username and password
       bindsym $mod+p exec 1password --quick-access
 
-      # Start rofimoji
-      bindsym $mod+m exec rofimoji
+      # Start rofimoji (load default emojis and icons from Font Awesome)
+      bindsym $mod+m exec rofimoji --files emojis fontawesome6
 
       # Start rofi frontend to clipboard manager (matching clipboard entries case insensitively with `-i` option passed to dmenu)
       bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu -i -p 'clipboard'
