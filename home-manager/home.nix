@@ -36,7 +36,6 @@
     ./rofi.nix
     ./ruby.nix
     ./scaleway.nix
-    ./scripts.nix
     ./ssh.nix
     ./starship.nix
     ./tldr.nix

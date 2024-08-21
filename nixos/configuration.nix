@@ -32,7 +32,7 @@
     ./evince.nix
     ./gnome-keyring.nix
     ./i3.nix
-    ./keyboard.nix
+    ./keyboards.nix
     ./locales.nix
     ./lollypop.nix
     ./mullvad.nix
@@ -46,7 +46,6 @@
     ./unclutter.nix
     ./vscode.nix
     ./yubikey.nix
-    ./zsa_keyboards.nix
     ./zsh.nix
   ];
 
