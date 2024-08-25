@@ -2,6 +2,8 @@
   programs.zsh.initExtra = ''
     ealias g='git'
     ealias ga='git add'
+    # Useful to diff untracked files, see https://stackoverflow.com/questions/24329051/what-does-git-add-intent-to-add-or-n-do-and-when-should-it-be-used
+    ealias gaia='git add --intent-to-add'
     # List branches
     ealias gbra='git branch'
     # Delete a branch
