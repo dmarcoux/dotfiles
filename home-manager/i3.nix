@@ -193,6 +193,9 @@
         --timer 300 "xset dpms force standby" "" \
         --timer 30 "slock systemctl suspend --check-inhibitors=no" ""
 
+      # Launch Keymapp while I am learning to work with my new ZSA keyboard
+      exec keymapp
+
       #################
       # Key bindings
       #################
