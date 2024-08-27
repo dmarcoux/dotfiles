@@ -4,9 +4,9 @@
 
 {
   services.xserver.xkb = {
-    # Set keyboard layout to EurKEY - https://eurkey.steffen.bruentjen.eu/layout.html
-    # There's even a layout available as a template for ZSA keyboards: https://blog.zsa.io/eurkey-layout/
-    layout = "eu";
+    # Set keyboard layout to Canadian Multilingual
+    layout = "ca";
+    variant = "multix";
     # AltGr + Space produces a normal space instead of a non-breakable space
     options = "nbsp:none";
   };
