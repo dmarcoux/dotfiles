@@ -5,6 +5,7 @@
 {
   services.xserver.xkb = {
     # Set keyboard layout to Canadian Multilingual
+    # https://kbdlayout.info/kbdcan
     layout = "ca";
     variant = "multix";
     # AltGr + Space produces a normal space instead of a non-breakable space
