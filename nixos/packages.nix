@@ -100,6 +100,8 @@
     slack
     # Ruby Language Server
     unstable.rubyPackages.solargraph
+    # Infrastructure as Code tool
+    terraform
     # For the `tree` command which shows the contents of the current directory as a tree
     tree
     # Emails and agenda
