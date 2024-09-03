@@ -40,7 +40,6 @@
       set $WS3 "3: 3"
       set $WS4 "4: 4"
       set $WS5 "5: 5"
-      set $WS6 "6: 6"
 
       #################
       # Colorscheme
@@ -279,7 +278,6 @@
       bindsym $mod+3 workspace $WS3
       bindsym $mod+4 workspace $WS4
       bindsym $mod+5 workspace $WS5
-      bindsym $mod+6 workspace $WS6
 
       # Move focused container to workspace
       bindsym $mod+Shift+1 move container to workspace $WS1
@@ -287,7 +285,6 @@
       bindsym $mod+Shift+3 move container to workspace $WS3
       bindsym $mod+Shift+4 move container to workspace $WS4
       bindsym $mod+Shift+5 move container to workspace $WS5
-      bindsym $mod+Shift+6 move container to workspace $WS6
 
       # Toggle the floating mode for the window
       bindsym $mod+Tab floating toggle
