@@ -52,6 +52,8 @@
     gpick
     # Tool for glamorous shell scripts
     unstable.gum
+    # Configure (most) webcams
+    guvcview
     # Interface to inotify, which can be used to monitor and act upon filesystem events
     inotify-tools
     # Digital painting
