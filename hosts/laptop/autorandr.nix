@@ -19,7 +19,7 @@
           "eDP-1" = {
             enable = true;
             mode = "1920x1080";
-            position = "0x1080";
+            position = "1920x0"; # Appears at the right of HDMI-1
             rate = "60.00";
             crtc = 1;
           };
