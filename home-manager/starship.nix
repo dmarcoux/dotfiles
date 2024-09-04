@@ -22,7 +22,7 @@
         "$directory" # Display the path to the current directory
         "\\]"
         "$git_branch" # Display the active branch of the git repository in the current directory
-        "$character" # Display a character beside where the text is entered in the terminal
+        "$character" # Display a character based on the configuration below
       ];
       # Configure the username module
       username = {
