@@ -133,6 +133,7 @@
       assign [class="^Code$"] → $WS1
       assign [class="^jetbrains-.*"] → $WS1
       assign [class="^obsidian$"] → $WS1
+      assign [class="^anytype$"] → $WS1
 
       assign [class="^firefox$"] → $WS2
       assign [class="^Slack$"] → $WS2
