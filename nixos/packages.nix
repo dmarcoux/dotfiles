@@ -9,6 +9,8 @@
     (callPackage ./teamus.nix {})
     # Infrastructure as Code tools
     ansible
+    # Local-first, peer-to-peer, and block-based notetaking app
+    unstable.anytype
     # Frontend to XRandR to manage multiple monitors
     arandr
     # Various commands to manage file archives of various types, such as tar and Zip archives
