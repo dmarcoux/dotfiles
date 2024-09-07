@@ -1,8 +1,6 @@
 # User configuration with home-manager
 # https://nix-community.github.io/home-manager/options.html
 
-{ config, pkgs, nixos_options, ... }:
-
 {
   imports = [
     ./alacritty.nix
@@ -20,7 +18,7 @@
     ./fzf.nix
     ./git.nix
     ./gtk.nix
-    (import ./i3.nix { pkgs = pkgs; nixos_options = nixos_options; })
+    ./i3.nix
     ./i3status.nix
     ./jetbrains.nix
     ./jq.nix

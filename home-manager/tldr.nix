@@ -1,10 +1,10 @@
 # User configuration for tldr
 
-{ pkgs, config, ... }:
+{ pkgs-unstable, config, ... }:
 
 {
   # Install tlrc, one of the official clients for tldr - Collaborative cheatsheets for console commands (https://tldr.sh/)
-  home.packages = [ pkgs.unstable.tlrc ];
+  home.packages = [ pkgs-unstable.tlrc ];
 
   # Configure tlrc
   xdg.configFile."tlrc/config.toml".text = ''

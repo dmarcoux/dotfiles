@@ -1,10 +1,10 @@
 # User configuration for JetBrains IDEs
 
-{ pkgs, ... }:
+{ pkgs-unstable, ... }:
 
 {
   # Install JetBrains Rider, a .NET IDE based on the IntelliJ platform and ReSharper
-  home.packages = [ pkgs.unstable.jetbrains.rider ];
+  home.packages = [ pkgs-unstable.jetbrains.rider ];
 
   # Configure IdeaVim, a plugin emulating Vim inside JetBrains IDEs
   # https://github.com/JetBrains/ideavim

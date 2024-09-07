@@ -1,3 +1,5 @@
+# TODO: This file needs to be updated now that I am using Nix flakes. See other TODO below
+
 ### Install From Scratch on a NixOS System
 
 1. Set [partitions and filesystems](https://nixos.org/nixos/manual/index.html#sec-installation-partitioning)
@@ -10,6 +12,12 @@
 sudo mount /dev/disk/by-label/nixos /mnt &&
 sudo mkdir -p /mnt/boot /mnt/etc/nixos &&
 sudo mount /dev/disk/by-label/boot /mnt/boot
+```
+
+# TODO: Try to go directly with Nix flakes with:
+
+```bash
+sudo nixos-rebuild switch --flake github:dmarcoux/dotfiles#HOSTNAME
 ```
 
 3. Download this repository as a ZIP archive and extract its content in /mnt/etc/nixos/dotfiles

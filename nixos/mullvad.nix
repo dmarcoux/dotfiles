@@ -1,6 +1,6 @@
 # System configuration for Mullvad VPN
 
-{ pkgs, ... }:
+{ pkgs-unstable, ... }:
 
 {
   services.mullvad-vpn = {
@@ -9,6 +9,6 @@
 
     # Install the Mullvad package with the CLI and GUI
     # Using unstable to always have the latest version available
-    package = pkgs.unstable.mullvad-vpn;
+    package = pkgs-unstable.mullvad-vpn;
   };
 }

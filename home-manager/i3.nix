@@ -1,6 +1,6 @@
 # User configuration for i3
 
-{ pkgs, nixos_options, ... }:
+{ pkgs, ... }:
 
 {
   xsession.windowManager.i3 = {
@@ -115,9 +115,9 @@
       # Applications
       #################
 
-      # Load the first profile detected by autorandr to setup monitors
+      # Load the first profile detected by autorandr to setup monitors, otherwise use the default profile (also called default... :D)
       # TODO: When this is executed, the screen flickers once. I wonder if running this in a systemd service when the graphical session starts would prevent this.
-      exec ${pkgs.autorandr}/bin/autorandr --change --default ${nixos_options.services.autorandr.defaultTarget.value};
+      exec ${pkgs.autorandr}/bin/autorandr --change --default default
 
       # Make headphones the default audio output
       # 0 is the sink number. `analog-output-headphones` is the port. List sinks and their ports with `pactl list sinks`.

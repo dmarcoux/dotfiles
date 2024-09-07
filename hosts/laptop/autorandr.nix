@@ -1,9 +1,7 @@
 # User configuration for autorandr
 
 {
-  # If no monitor layout can be detected, fallback to the laptop profile (it's defined below)
-  services.autorandr.defaultTarget = "laptop";
-
+  # Find available displays with xrandr
   home-manager.users.dany.programs.autorandr = {
     profiles = {
       both = {
@@ -51,7 +49,7 @@
           "HDMI-1" = "*";
         };
       };
-      laptop = {
+      default = { # Laptop screen only
         config = {
           "eDP-1" = {
             enable = true;

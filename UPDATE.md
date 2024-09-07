@@ -1,34 +1,28 @@
 ### How to Update to a New NixOS Version
 
-1. Change `nixos` channel by overwriting it (replace `VERSION_NUMBER` with the new version, like `22.11`)
+1. Update the inputs `nixpkgs.url` and `home-manager.url` in [flake.nix](./flake.nix) to use the new NixOS version
 
-   ```bash
-   sudo nix-channel --add https://nixos.org/channels/nixos-VERSION_NUMBER nixos
-   ```
+2. Update state version for NixOS and Home Manager
 
-2. Change the version of the home-manager import in [nixos/home-manager.nix](nixos/home-manager.nix)
-
-3. Update channels
-
-   ```bash
-   sudo nix-channel --update
-   ```
-
-4. Update state version for NixOS and Home Manager
-
-   3.1 Check the release notes if something needs to be changed.
+   2.1 Check the release notes if something needs to be changed.
      - [NixOS](https://nixos.org/manual/nixos/stable/release-notes.html#ch-release-notes)
      - [Home Manager](https://nix-community.github.io/home-manager/release-notes.xhtml)
 
-   3.2 Apply the changes if needed.
+   2.2 Apply the changes if needed.
 
-   3.3 Update state version.
+   2.3 Update state version.
      - NixOS: `system.stateVersion` in [nixos/configuration.nix](nixos/configuration.nix)
      - Home Manager: `home.stateVersion` in [home-manager/home.nix](home-manager/home.nix)
 
-5. Build the NixOS system with the new NixOS version, then reboot
+3. Update [flake.lock](./flake.lock) to use the new inputs
 
    ```bash
-   sudo nixos-rebuild boot
+   nix flake update
+   ```
+
+3. Build the NixOS system with the new NixOS version, then reboot
+
+   ```bash
+   sudo nixos-rebuild boot --flake ~/dotfiles
    reboot
    ```

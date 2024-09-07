@@ -10,10 +10,10 @@
     ealias ncu='sudo nix-channel --update'
 
     # Build the configuration and make it the default boot option, then activate it
-    ealias nrs='sudo nixos-rebuild switch'
+    ealias nrs='sudo nixos-rebuild switch --flake ~/dotfiles'
 
     # Build the configuration and make it the default boot option, but don't activate it until the next reboot
-    ealias nrb='sudo nixos-rebuild boot'
+    ealias nrb='sudo nixos-rebuild boot --flake ~/dotfiles'
 
     # Search for a package
     ealias ns='nix search'

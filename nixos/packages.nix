@@ -2,7 +2,7 @@
 # They are installed in the system profile
 # Search for packages to install with `nix search package_name`
 
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -10,7 +10,7 @@
     # Infrastructure as Code tools
     ansible
     # Local-first, peer-to-peer, and block-based notetaking app
-    unstable.anytype
+    pkgs-unstable.anytype
     # Frontend to XRandR to manage multiple monitors
     arandr
     # Various commands to manage file archives of various types, such as tar and Zip archives
@@ -22,20 +22,20 @@
     # For the command `ar`, which creates, modifies, and extracts from archives
     bintools-unwrapped
     # Tool to help building and using APIs
-    unstable.bruno
+    pkgs-unstable.bruno
     # Cross-platform build automation system
     cmake
     # CLI for development containers (https://containers.dev)
-    unstable.devcontainer
+    pkgs-unstable.devcontainer
     # Voice, video, and text chat
-    unstable.discord
+    pkgs-unstable.discord
     # Functional, meta-programming aware language built on top of the Erlang VM. Useful wehn I need to quickly test something in IEx
     elixir_1_16
     erlangR26 # Only for the command `escript`, it's not necessary to explicitly install Erlang for Elixir
     # Elixir Language Server
-    unstable.elixir_ls
+    pkgs-unstable.elixir_ls
     # CLI for https://exercism.org - Solve coding exercises and get mentored to gain true fluency in your chosen programming languages
-    unstable.exercism
+    pkgs-unstable.exercism
     # Audio and video conversion tool
     ffmpeg_6-headless
     # Ebook reader
@@ -47,13 +47,13 @@
     # Statically typed, compiled high-level programming language
     go_1_21
     # Go Language Server
-    unstable.gopls
+    pkgs-unstable.gopls
     # For the command make
     gnumake
     # Color picker
     gpick
     # Tool for glamorous shell scripts
-    unstable.gum
+    pkgs-unstable.gum
     # Configure (most) webcams
     guvcview
     # Interface to inotify, which can be used to monitor and act upon filesystem events
@@ -67,9 +67,9 @@
     # Formatter for Nix code
     nixfmt-classic
     # For coc.nvim, which provides auto-completion in Neovim
-    unstable.nodejs-18_x
+    pkgs-unstable.nodejs-18_x
     # Knowledge base that works on top of a local folder of plain text Markdown files
-    unstable.obsidian
+    pkgs-unstable.obsidian
     # Manage resolv.conf for DNS settings
     openresolv
     # VPN client
@@ -95,7 +95,7 @@
     # Rust toolchain installer
     rustup
     # Command Line Interface for Scaleway
-    unstable.scaleway-cli
+    pkgs-unstable.scaleway-cli
     # Terminal multiplexer, useful to perform long-running tasks
     screen
     # Static analysis tool for shell scripts
@@ -103,14 +103,14 @@
     # Chat for work
     slack
     # Ruby Language Server
-    unstable.rubyPackages.solargraph
+    pkgs-unstable.rubyPackages.solargraph
     # Infrastructure as Code tool
     terraform
     # For the `tree` command which shows the contents of the current directory as a tree
     tree
     # Emails and agenda
     # Using unstable for the TbSync plugin to work (it needs at least Thunderbird 102.0.3)
-    unstable.thunderbird-bin
+    pkgs-unstable.thunderbird-bin
     # Traceroute to a host
     traceroute
     # CLI to the freedesktop.org trashcan
@@ -142,7 +142,7 @@
     # Execute commands when computer is idle for a specified amount of time
     xidlehook
     # Shell script to check $HOME for unwanted files and directories
-    unstable.xdg-ninja
+    pkgs-unstable.xdg-ninja
     # Edit PDF documents and create digital signatures which can be applied to PDF documents
     xournalpp
     # Get and set the X selection (like changing the clipboard)

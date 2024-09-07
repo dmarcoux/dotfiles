@@ -1,7 +1,7 @@
 # User configuration for neovim
 # TODO: Look into https://github.com/nix-community/nixvim
 
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   programs.neovim = {
@@ -56,7 +56,7 @@
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
         -- Setup elixir_ls - https://github.com/elixir-lsp/elixir-ls
         require("lspconfig")["elixirls"].setup({
-          cmd = { "${pkgs.unstable.elixir_ls}/lib/language_server.sh" },
+          cmd = { "${pkgs-unstable.elixir_ls}/lib/language_server.sh" },
           capabilities = capabilities,
           settings = {
             elixirLS = {
@@ -67,7 +67,7 @@
         })
         -- Setup gopls - https://github.com/golang/tools/tree/master/gopls
         require("lspconfig")["gopls"].setup({
-          cmd = { "${pkgs.unstable.gopls}/bin/gopls" },
+          cmd = { "${pkgs-unstable.gopls}/bin/gopls" },
           capabilities = capabilities
         })
       EOF

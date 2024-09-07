@@ -4,27 +4,7 @@
 { config, pkgs, options, ... }:
 
 {
-  # Pull nixos-unstable channel to allow installation of the latest available packages if needed
-  # It's pinned to a revision to have reproducible builds
-  # Use `pkgs.unstable.package_name` to install a package from the unstable channel
-  nixpkgs.config = {
-    packageOverrides = pkgs: {
-      unstable = import (builtins.fetchTarball {
-        # Descriptive name to make the store path easier to identify
-        name = "nixos-unstable-05-09-2024";
-        # Find the hash of the latest commit for nixos-unstable with the command below
-        # git ls-remote https://github.com/nixos/nixpkgs nixos-unstable | cut --fields=1 | xargs --no-run-if-empty -I % echo "https://github.com/nixos/nixpkgs/archive/%.tar.gz"
-        url = "https://github.com/nixos/nixpkgs/archive/ad416d066ca1222956472ab7d0555a6946746a80.tar.gz";
-        # Obtained using `nix-prefetch-url --unpack <url>`
-        sha256 = "0b9x5sghija7gy4lzf6l9s2kchdwj0zxs37ndlms2r8z1g3gwa7v";
-      }) {
-        config = config.nixpkgs.config;
-      };
-    };
-  };
-
   imports = [
-    (import ./home-manager.nix { pkgs = pkgs; config = config; nixos_options = options; })
     ./1password.nix
     ./chromium.nix
     ./docker.nix
@@ -48,9 +28,6 @@
     ./yubikey.nix
     ./zsh.nix
   ];
-
-  # Allow installation of unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # Nix will conform to the XDG Base Directory Specification for files in $HOME
   nix.settings.use-xdg-base-directories = true;
