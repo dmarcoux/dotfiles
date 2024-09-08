@@ -1,13 +1,13 @@
 # User configuration for autorandr
 
 {
-  # If no monitor layout can be detected, fallback to the laptop profile (it's defined below)
+  # If no monitor layout can be detected, fallback to the desktop profile (it's defined below)
   services.autorandr.defaultTarget = "desktop";
 
   # Find available displays with xrandr
   home-manager.users.dany.programs.autorandr = {
     profiles = {
-      dvi = {
+      desktop = {
         config = {
           "DVI-D-1" = {
             enable = true;
