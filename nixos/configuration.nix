@@ -22,6 +22,7 @@
     ./printing.nix
     ./redshift.nix
     ./steam.nix
+    ./stylix.nix
     ./udiskie.nix
     ./unclutter.nix
     ./vscode.nix

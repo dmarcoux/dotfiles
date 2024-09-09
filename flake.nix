@@ -9,9 +9,11 @@
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     # Ensure that nixpkgs and home-manager stay in sync
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    stylix.url = "github:danth/stylix";
   };
 
-  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, ... }:
+  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, stylix, ... }:
   let
     system = "x86_64-linux";
 
@@ -54,6 +56,7 @@
               pkgs-unstable = pkgs-unstable;
             };
           }
+          stylix.nixosModules.stylix
         ];
       };
 
