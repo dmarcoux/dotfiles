@@ -5,6 +5,7 @@
   imports = [
     ./alacritty.nix
     ./autorandr.nix
+    ./awscli.nix
     ./bat.nix
     ./beets.nix
     ./cbatticon.nix
@@ -33,7 +34,6 @@
     ./ripgrep.nix
     ./rofi.nix
     ./ruby.nix
-    ./scaleway.nix
     ./ssh.nix
     ./starship.nix
     ./tldr.nix
