@@ -169,6 +169,9 @@
       # in autorandr to fix this issue... it's a lot of code/setup for something easily fix with an environment variable.
       exec WINIT_X11_SCALE_FACTOR=1 alacritty
 
+      # Launch notetaking app
+      exec anytype
+
       # Launch web browser
       exec $BROWSER
 
