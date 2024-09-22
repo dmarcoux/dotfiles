@@ -105,7 +105,7 @@
     # Ruby Language Server
     pkgs-unstable.rubyPackages.solargraph
     # Infrastructure as Code tool
-    terraform
+    pkgs-unstable.terraform
     # For the `tree` command which shows the contents of the current directory as a tree
     tree
     # Emails and agenda
