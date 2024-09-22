@@ -20,7 +20,16 @@
     # https://1password.community/discussion/132453/how-to-configure-aws-config-credential-process-op
     credential_process = sh -c "op item get 'AWS - Personal' --format=json --fields=label='Access Key Id',label='Secret Access Key' | jq 'map({key: .label | gsub(\" \"; \"\"), value: .value}) | {Version: 1} + from_entries'"
 
+    # Scaleway
     [profile scaleway]
+    region = fr-par
+    endpoint_url = https://s3.fr-par.scw.cloud
+    # Avoid storing credentials in plain text
+    # https://1password.community/discussion/132453/how-to-configure-aws-config-credential-process-op
+    credential_process = sh -c "op item get scaleway.com --format=json --fields=label='API Key.Access Key Id',label='API Key.Secret Access Key' | jq 'map({key: .label | gsub(\" \"; \"\"), value: .value}) | {Version: 1} + from_entries'"
+
+    # Scaleway - Object Storage
+    [profile scaleway-os]
     region = fr-par
     endpoint_url = https://s3.fr-par.scw.cloud
     # Avoid storing credentials in plain text
@@ -43,5 +52,6 @@
   programs.zsh.initExtra = ''
     alias awsp='aws --profile personal'
     alias scw='aws --profile scaleway'
+    alias scwos='aws --profile scaleway-os'
   '';
 }
