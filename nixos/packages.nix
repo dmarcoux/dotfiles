@@ -52,6 +52,8 @@
     gnumake
     # Color picker
     gpick
+    # Open source graph visualization software
+    graphviz
     # Tool for glamorous shell scripts
     pkgs-unstable.gum
     # Configure (most) webcams
