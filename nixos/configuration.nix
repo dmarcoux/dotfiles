@@ -19,6 +19,7 @@
     ./networking.nix
     ./packages.nix
     ./podman.nix
+    ./polkit.nix
     ./printing.nix
     ./redshift.nix
     ./steam.nix
