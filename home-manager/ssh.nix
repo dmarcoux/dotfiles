@@ -8,9 +8,11 @@
     serverAliveInterval = 60;
 
     # Use the 1Password SSH agent for all hosts
-    extraConfig = ''
-      Host *
-          IdentityAgent ~/.1password/agent.sock
-    '';
+    matchBlocks."*".extraOptions.IdentityAgent = "~/.1password/agent.sock";
   };
+
+  # Use the 1Password SSH agent for all hosts
+  programs.zsh.initExtra = ''
+    export SSH_AUTH_SOCK=~/.1password/agent.sock
+  '';
 }
