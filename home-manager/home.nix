@@ -45,6 +45,7 @@
     ./xorg.nix
     ./yank.nix
     ./yt-dlp.nix
+    ./zellij.nix
     ./zsh.nix
   ];
 
