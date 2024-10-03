@@ -5,6 +5,7 @@
 
 {
   programs.neovim = {
+    # Install Neovim
     enable = true;
 
     # Set neovim as the default "basic/terminal" editor by setting the EDITOR environment variable
