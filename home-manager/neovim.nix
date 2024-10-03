@@ -7,6 +7,8 @@
   programs.neovim = {
     # Install Neovim
     enable = true;
+    # Use latest Neovim version available on nixos-unstable
+    package = pkgs-unstable.neovim-unwrapped;
 
     # Set neovim as the default "basic/terminal" editor by setting the EDITOR environment variable
     defaultEditor = true;
