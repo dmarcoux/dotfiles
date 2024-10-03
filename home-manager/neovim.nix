@@ -1,5 +1,4 @@
 # User configuration for neovim
-# TODO: Look into https://github.com/nix-community/nixvim
 
 { pkgs, pkgs-unstable, ... }:
 
