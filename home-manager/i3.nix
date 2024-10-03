@@ -26,6 +26,8 @@
       workspaceLayout = "tabbed";
     };
     # Testing changes without rebuild NixOS is possible with `i3-msg -t command SOME_I3_COMMAND` (example: `i3-msg -t command exec alacritty`)
+    # TODO: Use this trick, just like in my Neovim config to avoid having to rebuild NixOS configuration only to change something in i3. The content of extraConfig would go in a separate file.
+    # xdg.configFile."nvim/git.vim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/home-manager/neovim/git.vim";
     extraConfig = ''
       #################
       # Variables
