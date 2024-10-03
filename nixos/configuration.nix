@@ -63,6 +63,8 @@
 
   # Enable a basic set of fonts providing several font styles and families and reasonable coverage of Unicode
   fonts.enableDefaultPackages = true;
+  # Install Nerd Fonts, patched and ready-to-use programming fonts: https://www.nerdfonts.com/
+  fonts.packages = [ pkgs.nerdfonts ];
 
   time.timeZone = "Europe/Berlin";
 

@@ -9,7 +9,7 @@
       # window: Window switcher
       # drun: Launch application (from list of .desktop files)
       modi = "window,drun";
-      font = "DejaVu Sans Mono 13";
+      font = "DejaVuSansM Nerd Font 13";
       show-icons = true;
       # Sort entries by matches
       sort = true;

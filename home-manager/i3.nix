@@ -15,7 +15,7 @@
         newWindow = "urgent";
       };
       fonts = {
-        names = ["DejaVu Sans Mono"];
+        names = ["DejaVuSansM Nerd Font"];
         size = 13.0;
       };
       keybindings = {};
@@ -77,7 +77,7 @@
       force_focus_wrapping yes
 
       # Font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
-      font pango:DejaVu Sans Mono 13
+      font pango:DejaVuSansM Nerd Font 13
 
       # Use LeftMouse+$mod on a floating window to drag it to the wanted position
       # Use RightMouse+$mod on a floating window to resize it
@@ -86,7 +86,7 @@
       bar {
           status_command i3status
           position top
-          font pango:DejaVu Sans Mono 13
+          font pango:DejaVuSansM Nerd Font 13
           strip_workspace_numbers yes
 
           # The first available output will be used. It will be the primary output, otherwise the laptop's output.

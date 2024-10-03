@@ -106,7 +106,7 @@
       # Do not accept auto-completion suggestions with Enter (if "editor.tabCompletion" is set to "on", it will only be possible with Tab)
       "editor.acceptSuggestionOnEnter" = "off";
       # Set the font family to the one I use in i3
-      "editor.fontFamily" = "'DejaVu Sans Mono'";
+      "editor.fontFamily" = "'DejaVuSansM Nerd Font'";
       # Update related symbols (like HTML tags) whenever one of them is changed (so changing <a> to <ul> would change the closing tag </a> to </ul>)
       "editor.linkedEditing" = true;
       # Do not show the minimap
