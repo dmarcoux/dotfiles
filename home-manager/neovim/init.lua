@@ -208,35 +208,37 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
-vim.cmd [[
-"-------------------- Plugins Settings
-"---------- fzf-vim
-" Non-recursive mapping in Normal and Visual modes for Ctrl+p to start fzf for files
-nnoremap <C-p> :Files<CR>
-vnoremap <C-p> :Files<CR>
-" Non-recursive mapping in Normal and Visual modes for Ctrl+n to start fzf for buffers
-nnoremap <C-n> :Buffers<CR>
-vnoremap <C-n> :Buffers<CR>
-" Display the fzf window at the bottom of the screen with 40% of the available height
-let g:fzf_layout = { 'down': '40%' }
+-------------------- Plugins Settings
+---------- fzf-vim
+-- Non-recursive mapping in Normal and Visual modes for Ctrl+p to start fzf for files
+vim.keymap.set({'n', 'v',}, '<C-p>', ':Files<CR>')
+-- Non-recursive mapping in Normal and Visual modes for Ctrl+n to start fzf for buffers
+vim.keymap.set({'n', 'v',}, '<C-n>', ':Buffers<CR>')
+-- Display the fzf window at the bottom of the screen with 40% of the available height
+vim.g.fzf_layout = { down = '40%' }
 
-"---------- nvim-solarized-lua
-" Use light version of colorscheme
-set background=light
+---------- nvim-solarized-lua
+-- Use light version of colorscheme
+vim.opt.background = 'light'
 
-" Set colorscheme if it's installed (otherwise it fails silently)
-silent! colorscheme solarized
+-- Set colorscheme if it's installed (otherwise it fails silently)
+vim.cmd('silent! colorscheme solarized')
 
-"---------- tagbar
-" Open tagbar automatically for supported filetypes whenever opening a file
-autocmd FileType * nested :call tagbar#autoopen(0)
+---------- tagbar
+vim.api.nvim_create_autocmd('FileType', {
+  desc = 'Open tagbar automatically for supported filetypes whenever opening a file',
+  nested = true,
+  pattern = '*', -- All filetypes
+  callback = function()
+    vim.cmd('call tagbar#autoopen(0)') -- See `:help :tagbar-autoopen`
+  end,
+})
 
-"---------- wstrip-vim
-" Enable wstrip-vim on all filetypes to remove trailing whitespaces only on changed lines
-" It's useful in rare occasions to disable this in a buffer, do it with the Neovim command `:let b:wstrip_auto = 0`
-let g:wstrip_auto = 1
+---------- wstrip-vim
+-- Enable wstrip-vim on all filetypes to remove trailing whitespaces only on changed lines
+-- It's useful in rare occasions to disable this in a buffer, do it with the Neovim command `:let b:wstrip_auto = 0`
+vim.g.wstrip_auto = 1
 
-"---------- vim-rooter
-" A root directory will have a `.git` directory
-let g:rooter_patterns = ['.git']
-]]
+---------- vim-rooter
+-- A root directory will have a `.git` directory
+vim.g.rooter_patterns = {'.git'}
