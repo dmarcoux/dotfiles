@@ -208,6 +208,14 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  callback = function()
+    -- See `:help vim.highlight.on_yank()`
+    vim.highlight.on_yank({ timeout = 1000 }) -- highlight for 1 second
+  end,
+})
+
 -------------------- Plugins Settings
 ---------- fzf-vim
 -- Non-recursive mapping in Normal and Visual modes for Ctrl+p to start fzf for files

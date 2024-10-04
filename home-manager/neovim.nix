@@ -52,9 +52,6 @@
       #       This started to happen with the update from 2022-11-14 to 2023-03-12
       # cmp-vsnip # snippets completions (nvim-cmp needs to have a snippets plugin)
 
-      # Highlight copied/yanked region
-      vim-highlightedyank
-
       # Indicate added/modified/removed lines for current file (if it's managed by a version control system)
       vim-signify
 
