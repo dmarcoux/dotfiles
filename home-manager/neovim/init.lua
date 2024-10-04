@@ -82,6 +82,16 @@ vim.api.nvim_set_keymap('n', '<C-k>', ':m .-2<CR>==', { noremap = true })
 vim.api.nvim_set_keymap('v', '<C-j>', ":m '>+1<CR>gv=gv", { noremap = true })
 vim.api.nvim_set_keymap('v', '<C-k>', ":m '<-2<CR>gv=gv", { noremap = true })
 
+-------------------- Command Mode
+-- Non-recursive abbreviations for common typos when saving/quiting
+vim.cmd.cnoreabbrev('W!', 'w!')
+vim.cmd.cnoreabbrev('W', 'w')
+vim.cmd.cnoreabbrev('Q!', 'q!')
+vim.cmd.cnoreabbrev('Q', 'q')
+vim.cmd.cnoreabbrev('Wq', 'wq')
+vim.cmd.cnoreabbrev('wQ', 'wq')
+vim.cmd.cnoreabbrev('WQ', 'wq')
+
 -------------------- UI Settings
 -- Enable true colors
 vim.opt.termguicolors = true
@@ -173,19 +183,6 @@ noremap k gk
 
 " Non-recursive mapping for leader + Enter to disable text highlighting
 noremap <silent> <leader><CR> :noh<CR>
-
-"-------------------- Command Mode
-" Non-recursive abbreviations for common typos when saving/quiting
-cnoreabbrev W! w!
-cnoreabbrev W w
-cnoreabbrev Q! q!
-cnoreabbrev Q q
-cnoreabbrev Wq wq
-cnoreabbrev wQ wq
-cnoreabbrev WQ wq
-
-" When forgetting to sudo before editing a file which requires root privileges, use w!! instead of w! to save changes
-cmap w!! w !sudo tee % >/dev/null
 
 "-------------------- Autocommands
 autocmd BufNewFile,BufReadPost *.md call SetMarkdownOptions()
