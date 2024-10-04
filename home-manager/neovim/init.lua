@@ -150,6 +150,16 @@ vim.opt.writebackup = false
 -- Disable swap file
 vim.opt.swapfile = false
 
+-------------------- Wildmenu
+-- Ignore case
+vim.opt.wildignorecase = true
+
+-- Ignore these files
+vim.opt.wildignore = '*~,.git*,.hg*,.svn*'
+
+-- List all matches without completing
+vim.opt.wildmode = 'longest,list,full'
+
 vim.cmd [[
 "-------------------- Mappings
 "---------- Normal, Visual and Operator Pending Modes
@@ -176,16 +186,6 @@ cnoreabbrev WQ wq
 
 " When forgetting to sudo before editing a file which requires root privileges, use w!! instead of w! to save changes
 cmap w!! w !sudo tee % >/dev/null
-
-"-------------------- Wildmenu
-" Ignore case
-set wildignorecase
-
-" Ignore these files
-set wildignore+=*~,.git\*,.hg\*,.svn\*
-
-" List all matches without completing
-set wildmode=longest,list,full
 
 "-------------------- Autocommands
 autocmd BufNewFile,BufReadPost *.md call SetMarkdownOptions()
