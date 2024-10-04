@@ -128,6 +128,28 @@ vim.opt.wrap = false
 vim.opt.linebreak = true
 vim.opt.textwidth = 500
 
+-------------------- Search Settings
+-- Use case-insensitive search by default
+vim.opt.ignorecase = true
+-- Use case-sensitive search if any of the search characters are uppercase
+vim.opt.smartcase = true
+
+---------------------- History, Backup & System
+-- Link to the system clipboard. Enable the setting after `UiEnter` to reduce startup time.
+vim.schedule(function()
+  vim.opt.clipboard = 'unnamedplus'
+end)
+
+-- Use Unix as the standard file format
+vim.opt.fileformats = 'unix,dos,mac'
+
+-- Do not create backup files, my files are tracked in Git anyway
+vim.opt.backup = false
+vim.opt.writebackup = false
+
+-- Disable swap file
+vim.opt.swapfile = false
+
 vim.cmd [[
 "-------------------- Mappings
 "---------- Normal, Visual and Operator Pending Modes
@@ -154,26 +176,6 @@ cnoreabbrev WQ wq
 
 " When forgetting to sudo before editing a file which requires root privileges, use w!! instead of w! to save changes
 cmap w!! w !sudo tee % >/dev/null
-
-"-------------------- Search Settings
-" Use case-insensitive search by default
-set ignorecase
-" Use case-sensitive search if any of the search characters are uppercase
-set smartcase
-
-"-------------------- History, Backup & System
-" Link to the system clipboard
-set clipboard^=unnamedplus
-
-" Use Unix as the standard file format
-set fileformats=unix,dos,mac
-
-" Disable backup
-set nobackup
-set nowritebackup
-
-" Disable swap file
-set noswapfile
 
 "-------------------- Wildmenu
 " Ignore case
