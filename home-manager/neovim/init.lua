@@ -82,6 +82,52 @@ vim.api.nvim_set_keymap('n', '<C-k>', ':m .-2<CR>==', { noremap = true })
 vim.api.nvim_set_keymap('v', '<C-j>', ":m '>+1<CR>gv=gv", { noremap = true })
 vim.api.nvim_set_keymap('v', '<C-k>', ":m '<-2<CR>gv=gv", { noremap = true })
 
+-------------------- UI Settings
+-- Enable true colors
+vim.opt.termguicolors = true
+
+-- Set the title of the terminal to the file's complete path (up to maximum 70 characters)
+vim.opt.title = true
+vim.opt.titlestring = 'neovim: %F' -- TODO: This isn't really useful to have the file's complete path, since it's quite long most of the time. The file name isn't visible then...
+vim.opt.titlelen = 70
+
+-- Format the status line
+vim.opt.statusline = 'FILE: %F%m%r%h %w  CWD: %r%{getcwd()}%h  Line: %l  Column: %c'
+
+-- Highlight the column and line where the cursor is currently
+vim.opt.cursorcolumn = true
+vim.opt.cursorline = true
+
+-- Always display the sign column (signs appear when lines are added/modified/deleted, some plugins like also LSP use signs)
+-- Without this setting, it's pretty annoying to always have the text shift to the right whenever the first sign appears
+vim.opt.signcolumn = 'yes'
+
+-- Show the line number where the cursor is located
+vim.opt.number = true
+
+-- Height (in number of lines) of the command bar at the bottom
+vim.opt.cmdheight = 2
+
+-- Show matching brackets when text indicator is over them
+vim.opt.showmatch = true
+
+-- How many tenths of a second to blink when matching brackets
+vim.opt.matchtime = 2
+
+-- Minimal number of screen lines to keep above and below the cursor when moving vertically (if possible...)
+vim.opt.scrolloff = 10
+
+-- Display tabs as │· (longer pipe) and trailing spaces as ·
+vim.opt.list = true
+vim.opt.listchars = 'tab:│·,trail:·'
+
+-- Disable word wrapping
+vim.opt.wrap = false
+
+-- Visually line break on lines of 500 characters (without actually inserting line break)
+vim.opt.linebreak = true
+vim.opt.textwidth = 500
+
 vim.cmd [[
 "-------------------- Mappings
 "---------- Normal, Visual and Operator Pending Modes
@@ -108,53 +154,6 @@ cnoreabbrev WQ wq
 
 " When forgetting to sudo before editing a file which requires root privileges, use w!! instead of w! to save changes
 cmap w!! w !sudo tee % >/dev/null
-
-"-------------------- UI Settings
-" Enable true colors
-set termguicolors
-
-" Set the title of the terminal to the file name (up to maximum 70 characters)
-set title
-set titlestring=neovim:\ %F titlelen=70
-
-" Format the status line
-set statusline=\ FILE:\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-
-" Highlight the column and line where the cursor is currently
-set cursorcolumn
-set cursorline
-
-" Always display the sign column (signs appear when lines are added/modified/deleted, some plugins like also LSP use signs)
-" Without this setting, it's pretty annoying to always have the text shift to the right whenever the first sign appears
-set signcolumn=yes
-
-" Show the line number where the cursor is located
-set number
-
-" Height (in number of lines) of the command bar at the bottom
-set cmdheight=2
-
-" Show matching brackets when text indicator is over them
-set showmatch
-
-" How many tenths of a second to blink when matching brackets
-set mat=2
-
-" Minimal number of screen lines to keep above and below the cursor when moving vertically (if possible...)
-set scrolloff=10
-
-" Display tabs as │· (longer pipe) and trailing spaces as ·
-set list listchars=tab:\│·,trail:·
-
-" Disable word wrapping
-set nowrap
-
-" Visually line break on lines of 500 characters (without actually inserting line break)
-set linebreak
-set tw=500
-
-" Don't redraw while executing macros, registers and other commands
-set lazyredraw
 
 "-------------------- Search Settings
 " Use case-insensitive search by default
