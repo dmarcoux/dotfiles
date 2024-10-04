@@ -184,20 +184,28 @@ vim.opt.wildignore = '*~,.git*,.hg*,.svn*'
 -- List all matches without completing
 vim.opt.wildmode = 'longest,list,full'
 
+-------------------- Autocommands
+--  See `:help lua-guide-autocommands`
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufReadPost'}, {
+  desc = 'Set Markdown options',
+  pattern = '*.md',
+  callback = function()
+    -- Force Markdown type for all files with the .md extension (from tpope/vim-markdown)
+    vim.opt.filetype = 'markdown'
+    -- Wrap lines at 80 characters
+    vim.opt_local.textwidth = 80
+  end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  desc = 'When the quickfix window opens, move it the very bottom',
+  pattern = 'qf', -- `qf` refers to the quickfix window (Search for `qf` in `:help filetypes`)
+  callback = function()
+    vim.cmd('wincmd J') -- See `:help :wincmd` and `:help ^WJ`
+  end,
+})
+
 vim.cmd [[
-"-------------------- Autocommands
-autocmd BufNewFile,BufReadPost *.md call SetMarkdownOptions()
-function SetMarkdownOptions()
-    " Force Markdown type for all files with the .md extension (from tpope/vim-markdown)
-    set filetype=markdown
-    " Wrap lines at 80 characters
-    setlocal textwidth=80
-endfunction
-
-" Move the quickfix window at the very bottom, no matter what
-" See ':help :wincmd' and ':help ^WJ' for more info
-autocmd FileType qf wincmd J
-
 "-------------------- Plugins Settings
 "---------- fzf-vim
 " Non-recursive mapping in Normal and Visual modes for Ctrl+p to start fzf for files
