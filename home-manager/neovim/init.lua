@@ -1,65 +1,63 @@
-vim.cmd [[
-lua << EOF
-  -------------------- Plugins Settings
-  ---------- nvim-cmp
-  -- Display completion menu when there is one (menuone) or multiple (menu) suggestions and do not select a suggestion in the menu (noselect)
-  vim.opt.completeopt = { "menu", "menuone", "noselect" }
+-------------------- Plugins Settings
+---------- nvim-cmp
+-- Display completion menu when there is one (menuone) or multiple (menu) suggestions and do not select a suggestion in the menu (noselect)
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
-  local cmp = require "cmp"
+local cmp = require "cmp"
 
-  cmp.setup({
-    snippet = {
-      expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body)
-      end,
-    },
-    -- Do not preselect a suggestion in the completion menu when it opens
-    preselect = cmp.PreselectMode.None,
-    mapping = {
-      -- Select next suggestion with Ctrl + j
-      ["<C-j>"] = cmp.mapping.select_next_item(),
-      -- Select previous suggestion with Ctrl + k
-      ["<C-k>"] = cmp.mapping.select_prev_item(),
-      -- Trigger completion with Ctrl + Space
-      ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
-      ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-      -- Exit completion
-      ["<C-e>"] = cmp.mapping({
-        i = cmp.mapping.abort(),
-        c = cmp.mapping.close(),
-      }),
-       -- Accept currently selected suggestion with Ctrl + l. With `select` to `false`, only accept explicitly selected items.
-      ["<C-l>"] = cmp.mapping.confirm({ select = false }),
-    },
-    -- Completion suggestions appear based on the order below
-    sources = cmp.config.sources({
-      { name = 'nvim_lsp' },
-      { name = 'vsnip' },
-    }, {
-      { name = 'buffer' },
-    })
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body)
+    end,
+  },
+  -- Do not preselect a suggestion in the completion menu when it opens
+  preselect = cmp.PreselectMode.None,
+  mapping = {
+    -- Select next suggestion with Ctrl + j
+    ["<C-j>"] = cmp.mapping.select_next_item(),
+    -- Select previous suggestion with Ctrl + k
+    ["<C-k>"] = cmp.mapping.select_prev_item(),
+    -- Trigger completion with Ctrl + Space
+    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+    ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+    -- Exit completion
+    ["<C-e>"] = cmp.mapping({
+      i = cmp.mapping.abort(),
+      c = cmp.mapping.close(),
+    }),
+     -- Accept currently selected suggestion with Ctrl + l. With `select` to `false`, only accept explicitly selected items.
+    ["<C-l>"] = cmp.mapping.confirm({ select = false }),
+  },
+  -- Completion suggestions appear based on the order below
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'vsnip' },
+  }, {
+    { name = 'buffer' },
   })
+})
 
-  -- Setup lspconfig
-  local capabilities = require("cmp_nvim_lsp").default_capabilities()
-  -- Setup elixir_ls - https://github.com/elixir-lsp/elixir-ls
-  require("lspconfig")["elixirls"].setup({
-    cmd = { "/nix/store/jd36kvjf6da76q01lr0g6s7hnl4q8qg7-elixir-ls-0.23.0/lib/language_server.sh" },
-    capabilities = capabilities,
-    settings = {
-      elixirLS = {
-        -- Disable Dialyzer until I'm more familiar with it...
-        dialyzerEnabled = false,
-      }
+-- Setup lspconfig
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+-- Setup elixir_ls - https://github.com/elixir-lsp/elixir-ls
+require("lspconfig")["elixirls"].setup({
+  cmd = { "/nix/store/jd36kvjf6da76q01lr0g6s7hnl4q8qg7-elixir-ls-0.23.0/lib/language_server.sh" },
+  capabilities = capabilities,
+  settings = {
+    elixirLS = {
+      -- Disable Dialyzer until I'm more familiar with it...
+      dialyzerEnabled = false,
     }
-  })
-  -- Setup gopls - https://github.com/golang/tools/tree/master/gopls
-  require("lspconfig")["gopls"].setup({
-    cmd = { "/nix/store/6nysag23irns7ldbsdrjwc1ckap1hqm6-gopls-0.16.2/bin/gopls" },
-    capabilities = capabilities
-  })
-EOF
+  }
+})
+-- Setup gopls - https://github.com/golang/tools/tree/master/gopls
+require("lspconfig")["gopls"].setup({
+  cmd = { "/nix/store/6nysag23irns7ldbsdrjwc1ckap1hqm6-gopls-0.16.2/bin/gopls" },
+  capabilities = capabilities
+})
 
+vim.cmd [[
 "-------------------- Mappings
 " Mouse can be used in all modes
 set mouse=a
