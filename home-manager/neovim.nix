@@ -16,9 +16,6 @@
     # Any dot in the vim plugin names is replaced by a dash when listed below. Example: `fzf.vim` becomes `fzf-vim`.
     plugins = with pkgs.vimPlugins; [
       #---------- Efficiency Plugins
-      # Remaps . in a way that plugins can tap into it
-      vim-repeat
-
       # Comment stuff out
       vim-commentary
 
