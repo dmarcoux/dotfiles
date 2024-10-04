@@ -1,3 +1,5 @@
+--- TODO: See what https://github.com/nvim-lua/kickstart.nvim does, maybe I can incorporate a few things...
+
 -------------------- Mappings
 ---- Mappings with vim.keymap.set are non-recursive by default
 -- Mouse can be used in all modes
