@@ -58,6 +58,7 @@ require("lspconfig")["gopls"].setup({
 })
 
 -------------------- Mappings
+---- Mappings with vim.keymap.set are non-recursive by default
 -- Mouse can be used in all modes
 vim.opt.mouse = 'a'
 
@@ -70,30 +71,30 @@ vim.opt.whichwrap = 'b,s,<,>,h,l'
 
 ---------- Insert Mode
 -- Non-recursive mapping for Shift+Tab to unindent
-vim.api.nvim_set_keymap('i', '<S-Tab>', '<C-D>', { noremap = true })
+vim.keymap.set('i', '<S-Tab>', '<C-D>')
 
 ---------- Normal Mode
 -- Non-recursive mappings for Ctrl + J and Ctrl + K to move the current line(s) up / down
-vim.api.nvim_set_keymap('n', '<C-j>', ':m .+1<CR>==', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-k>', ':m .-2<CR>==', { noremap = true })
+vim.keymap.set('n', '<C-j>', ':m .+1<CR>==')
+vim.keymap.set('n', '<C-k>', ':m .-2<CR>==')
 
 ---------- Visual and Select Modes
 -- Non-recursive mappings for Ctrl + J and Ctrl + K to move selected line(s) up / down
-vim.api.nvim_set_keymap('v', '<C-j>', ":m '>+1<CR>gv=gv", { noremap = true })
-vim.api.nvim_set_keymap('v', '<C-k>', ":m '<-2<CR>gv=gv", { noremap = true })
+vim.keymap.set('v', '<C-j>', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', '<C-k>', ":m '<-2<CR>gv=gv")
 
 ---------- Normal, Visual and Operator Pending Modes
 -- Non-recursive mappings for n to always search forward and N to always search backward (for / and ?)
 --https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
-vim.keymap.set({'n', 'v', 'o'}, 'n', "'Nn'[v:searchforward]", { noremap = true, expr = true })
-vim.keymap.set({'n', 'v', 'o'}, 'N', "'nN'[v:searchforward]", { noremap = true, expr = true })
+vim.keymap.set({'n', 'v', 'o'}, 'n', "'Nn'[v:searchforward]", { expr = true })
+vim.keymap.set({'n', 'v', 'o'}, 'N', "'nN'[v:searchforward]", { expr = true })
 
 -- Non-recursive mappings to move around long wrapped lines
-vim.keymap.set({'n', 'v', 'o'}, 'j', 'gj', { noremap = true })
-vim.keymap.set({'n', 'v', 'o'}, 'k', 'gk', { noremap = true })
+vim.keymap.set({'n', 'v', 'o'}, 'j', 'gj')
+vim.keymap.set({'n', 'v', 'o'}, 'k', 'gk')
 
 -- Non-recursive mapping for leader + Enter to disable text highlighting
-vim.keymap.set({'n', 'v', 'o'}, '<leader><CR>', ':noh<CR>', { noremap = true, silent = true })
+vim.keymap.set({'n', 'v', 'o'}, '<leader><CR>', ':noh<CR>', { silent = true })
 
 -------------------- Command Mode
 -- Non-recursive abbreviations for common typos when saving/quiting
