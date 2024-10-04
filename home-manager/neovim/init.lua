@@ -82,6 +82,19 @@ vim.api.nvim_set_keymap('n', '<C-k>', ':m .-2<CR>==', { noremap = true })
 vim.api.nvim_set_keymap('v', '<C-j>', ":m '>+1<CR>gv=gv", { noremap = true })
 vim.api.nvim_set_keymap('v', '<C-k>', ":m '<-2<CR>gv=gv", { noremap = true })
 
+---------- Normal, Visual and Operator Pending Modes
+-- Non-recursive mappings for n to always search forward and N to always search backward (for / and ?)
+--https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
+vim.keymap.set({'n', 'v', 'o'}, 'n', "'Nn'[v:searchforward]", { noremap = true, expr = true })
+vim.keymap.set({'n', 'v', 'o'}, 'N', "'nN'[v:searchforward]", { noremap = true, expr = true })
+
+-- Non-recursive mappings to move around long wrapped lines
+vim.keymap.set({'n', 'v', 'o'}, 'j', 'gj', { noremap = true })
+vim.keymap.set({'n', 'v', 'o'}, 'k', 'gk', { noremap = true })
+
+-- Non-recursive mapping for leader + Enter to disable text highlighting
+vim.keymap.set({'n', 'v', 'o'}, '<leader><CR>', ':noh<CR>', { noremap = true, silent = true })
+
 -------------------- Command Mode
 -- Non-recursive abbreviations for common typos when saving/quiting
 vim.cmd.cnoreabbrev('W!', 'w!')
@@ -171,19 +184,6 @@ vim.opt.wildignore = '*~,.git*,.hg*,.svn*'
 vim.opt.wildmode = 'longest,list,full'
 
 vim.cmd [[
-"-------------------- Mappings
-"---------- Normal, Visual and Operator Pending Modes
-" Non-recursive mappings for n to always search forward and N to always search backward (for / and ?)
-noremap <expr> n  'Nn'[v:searchforward]
-noremap <expr> N  'nN'[v:searchforward]
-
-" Non-recursive mappings to move around long wrapped lines
-noremap j gj
-noremap k gk
-
-" Non-recursive mapping for leader + Enter to disable text highlighting
-noremap <silent> <leader><CR> :noh<CR>
-
 "-------------------- Autocommands
 autocmd BufNewFile,BufReadPost *.md call SetMarkdownOptions()
 function SetMarkdownOptions()
