@@ -11,6 +11,12 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     stylix.url = "github:danth/stylix";
+
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-24.05";
+      # Ensure that nixpkgs and nixvim stay in sync
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, stylix, ... }:
@@ -50,7 +56,10 @@
             # By default, packages will be installed to `~/.nix-profile`
             # With useUserPackages set to `true`, packages will be installed to `/etc/profiles/per-user/$USER` instead
             home-manager.useUserPackages = true;
-            home-manager.users.dany = import ./home-manager/home.nix;
+            home-manager.users.dany.imports = [
+              (import ./home-manager/home.nix)
+              inputs.nixvim.homeManagerModules.nixvim
+            ];
 
             home-manager.extraSpecialArgs = {
               pkgs-unstable = pkgs-unstable;

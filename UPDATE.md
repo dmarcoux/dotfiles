@@ -1,6 +1,9 @@
 ### How to Update to a New NixOS Version
 
-1. Update the inputs `nixpkgs.url` and `home-manager.url` in [flake.nix](./flake.nix) to use the new NixOS version
+1. Update the following inputs in [flake.nix](./flake.nix) to use the new NixOS version:
+   - `nixpkgs.url`
+   - `home-manager.url`
+   - `nixvim.url`
 
 2. Update state version for NixOS and Home Manager
 
