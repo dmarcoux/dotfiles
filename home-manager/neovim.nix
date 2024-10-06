@@ -285,14 +285,6 @@
       vim.keymap.set({'n', 'v',}, '<C-n>', ':Buffers<CR>')
       -- Display the fzf window at the bottom of the screen with 40% of the available height
       vim.g.fzf_layout = { down = '40%' }
-
-      ---------- nvim-solarized-lua
-      -- Use light version of colorscheme
-      vim.opt.background = 'light'
-
-      -- Set colorscheme if it's installed (otherwise it fails silently)
-      vim.cmd('silent! colorscheme solarized')
-
     '';
   };
 
