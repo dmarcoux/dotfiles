@@ -5,6 +5,8 @@
 {
   imports = [
     ./neovim/autocompletion.nix
+    ./neovim/tagbar.nix
+    ./neovim/wstrip.nix
   ];
 
   # Install and configure Neovim with Nix - https://github.com/nix-community/nixvim
@@ -51,10 +53,6 @@
       # Try to automatically adjust 'shiftwidth' and 'expandtab' based on the current file or its parents
       # https://github.com/tpope/vim-sleuth/
       sleuth.enable = true;
-
-      # Browse the tags of the current file and get an overview of its structure
-      # https://github.com/preservim/tagbar/
-      tagbar.enable = true;
 
       # Language Server Protocol (LSP)
       lsp = {
@@ -115,10 +113,6 @@
       # Automatically close certain structures like `if`, `do`, `def` in Ruby (and other languages)
       # https://github.com/cohama/lexima.vim
       lexima-vim
-
-      # Remove trailing whitespaces only on changed lines
-      # https://github.com/tweekmonster/wstrip.vim
-      wstrip-vim
 
       #---------- Language Plugins
       # A collection of language plugins (150+ languages)
@@ -301,21 +295,6 @@
 
       -- Set colorscheme if it's installed (otherwise it fails silently)
       vim.cmd('silent! colorscheme solarized')
-
-      ---------- tagbar
-      vim.api.nvim_create_autocmd('FileType', {
-        desc = 'Open tagbar automatically for supported filetypes whenever opening a file',
-        nested = true,
-        pattern = '*', -- All filetypes
-        callback = function()
-          vim.cmd('call tagbar#autoopen(0)') -- See `:help :tagbar-autoopen`
-        end,
-      })
-
-      ---------- wstrip-vim
-      -- Enable wstrip-vim on all filetypes to remove trailing whitespaces only on changed lines
-      -- It's useful in rare occasions to disable this in a buffer, do it with the Neovim command `:let b:wstrip_auto = 0`
-      vim.g.wstrip_auto = 1
 
       ---------- vim-rooter
       -- A root directory will have a `.git` directory
