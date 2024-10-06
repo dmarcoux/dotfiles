@@ -6,6 +6,7 @@
   imports = [
     ./neovim/autocompletion.nix
     ./neovim/tagbar.nix
+    ./neovim/vim-rooter.nix
     ./neovim/wstrip.nix
   ];
 
@@ -100,10 +101,6 @@
       # Use fzf inside vim to open files and much more
       # https://github.com/junegunn/fzf.vim
       fzf-vim
-
-      # Change Vim working directory to project root (defined by the presence of a .git directory or anything else, it's configurable)
-      # https://github.com/airblade/vim-rooter
-      vim-rooter
 
       # Indicate added/modified/removed lines for current file (if it's managed by a version control system)
       # https://github.com/mhinz/vim-signify
@@ -296,9 +293,6 @@
       -- Set colorscheme if it's installed (otherwise it fails silently)
       vim.cmd('silent! colorscheme solarized')
 
-      ---------- vim-rooter
-      -- A root directory will have a `.git` directory
-      vim.g.rooter_patterns = {'.git'}
     '';
   };
 
