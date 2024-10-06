@@ -5,6 +5,7 @@
 {
   imports = [
     ./neovim/autocompletion.nix
+    ./neovim/fzf-vim.nix
     ./neovim/tagbar.nix
     ./neovim/vim-rooter.nix
     ./neovim/wstrip.nix
@@ -97,10 +98,6 @@
       # Lightning fast left-right movement
       # https://github.com/unblevable/quick-scope
       quick-scope
-
-      # Use fzf inside vim to open files and much more
-      # https://github.com/junegunn/fzf.vim
-      fzf-vim
 
       # Indicate added/modified/removed lines for current file (if it's managed by a version control system)
       # https://github.com/mhinz/vim-signify
@@ -276,15 +273,6 @@
           vim.highlight.on_yank({ timeout = 1000 }) -- highlight for 1 second
         end,
       })
-
-      -------------------- Plugins Settings
-      ---------- fzf-vim
-      -- Non-recursive mapping in Normal and Visual modes for Ctrl+p to start fzf for files
-      vim.keymap.set({'n', 'v',}, '<C-p>', ':Files<CR>')
-      -- Non-recursive mapping in Normal and Visual modes for Ctrl+n to start fzf for buffers
-      vim.keymap.set({'n', 'v',}, '<C-n>', ':Buffers<CR>')
-      -- Display the fzf window at the bottom of the screen with 40% of the available height
-      vim.g.fzf_layout = { down = '40%' }
     '';
   };
 
