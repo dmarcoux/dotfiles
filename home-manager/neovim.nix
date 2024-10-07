@@ -7,6 +7,7 @@
     ./neovim/autocommands.nix
     ./neovim/plugins/cmp_autocompletion.nix
     ./neovim/plugins/fzf-vim.nix
+    ./neovim/plugins/lsp.nix
     ./neovim/plugins/tagbar.nix
     ./neovim/plugins/vim-rooter.nix
     ./neovim/plugins/wstrip.nix
@@ -56,30 +57,6 @@
       # Try to automatically adjust 'shiftwidth' and 'expandtab' based on the current file or its parents
       # https://github.com/tpope/vim-sleuth/
       sleuth.enable = true;
-
-      # Language Server Protocol (LSP)
-      lsp = {
-        enable = true;
-
-        servers = {
-          # Elixir
-          # https://github.com/elixir-lsp/elixir-ls
-          elixirls = {
-            enable = true;
-
-            settings = {
-              elixirLS = {
-                # Disable Dialyzer until I'm more familiar with it...
-                dialyzerEnabled = false;
-              };
-            };
-          };
-
-          # Go
-          # https://github.com/golang/tools/tree/master/gopls
-          gopls.enable = true;
-        };
-      };
     };
 
     # List of plugins which are not directly available in Nixvim
