@@ -16,8 +16,6 @@
     arandr
     # Various commands to manage file archives of various types, such as tar and Zip archives
     atool
-    # CLI for the Azure cloud computing platform from Microsoft
-    azure-cli
     # For DNS commands dig and nslookup
     bind
     # For the command `ar`, which creates, modifies, and extracts from archives
@@ -30,11 +28,6 @@
     pkgs-unstable.devcontainer
     # Voice, video, and text chat
     pkgs-unstable.discord
-    # Functional, meta-programming aware language built on top of the Erlang VM. Useful wehn I need to quickly test something in IEx
-    elixir_1_16
-    erlangR26 # Only for the command `escript`, it's not necessary to explicitly install Erlang for Elixir
-    # Elixir Language Server
-    pkgs-unstable.elixir_ls
     # CLI for https://exercism.org - Solve coding exercises and get mentored to gain true fluency in your chosen programming languages
     pkgs-unstable.exercism
     # Audio and video conversion tool
@@ -45,10 +38,6 @@
     galculator
     # Compiler
     gcc
-    # Statically typed, compiled high-level programming language
-    go_1_21
-    # Go Language Server
-    pkgs-unstable.gopls
     # For the command make
     gnumake
     # Color picker
@@ -69,8 +58,6 @@
     nix-index
     # Formatter for Nix code
     nixfmt-classic
-    # For coc.nvim, which provides auto-completion in Neovim
-    pkgs-unstable.nodejs-18_x
     # Knowledge base that works on top of a local folder of plain text Markdown files
     pkgs-unstable.obsidian
     # Manage resolv.conf for DNS settings
@@ -85,8 +72,6 @@
     pdftk
     # Simple animated GIF screen recorder
     peek
-    # G-code generator for 3D printers
-    prusa-slicer
     # Music tagger to fix music files with wrong metadata tags
     picard
     # CLI program to copy/sync/move files and directories to and from many cloud services
@@ -95,8 +80,6 @@
     rename
     # Beside work when I need to quickly test something in IRB, I also have Ruby to install gems without relying on the usual Nix way
     ruby
-    # Rust toolchain installer
-    rustup
     # Command Line Interface for Scaleway
     pkgs-unstable.scaleway-cli
     # Terminal multiplexer, useful to perform long-running tasks
@@ -105,8 +88,6 @@
     shellcheck
     # Chat for work
     slack
-    # Ruby Language Server
-    pkgs-unstable.rubyPackages.solargraph
     # Infrastructure as Code tool
     pkgs-unstable.terraform
     # For the `tree` command which shows the contents of the current directory as a tree
