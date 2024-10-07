@@ -4,11 +4,11 @@
 
 {
   imports = [
-    ./neovim/autocompletion.nix
-    ./neovim/fzf-vim.nix
-    ./neovim/tagbar.nix
-    ./neovim/vim-rooter.nix
-    ./neovim/wstrip.nix
+    ./neovim/plugins/cmp_autocompletion.nix
+    ./neovim/plugins/fzf-vim.nix
+    ./neovim/plugins/tagbar.nix
+    ./neovim/plugins/vim-rooter.nix
+    ./neovim/plugins/wstrip.nix
   ];
 
   # Install and configure Neovim with Nix - https://github.com/nix-community/nixvim
