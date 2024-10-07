@@ -6,16 +6,24 @@
 
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    home-manager.url = "github:nix-community/home-manager/release-24.05";
-    # Ensure that nixpkgs and home-manager stay in sync
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager/release-24.05";
+      # Ensure that nixpkgs and home-manager stay in sync
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    stylix.url = "github:danth/stylix";
+    stylix = {
+      # Follow the stable NixOS release
+      url = "github:danth/stylix/release-24.05";
+      # Use nixpkgs
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nixvim = {
-      url = "github:nix-community/nixvim/nixos-24.05";
-      # Ensure that nixpkgs and nixvim stay in sync
-      inputs.nixpkgs.follows = "nixpkgs";
+      # Follow the master/main branch
+      url = "github:nix-community/nixvim";
+      # Use nixpkgs-unstable
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
 
