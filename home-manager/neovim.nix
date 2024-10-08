@@ -10,6 +10,7 @@
     ./neovim/plugins/lsp.nix
     ./neovim/plugins/tagbar.nix
     ./neovim/plugins/vim-rooter.nix
+    ./neovim/plugins/which-key.nix
     ./neovim/plugins/wstrip.nix
   ];
 
