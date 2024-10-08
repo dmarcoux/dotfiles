@@ -194,8 +194,6 @@
       "vsicons.dontShowNewVersionMessage" = true;
       # Hide the activity bar
       "workbench.activityBar.visible" = false;
-      # Set the color theme
-      "workbench.colorTheme" = "Solarized Light";
       # Disable command history in the command palette
       "workbench.commandPalette.history" = 0;
       # Open files directly without previewing them (previews are reused until opened files are edited)

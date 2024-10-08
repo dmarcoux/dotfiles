@@ -9,7 +9,6 @@
     ./bat.nix
     ./beets.nix
     ./cbatticon.nix
-    ./dircolors.nix
     ./direnv.nix
     ./dotnet.nix
     ./elixir.nix

@@ -1,23 +1,10 @@
 # User configuration for i3
 
-{ pkgs, config, ... }:
+{ pkgs, config, lib, ... }:
 
-let
-  # Solarized (Light) colors
-  # Without alpha (for i3)
-  black = "#002B36";
-  grey = "#839496";
-  dark_beige = "#EEE8D5";
-  light_beige = "#FDF6E3";
-  yellow = "#B58900";
-  orange = "#CB4B16";
-  red = "#DC322F";
-  magenta = "#D33682";
-  violet = "#6C71C4";
-  blue = "#268BD2";
-  cyan = "#2AA198";
-  green = "#859900";
-in
+# To directly use base00, base01, base02, etc...
+with config.lib.stylix.colors.withHashtag;
+
 {
   xsession.windowManager.i3 = {
     enable = true;
@@ -29,17 +16,26 @@ in
           position = "top";
           fonts = {
             names = [ "DejaVuSansM Nerd Font" ];
-            size = 13.0;
+            size = lib.mkForce 13.0;
           };
-          colors = {
-            background = light_beige;
-            statusline = grey;
-            separator = grey;
 
-            focusedWorkspace = { border = green; background = green; text = light_beige; };
-            activeWorkspace = { border = violet; background = violet; text = light_beige; };
-            inactiveWorkspace = { border = dark_beige; background = dark_beige; text = grey; };
-            urgentWorkspace = { border = red; background = red; text = light_beige; };
+          # Overwrite some of the default colors set by stylix for i3's bar
+          colors = config.lib.stylix.i3.bar.colors // {
+            focusedWorkspace = {
+              text = base00;
+              background = base0B;
+              border = base0B;
+            };
+            activeWorkspace = {
+              text = base00;
+              background = base0E;
+              border = base0E;
+            };
+            urgentWorkspace = {
+              text = base00;
+              background = base08;
+              border = base08;
+            };
           };
 
           # Do not display workspace numbers
@@ -56,11 +52,11 @@ in
           '';
         }
       ];
+      # Overwrite some of the default colors set by stylix for i3
       colors = {
-        focused = { background = green; border = green; childBorder = green; indicator = black; text = light_beige; };
-        unfocused = { background = grey; border = grey; childBorder = grey; indicator = black; text = light_beige; };
-        focusedInactive = { background = grey; border = grey; childBorder = grey; indicator = black; text = light_beige; };
-        urgent = { background = red; border = red; childBorder = red; indicator = black; text = light_beige; };
+        focused = { background = lib.mkForce base0B; border = lib.mkForce base0B; childBorder = lib.mkForce base0B; text = lib.mkForce base00; };
+        focusedInactive = { background = lib.mkForce base0E; border = lib.mkForce base0E; childBorder = lib.mkForce base0E; text = lib.mkForce base00; };
+        urgent = { background = lib.mkForce base08; border = lib.mkForce base08; childBorder = lib.mkForce base08; text = lib.mkForce base00; };
       };
       focus = {
         # Window focus doesn't follow mouse movements
@@ -70,7 +66,7 @@ in
       };
       fonts = {
         names = ["DejaVuSansM Nerd Font"];
-        size = 13.0;
+        size = lib.mkForce 13.0;
       };
       keybindings = {};
       modes = {};

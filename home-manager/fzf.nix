@@ -2,21 +2,6 @@
 
 { config, ... }:
 
-let
-  # Colors, Solarized Light
-  # black = "#002B36";
-  # cyan = "#2AA198";
-  # dark_beige = "#EEE8D5";
-  # magenta = "#D33682";
-  # orange = "#CB4B16";
-  # red = "#DC322F";
-  # violet = "#6C71C4";
-  blue = "#268BD2";
-  green = "#859900";
-  grey = "#839496";
-  light_beige = "#FDF6E3";
-  yellow = "#B58900";
-in
 {
   programs.fzf = {
     enable = true;
@@ -34,9 +19,6 @@ in
       "--bind 'ctrl-f:reload(${config.programs.fzf.defaultCommand} --no-ignore-vcs),ctrl-g:reload(${config.programs.fzf.defaultCommand})'"
       # Default layout (fullscreen and input from top)
       "--min-height=100 --reverse"
-      # Default colors
-      "--color fg:${grey},bg:${light_beige},hl:${blue},fg+:${light_beige},bg+:${green},hl+:${blue}"
-      "--color info:${yellow},prompt:${yellow},pointer:${light_beige},marker:${light_beige},spinner:${yellow}"
       # Disable the default horizontal line separator between the typing area and the matches
       "--no-separator"
     ];

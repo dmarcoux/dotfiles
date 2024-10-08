@@ -1,12 +1,7 @@
 # User configuration for bat
 
 {
-  programs.bat = {
-    enable = true;
-    config = {
-      theme = "Solarized (light)";
-    };
-  };
+  programs.bat.enable = true;
 
   programs.zsh.shellAliases = { cat = "bat"; };
 }

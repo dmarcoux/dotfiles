@@ -30,13 +30,6 @@
     # Alias `vimdiff` to `nvim -d`
     vimdiffAlias = true;
 
-    # Set colorscheme
-    # https://github.com/RRethy/base16-nvim/
-    colorschemes.base16 = {
-      enable = true;
-      colorscheme = "solarized-light";
-    };
-
     # Install and configure Neovim plugins
     #
     # A lot of Neovim plugins are packaged in nixpkgs, see https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/editors/vim/plugins/vim-plugin-names

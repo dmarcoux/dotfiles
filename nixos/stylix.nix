@@ -2,12 +2,41 @@
 
 {
   stylix = {
-    # TODO: Finish setting up stylix
-    enable = false;
+    enable = true;
 
-    # An image is mandatory, but I don't need one for now... so I have a white 1x1 pixel as a placeholder
-    image = ./stylix-wallpaper-placeholder.jpg;
+    # TODO: Match the theme
+    # Credits go to https://github.com/helpotters/dracula-wallpapers
+    image = ./stylix-wallpaper.png;
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/dracula.yaml";
+    # Preview the themes at https://tinted-theming.github.io/base16-gallery/
+    # The themes are at https://github.com/tinted-theming/schemes
+    # TODO: Choose between one of those themes: solarized-light, dracula (dark), bright (dark), da-one-black (dark)
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/da-one-black.yaml";
+
+    fonts = {
+      sizes = {
+        applications = 12;
+        desktop = 10;
+        popups = 10;
+        terminal = 12;
+      };
+
+      monospace = {
+        package = pkgs.nerdfonts;
+        name = "DejaVuSansM Nerd Font";
+      };
+    };
+
+    cursor = {
+      # https://github.com/ful1e5/Bibata_Cursor
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Original-Ice"; # For dark themes: Bibata-Original-Classic
+      size = 24;
+    };
   };
+
+  # TODO: Set LS_COLORS - See https://github.com/danth/stylix/issues/560
+  # environment.variables = {
+  #   LS_COLORS = ''"${generateLsColors config.lib.stylix.colors}"'';
+  # };
 }

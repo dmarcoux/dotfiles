@@ -4,7 +4,7 @@
 
 {
   # Set default `bat` theme for syntax highlighting in file previews
-  home.sessionVariables = { BAT_THEME = "Solarized (light)"; };
+  home.sessionVariables = { BAT_THEME = "base16-stylix"; };
 
   programs.lf = {
     # Install lf

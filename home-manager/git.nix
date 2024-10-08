@@ -23,7 +23,7 @@ in
       enable = true;
       options = {
         # See available themes with `delta --list-syntax-themes`
-        syntax-theme = "Solarized (light)";
+        syntax-theme = "base16-stylix";
       };
     };
 
