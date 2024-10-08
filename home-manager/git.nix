@@ -84,6 +84,7 @@ in
       ".nix-hex.local" # Elixir
       ".bundle" # Ruby, this is almost always included in .gitignore, but just in case I ignored it too...
       ".idea" # JetBrains IDEs
+      ".~lock.*.odt" # Lock files from LibreOffice
     ];
 
     # Install and setup git-lfs
