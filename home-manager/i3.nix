@@ -1,13 +1,67 @@
 # User configuration for i3
 
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
+let
+  # Solarized (Light) colors
+  # Without alpha (for i3)
+  black = "#002B36";
+  grey = "#839496";
+  dark_beige = "#EEE8D5";
+  light_beige = "#FDF6E3";
+  yellow = "#B58900";
+  orange = "#CB4B16";
+  red = "#DC322F";
+  magenta = "#D33682";
+  violet = "#6C71C4";
+  blue = "#268BD2";
+  cyan = "#2AA198";
+  green = "#859900";
+in
 {
   xsession.windowManager.i3 = {
     enable = true;
     # Empty settings are instead set below in extraConfig
     config = {
-      bars = [];
+      bars = [
+        {
+          statusCommand = "${config.programs.i3status.package}/bin/i3status";
+          position = "top";
+          fonts = {
+            names = [ "DejaVuSansM Nerd Font" ];
+            size = 13.0;
+          };
+          colors = {
+            background = light_beige;
+            statusline = grey;
+            separator = grey;
+
+            focusedWorkspace = { border = green; background = green; text = light_beige; };
+            activeWorkspace = { border = violet; background = violet; text = light_beige; };
+            inactiveWorkspace = { border = dark_beige; background = dark_beige; text = grey; };
+            urgentWorkspace = { border = red; background = red; text = light_beige; };
+          };
+
+          # Do not display workspace numbers
+          workspaceNumbers = false;
+
+          extraConfig = ''
+            # The first available output will be used. It will be the primary output, otherwise the laptop's output.
+            tray_output primary
+            tray_output eDP-1-1
+
+            # Disable switching workspace by scrolling the mouse wheel up/down
+            bindsym button4 nop
+            bindsym button5 nop
+          '';
+        }
+      ];
+      colors = {
+        focused = { background = green; border = green; childBorder = green; indicator = black; text = light_beige; };
+        unfocused = { background = grey; border = grey; childBorder = grey; indicator = black; text = light_beige; };
+        focusedInactive = { background = grey; border = grey; childBorder = grey; indicator = black; text = light_beige; };
+        urgent = { background = red; border = red; childBorder = red; indicator = black; text = light_beige; };
+      };
       focus = {
         # Window focus doesn't follow mouse movements
         followMouse = false;
@@ -44,31 +98,6 @@
       set $WS5 "5:  5"
 
       #################
-      # Colorscheme
-      #################
-
-      # Solarized (Light) colors
-      # Without alpha (for i3)
-      set $black         #002B36
-      set $grey          #839496
-      set $dark_beige    #EEE8D5
-      set $light_beige   #FDF6E3
-      set $yellow        #B58900
-      set $orange        #CB4B16
-      set $red           #DC322F
-      set $magenta       #D33682
-      set $violet        #6C71C4
-      set $blue          #268BD2
-      set $cyan          #2AA198
-      set $green         #859900
-
-      # TYPE                   BORDER BACKGROUND TEXT
-      client.focused           $green $green     $light_beige
-      client.unfocused         $grey  $grey      $light_beige
-      client.focused_inactive  $grey  $grey      $light_beige
-      client.urgent            $red   $red       $light_beige
-
-      #################
       # Settings
       #################
 
@@ -84,34 +113,6 @@
       # Use LeftMouse+$mod on a floating window to drag it to the wanted position
       # Use RightMouse+$mod on a floating window to resize it
       floating_modifier $mod
-
-      bar {
-          status_command i3status
-          position top
-          font pango:DejaVuSansM Nerd Font 13
-          strip_workspace_numbers yes
-
-          # The first available output will be used. It will be the primary output, otherwise the laptop's output.
-          tray_output primary
-          tray_output eDP-1-1
-
-          # Disable switching workspace by scrolling the mouse wheel up/down
-          bindsym button4 nop
-          bindsym button5 nop
-
-          colors {
-              # Solarized (Light) colors
-              background $light_beige
-              statusline $grey
-              separator  $grey
-
-              # TYPE              BORDER      BACKGROUND  TEXT
-              focused_workspace   $green      $green      $light_beige
-              active_workspace    $violet     $violet     $light_beige
-              inactive_workspace  $dark_beige $dark_beige $grey
-              urgent_workspace    $red        $red        $light_beige
-          }
-      }
 
       #################
       # Applications
