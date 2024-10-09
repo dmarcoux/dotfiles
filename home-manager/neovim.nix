@@ -9,6 +9,7 @@
     ./neovim/plugins/fzf-vim.nix
     ./neovim/plugins/lsp.nix
     ./neovim/plugins/tagbar.nix
+    ./neovim/plugins/treesitter.nix
     ./neovim/plugins/vim-rooter.nix
     ./neovim/plugins/which-key.nix
     ./neovim/plugins/wstrip.nix
@@ -81,7 +82,7 @@
       lexima-vim
 
       #---------- Language Plugins
-      # A collection of language plugins (150+ languages)
+      # A collection of language plugins (150+ languages), useful for languages not supported by treesitter yet
       # https://github.com/sheerun/vim-polyglot
       vim-polyglot
     ];
