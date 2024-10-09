@@ -82,7 +82,8 @@
       map dD delete
       map dT trash
 
-      # Every mapping starting with g is also used in fzf to quickly cd to those directories outside of lf
+      # Every mapping starting with g (except g,) is also used in fzf to quickly cd to those directories outside of lf
+      map g, :push ''' # Type 2 single quotes, which is loading the ' mark. It goes to the last directory I cd'ed into.
       map g. cd /home/dany/dotfiles
       map g/ cd /
       map gc cd ${config.xdg.configHome}
@@ -98,8 +99,9 @@
       map gt cd ${config.xdg.dataHome}/Trash
       map gv cd /home/dany/videos
 
+      # I do not use marks, except for the ' mark, which is storing the last directory I cd'ed into
+      # So beside mark-load (mapped to `'`), all mappings for marks are removed
       map m # Remove default mapping for mark-save
-      map \' # Remove default mapping for mark-load (' has to be escaped since it's a special character)
       map \" # Remove default mapping for mark-remove (" has to be escaped since it's a special character)
 
       # Remove default mappings for find, I prefer to use search

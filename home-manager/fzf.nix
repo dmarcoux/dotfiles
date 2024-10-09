@@ -29,8 +29,8 @@
   programs.zsh.initExtra = ''
     function cd_to_lf_g_mappings_and_project_directories() {
       local directory
-      # Take the lf g mappings, format them before adding all directories under ~/projets to the list of directories to be processed by fzf
-      directory=$(cat ${config.xdg.configHome}/lf/lfrc | { sed -n -e 's|\s*map g.* cd "\?\(.*\)"\?|\1|gp'; \ls --directory ~/projets/* } | sort | uniq | fzf)
+      # Take the lf g mappings (except `g,`), format them before adding all directories under ~/projets to the list of directories to be processed by fzf
+      directory=$(cat ${config.xdg.configHome}/lf/lfrc | { sed -n -e 's|\s*map g[^,]* cd "\?\(.*\)"\?|\1|gp'; \ls --directory ~/projets/* } | sort | uniq | fzf)
 
       cd "$directory" || echo "$directory doesn't exist."
 
