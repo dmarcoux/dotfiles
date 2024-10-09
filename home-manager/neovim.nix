@@ -31,6 +31,13 @@
     # Alias `vimdiff` to `nvim -d`
     vimdiffAlias = true;
 
+    clipboard = {
+      # Use system clipboard
+      register = "unnamedplus";
+
+      providers.xsel.enable = true;
+    };
+
     # Install and configure Neovim plugins
     #
     # A lot of Neovim plugins are packaged in nixpkgs, see https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/editors/vim/plugins/vim-plugin-names
@@ -193,11 +200,6 @@
       vim.opt.smartcase = true
 
       ---------------------- History, Backup & System
-      -- Link to the system clipboard. Enable the setting after `UiEnter` to reduce startup time.
-      vim.schedule(function()
-        vim.opt.clipboard = 'unnamedplus'
-      end)
-
       -- Use Unix as the standard file format
       vim.opt.fileformats = 'unix,dos,mac'
 
