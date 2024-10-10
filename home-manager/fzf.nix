@@ -23,7 +23,7 @@ with config.lib.stylix.colors.withHashtag;
       # Default layout (fullscreen and input from top)
       "--min-height=100 --reverse"
       # Default colors
-      "--color fg:${base03},bg:${base00},hl:${base0D},fg+:${base00},bg+:${base0B},hl+:${base0D}"
+      "--color fg:${base03},bg:${base00},hl:${base0D}:bold,fg+:${base00},bg+:${base0B},hl+:${base0D}:bold"
       "--color info:${base0A},prompt:${base0A},pointer:${base00},marker:${base00},spinner:${base0A}"
       # Disable the default horizontal line separator between the typing area and the matches
       "--no-separator"
