@@ -10,8 +10,16 @@
 
     # Preview the themes at https://tinted-theming.github.io/base16-gallery/
     # The themes are at https://github.com/tinted-theming/schemes
-    # TODO: Choose between one of those themes: solarized-light, dracula (dark), bright (dark), da-one-black (dark)
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/da-one-black.yaml";
+    # TODO: Choose between one of those themes:
+    #   light
+    #   - solarized-light
+    #   - measured-light
+    #   dark
+    #   - dracula,
+    #   - bright
+    #   - da-one-black
+    #   - blueforest
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-light.yaml";
 
     fonts = {
       sizes = {
