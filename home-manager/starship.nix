@@ -22,6 +22,7 @@
         "$directory" # Display the path to the current directory
         "\\]"
         "$git_branch" # Display the active branch of the git repository in the current directory
+        "$nix_shell" # Display nix-shell when a nix-shell is active
         "$python" # If a Python virtual environment is active, display its name
         "$character" # Display a character based on the configuration below
       ];
@@ -45,6 +46,10 @@
       git_branch = {
         format = " [$branch]($style) ";
         style = "fg:green";
+      };
+      # Configure the nix_shell module
+      nix_shell = {
+        format = "| [nix-shell]($style) ";
       };
       # Configure the python module
       python = {
