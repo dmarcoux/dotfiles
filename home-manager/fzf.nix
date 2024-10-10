@@ -2,6 +2,9 @@
 
 { config, ... }:
 
+# To directly use base00, base01, base02, etc...
+with config.lib.stylix.colors.withHashtag;
+
 {
   programs.fzf = {
     enable = true;
@@ -19,6 +22,9 @@
       "--bind 'ctrl-f:reload(${config.programs.fzf.defaultCommand} --no-ignore-vcs),ctrl-g:reload(${config.programs.fzf.defaultCommand})'"
       # Default layout (fullscreen and input from top)
       "--min-height=100 --reverse"
+      # Default colors
+      "--color fg:${base03},bg:${base00},hl:${base0D},fg+:${base00},bg+:${base0B},hl+:${base0D}"
+      "--color info:${base0A},prompt:${base0A},pointer:${base00},marker:${base00},spinner:${base0A}"
       # Disable the default horizontal line separator between the typing area and the matches
       "--no-separator"
     ];
