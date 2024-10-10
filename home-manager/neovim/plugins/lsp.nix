@@ -20,6 +20,9 @@
       # Go
       # https://github.com/golang/tools/tree/master/gopls
       gopls.enable = true;
+
+      # Python
+      pyright.enable = true;
     };
   };
 }
