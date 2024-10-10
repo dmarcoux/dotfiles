@@ -22,6 +22,7 @@
         "$directory" # Display the path to the current directory
         "\\]"
         "$git_branch" # Display the active branch of the git repository in the current directory
+        "$python" # If a Python virtual environment is active, display its name
         "$character" # Display a character based on the configuration below
       ];
       # Configure the username module
@@ -44,6 +45,10 @@
       git_branch = {
         format = " [$branch]($style) ";
         style = "fg:green";
+      };
+      # Configure the python module
+      python = {
+        format = "(| [🐍 $virtualenv]($style) )"; # Since it's wrapped in parentheses, the python module will be shown only if a virtual environment is active (so $virtualenv isn't empty)
       };
     };
   };
