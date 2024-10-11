@@ -83,8 +83,8 @@ with config.lib.stylix.colors.withHashtag;
       # Variables
       #################
 
-      # Modifier key is the Windows Key
-      set $mod Mod4
+      # Use the same modifier key as defined above in Nix
+      set $mod ${config.xsession.windowManager.i3.config.modifier}
 
       # Workspaces (names include Font Awesome icons)
       set $WS1 "1:  1"
