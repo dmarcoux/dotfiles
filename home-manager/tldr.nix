@@ -54,7 +54,7 @@
     # Fixed colors:       "black", "red", "green", "yellow", "blue", "magenta", "cyan", "white", "default"
     # 256color ANSI code: { color256 = 50 }
     # RGB:                { rgb = [0, 255, 255] }
-    color = "black"
+    color = "white"
     background = "default"
     bold = false
     underline = false
@@ -84,7 +84,7 @@
 
     # Style for command examples.
     [style.example]
-    color = "black"
+    color = "white"
     background = "default"
     bold = false
     underline = false
