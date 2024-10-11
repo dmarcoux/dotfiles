@@ -15,7 +15,7 @@ with config.lib.stylix.colors.withHashtag;
           statusCommand = "${config.programs.i3status.package}/bin/i3status";
           position = "top";
           fonts = {
-            names = [ "DejaVuSansM Nerd Font" ];
+            names = [ config.stylix.fonts.monospace.name ];
             size = lib.mkForce 13.0;
           };
 
@@ -65,7 +65,7 @@ with config.lib.stylix.colors.withHashtag;
         newWindow = "urgent";
       };
       fonts = {
-        names = ["DejaVuSansM Nerd Font"];
+        names = [config.stylix.fonts.monospace.name];
         size = lib.mkForce 13.0;
       };
       keybindings = {};
@@ -104,7 +104,7 @@ with config.lib.stylix.colors.withHashtag;
       force_focus_wrapping yes
 
       # Font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
-      font pango:DejaVuSansM Nerd Font 13
+      font pango:${config.stylix.fonts.monospace.name} 13
 
       # Use LeftMouse+$mod on a floating window to drag it to the wanted position
       # Use RightMouse+$mod on a floating window to resize it

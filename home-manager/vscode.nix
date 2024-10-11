@@ -1,6 +1,6 @@
 # User configuration for VS Code
 
-{ pkgs-unstable, ... }:
+{ pkgs-unstable, config, ... }:
 
 {
   programs.vscode = {
@@ -105,8 +105,8 @@
       "cSpell.language" = "en,fr,de";
       # Do not accept auto-completion suggestions with Enter (if "editor.tabCompletion" is set to "on", it will only be possible with Tab)
       "editor.acceptSuggestionOnEnter" = "off";
-      # Set the font family to the one I use in i3
-      "editor.fontFamily" = "'DejaVuSansM Nerd Font'";
+      # Set the font family
+      "editor.fontFamily" = "'${config.stylix.fonts.monospace.name}'";
       # Update related symbols (like HTML tags) whenever one of them is changed (so changing <a> to <ul> would change the closing tag </a> to </ul>)
       "editor.linkedEditing" = true;
       # Do not show the minimap
