@@ -248,9 +248,4 @@ with config.lib.stylix.colors.withHashtag;
       vim.opt.wildmode = 'longest,list,full'
     '';
   };
-
-  # Minimal Neovim configuration for Git, like when doing `git commit --amend`
-  # It duplicates some parts of the config above, but only what's needed.
-  # TODO: Find a way to load this config into the main config.
-  xdg.configFile."nvim/git.vim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/home-manager/neovim/git.vim";
 }
