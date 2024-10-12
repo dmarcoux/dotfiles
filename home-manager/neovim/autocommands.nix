@@ -37,11 +37,6 @@
           function()
             -- See `:help vim.highlight.on_yank()`
             vim.highlight.on_yank({ timeout = 1000 }) -- highlight for 1 second
-
-            -- Force Markdown type for all files with the .md extension (from tpope/vim-markdown)
-            vim.opt.filetype = 'markdown'
-            -- Wrap lines at 80 characters
-            vim.opt_local.textwidth = 80
           end
         '';
       };
