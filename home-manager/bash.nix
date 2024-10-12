@@ -1,7 +1,32 @@
 {
+  imports = [
+    ./bash/autocompletion.nix
+    ./bash/docker-podman.nix
+    ./bash/general.nix
+    ./bash/git.nix
+    ./bash/github_cli.nix
+    ./bash/nixos.nix
+    ./bash/xmllint.nix
+  ];
+
   programs.bash = {
     enable = true;
     enableCompletion = true;
+
+    initExtra = ''
+      # Space does not expand aliases
+      bind '" ": magic-space'
+
+      # Ctrl + Space expands all aliases
+      bind '"\C- ": alias-expand-line'
+    '';
+
+    # If a new command line being added to the history list duplicates an older one,
+    # the older command is removed from the list (even if it is not the previous event)
+    historyControl = [ "ignoredups" "erasedups" ];
+    # TODO: In zsh, I had this... maybe I can achieve this too in bash
+    # Remove superfluous blanks from each command line being added to the history
+    # setopt HIST_REDUCE_BLANKS
 
     shellAliases = {
       #----- Clipboard
@@ -27,6 +52,11 @@
       chgrp = "chgrp --preserve-root";
       # This prevents issues with certain servers when SSH'ing like backspace not working and more...
       ssh = "TERM='xterm-256color' ssh";
+      #----- Utilities
+      # --data '{"abc":"123","def":"'my text'"}' or --data @filename (for some file containing JSON)
+      curljson = "curl --verbose --header 'Content-Type: application/json' -X POST --data"; # See above for --data, then add  http://whatever.com
+      # The password file (-rfbauth ~/.vnc/passwd) has to be setup with 'x11vnc -storepasswd'
+      vncup = "x11vnc -forever -repeat -shared -viewonly -clip xinerama1 -rfbauth ~/.vnc/passwd";
     };
   };
 }
