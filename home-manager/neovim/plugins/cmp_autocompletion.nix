@@ -32,6 +32,7 @@
           sources = [
             { name = "path"; }
             { name = "nvim_lsp"; }
+            { name = "nvim_lsp_signature_help"; }
             { name = "luasnip"; }
             { name = "buffer"; }
           ];
@@ -40,6 +41,9 @@
       # Autocompletion for LSPs
       # https://github.com/hrsh7th/cmp-nvim-lsp
       cmp-nvim-lsp.enable = true;
+      # Display function signatures with the current parameter emphasized
+      # https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
+      cmp-nvim-lsp-signature-help.enable = true;
       # Autocompletion for paths
       # https://github.com/hrsh7th/cmp-path
       cmp-path.enable = true;
