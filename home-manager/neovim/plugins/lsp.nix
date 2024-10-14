@@ -22,6 +22,7 @@
       gopls.enable = true;
 
       # Python
+      # https://github.com/microsoft/pyright
       pyright.enable = true;
     };
   };
