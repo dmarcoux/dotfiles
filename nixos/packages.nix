@@ -22,6 +22,8 @@
     bintools-unwrapped
     # Tool to help building and using APIs
     pkgs-unstable.bruno
+    # eBook management
+    calibre
     # Cross-platform build automation system
     cmake
     # CLI for development containers (https://containers.dev)
