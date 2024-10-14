@@ -13,6 +13,7 @@ with config.lib.stylix.colors.withHashtag;
     ./neovim/plugins/cmp_autocompletion.nix
     ./neovim/plugins/fzf-vim.nix
     ./neovim/plugins/lsp.nix
+    ./neovim/plugins/lualine.nix
     ./neovim/plugins/tagbar.nix
     ./neovim/plugins/treesitter.nix
     ./neovim/plugins/vim-rooter.nix
