@@ -13,7 +13,14 @@
       sections = {
         lualine_a = ["mode"]; # Vim mode
         lualine_b = ["branch"]; # Git branch
-        lualine_c = ["filename" "diff"];
+        lualine_c = [
+          {
+            __unkeyed-1 = "filename";
+            file_status = true; # Display if the file is readonly and was modified
+            path = 1; # With 0, display only the filename. With 1, display the filename including its relative path from the current working directory or Git repository. With 2, display the filename, including its absolute path.
+          }
+          "diff"
+        ];
 
         lualine_x = [
           "diagnostics"
