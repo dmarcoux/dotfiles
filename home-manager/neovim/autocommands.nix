@@ -5,11 +5,11 @@
     {
       desc = "Set options in Markdown files";
       event = [ "BufNewFile" "BufReadPost" ];
-      pattern = "*.md";
+      pattern = [ "*.md" "gitcommit" ];
       callback = {
         __raw = ''
           function()
-            -- Force Markdown type for all files with the .md extension (from tpope/vim-markdown)
+            -- Force Markdown type
             vim.opt.filetype = 'markdown'
             -- Wrap lines at 80 characters
             vim.opt_local.textwidth = 80
