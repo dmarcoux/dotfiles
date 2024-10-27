@@ -134,6 +134,8 @@
       "npm.fetchOnlinePackageInfo" = false;
       # Do not include recently opened files in the "Quick Open" search
       "search.quickOpen.includeHistory" = false;
+      # Sort entries in the "Quick Open" search by recency. More recently opened entries appear first.
+      "search.quickOpen.history.filterSortOrder" = "recency";
       # Show line numbers for search results
       "search.showLineNumbers" = true;
       # Search case-insensitively if the pattern is all lowercase, otherwise, search case-sensitively
