@@ -112,8 +112,8 @@
       "editor.minimap.enabled" = false;
       # Do not render the last line number when it's an empty newline
       "editor.renderFinalNewline" = "off";
-      # Render all whitespace characters
-      "editor.renderWhitespace" = "all";
+      # Display only trailing whitespace characters
+      "editor.renderWhitespace" = "trailing";
       # Enable tab completion and accept auto-completion suggestions with Tab
       "editor.tabCompletion" = "on";
       # Set the number of spaces a tab is equal to
