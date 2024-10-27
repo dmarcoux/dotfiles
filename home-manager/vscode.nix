@@ -15,15 +15,14 @@
     # code --install-extension PUBLISHER.NAME
     #
     # List of extensions to install manually with their identifier, name and description
-    # vayan.haml | Ruby Haml | Syntax highlighting for Haml files
+    # id.example | This is an example | Longer description example
     extensions = with pkgs-unstable.vscode-extensions; [
+      ms-vscode-remote.remote-containers # Devcontainers - https://containers.dev/
       vscodevim.vim # Vim emulation
       streetsidesoftware.code-spell-checker # Spell checking
-      # rust-lang.rust-analyzer # Language Server Protocol for Rust (auto-completion)
       bradlc.vscode-tailwindcss # IntelliSense for Tailwind CSS
-      # elixir-lsp.vscode-elixir-ls # Elixir support with debugger, autocomplete, and more. Powered by ElixirLS
-      # phoenixframework.phoenix # Syntax highlighting support for HEEx / Phoenix templates
       vscode-icons-team.vscode-icons # Icons
+      ms-python.python # Python: LSP (Pylance), Debugger, and more...
     ];
     keybindings = [
       # Open next editor with "Shift + Right arrow" instead of "Ctrl + Page Down"
