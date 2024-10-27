@@ -156,6 +156,8 @@
         "<C-w>" = false;
         # Do not handle "Ctrl + b" in the vim extension, it's used in hiding the sidebar in VS Code
         "<C-b>" = false;
+        # Do not handle "Ctrl + p" in the vim extension, it's used to go to a file in VS Code
+        "<C-p>" = false;
       };
       # Highlight matches of last search done in the vim extension
       "vim.hlsearch" = true;
