@@ -19,10 +19,10 @@
     extensions = with pkgs-unstable.vscode-extensions; [
       vscodevim.vim # Vim emulation
       streetsidesoftware.code-spell-checker # Spell checking
-      rust-lang.rust-analyzer # Language Server Protocol for Rust (auto-completion)
+      # rust-lang.rust-analyzer # Language Server Protocol for Rust (auto-completion)
       bradlc.vscode-tailwindcss # IntelliSense for Tailwind CSS
-      elixir-lsp.vscode-elixir-ls # Elixir support with debugger, autocomplete, and more. Powered by ElixirLS
-      phoenixframework.phoenix # Syntax highlighting support for HEEx / Phoenix templates
+      # elixir-lsp.vscode-elixir-ls # Elixir support with debugger, autocomplete, and more. Powered by ElixirLS
+      # phoenixframework.phoenix # Syntax highlighting support for HEEx / Phoenix templates
       vscode-icons-team.vscode-icons # Icons
     ];
     keybindings = [
@@ -111,10 +111,8 @@
       "editor.linkedEditing" = true;
       # Do not show the minimap
       "editor.minimap.enabled" = false;
-      # Automatically rename paired HTML tags
-      "editor.renameOnType" = true;
       # Do not render the last line number when it's an empty newline
-      "editor.renderFinalNewline" = false;
+      "editor.renderFinalNewline" = "off";
       # Render all whitespace characters
       "editor.renderWhitespace" = "all";
       # Enable tab completion and accept auto-completion suggestions with Tab
@@ -127,8 +125,6 @@
       "extensions.autoUpdate" = false;
       # Do not show notifications for extension recommendations
       "extensions.ignoreRecommendations" = true;
-      # Do not fetch extension recommendations
-      "extensions.showRecommendationsOnlyOnDemand" = true;
       # Insert a new line at the end of files when saving
       "files.insertFinalNewline" = true;
       # Enable git extension
@@ -143,10 +139,8 @@
       "search.showLineNumbers" = true;
       # Search case-insensitively if the pattern is all lowercase, otherwise, search case-sensitively
       "search.smartCase" = true;
-      # Do not send crash reports to Microsoft
-      "telemetry.enableCrashReporter" = false;
-      # Do not send usage data and errors to Microsoft
-      "telemetry.enableTelemetry" = false;
+      # Disable telemetry reporting
+      "telemetry.telemetryLevel" = "off";
       # Enable automatic updating of import paths when renaming/moving a file in VS Code
       "typescript.updateImportsOnFileMove.enabled" = "always";
       # Do not receive automatic updates
@@ -193,7 +187,7 @@
       # Do not show new version messages
       "vsicons.dontShowNewVersionMessage" = true;
       # Hide the activity bar
-      "workbench.activityBar.visible" = false;
+      "workbench.activityBar.location" = "hidden";
       # Disable command history in the command palette
       "workbench.commandPalette.history" = 0;
       # Open files directly without previewing them (previews are reused until opened files are edited)
