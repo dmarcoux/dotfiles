@@ -195,6 +195,8 @@
       "workbench.editor.enablePreview" = false;
       # Open files directly without previewing them in the "Quick Open" search
       "workbench.editor.enablePreviewFromQuickOpen" = false;
+      # Do not show tabs (one tab is opened whenever opening a file)
+      "workbench.editor.showTabs" = "none";
       # Do not fetch experiments
       "workbench.enableExperiments" = false;
       # Set the icon theme
