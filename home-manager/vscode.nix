@@ -15,7 +15,7 @@
     # code --install-extension PUBLISHER.NAME
     #
     # List of extensions to install manually with their identifier, name and description
-    # id.example | This is an example | Longer description example
+    # IuriiBarlukov.cursor-column-highlight | Cursor column highlight | Highlights cursor position with vertical line
     extensions = with pkgs-unstable.vscode-extensions; [
       ms-vscode-remote.remote-containers # Devcontainers - https://containers.dev/
       vscodevim.vim # Vim emulation
