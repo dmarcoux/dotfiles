@@ -106,6 +106,8 @@
       "editor.acceptSuggestionOnEnter" = "off";
       # Set the font family
       "editor.fontFamily" = "'${config.stylix.fonts.monospace.name}'";
+      # Do not show indent guides
+      "editor.guides.indentation" = false;
       # Update related symbols (like HTML tags) whenever one of them is changed (so changing <a> to <ul> would change the closing tag </a> to </ul>)
       "editor.linkedEditing" = true;
       # Do not show the minimap
