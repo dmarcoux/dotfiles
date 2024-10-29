@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   stylix = {
@@ -14,12 +14,13 @@
     #   light
     #   - solarized-light
     #   - measured-light
+    #   - precious-light-white
     #   dark
     #   - dracula,
     #   - bright
     #   - da-one-black
     #   - blueforest
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-light.yaml";
+    base16Scheme = "${pkgs-unstable.base16-schemes}/share/themes/precious-light-white.yaml";
 
     fonts = {
       sizes = {
