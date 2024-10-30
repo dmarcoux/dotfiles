@@ -7,7 +7,7 @@
     # Enable docker on boot
     enable = true;
     # Install docker (from unstable to get the latest version)
-    package = pkgs-unstable.docker_26;
+    package = pkgs-unstable.docker;
   };
 
   # Install docker-compose
