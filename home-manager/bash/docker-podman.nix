@@ -4,7 +4,7 @@
 
     alias doc='docker'
     alias pod='podman'
-    alias doccom='docker-compose'
+    alias doccom='docker compose'
     alias podcom='podman-compose'
 
     # Start a Docker/Podman container for projects without a Docker/Podman setup (ports are mapped directly on the host, so anything running inside the container is accessible on the host)

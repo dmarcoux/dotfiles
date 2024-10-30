@@ -10,9 +10,6 @@
     package = pkgs-unstable.docker;
   };
 
-  # Install docker-compose
-  environment.systemPackages = [ pkgs.docker-compose ];
-
   # Allow user to interact with the docker daemon
   users.users.dany.extraGroups = [ "docker" ];
 }
