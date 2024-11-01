@@ -7,6 +7,7 @@
   imports = [
     ./1password.nix
     ./chromium.nix
+    ./devenv.nix
     ./docker.nix
     ./dotnet.nix
     ./evince.nix
