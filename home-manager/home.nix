@@ -9,6 +9,7 @@
     ./bash.nix
     ./bat.nix
     ./beets.nix
+    ./caffeine.nix
     ./cbatticon.nix
     ./direnv.nix
     ./dotnet.nix

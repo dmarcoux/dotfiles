@@ -6,7 +6,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    (callPackage ./caffeinate.nix {})
     (callPackage ./teamus.nix {})
     # Infrastructure as Code tools
     ansible
