@@ -8,7 +8,7 @@
     # Install 1Password CLI
     enable = true;
     # Always get the latest version available
-    package = pkgs-unstable._1password;
+    package = pkgs-unstable._1password-cli;
   };
 
   # Install and configure 1Password GUI
