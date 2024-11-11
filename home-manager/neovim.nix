@@ -1,9 +1,9 @@
 # User configuration for Neovim
 
-# TODO: Remove lib once https://github.com/danth/stylix/pull/536 is merged
+# TODO: NixOS 24.11 - Remove lib, now that https://github.com/danth/stylix/pull/536 is merged
 { pkgs, pkgs-unstable, config, lib, ... }:
 
-# TODO: Remove both lines below https://github.com/danth/stylix/pull/536 is merged
+# TODO: NixOS 24.11 - Remove both lines below, now that https://github.com/danth/stylix/pull/536 is merged
 # To directly use base00, base01, base02, etc...
 with config.lib.stylix.colors.withHashtag;
 
@@ -100,7 +100,7 @@ with config.lib.stylix.colors.withHashtag;
       vim-polyglot
     ];
 
-    # TODO: Remove the line below and plugins.mini block once https://github.com/danth/stylix/pull/536 is merged
+    # TODO: NixOS 24.11 - Remove the line below and plugins.mini block, now that https://github.com/danth/stylix/pull/536 is merged
     colorschemes.base16.enable = lib.mkForce false;
     plugins.mini = {
       enable = true;
@@ -113,7 +113,7 @@ with config.lib.stylix.colors.withHashtag;
     };
 
     extraConfigLua = ''
-      -- TODO: Remove the require block once https://github.com/danth/stylix/pull/536 is merged
+      -- TODO: NixOS 24.11 - Remove the require block, now that https://github.com/danth/stylix/pull/536 is merged
       require('mini.base16').setup({
         palette = {
           base00 = '${base00}', base01 = '${base01}', base02 = '${base02}', base03 = '${base03}',
