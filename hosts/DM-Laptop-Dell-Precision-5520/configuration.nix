@@ -1,4 +1,4 @@
-# Host-specific configuration for my laptop at work
+# Host-specific configuration for my Dell Precision 5520 laptop
 
 { config, pkgs, ... }:
 
@@ -30,7 +30,7 @@
   };
 
   networking = {
-    hostName = "DM-Laptop";
+    hostName = "DM-Laptop-Dell-Precision-5520";
     networkmanager.enable = true;
   };
 

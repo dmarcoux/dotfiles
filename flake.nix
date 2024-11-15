@@ -47,7 +47,7 @@
   in
   {
     nixosConfigurations = {
-      DM-Laptop = nixpkgs.lib.nixosSystem {
+      DM-Laptop-Dell-Precision-5520 = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit system;
 
@@ -56,7 +56,7 @@
         };
 
         modules = [
-          ./hosts/laptop/configuration.nix
+          ./hosts/DM-Laptop-Dell-Precision-5520/configuration.nix
           home-manager.nixosModules.home-manager
           {
             # Have home-manager rely on the global `pkgs` configured via the system options `nixpkgs`
