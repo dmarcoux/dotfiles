@@ -77,14 +77,35 @@
         ];
       };
 
-      # TODO: Do the same for the desktop host
-      # DM-Desktop = nixpkgs.lib.nixosSystem {
-      #   (...)
-      #
-      #   modules = [
-      #     ./hosts/desktop/configuration.nix
-      #   ];
-      # };
+      DM-Desktop = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit system;
+
+          pkgs = pkgs;
+          pkgs-unstable = pkgs-unstable;
+        };
+
+        modules = [
+          ./hosts/DM-Desktop/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            # Have home-manager rely on the global `pkgs` configured via the system options `nixpkgs`
+            home-manager.useGlobalPkgs = true;
+            # By default, packages will be installed to `~/.nix-profile`
+            # With useUserPackages set to `true`, packages will be installed to `/etc/profiles/per-user/$USER` instead
+            home-manager.useUserPackages = true;
+            home-manager.users.dany.imports = [
+              (import ./home-manager/home.nix)
+              inputs.nixvim.homeManagerModules.nixvim
+            ];
+
+            home-manager.extraSpecialArgs = {
+              pkgs-unstable = pkgs-unstable;
+            };
+          }
+          stylix.nixosModules.stylix
+        ];
+      };
     };
   };
 }
