@@ -12,7 +12,6 @@ in
     git-crypt
   ];
 
-  # TODO: Configure git to use a separate user/config for work projects, see https://stackoverflow.com/a/43654115
   programs.git = {
     # Install git
     enable = true;
@@ -84,6 +83,20 @@ in
       ".bundle" # Ruby, this is almost always included in .gitignore, but just in case I ignored it too...
       ".idea" # JetBrains IDEs
       ".~lock.*.odt" # Lock files from LibreOffice
+    ];
+
+    includes = [
+      # Configuration specific to all repositories at work
+      # This is useful to use a separate account at work for GitHub/GitLab/etc...
+      {
+        contentSuffix = "work.gitconfig"; # Nix store name for the generated git configuration file for this include
+        condition = "gitdir:~/projets/work/**"; # Only applies to git repositories matching this path
+        contents = {
+          user = {
+            email = "TODO@work"; # Use this email instead of the default defined above
+          };
+        };
+      }
     ];
 
     # Install and setup git-lfs
