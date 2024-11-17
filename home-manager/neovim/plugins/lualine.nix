@@ -6,6 +6,30 @@
       # Have a single statusline at bottom of Neovim, instead of one for each individual window
       options.globalstatus = true;
 
+      # Window bar for active and inactive windows. It is shown at the top of every window
+      # +-------------------------------------------------+
+      # | A | B | C                             X | Y | Z |
+      # +-------------------------------------------------+
+      winbar = {
+        lualine_c = [
+          {
+            __unkeyed-1 = "filename";
+            file_status = true; # Display if the file is readonly and was modified
+            path = 1; # With 0, display only the filename. With 1, display the filename including its relative path from the current working directory or Git repository. With 2, display the filename, including its absolute path.
+          }
+        ];
+      };
+
+      inactive_winbar = {
+        lualine_c = [
+          {
+            __unkeyed-1 = "filename";
+            file_status = true; # Display if the file is readonly and was modified
+            path = 1; # With 0, display only the filename. With 1, display the filename including its relative path from the current working directory or Git repository. With 2, display the filename, including its absolute path.
+          }
+        ];
+      };
+
       # Status line, shown at the bottom of every window
       # +-------------------------------------------------+
       # | A | B | C                             X | Y | Z |
