@@ -6,6 +6,7 @@
       # Have a single statusline at bottom of Neovim, instead of one for each individual window
       options.globalstatus = true;
 
+      # Status line, shown at the bottom of every window
       # +-------------------------------------------------+
       # | A | B | C                             X | Y | Z |
       # +-------------------------------------------------+
