@@ -91,6 +91,7 @@
       "beakmhbijpdhipnjhnclmhgjlddhidpe" # linkding extension
       "jbbplnpkjmmeebjpijfedlgcdilocofh" # WAVE Evaluation Tool
       "aeblfdkhhhdcdjpifhhbdiojplfjncoa" # 1Password
+      "fdpohaocaechififmbbbbbknoalclacl" # GoFullPage - Full Page Screen Capture
     ];
   };
 }
