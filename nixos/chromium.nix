@@ -84,7 +84,6 @@
       "cjpalhdlnbpafiamejdnhcphjbkeiagm" # uBlock Origin
       "edibdbjcniadpccecjdfdjjppcpchdlm" # I still don't care about cookies
       "mnjggcdmjocbbbhaepdhchncahnbgone" # SponsorBlock for YouTube
-      "ldgfbffkinooeloadekpmfoklnobpien" # Raindrop.io
       "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" # Privacy Badger
       "khncfooichmfjbepaaaebmommgaepoid" # Unhook for YouTube
       "blaaajhemilngeeffpbfkdjjoefldkok" # LeechBlock NG
