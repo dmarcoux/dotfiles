@@ -45,8 +45,19 @@
     };
   };
 
-  # Enable bluetooth support
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth = {
+    # Enable bluetooth support
+    enable = true;
+    # Power up the default Bluetooth controller on boot
+    powerOnBoot = true;
+
+    settings = {
+      General = {
+        # For modern headsets, enable A2DP sink
+        Enable = "Source,Sink,Media,Socket";
+      };
+    };
+  };
   # Install blueman, a GUI to manage Bluetooth devices
   services.blueman.enable = true;
 

@@ -70,7 +70,11 @@
   time.timeZone = "Europe/Berlin";
 
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio = {
+    enable = true;
+    # Enable extra audio codecs
+    package = pkgs.pulseaudioFull;
+  };
 
   services = {
     xserver = {
