@@ -1,11 +1,6 @@
 # User configuration for Neovim
 
-# TODO: NixOS 24.11 - Remove lib, now that https://github.com/danth/stylix/pull/536 is merged
-{ pkgs, pkgs-unstable, config, lib, ... }:
-
-# TODO: NixOS 24.11 - Remove both lines below, now that https://github.com/danth/stylix/pull/536 is merged
-# To directly use base00, base01, base02, etc...
-with config.lib.stylix.colors.withHashtag;
+{ pkgs, pkgs-unstable, config, ... }:
 
 {
   imports = [
@@ -100,29 +95,7 @@ with config.lib.stylix.colors.withHashtag;
       vim-polyglot
     ];
 
-    # TODO: NixOS 24.11 - Remove the line below and plugins.mini block, now that https://github.com/danth/stylix/pull/536 is merged
-    colorschemes.base16.enable = lib.mkForce false;
-    plugins.mini = {
-      enable = true;
-
-      modules.base16.palette = {
-        inherit (config.lib.stylix.colors.withHashtag)
-          base00 base01 base02 base03 base04 base05 base06 base07
-          base08 base09 base0A base0B base0C base0D base0E base0F;
-      };
-    };
-
     extraConfigLua = ''
-      -- TODO: NixOS 24.11 - Remove the require block, now that https://github.com/danth/stylix/pull/536 is merged
-      require('mini.base16').setup({
-        palette = {
-          base00 = '${base00}', base01 = '${base01}', base02 = '${base02}', base03 = '${base03}',
-          base04 = '${base04}', base05 = '${base05}', base06 = '${base06}', base07 = '${base07}',
-          base08 = '${base08}', base09 = '${base09}', base0A = '${base0A}', base0B = '${base0B}',
-          base0C = '${base0C}', base0D = '${base0D}', base0E = '${base0E}', base0F = '${base0F}'
-        }
-      })
-
       --- TODO: See what https://github.com/nvim-lua/kickstart.nvim does, maybe I can incorporate a few things...
 
       -------------------- Mappings

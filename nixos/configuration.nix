@@ -69,7 +69,15 @@
 
   time.timeZone = "Europe/Berlin";
 
-  sound.enable = true;
+  # TODO: Migrate to Pipewire after recommendation in NixOS 24.11 release notes:
+  #       The default sound server for most graphical sessions has been switched from PulseAudio to PipeWire.
+  #       Users that want to keep using PulseAudio will want to set services.pipewire.enable = false; and hardware.pulseaudio.enable = true;.
+  #       There is currently no plan to fully deprecate and remove PulseAudio, however, PipeWire should generally be preferred for new installs.
+  #
+  #       This change also implies finding an alternative to pasystray, look at:
+  #       - https://wiki.archlinux.org/title/PipeWire
+  #       - https://wiki.archlinux.org/title/List_of_applications/Multimedia#Volume_control
+  services.pipewire.enable = false;
   hardware.pulseaudio = {
     enable = true;
     # Enable extra audio codecs
@@ -114,7 +122,7 @@
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
   # should
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
 
   # TODO: https://github.com/NixOS/nixpkgs/issues/180175
   systemd.services.NetworkManager-wait-online.enable = false;
