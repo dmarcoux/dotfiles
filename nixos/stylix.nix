@@ -8,9 +8,8 @@
     # Credits go to https://github.com/helpotters/dracula-wallpapers
     image = ./stylix-wallpaper.png;
 
-    # Preview the themes at https://tinted-theming.github.io/base16-gallery/
-    # The themes are at https://github.com/tinted-theming/schemes
-    # TODO: Choose between one of those themes:
+    # High-constrast themes from https://github.com/tinted-theming/schemes
+    # Preview them at https://tinted-theming.github.io/base16-gallery/
     #   light
     #   - solarized-light
     #   - measured-light
