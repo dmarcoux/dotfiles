@@ -238,6 +238,7 @@ with config.lib.stylix.colors.withHashtag;
       bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu -i -p 'clipboard'
 
       # Control media players with media keys
+      # TODO: Do the same for volume and mute. See WirePlumber, it comes with PipeWire: https://wiki.archlinux.org/title/WirePlumber#Keyboard_volume_control
       bindsym XF86AudioPlay exec playerctl play-pause
       bindsym XF86AudioPause exec playerctl play-pause
       bindsym XF86AudioStop exec playerctl stop
