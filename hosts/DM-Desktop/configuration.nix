@@ -7,11 +7,6 @@
     ./autorandr.nix
     ./hardware-configuration.nix # Include the results of the hardware scan
     ../../nixos/configuration.nix # System configuration
-    # Secrets for work
-    # ../../secrets/certificates/work.nix
-    # ../../secrets/vpn/work.nix
-    # ../../secrets/ssh/work.nix
-
   ];
 
   # Use the GRUB boot loader to dual-boot Windows and NixOS
