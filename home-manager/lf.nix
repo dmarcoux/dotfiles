@@ -95,6 +95,8 @@
       map gmu cd /home/dany/music
       map gpi cd /home/dany/pictures
       map gpr cd /home/dany/projets
+      # Directory where USB drives are mounted
+      map gr cd /run/media/
       map gsv cd "/home/dany/.steam/steam/steamapps/common/Stardew Valley"
       map gt cd ${config.xdg.dataHome}/Trash
       map gv cd /home/dany/videos
