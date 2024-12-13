@@ -1,5 +1,22 @@
 # TODO: This file needs to be updated now that I am using Nix flakes. See other TODO below
 
+### Before Installation
+
+If possible on my previous system:
+
+1. Backup any data which isn't already backed up somewhere else.
+
+   - Shell history (zsh)
+   - Music (I have a backup, but make sure it's really up-to-date)
+   - Chrome bookmarks (They should all be in my bookmark manager)
+   - Firefox bookmarks should be synced with my Mozilla account, but double-check
+   - ~/downloads/
+
+2. Commit and push changes for my Git repositories.
+
+   - dotfiles
+   - Everything under ~/projets
+
 ### Install From Scratch on a NixOS System
 
 1. Set [partitions and filesystems](https://nixos.org/nixos/manual/index.html#sec-installation-partitioning)
