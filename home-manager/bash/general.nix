@@ -41,14 +41,5 @@
 
       export $(echo $VARS | xargs)
     }
-
-    # Read from STDIN and return matched text
-    #
-    # $1: regular expression pattern
-    #
-    # Example: ip link show | sedp 'wlp[0-9]s[0-9]'
-    sedp() {
-      sed -n "s/^.*\($1\).*$/\1/p"
-    }
   '';
 }
