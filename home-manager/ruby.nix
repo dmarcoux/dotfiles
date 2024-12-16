@@ -10,6 +10,6 @@
 
   # Set the directory where binaries of Ruby gems are installed (which is also in $PATH)
   xdg.configFile."ruby/gemrc".text = ''
-    gem: --bindir /home/dany/bin
+    gem: --bindir ${config.home.homeDirectory}/bin
   '';
 }

@@ -1,6 +1,6 @@
 # User configuration for beets
 
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   programs.beets = {
@@ -8,7 +8,7 @@
     # Even settings with their default value are listed below to understand what beets does
     # and if those values were to ever change, beets would still act the same way
     settings = {
-      directory = "~/music";
+      directory = "${config.xdg.userDirs.music}";
 
       import = { # When using `beet import`...
         # Write metadata tags to files

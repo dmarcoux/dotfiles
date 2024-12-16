@@ -84,22 +84,22 @@
 
       # Every mapping starting with g (except g,) is also used in fzf to quickly cd to those directories outside of lf
       map g, :push ''' # Type 2 single quotes, which is loading the ' mark. It goes to the last directory I cd'ed into.
-      map g. cd /home/dany/dotfiles
+      map g. cd ${config.home.homeDirectory}/dotfiles
       map g/ cd /
       map gc cd ${config.xdg.configHome}
-      map gdc cd /home/dany/documents
-      map gdv cd /home/dany/documents/obsidian/
-      map gdw cd /home/dany/downloads
-      map ge cd /home/dany/ebooks
-      map gmi cd /home/dany/music-to-import
-      map gmu cd /home/dany/music
-      map gpi cd /home/dany/pictures
-      map gpr cd /home/dany/projets
+      map gdc cd ${config.xdg.userDirs.documents}
+      map gdv cd ${config.xdg.userDirs.documents}/obsidian/
+      map gdw cd ${config.xdg.userDirs.download}
+      map ge cd ${config.xdg.userDirs.extraConfig.XDG_EBOOKS_DIR}
+      map gmi cd ${config.home.homeDirectory}/music-to-import
+      map gmu cd ${config.xdg.userDirs.music}
+      map gpi cd ${config.xdg.userDirs.pictures}
+      map gpr cd ${config.xdg.userDirs.extraConfig.XDG_PROJETS_DIR}
       # Directory where USB drives are mounted
       map gr cd /run/media/
-      map gsv cd "/home/dany/.steam/steam/steamapps/common/Stardew Valley"
+      map gsv cd "${config.home.homeDirectory}/.steam/steam/steamapps/common/Stardew Valley"
       map gt cd ${config.xdg.dataHome}/Trash
-      map gv cd /home/dany/videos
+      map gv cd ${config.xdg.userDirs.videos}
 
       # I do not use marks, except for the ' mark, which is storing the last directory I cd'ed into
       # So beside mark-load (mapped to `'`), all mappings for marks are removed

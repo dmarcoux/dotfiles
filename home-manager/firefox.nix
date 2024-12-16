@@ -1,5 +1,7 @@
 # User configuration for Firefox
 
+{ config, ... }:
+
 {
   programs.firefox = {
     # Install Firefox
@@ -24,7 +26,7 @@
         # Do not show the warning when opening the `about:config` page
         "browser.aboutConfig.showWarning" = false;
         # Set the default download directory
-        "browser.download.dir" = "/home/dany/downloads";
+        "browser.download.dir" = "${config.xdg.userDirs.download}";
         # Remember and suggest the location of the most recent download before downloading a file
         "browser.download.folderList" = 2;
         # Prevent searches for addresses ending with `.home`, those are part of my local network

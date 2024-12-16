@@ -7,15 +7,15 @@ If possible on my previous system:
 1. Backup any data which isn't already backed up somewhere else.
 
    - Shell history (zsh)
-   - Music (I have a backup, but make sure it's really up-to-date)
+   - Music under $XDG_MUSIC_DIR (I have a backup, but make sure it's really up-to-date)
    - Chrome bookmarks (They should all be in my bookmark manager)
    - Firefox bookmarks should be synced with my Mozilla account, but double-check
-   - ~/downloads/
+   - Files under $XDG_DOWNLOAD_DIR
 
 2. Commit and push changes for my Git repositories.
 
    - dotfiles
-   - Everything under ~/projets
+   - Everything under $XDG_PROJETS_DIR
 
 ### Install From Scratch on a NixOS System
 

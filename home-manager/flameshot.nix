@@ -1,6 +1,6 @@
 # User configuration for flameshot
 
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   # Install flameshot
@@ -17,7 +17,7 @@
         drawColor = "#ff0000";
         drawThickness = 1;
         saveAsFileExtension = "png";
-        savePath = "/home/dany/pictures";
+        savePath = "${config.xdg.userDirs.pictures}";
         savePathFixed = "false";
         showStartupLaunchMessage = "false";
       };
