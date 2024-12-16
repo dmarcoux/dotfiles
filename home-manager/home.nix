@@ -6,7 +6,6 @@
     ./alacritty.nix
     ./autorandr.nix
     ./awscli.nix
-    ./bash.nix
     ./bat.nix
     ./beets.nix
     ./caffeine.nix

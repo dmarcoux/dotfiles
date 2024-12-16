@@ -33,23 +33,6 @@ with config.lib.stylix.colors.withHashtag;
     fileWidgetCommand = "${config.programs.fzf.defaultCommand}";
   };
 
-  # TODO: Fix this...
-  # programs.bash.initExtra = ''
-  #   cd_to_lf_g_mappings_and_project_directories() {
-  #     local directory
-  #     # Take the lf g mappings (except `g,`), format them before adding all directories under ~/projets to the list of directories to be processed by fzf
-  #     directory=$(cat ${config.xdg.configHome}/lf/lfrc | { sed -n -e 's|\s*map g[^,]* cd "\?\(.*\)"\?|\1|gp'; \ls --directory ~/projets/* } | sort | uniq | fzf)
-
-  #     cd "$directory" || echo "$directory doesn't exist."
-  #   }
-
-  #   # Define keybind CTRL+G to call the function
-  #   bind -m emacs-standard -x '"\C-g": cd_to_lf_g_mappings_and_project_directories'
-  #   bind -m vi-command -x '"\C-g": cd_to_lf_g_mappings_and_project_directories'
-  #   bind -m vi-insert -x '"\C-g": cd_to_lf_g_mappings_and_project_directories'
-  # '';
-
-
   programs.zsh.initExtra = ''
     function cd_to_lf_g_mappings_and_project_directories() {
       local directory
