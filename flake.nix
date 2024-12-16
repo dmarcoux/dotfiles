@@ -25,9 +25,15 @@
       # Use nixpkgs-unstable
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+
+    disko = {
+      url = "github:nix-community/disko";
+      # Ensure that nixpkgs and disko stay in sync
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, stylix, ... }:
+  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, stylix, disko, ... }:
   let
     system = "x86_64-linux";
 
@@ -74,6 +80,7 @@
             };
           }
           stylix.nixosModules.stylix
+          disko.nixosModules.disko
         ];
       };
 
