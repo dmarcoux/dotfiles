@@ -17,9 +17,13 @@ This repository is structured as follow:
 
 - *nixos*: System configuration which applies to all users and hosts
 
-### Install From Scratch on a New NixOS System
+### Install NixOS on a New Host
 
-Refer to [INSTALL.md](INSTALL.md).
+Refer to [NEW_INSTALL.md](NEW_INSTALL.md).
+
+### Reinstall NixOS on a Configured Host
+
+Refer to [REINSTALL.md](REINSTALL.md).
 
 ### How to Update to a New NixOS Version
 
