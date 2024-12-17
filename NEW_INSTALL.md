@@ -64,7 +64,7 @@ If possible, do this on the previous host:
    are handled by `disko`.
 
    ```bash
-   nixos-generate-config --no-filesystems --root /mnt
+   sudo nixos-generate-config --no-filesystems --root /mnt
    ```
 
 5. Set hostname, move the dotfiles on the mounted disks, and create a host in the dotfiles.
@@ -117,13 +117,16 @@ If possible, do this on the previous host:
 
 4. Log in as my user
 
-5. Clone the dotfiles repository
+5. Setup 1Password, my password manager. The settings for the CLI, desktop and
+   browser extensions are explained in one of the secure notes.
+
+6. Clone the dotfiles repository
 
    ```bash
    git clone git@github.com:dmarcoux/dotfiles.git ~/dotfiles
    ```
 
-6. Setup `secrets` gitsubmodule
+7. Setup `secrets` gitsubmodule
 
    ```bash
    cd dotfiles &&
@@ -133,18 +136,18 @@ If possible, do this on the previous host:
    echo "Follow instructions from the Setup section in secrets' README"
    ```
 
-7. Copy over the files from `/etc/nixos/dotfiles` to the dotfiles repository.
+8. Copy over the files from `/etc/nixos/dotfiles` to the dotfiles repository.
 
-8. Commit and push the changes to the dotfiles repository.
+9. Commit and push the changes to the dotfiles repository.
 
-9. Build the NixOS system for the host. Its hostname matches one of the
-   directories under [hosts/](hosts/).
+10. Build the NixOS system for the host. Its hostname matches one of the
+    directories under [hosts/](hosts/).
 
-   ```bash
-   sudo nixos-rebuild boot --flake /home/dany/dotfiles
-   ```
+    ```bash
+    sudo nixos-rebuild boot --flake /home/dany/dotfiles
+    ```
 
-10. Reboot
+11. Reboot
 
     ```bash
     reboot
