@@ -22,7 +22,8 @@
     ./gtk.nix
     ./i3.nix
     ./i3status.nix
-    ./jetbrains.nix
+    # I don't use Jetbrains IDEs right now, but I want to keep their configuration around if needed
+    # ./jetbrains.nix
     ./jq.nix
     ./keyboard.nix
     ./lf.nix
