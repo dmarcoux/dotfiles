@@ -17,7 +17,13 @@
 
 Configured hosts are tracked in this repository under [hosts/](hosts/).
 
-1. Download this repository as a ZIP archive and extract its content at
+1. Switch to the root user.
+
+   ```bash
+   su -
+   ```
+
+2. Download this repository as a ZIP archive and extract its content at
    `/tmp/dotfiles` (with `-L`, `curl` follows redirects)
 
    ```bash
@@ -26,7 +32,7 @@ Configured hosts are tracked in this repository under [hosts/](hosts/).
    mv /tmp/dotfiles-main /tmp/dotfiles
    ```
 
-2. Set the hostname from one of the configured hosts under `/tmp/dotfiles/hosts/`.
+3. Set the hostname from one of the configured hosts under `/tmp/dotfiles/hosts/`.
 
    _Lists the configured hosts_
 
@@ -40,7 +46,7 @@ Configured hosts are tracked in this repository under [hosts/](hosts/).
    export HOSTNAME="PICK_A_HOST"
    ```
 
-3. To partition, format, and mount the disks, I use [disko](https://github.com/nix-community/disko).
+4. To partition, format, and mount the disks, I use [disko](https://github.com/nix-community/disko).
    Reuse the disko configuration for the host, or create one. Either way, ensure
    the disk names match what `lsblk` outputs.
 
@@ -65,55 +71,55 @@ Configured hosts are tracked in this repository under [hosts/](hosts/).
        type = "gpt";
    # ...
    ```
-4. If encrypting disks with LUKS:
+5. If encrypting disks with LUKS:
 
-   4.1. Wipe disks before proceeding
+   5.1. Wipe disks before proceeding
 
       ```bash
-      sudo dd if=/dev/zero of=DISK bs=1M status=progress
+      dd if=/dev/zero of=DISK bs=1M status=progress
       ```
 
-   4.2. Set passphrase to decrypt disks on boot
+   5.2. Set passphrase to decrypt disks on boot
 
       ```bash
       echo -n "password" > /tmp/secret.key
       ```
 
-5. Run disko to partition, format, and mount the disks.
+6. Run disko to partition, format, and mount the disks.
 
    **This will erase any existing data on the disks.**
 
    ```bash
-   sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount "/tmp/dotfiles/hosts/$HOSTNAME/disko-config.nix"
+   nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount "/tmp/dotfiles/hosts/$HOSTNAME/disko-config.nix"
    ```
 
-6. Find and comment out the various `secrets` imports in the root `home-manager`
+7. Find and comment out the various `secrets` imports in the root `home-manager`
    and `NixOS` Nix files (The repository with secrets isn't cloned yet)
 
    ```bash
    grep -rni "secrets" /tmp/dotfiles/*
    ```
 
-7. Generate NixOS configuration files
+8. Generate NixOS configuration files
 
    ```bash
-   sudo nixos-generate-config --no-filesystems --root /mnt
+   nixos-generate-config --no-filesystems --root /mnt
    ```
 
    Differences between those generated files and the ones under
    `/tmp/dotfiles/hosts/$HOSTNAME` will be committed and pushed after rebooting.
 
-8. Install NixOS for the given host.
+9. Install NixOS for the given host.
 
    ```bash
    nixos-install --flake "/tmp/dotfiles#$HOSTNAME"
    ```
 
-9. Reboot
+10. Reboot
 
-   ```bash
-   reboot
-   ```
+    ```bash
+    reboot
+    ```
 
 -----
 

@@ -18,7 +18,13 @@ If possible, do this on the previous host:
 
 # Install NixOS on a New Host
 
-1. Download this repository as a ZIP archive and extract its content at
+1. Switch to the root user.
+
+   ```bash
+   su -
+   ```
+
+2. Download this repository as a ZIP archive and extract its content at
    `/tmp/dotfiles` (with `-L`, `curl` follows redirects)
 
    ```bash
@@ -27,7 +33,7 @@ If possible, do this on the previous host:
    mv /tmp/dotfiles-main /tmp/dotfiles
    ```
 
-2. To partition, format, and mount the disks, I use
+3. To partition, format, and mount the disks, I use
    [disko](https://github.com/nix-community/disko). Create or adapt one of the
    disko configurations from the dotfiles. Either way, ensure the disk names match
    what `lsblk` outputs.
@@ -52,22 +58,22 @@ If possible, do this on the previous host:
    # ...
    ```
 
-3. Run disko to partition, format and mount the disks.
+4. Run disko to partition, format and mount the disks.
 
    **This will erase any existing data on the disks.**
 
    ```bash
-   sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount /tmp/path/to/disko-config.nix
+   nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount /tmp/path/to/disko-config.nix
    ```
 
-4. Create `configuration.nix` for the system, but without the filesystems. Those
+5. Create `configuration.nix` for the system, but without the filesystems. Those
    are handled by `disko`.
 
    ```bash
-   sudo nixos-generate-config --no-filesystems --root /mnt
+   nixos-generate-config --no-filesystems --root /mnt
    ```
 
-5. Set hostname, move the dotfiles on the mounted disks, and create a host in the dotfiles.
+6. Set hostname, move the dotfiles on the mounted disks, and create a host in the dotfiles.
 
    ```bash
    export HOSTNAME="PICK_A_NAME" &&
@@ -81,19 +87,19 @@ If possible, do this on the previous host:
    vim /mnt/etc/nixos/dotfiles/flake.nix
    ```
 
-6. Edit the Nix configuration files for the host.
+7. Edit the Nix configuration files for the host.
 
    ```bash
    vim "/mnt/etc/nixos/dotfiles/hosts/$HOSTNAME/*.nix"
    ```
 
-7. Install NixOS for the new host.
+8. Install NixOS for the new host.
 
    ```bash
    nixos-install --flake "/mnt/etc/nixos/dotfiles#$HOSTNAME"
    ```
 
-8. Reboot
+9. Reboot
 
    ```bash
    reboot
