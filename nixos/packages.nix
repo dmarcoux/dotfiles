@@ -6,7 +6,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    (callPackage ./teamus.nix {})
     # Infrastructure as Code tools
     ansible
     # Local-first, peer-to-peer, and block-based notetaking app
