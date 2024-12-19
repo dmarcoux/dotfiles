@@ -50,6 +50,26 @@
       # Allow installation of unfree packages
       config.allowUnfree = true;
     };
+
+    common_modules = [
+      home-manager.nixosModules.home-manager
+      {
+        # Have home-manager rely on the global `pkgs` configured via the system options `nixpkgs`
+        home-manager.useGlobalPkgs = true;
+        # By default, packages will be installed to `~/.nix-profile`
+        # With useUserPackages set to `true`, packages will be installed to `/etc/profiles/per-user/$USER` instead
+        home-manager.useUserPackages = true;
+        home-manager.users.dany.imports = [
+          (import ./home-manager/home.nix)
+          inputs.nixvim.homeManagerModules.nixvim
+        ];
+
+        home-manager.extraSpecialArgs = {
+          pkgs-unstable = pkgs-unstable;
+        };
+      }
+      stylix.nixosModules.stylix
+    ];
   in
   {
     nixosConfigurations = {
@@ -63,25 +83,8 @@
 
         modules = [
           ./hosts/DM-Laptop-Dell-Precision-5520/configuration.nix
-          home-manager.nixosModules.home-manager
-          {
-            # Have home-manager rely on the global `pkgs` configured via the system options `nixpkgs`
-            home-manager.useGlobalPkgs = true;
-            # By default, packages will be installed to `~/.nix-profile`
-            # With useUserPackages set to `true`, packages will be installed to `/etc/profiles/per-user/$USER` instead
-            home-manager.useUserPackages = true;
-            home-manager.users.dany.imports = [
-              (import ./home-manager/home.nix)
-              inputs.nixvim.homeManagerModules.nixvim
-            ];
-
-            home-manager.extraSpecialArgs = {
-              pkgs-unstable = pkgs-unstable;
-            };
-          }
-          stylix.nixosModules.stylix
-          disko.nixosModules.disko
-        ];
+          disko.nixosModules.disko # TODO: Move to common_modules once all hosts are using disko
+        ] ++ common_modules;
       };
 
       DM-Desktop = nixpkgs.lib.nixosSystem {
@@ -94,24 +97,7 @@
 
         modules = [
           ./hosts/DM-Desktop/configuration.nix
-          home-manager.nixosModules.home-manager
-          {
-            # Have home-manager rely on the global `pkgs` configured via the system options `nixpkgs`
-            home-manager.useGlobalPkgs = true;
-            # By default, packages will be installed to `~/.nix-profile`
-            # With useUserPackages set to `true`, packages will be installed to `/etc/profiles/per-user/$USER` instead
-            home-manager.useUserPackages = true;
-            home-manager.users.dany.imports = [
-              (import ./home-manager/home.nix)
-              inputs.nixvim.homeManagerModules.nixvim
-            ];
-
-            home-manager.extraSpecialArgs = {
-              pkgs-unstable = pkgs-unstable;
-            };
-          }
-          stylix.nixosModules.stylix
-        ];
+        ] ++ common_modules;
       };
     };
   };
