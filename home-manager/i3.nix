@@ -145,6 +145,7 @@ with config.lib.stylix.colors.withHashtag;
       assign [class="^thunderbird$"] → $WS4
 
       assign [class="^Lollypop$"] → $WS5
+      assign [class="^Supersonic$"] → $WS5
 
       # Applications to start in floating mode
       for_window [class="^Galculator$"] floating enable

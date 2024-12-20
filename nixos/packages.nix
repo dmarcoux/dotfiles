@@ -88,6 +88,8 @@
     shellcheck
     # Chat for work
     slack
+    # Desktop client for Subsonic music services (like Navidrome)
+    supersonic
     # Infrastructure as Code tool
     pkgs-unstable.terraform
     # For the `tree` command which shows the contents of the current directory as a tree
