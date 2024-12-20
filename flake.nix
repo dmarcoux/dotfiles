@@ -31,9 +31,17 @@
       # Ensure that nixpkgs and disko stay in sync
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # For command-not-found to work, it needs a SQLite database which is only available via NixOS channels.
+    # This is the solution for Nix flakes.
+    flake-programs-sqlite = {
+      url = "github:wamserma/flake-programs-sqlite";
+      # Ensure that nixpkgs and flake-programs-sqlite stay in sync
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, stylix, disko, ... }:
+  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, stylix, disko, flake-programs-sqlite, ... }:
   let
     system = "x86_64-linux";
 
@@ -69,6 +77,7 @@
         };
       }
       stylix.nixosModules.stylix
+      flake-programs-sqlite.nixosModules.programs-sqlite
     ];
   in
   {
