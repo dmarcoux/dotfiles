@@ -6,6 +6,11 @@
 
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    # In case I need packages from staging / staging-next,
+    # uncomment the line(s) below and pull packages with them just like with nixpkgs-unstable
+    # nixpkgs-staging.url = "github:nixos/nixpkgs/staging";
+    # nixpkgs-staging-next.url = "github:nixos/nixpkgs/staging-next";
+
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
       # Ensure that nixpkgs and home-manager stay in sync
