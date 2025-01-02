@@ -1,6 +1,6 @@
 # User configuration for VS Code
 
-{ pkgs-unstable, config, ... }:
+{ pkgs-unstable, config, lib, ... }:
 
 {
   programs.vscode = {
@@ -105,7 +105,7 @@
       # Do not accept auto-completion suggestions with Enter (if "editor.tabCompletion" is set to "on", it will only be possible with Tab)
       "editor.acceptSuggestionOnEnter" = "off";
       # Set the font family
-      "editor.fontFamily" = "'${config.stylix.fonts.monospace.name}'";
+      "editor.fontFamily" = lib.mkForce "'${config.stylix.fonts.monospace.name}'";
       # Do not show indent guides
       "editor.guides.indentation" = false;
       # Update related symbols (like HTML tags) whenever one of them is changed (so changing <a> to <ul> would change the closing tag </a> to </ul>)
