@@ -101,6 +101,20 @@
         ] ++ common_modules;
       };
 
+      DM-Laptop-Dell-Precision-3581 = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit system;
+
+          pkgs = pkgs;
+          pkgs-unstable = pkgs-unstable;
+        };
+
+        modules = [
+          ./hosts/DM-Laptop-Dell-Precision-3581/configuration.nix
+          disko.nixosModules.disko # TODO: Move to common_modules once all hosts are using disko
+        ] ++ common_modules;
+      };
+
       DM-Desktop = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit system;
