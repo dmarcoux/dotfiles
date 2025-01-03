@@ -1,6 +1,6 @@
 # Host-specific configuration for my desktop computer
 
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 
 {
   imports = [
@@ -44,4 +44,14 @@
   # System clock might be incorrect after booting Windows and going back to the NixOS
   # This sets RTC time standard to localtime, compatible with Windows in its default configuration
   time.hardwareClockInLocalTime = true;
+
+  # Extra packages only for this host
+  environment.systemPackages = with pkgs; [
+    # Voice, video, and text chat
+    pkgs-unstable.discord
+    # CLI for https://exercism.org - Solve coding exercises and get mentored to gain true fluency in your chosen programming languages
+    pkgs-unstable.exercism
+    # Music tagger to fix music files with wrong metadata tags
+    picard
+  ];
 }

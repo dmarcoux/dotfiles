@@ -26,10 +26,6 @@
     cmake
     # CLI for development containers (https://containers.dev)
     pkgs-unstable.devcontainer
-    # Voice, video, and text chat
-    pkgs-unstable.discord
-    # CLI for https://exercism.org - Solve coding exercises and get mentored to gain true fluency in your chosen programming languages
-    pkgs-unstable.exercism
     # Audio and video conversion tool
     ffmpeg_6-headless
     # Ebook reader
@@ -74,8 +70,6 @@
     pdftk
     # Simple animated GIF screen recorder
     peek
-    # Music tagger to fix music files with wrong metadata tags
-    picard
     # CLI program to copy/sync/move files and directories to and from many cloud services
     rclone
     # Batch rename files/directories according to a Perl expression

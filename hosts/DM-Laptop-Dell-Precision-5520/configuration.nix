@@ -1,6 +1,6 @@
 # Host-specific configuration for my Dell Precision 5520 laptop
 
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 
 {
   imports = [
@@ -64,4 +64,14 @@
 
   # Disable Nvidia Quadro graphics card. This improves the battery life.
   hardware.nvidiaOptimus.disable = true;
+
+  # Extra packages only for this host
+  environment.systemPackages = with pkgs; [
+    # Voice, video, and text chat
+    pkgs-unstable.discord
+    # CLI for https://exercism.org - Solve coding exercises and get mentored to gain true fluency in your chosen programming languages
+    pkgs-unstable.exercism
+    # Music tagger to fix music files with wrong metadata tags
+    picard
+  ];
 }
