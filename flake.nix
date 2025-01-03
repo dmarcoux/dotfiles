@@ -73,7 +73,6 @@
         # With useUserPackages set to `true`, packages will be installed to `/etc/profiles/per-user/$USER` instead
         home-manager.useUserPackages = true;
         home-manager.users.dany.imports = [
-          (import ./home-manager/home.nix)
           inputs.nixvim.homeManagerModules.nixvim
         ];
 
