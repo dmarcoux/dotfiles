@@ -61,4 +61,12 @@
   };
   # Install blueman, a GUI to manage Bluetooth devices
   services.blueman.enable = true;
+
+  # Extra packages only for this host
+  environment.systemPackages = with pkgs; [
+    # VPN client for Cisco's AnyConnect SSL VPN
+    openconnect
+    # NetworkManager’s OpenConnect plugin
+    networkmanager-openconnect
+  ];
 }
