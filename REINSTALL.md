@@ -20,7 +20,7 @@ Configured hosts are tracked in this repository under [hosts/](hosts/).
 1. Switch to the root user.
 
    ```bash
-   su -
+   sudo su -
    ```
 
 2. Download this repository as a ZIP archive and extract its content at
@@ -151,7 +151,7 @@ Configured hosts are tracked in this repository under [hosts/](hosts/).
 7. Setup `secrets` gitsubmodule
 
    ```bash
-   cd dotfiles &&
+   cd ~/dotfiles &&
    git submodule init &&
    git submodule update &&
    cd secrets &&

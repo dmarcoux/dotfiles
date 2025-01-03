@@ -21,7 +21,7 @@ If possible, do this on the previous host:
 1. Switch to the root user.
 
    ```bash
-   su -
+   sudo su -
    ```
 
 2. Download this repository as a ZIP archive and extract its content at
@@ -78,7 +78,7 @@ If possible, do this on the previous host:
    ```bash
    export HOSTNAME="PICK_A_NAME" &&
    mv /tmp/dotfiles /mnt/etc/nixos/ &&
-   mkdir "/mnt/etc/nixos/dotfiles/hosts/$HOSTNAME" &&
+   mkdir -p "/mnt/etc/nixos/dotfiles/hosts/$HOSTNAME" &&
    mv /mnt/etc/nixos/*.nix "/mnt/etc/nixos/dotfiles/hosts/$HOSTNAME/"
    ```
 
@@ -135,7 +135,7 @@ If possible, do this on the previous host:
 7. Setup `secrets` gitsubmodule
 
    ```bash
-   cd dotfiles &&
+   cd ~/dotfiles &&
    git submodule init &&
    git submodule update &&
    cd secrets &&
