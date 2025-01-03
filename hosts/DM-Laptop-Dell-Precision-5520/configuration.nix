@@ -14,12 +14,8 @@
     ./autorandr.nix
     ./hardware-configuration.nix # Include the results of the hardware scan
     ./disko-config.nix
-    ../../nixos/configuration.nix # System configuration
-    # Secrets for work
-    # ../../secrets/certificates/work.nix
-    # ../../secrets/vpn/work.nix
-    # ../../secrets/ssh/work.nix
-
+    ./nixos.nix
+    ./home-manager.nix
   ];
 
   # Use the systemd-boot EFI boot loader
