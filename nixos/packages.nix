@@ -62,6 +62,8 @@
     pkgs-unstable.obsidian
     # Manage resolv.conf for DNS settings
     openresolv
+    # TLS/SSL and cryptography library
+    openssl
     # VPN client
     openvpn
     # Cryptography for various applications
