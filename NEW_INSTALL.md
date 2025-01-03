@@ -33,10 +33,18 @@ If possible, do this on the previous host:
    mv /tmp/dotfiles-main /tmp/dotfiles
    ```
 
-3. To partition, format, and mount the disks, I use
+3. Set the hostname for the new host, and create its directory in the dotfiles.
+
+   ```bash
+   export HOSTNAME="PICK_A_NAME" &&
+   mkdir -p "/tmp/dotfiles/hosts/$HOSTNAME"
+   ```
+
+4. To partition, format, and mount the disks, I use
    [disko](https://github.com/nix-community/disko). Create or adapt one of the
-   disko configurations from the dotfiles. Either way, ensure the disk names match
-   what `lsblk` outputs.
+   disko configurations from the dotfiles. The disko configuration must be at
+   `/tmp/dotfiles/hosts/$HOSTNAME/disko-config.nix`. Either way, ensure the disk
+   names match what `lsblk` outputs.
 
    _Example of `lsblk` output_
    ```bash
@@ -58,52 +66,65 @@ If possible, do this on the previous host:
    # ...
    ```
 
-4. Run disko to partition, format and mount the disks.
+5. If encrypting disks with LUKS:
+
+   5.1. Wipe disks before proceeding
+
+      ```bash
+      dd if=/dev/zero of=DISK bs=1M status=progress
+      ```
+
+   5.2. Set passphrase to decrypt disks on boot
+
+      ```bash
+      echo -n "password" > /tmp/secret.key
+      ```
+
+6. Run disko to partition, format and mount the disks.
 
    **This will erase any existing data on the disks.**
 
    ```bash
-   nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount /tmp/path/to/disko-config.nix
+   nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount "/tmp/dotfiles/hosts/$HOSTNAME/disko-config.nix"
    ```
 
-5. Create `configuration.nix` for the system, but without the filesystems. Those
+7. Create `configuration.nix` for the system, but without the filesystems. Those
    are handled by `disko`.
 
    ```bash
    nixos-generate-config --no-filesystems --root /mnt
    ```
 
-6. Set hostname, move the dotfiles on the mounted disks, and create a host in the dotfiles.
+8. Move the dotfiles and the generated Nix files to the mounted disks.
 
    ```bash
-   export HOSTNAME="PICK_A_NAME" &&
    mv /tmp/dotfiles /mnt/etc/nixos/ &&
-   mkdir -p "/mnt/etc/nixos/dotfiles/hosts/$HOSTNAME" &&
    mv /mnt/etc/nixos/*.nix "/mnt/etc/nixos/dotfiles/hosts/$HOSTNAME/"
    ```
 
-   _Add the new host inside `nixosConfigurations = { ... }`_
+9. Add the new host inside `nixosConfigurations = { ... }`.
+
    ```bash
    vim /mnt/etc/nixos/dotfiles/flake.nix
    ```
 
-7. Edit the Nix configuration files for the host.
+10. Edit the Nix configuration files for the host.
 
-   ```bash
-   vim "/mnt/etc/nixos/dotfiles/hosts/$HOSTNAME/*.nix"
-   ```
+    ```bash
+    vim "/mnt/etc/nixos/dotfiles/hosts/$HOSTNAME/*.nix"
+    ```
 
-8. Install NixOS for the new host.
+11. Install NixOS for the new host.
 
-   ```bash
-   nixos-install --flake "/mnt/etc/nixos/dotfiles#$HOSTNAME"
-   ```
+    ```bash
+    nixos-install --flake "/mnt/etc/nixos/dotfiles#$HOSTNAME"
+    ```
 
-9. Reboot
+12. Reboot
 
-   ```bash
-   reboot
-   ```
+    ```bash
+    reboot
+    ```
 
 -----
 
