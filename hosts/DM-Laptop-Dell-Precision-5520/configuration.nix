@@ -73,5 +73,7 @@
     pkgs-unstable.exercism
     # Music tagger to fix music files with wrong metadata tags
     picard
+    # TODO: Finish migration of notes to Anytype - Knowledge base that works on top of a local folder of plain text Markdown files
+    pkgs-unstable.obsidian
   ];
 }

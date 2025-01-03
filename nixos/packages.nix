@@ -54,8 +54,6 @@
     nix-index
     # Formatter for Nix code
     nixfmt-classic
-    # Knowledge base that works on top of a local folder of plain text Markdown files
-    pkgs-unstable.obsidian
     # Manage resolv.conf for DNS settings
     openresolv
     # TLS/SSL and cryptography library
