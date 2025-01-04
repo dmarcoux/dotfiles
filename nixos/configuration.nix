@@ -4,35 +4,6 @@
 { config, pkgs, options, ... }:
 
 {
-  # TODO: This list must be removed and ported to every host based on its needs. See how DM-Laptop-Dell-Precision-3581 does it with nixos.nix
-  # imports = [
-  #   ./1password.nix
-  #   ./chromium.nix
-  #   ./devenv.nix
-  #   ./docker.nix
-  #   ./dotnet.nix
-  #   ./evince.nix
-  #   ./gnome-keyring.nix
-  #   ./i3.nix
-  #   ./keyboards.nix
-  #   ./locales.nix
-  #   ./lollypop.nix
-  #   ./mullvad.nix
-  #   ./networking.nix
-  #   ./packages.nix
-  #   ./podman.nix
-  #   ./polkit.nix
-  #   ./printing.nix
-  #   ./redshift.nix
-  #   ./steam.nix
-  #   ./stylix.nix
-  #   ./udiskie.nix
-  #   ./unclutter.nix
-  #   ./vscode.nix
-  #   ./yubikey.nix
-  #   ./zsh.nix
-  # ];
-
   # Nix will conform to the XDG Base Directory Specification for files in $HOME
   nix.settings.use-xdg-base-directories = true;
 
