@@ -46,8 +46,6 @@
     guvcview
     # Interface to inotify, which can be used to monitor and act upon filesystem events
     inotify-tools
-    # Digital painting
-    krita
     # Office suite for spreadsheets, presentations and more...
     libreoffice
     # Generate a database index of all files in my channels, then locate with nix-locate which packages contain these files
@@ -68,6 +66,8 @@
     pdftk
     # Simple animated GIF screen recorder
     peek
+    # Image editing software (and drawing)
+    pinta
     # CLI program to copy/sync/move files and directories to and from many cloud services
     rclone
     # Batch rename files/directories according to a Perl expression
