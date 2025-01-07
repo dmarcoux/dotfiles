@@ -81,17 +81,23 @@
 
     # Install the following extensions
     extensions = [
-      "cjpalhdlnbpafiamejdnhcphjbkeiagm" # uBlock Origin
-      "edibdbjcniadpccecjdfdjjppcpchdlm" # I still don't care about cookies
-      "mnjggcdmjocbbbhaepdhchncahnbgone" # SponsorBlock for YouTube
-      "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" # Privacy Badger
-      "khncfooichmfjbepaaaebmommgaepoid" # Unhook for YouTube
-      "blaaajhemilngeeffpbfkdjjoefldkok" # LeechBlock NG
-      "cdfcbpndhmollmcmlehepbodcleebfen" # vim-scroll
-      "beakmhbijpdhipnjhnclmhgjlddhidpe" # linkding extension
-      "jbbplnpkjmmeebjpijfedlgcdilocofh" # WAVE Evaluation Tool
-      "aeblfdkhhhdcdjpifhhbdiojplfjncoa" # 1Password
-      "fdpohaocaechififmbbbbbknoalclacl" # GoFullPage - Full Page Screen Capture
+      # uBlock Origin
+      # Setup: Be sure to configure filters in the extension's settings. Add this list to custom filters: https://www.i-dont-care-about-cookies.eu/abp/
+      "cjpalhdlnbpafiamejdnhcphjbkeiagm"
+      # SponsorBlock for YouTube
+      "mnjggcdmjocbbbhaepdhchncahnbgone"
+      # Privacy Badger
+      "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"
+      # Unhook for YouTube
+      "khncfooichmfjbepaaaebmommgaepoid"
+      # linkding extension
+      "beakmhbijpdhipnjhnclmhgjlddhidpe"
+      # WAVE Evaluation Tool
+      "jbbplnpkjmmeebjpijfedlgcdilocofh"
+      # 1Password
+      "aeblfdkhhhdcdjpifhhbdiojplfjncoa"
+      # GoFullPage - Full Page Screen Capture
+      "fdpohaocaechififmbbbbbknoalclacl"
     ];
   };
 }
