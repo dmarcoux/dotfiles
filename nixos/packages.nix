@@ -80,8 +80,6 @@
     screen
     # Static analysis tool for shell scripts
     shellcheck
-    # Chat for work
-    slack
     # Desktop client for Subsonic music services (like Navidrome)
     supersonic
     # Infrastructure as Code tool

@@ -53,5 +53,7 @@
     pkgs-unstable.exercism
     # Music tagger to fix music files with wrong metadata tags
     picard
+    # Chat for various communities
+    slack
   ];
 }
