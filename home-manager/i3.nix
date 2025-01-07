@@ -178,11 +178,6 @@ with config.lib.stylix.colors.withHashtag;
       # Launch password manager in the system tray
       exec 1password --silent
 
-      # If I'm not on holidays and today is a work day, launch Slack.
-      #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
-      #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
-      exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -lt 5 && slack
-
       # If I'm not on holidays and today is a work day, launch Thunderbird.
       #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
       #   1 to 4 are work days (Monday to Thursday), so if "date" outputs less than 5, it's a work day.
