@@ -62,6 +62,10 @@
   # Install blueman, a GUI to manage Bluetooth devices
   services.blueman.enable = true;
 
+  # Enable the Bolt daemon for Thunderbolt devices
+  # `boltctl` to list and authorize devices. For every device, it must be authorized with `boltctl enroll --chain UUID_FROM_YOUR_DEVICE`.
+  services.hardware.bolt.enable = true;
+
   # Extra packages only for this host
   environment.systemPackages = with pkgs; [
     # VPN client for Cisco's AnyConnect SSL VPN
