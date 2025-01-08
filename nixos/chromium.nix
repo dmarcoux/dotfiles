@@ -57,6 +57,7 @@
       "AutofillCreditCardEnabled" = false;
       # Set DuckDuckGo as the search provider
       # To customize this further, refer to https://duckduckgo.com/duckduckgo-help-pages/settings/params/
+      # For other search providers, refer to chrome://settings/searchEngines. It's possible to activate and edit them.
       "DefaultSearchProviderEnabled" = true;
       "DefaultSearchProviderName" = "DuckDuckGo";
       "DefaultSearchProviderSearchURL" = "https://duckduckgo.com/?q={searchTerms}";
