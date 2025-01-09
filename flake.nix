@@ -44,9 +44,14 @@
       # Ensure that nixpkgs and flake-programs-sqlite stay in sync
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    secrets = {
+      url = "git+file:/home/dany/dotfiles/secrets?shallow=1";
+      flake = false;
+    };
   };
 
-  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, stylix, disko, flake-programs-sqlite, ... }:
+  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, stylix, disko, flake-programs-sqlite, secrets, ... }:
   let
     system = "x86_64-linux";
 
@@ -106,6 +111,7 @@
 
           pkgs = pkgs;
           pkgs-unstable = pkgs-unstable;
+          secrets = secrets;
         };
 
         modules = [

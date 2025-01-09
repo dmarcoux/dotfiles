@@ -507,7 +507,25 @@
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixvim": "nixvim",
+        "secrets": "secrets",
         "stylix": "stylix"
+      }
+    },
+    "secrets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1736430312,
+        "narHash": "sha256-nKWTazwIcKHf8j4KhdchAeJYacUeL86X48j+tZbDoTc=",
+        "rev": "c84b9eee65b4e322da8139cacd1e5a363bba8e8e",
+        "revCount": 19,
+        "shallow": true,
+        "type": "git",
+        "url": "file:/home/dany/dotfiles/secrets"
+      },
+      "original": {
+        "shallow": true,
+        "type": "git",
+        "url": "file:/home/dany/dotfiles/secrets"
       }
     },
     "stylix": {

@@ -1,6 +1,6 @@
 # Host-specific configuration for my Dell Precision 3581 laptop
 
-{ config, pkgs, ... }:
+{ config, pkgs, secrets, ... }:
 
 {
   imports = [
@@ -16,10 +16,7 @@
     ./disko-config.nix
     ./nixos.nix
     ./home-manager.nix
-    # Secrets for work
-    # ../../secrets/certificates/work.nix
-    # ../../secrets/vpn/work.nix
-    # ../../secrets/ssh/work.nix
+    "${secrets}/samba-cifs.nix"
   ];
 
   # Use the systemd-boot EFI boot loader
@@ -75,5 +72,7 @@
     # Distributed, highly available, datacenter-aware scheduler
     # TODO: I might need to instead use the service to setup nomad: https://search.nixos.org/options?channel=24.11&from=0&size=50&sort=relevance&type=packages&query=services.nomad
     nomad
+    # Samba / CIFS
+    samba
   ];
 }
