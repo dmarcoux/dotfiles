@@ -206,6 +206,10 @@ with config.lib.stylix.colors.withHashtag;
       # --release is needed when using slock (see https://github.com/i3/i3/issues/3298)
       bindsym --release $mod+Shift+C exec --no-startup-id "xset dpms force standby && slock systemctl suspend --check-inhibitors=no"
 
+      # Put the screen on standby (~1 second recovery time) to save power, then lock the screen
+      # --release is needed when using slock (see https://github.com/i3/i3/issues/3298)
+      bindsym --release $mod+Shift+Z exec --no-startup-id "xset dpms force standby && slock"
+
       # Start a terminal
       bindsym $mod+Return exec alacritty
 
