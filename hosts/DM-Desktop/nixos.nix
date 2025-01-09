@@ -15,7 +15,6 @@
     ../../nixos/i3.nix
     ../../nixos/keyboards.nix
     ../../nixos/locales.nix
-    ../../nixos/lollypop.nix
     ../../nixos/mullvad.nix
     ../../nixos/networking.nix
     ../../nixos/packages.nix
@@ -23,11 +22,9 @@
     ../../nixos/polkit.nix
     ../../nixos/printing.nix
     ../../nixos/redshift.nix
-    ../../nixos/steam.nix
     ../../nixos/stylix.nix
     ../../nixos/udiskie.nix
     ../../nixos/unclutter.nix
-    ../../nixos/vscode.nix
     ../../nixos/yubikey.nix
     ../../nixos/zsh.nix
   ];

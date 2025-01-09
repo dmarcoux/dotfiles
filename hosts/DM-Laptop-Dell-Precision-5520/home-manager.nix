@@ -40,7 +40,6 @@
     ../../home-manager/starship.nix
     ../../home-manager/tldr.nix
     ../../home-manager/udiskie.nix
-    ../../home-manager/vscode.nix
     ../../home-manager/xcape.nix
     ../../home-manager/xdg.nix
     ../../home-manager/xorg.nix
