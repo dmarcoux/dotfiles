@@ -48,6 +48,8 @@
     inotify-tools
     # Office suite for spreadsheets, presentations and more...
     libreoffice
+    # Share files with nearby devices
+    localsend
     # Generate a database index of all files in my channels, then locate with nix-locate which packages contain these files
     nix-index
     # Formatter for Nix code
