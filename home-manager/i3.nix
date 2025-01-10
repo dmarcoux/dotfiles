@@ -142,8 +142,6 @@ with config.lib.stylix.colors.withHashtag;
       assign [class="^bruno$"] → $WS3
       assign [class="^Keymapp$"] → $WS3
 
-      assign [class="^thunderbird$"] → $WS4
-
       assign [class="^Lollypop$"] → $WS5
 
       # Applications to start in floating mode
@@ -176,11 +174,6 @@ with config.lib.stylix.colors.withHashtag;
 
       # Launch password manager in the system tray
       exec 1password --silent
-
-      # If I'm not on holidays and today is a work day, launch Thunderbird.
-      #   "date +'%u'" prints out a number from 1 to 7 depending on the current day.
-      #   1 to 5 are work days (Monday to Friday), so if "date" outputs less than 6, it's a work day.
-      exec test ! -f "$HOME/dotfiles/urlaub" && test $(date +'%u') -lt 6 && thunderbird
 
       # After 300 seconds (5 minutes) of inactivity (when audio isn't playing), put the
       # screen on standby (~1 second recovery time). After 30 more seconds, lock the screen
