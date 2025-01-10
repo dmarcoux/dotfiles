@@ -25,6 +25,7 @@
     dotDir = ".config/zsh";
     history = {
       # Don't pollute home directory with zsh's history
+      # This path is ~/.local/share/zsh/zsh_history
       path = "${config.xdg.dataHome}/zsh/zsh_history";
       # Share history among all shells
       share = true;
