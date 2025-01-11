@@ -11,11 +11,11 @@
       name = "nixos-hardware-26-06-2024";
       rev = "aab67495e34365045f9dfbe58725cc6fa03607b7";
     }}/dell/precision/5530"
-    ./autorandr.nix
     ./hardware-configuration.nix # Include the results of the hardware scan
     ./disko-config.nix
     ./nixos.nix
     ./home-manager.nix
+    ./kde.nix
   ];
 
   # Use the systemd-boot EFI boot loader
@@ -55,9 +55,6 @@
       };
     };
   };
-  # Install blueman, a GUI to manage Bluetooth devices
-  services.blueman.enable = true;
-
   # Disable Nvidia Quadro graphics card. This improves the battery life.
   hardware.nvidiaOptimus.disable = true;
 

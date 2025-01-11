@@ -3,15 +3,6 @@
 { pkgs, ... }:
 
 {
-  services.xserver.xkb = {
-    # Set keyboard layout to Canadian Multilingual
-    # https://kbdlayout.info/kbdcan
-    layout = "ca";
-    variant = "multix";
-    # AltGr + Space produces a normal space instead of a non-breakable space
-    options = "nbsp:none";
-  };
-
   # Enable udev rules for ZSA keyboards. This is needed to be able to flash a new configuration on the keyboards
   hardware.keyboard.zsa.enable = true;
 

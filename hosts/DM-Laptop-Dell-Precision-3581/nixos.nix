@@ -1,5 +1,7 @@
 # NixOS configuration for my Dell Precision 3581 laptop
 
+{ pkgs, ... }:
+
 {
   imports = [
     # NixOS base configuration
@@ -25,4 +27,28 @@
     ../../nixos/yubikey.nix
     ../../nixos/zsh.nix
   ];
+
+  # TODO: Temporary for now while I experiment with KDE
+  # Enable minimal desktop/display manager setup to have a login screen
+  # home-manager will take over after login in
+  services.xserver = {
+    desktopManager.xterm.enable = true;
+    displayManager.lightdm.enable = true;
+
+    # Disable screensaver and display power manager signaling (DPMS)
+    displayManager.sessionCommands = ''
+      ${pkgs.xorg.xset}/bin/xset s off -dpms
+    '';
+
+    xkb = {
+      # Set multiple keyboard layouts (This is useful when pair-programming with colleagues which are used to another layout)
+      # - Canadian Multilingual: https://kbdlayout.info/kbdcan
+      # - German: https://kbdlayout.info/kbdgr
+      # - US: https://kbdlayout.info/kbdus
+      layout = "ca(multix),de,us";
+      # AltGr + Space produces a normal space instead of a non-breakable space
+      # Alt + Space switches to the next keyboard layout
+      options = "nbsp:none,grp:alt_space_toggle";
+    };
+  };
 }

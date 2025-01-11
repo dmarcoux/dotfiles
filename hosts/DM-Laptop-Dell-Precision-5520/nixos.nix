@@ -10,9 +10,6 @@
     ../../nixos/devenv.nix
     ../../nixos/docker.nix
     ../../nixos/dotnet.nix
-    ../../nixos/evince.nix
-    ../../nixos/gnome-keyring.nix
-    ../../nixos/i3.nix
     ../../nixos/keyboards.nix
     ../../nixos/locales.nix
     ../../nixos/mullvad.nix
@@ -21,9 +18,7 @@
     ../../nixos/podman.nix
     ../../nixos/polkit.nix
     ../../nixos/printing.nix
-    ../../nixos/redshift.nix
     ../../nixos/stylix.nix
-    ../../nixos/udiskie.nix
     ../../nixos/unclutter.nix
     ../../nixos/yubikey.nix
     ../../nixos/zsh.nix
