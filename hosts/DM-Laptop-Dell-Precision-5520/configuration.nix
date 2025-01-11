@@ -16,6 +16,7 @@
     ./disko-config.nix
     ./nixos.nix
     ./home-manager.nix
+    ./kde.nix
   ];
 
   # Use the systemd-boot EFI boot loader
@@ -55,9 +56,6 @@
       };
     };
   };
-  # Install blueman, a GUI to manage Bluetooth devices
-  services.blueman.enable = true;
-
   # Disable Nvidia Quadro graphics card. This improves the battery life.
   hardware.nvidiaOptimus.disable = true;
 
