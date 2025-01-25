@@ -11,6 +11,7 @@
     ../../home-manager/bat.nix
     ../../home-manager/beets.nix
     ../../home-manager/caffeine.nix
+    ../../home-manager/cbatticon.nix
     ../../home-manager/direnv.nix
     ../../home-manager/dotnet.nix
     ../../home-manager/elixir.nix
@@ -21,18 +22,24 @@
     ../../home-manager/fzf.nix
     ../../home-manager/git.nix
     ../../home-manager/gtk.nix
+    ../../home-manager/i3.nix
+    ../../home-manager/i3status.nix
     ../../home-manager/jq.nix
     ../../home-manager/keyboard.nix
     ../../home-manager/lf.nix
     ../../home-manager/neovim.nix
     ../../home-manager/network-manager.nix
+    ../../home-manager/pasystray.nix
+    ../../home-manager/picom.nix
     ../../home-manager/playerctl.nix
+    ../../home-manager/redshift.nix
     ../../home-manager/ripgrep.nix
     ../../home-manager/rofi.nix
     ../../home-manager/ruby.nix
     ../../home-manager/ssh.nix
     ../../home-manager/starship.nix
     ../../home-manager/tldr.nix
+    ../../home-manager/udiskie.nix
     ../../home-manager/xcape.nix
     ../../home-manager/xdg.nix
     ../../home-manager/xorg.nix

@@ -1,7 +1,5 @@
 # NixOS configuration for my Dell Precision 3581 laptop
 
-{ pkgs, ... }:
-
 {
   imports = [
     # NixOS base configuration
@@ -27,17 +25,4 @@
     ../../nixos/yubikey.nix
     ../../nixos/zsh.nix
   ];
-
-  # TODO: Temporary for now while I experiment with KDE
-  # Enable minimal desktop/display manager setup to have a login screen
-  # home-manager will take over after login in
-  services.xserver = {
-    desktopManager.xterm.enable = true;
-    displayManager.lightdm.enable = true;
-
-    # Disable screensaver and display power manager signaling (DPMS)
-    displayManager.sessionCommands = ''
-      ${pkgs.xorg.xset}/bin/xset s off -dpms
-    '';
-  };
 }
