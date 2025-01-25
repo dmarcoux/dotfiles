@@ -19,7 +19,6 @@
   # https://blog.zsa.io/keymapp/
   environment.systemPackages = with pkgs; [ keymapp ];
 
-
   # Configure the console keymap from the xserver keyboard settings
   console.useXkbConfig = true;
 }
