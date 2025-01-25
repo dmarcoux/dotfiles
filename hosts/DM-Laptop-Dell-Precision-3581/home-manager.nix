@@ -25,7 +25,6 @@
     ../../home-manager/jq.nix
     ../../home-manager/keyboard.nix
     ../../home-manager/lf.nix
-    ../../home-manager/mise.nix
     ../../home-manager/neovim.nix
     ../../home-manager/network-manager.nix
     ../../home-manager/pasystray.nix
