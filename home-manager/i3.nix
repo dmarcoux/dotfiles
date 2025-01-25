@@ -12,7 +12,7 @@ with config.lib.stylix.colors.withHashtag;
     config = {
       bars = [
         {
-          statusCommand = "${config.programs.i3status.package}/bin/i3status";
+          statusCommand = "${config.programs.i3status-rust.package}/bin/i3status-rs ${config.xdg.configHome}/i3status-rust/config-default.toml";
           position = "top";
           fonts = {
             names = [ config.stylix.fonts.monospace.name ];
@@ -186,6 +186,9 @@ with config.lib.stylix.colors.withHashtag;
 
       # Launch Keymapp while I am learning to work with my new ZSA keyboard
       exec keymapp
+
+      # Launch kbdd to monitor which keyboard layout is active
+      exec ${pkgs.kbdd}/bin/kbdd
 
       #################
       # Key bindings
