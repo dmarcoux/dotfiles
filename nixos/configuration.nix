@@ -34,6 +34,16 @@
   # Delete all files in /tmp during boot
   boot.tmp.cleanOnBoot = true;
 
+  # Enable Plymouth boot splash screen
+  # TODO: Customize this with `boot.plymouth.theme`, it could be fun :D. Search for inspiration: https://github.com/search?q=language%3Anix+plymouth&type=code
+  boot.plymouth.enable = true;
+  # With this, Plymouth shows the passphrase prompt to unlock LUKS-encrypted disks. Otherwise, Plymouth would start after entering the LUKS passphrase.
+  # See https://github.com/NixOS/nixpkgs/issues/26722 for details.
+  boot.initrd.systemd.enable = true;
+  # Show a blank screen before plymouth takes over.
+  # Without `quiet` and `splash`, the details fallback plymouth theme is used and shows systemd messages.
+  boot.kernelParams = [ "quiet" "splash" ];
+
   # Enable a basic set of fonts providing several font styles and families and reasonable coverage of Unicode
   fonts.enableDefaultPackages = true;
   # Install Nerd Fonts, patched and ready-to-use programming fonts: https://www.nerdfonts.com/
