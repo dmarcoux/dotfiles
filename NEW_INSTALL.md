@@ -18,13 +18,15 @@ If possible, do this on the previous host:
 
 # Install NixOS on a New Host
 
-1. Switch to the root user.
+1. In the *Live ISO*, set the keyboard layout to `Canadian (CSA)` in the OS settings (Search for `Keyboard`).
+
+2. Switch to the root user.
 
    ```bash
    sudo su -
    ```
 
-2. Download this repository as a ZIP archive and extract its content at
+3. Download this repository as a ZIP archive and extract its content at
    `/tmp/dotfiles` (with `-L`, `curl` follows redirects)
 
    ```bash
@@ -33,14 +35,14 @@ If possible, do this on the previous host:
    mv /tmp/dotfiles-main /tmp/dotfiles
    ```
 
-3. Set the hostname for the new host, and create its directory in the dotfiles.
+4. Set the hostname for the new host, and create its directory in the dotfiles.
 
    ```bash
    export HOSTNAME="PICK_A_NAME" &&
    mkdir -p "/tmp/dotfiles/hosts/$HOSTNAME"
    ```
 
-4. To partition, format, and mount the disks, I use
+5. To partition, format, and mount the disks, I use
    [disko](https://github.com/nix-community/disko). Create or adapt one of the
    disko configurations from the dotfiles. The disko configuration must be at
    `/tmp/dotfiles/hosts/$HOSTNAME/disko-config.nix`. Either way, ensure the disk
@@ -66,21 +68,21 @@ If possible, do this on the previous host:
    # ...
    ```
 
-5. If encrypting disks with LUKS:
+6. If encrypting disks with LUKS:
 
-   5.1. Wipe disks before proceeding
+   1. Wipe disks before proceeding
 
       ```bash
       dd if=/dev/zero of=DISK bs=1M status=progress
       ```
 
-   5.2. Set passphrase to decrypt disks on boot
+   2. Set passphrase to decrypt disks on boot
 
       ```bash
       echo -n "password" > /tmp/secret.key
       ```
 
-6. Run disko to partition, format and mount the disks.
+7. Run disko to partition, format and mount the disks.
 
    **This will erase any existing data on the disks.**
 
@@ -88,39 +90,39 @@ If possible, do this on the previous host:
    nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount "/tmp/dotfiles/hosts/$HOSTNAME/disko-config.nix"
    ```
 
-7. Create `configuration.nix` for the system, but without the filesystems. Those
+8. Create `configuration.nix` for the system, but without the filesystems. Those
    are handled by `disko`.
 
    ```bash
    nixos-generate-config --no-filesystems --root /mnt
    ```
 
-8. Move the dotfiles and the generated Nix files to the mounted disks.
+9. Move the dotfiles and the generated Nix files to the mounted disks.
 
    ```bash
    mv /tmp/dotfiles /mnt/etc/nixos/ &&
    mv /mnt/etc/nixos/*.nix "/mnt/etc/nixos/dotfiles/hosts/$HOSTNAME/"
    ```
 
-9. Add the new host inside `nixosConfigurations = { ... }`.
+10. Add the new host inside `nixosConfigurations = { ... }`.
 
-   ```bash
-   vim /mnt/etc/nixos/dotfiles/flake.nix
-   ```
+    ```bash
+    vim /mnt/etc/nixos/dotfiles/flake.nix
+    ```
 
-10. Edit the Nix configuration files for the host.
+11. Edit the Nix configuration files for the host.
 
     ```bash
     vim "/mnt/etc/nixos/dotfiles/hosts/$HOSTNAME/*.nix"
     ```
 
-11. Install NixOS for the new host.
+12. Install NixOS for the new host.
 
     ```bash
     nixos-install --flake "/mnt/etc/nixos/dotfiles#$HOSTNAME"
     ```
 
-12. Reboot
+13. Reboot
 
     ```bash
     reboot
