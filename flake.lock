@@ -603,10 +603,10 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1736431768,
-        "narHash": "sha256-eBQHtKqR7ifBOsWiVjhuKwYVGv1sgyjysPKnt9kH7tM=",
-        "rev": "bbb3e8f808e653941118c24e3fea253c1a95dfb9",
-        "revCount": 19,
+        "lastModified": 1737993800,
+        "narHash": "sha256-Lctcm+tm4uvEHLZPf6L9I6/xdsY8Ch1a5MK1IJXCxjU=",
+        "rev": "824909423cfa00c59b4d4026b72960136bf05115",
+        "revCount": 20,
         "shallow": true,
         "type": "git",
         "url": "file:/home/dany/dotfiles/secrets"
