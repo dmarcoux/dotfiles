@@ -17,6 +17,7 @@
     ./nixos.nix
     ./home-manager.nix
     "${secrets}/samba-cifs.nix"
+    "${secrets}/etc-hosts.nix"
   ];
 
   # Use the systemd-boot EFI boot loader
