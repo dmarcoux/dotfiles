@@ -24,6 +24,7 @@
     ../../home-manager/gtk.nix
     ../../home-manager/i3.nix
     ../../home-manager/i3status-rust.nix
+    ../../home-manager/jetbrains.nix
     ../../home-manager/jq.nix
     ../../home-manager/keyboard.nix
     ../../home-manager/lf.nix
