@@ -6,6 +6,7 @@
     ealias pod='podman'
     ealias doccom='docker compose'
     ealias podcom='podman-compose'
+    alias docker-compose='docker compose' # This is the old Docker Compose command, it's sometimes in documentation or articles online
 
     # Start a Docker/Podman container for projects without a Docker/Podman setup (ports are mapped directly on the host, so anything running inside the container is accessible on the host)
     ealias drunb='docker run -v "$PWD:/app" --net="host" -it ruby:"$(cat .ruby-version)" bash'
