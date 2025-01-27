@@ -12,6 +12,7 @@
     ../../home-manager/caffeine.nix
     ../../home-manager/cbatticon.nix
     ../../home-manager/direnv.nix
+    ../../home-manager/docker-podman.nix
     ../../home-manager/eza.nix
     ../../home-manager/fd.nix
     ../../home-manager/firefox.nix

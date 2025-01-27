@@ -11,6 +11,7 @@
     ../../home-manager/beets.nix
     ../../home-manager/caffeine.nix
     ../../home-manager/direnv.nix
+    ../../home-manager/docker-podman.nix
     ../../home-manager/dotnet.nix
     ../../home-manager/elixir.nix
     ../../home-manager/eza.nix
