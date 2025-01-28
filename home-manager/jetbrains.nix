@@ -3,8 +3,8 @@
 { pkgs-unstable, ... }:
 
 {
-  # Install JetBrains IDEs
-  home.packages = [ pkgs-unstable.jetbrains.idea-ultimate ];
+  # Install JetBrains IDEs with the JetBrains Toolbox
+  home.packages = [ pkgs-unstable.jetbrains-toolbox ];
 
   # Configure IdeaVim, a plugin emulating Vim inside JetBrains IDEs
   # https://github.com/JetBrains/ideavim
