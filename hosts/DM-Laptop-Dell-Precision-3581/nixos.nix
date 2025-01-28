@@ -11,6 +11,7 @@
     ../../nixos/evince.nix
     ../../nixos/gnome-keyring.nix
     ../../nixos/i3.nix
+    ../../nixos/jetbrains.nix
     ../../nixos/keyboards.nix
     ../../nixos/locales.nix
     ../../nixos/networking.nix
