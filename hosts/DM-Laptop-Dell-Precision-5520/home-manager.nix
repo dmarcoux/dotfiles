@@ -6,7 +6,6 @@
     ../../home-manager/home.nix
     # Everything else... this list is adapted to this host
     ../../home-manager/alacritty.nix
-    ../../home-manager/autorandr.nix
     ../../home-manager/awscli.nix
     ../../home-manager/bat.nix
     ../../home-manager/beets.nix
@@ -27,13 +26,13 @@
     ../../home-manager/keyboard.nix
     ../../home-manager/lf.nix
     ../../home-manager/neovim.nix
-    ../../home-manager/network-manager.nix
     ../../home-manager/playerctl.nix
     ../../home-manager/ripgrep.nix
     ../../home-manager/rofi.nix
     ../../home-manager/ruby.nix
     ../../home-manager/ssh.nix
     ../../home-manager/starship.nix
+    ../../home-manager/stylix.nix
     ../../home-manager/tldr.nix
     ../../home-manager/xcape.nix
     ../../home-manager/xdg.nix

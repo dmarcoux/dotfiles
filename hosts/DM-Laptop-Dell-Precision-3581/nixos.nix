@@ -40,5 +40,16 @@
     displayManager.sessionCommands = ''
       ${pkgs.xorg.xset}/bin/xset s off -dpms
     '';
+
+    xkb = {
+      # Set multiple keyboard layouts (This is useful when pair-programming with colleagues which are used to another layout)
+      # - Canadian Multilingual: https://kbdlayout.info/kbdcan
+      # - German: https://kbdlayout.info/kbdgr
+      # - US: https://kbdlayout.info/kbdus
+      layout = "ca(multix),de,us";
+      # AltGr + Space produces a normal space instead of a non-breakable space
+      # Alt + Space switches to the next keyboard layout
+      options = "nbsp:none,grp:alt_space_toggle";
+    };
   };
 }

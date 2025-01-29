@@ -11,7 +11,6 @@
       name = "nixos-hardware-26-06-2024";
       rev = "aab67495e34365045f9dfbe58725cc6fa03607b7";
     }}/dell/precision/5530"
-    ./autorandr.nix
     ./hardware-configuration.nix # Include the results of the hardware scan
     ./disko-config.nix
     ./nixos.nix
