@@ -6,6 +6,9 @@
   # Install JetBrains IDEs with the JetBrains Toolbox
   home.packages = [ pkgs-unstable.jetbrains-toolbox ];
 
+  # When migrating from one JetBrains account to another (like when getting a new job),
+  # see my JetBrains settings backup at https://github.com/dmarcoux/jetbrains-settings
+
   # Configure IdeaVim, a plugin emulating Vim inside JetBrains IDEs
   # https://github.com/JetBrains/ideavim
   #
