@@ -1,6 +1,6 @@
 # Host-specific configuration for my Dell Precision 3581 laptop
 
-{ config, pkgs, secrets, ... }:
+{ config, pkgs, pkgs-unstable, secrets, ... }:
 
 {
   imports = [
@@ -66,6 +66,8 @@
 
   # Extra packages only for this host
   environment.systemPackages = with pkgs; [
+    # CLI for https://exercism.org - Solve coding exercises and get mentored to gain true fluency in your chosen programming languages
+    pkgs-unstable.exercism
     # VPN client for Cisco's AnyConnect SSL VPN
     openconnect
     # NetworkManager’s OpenConnect plugin
