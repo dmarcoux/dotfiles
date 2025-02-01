@@ -83,7 +83,7 @@
         # By default, packages will be installed to `~/.nix-profile`
         # With useUserPackages set to `true`, packages will be installed to `/etc/profiles/per-user/$USER` instead
         home-manager.useUserPackages = true;
-        home-manager.users.dany.imports = [
+        home-manager.sharedModules = [
           inputs.nixvim.homeManagerModules.nixvim
           inputs.plasma-manager.homeManagerModules.plasma-manager
         ];
