@@ -36,6 +36,7 @@
     ../../home-manager/rofi.nix
     ../../home-manager/ssh.nix
     ../../home-manager/starship.nix
+    ../../home-manager/stylix.nix
     ../../home-manager/tldr.nix
     ../../home-manager/udiskie.nix
     ../../home-manager/xcape.nix
