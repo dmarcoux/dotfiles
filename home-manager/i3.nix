@@ -1,4 +1,5 @@
 # User configuration for i3
+# TODO: Convert this configuration to Nix, before moving to Wayland / Sway
 
 { pkgs, config, lib, ... }:
 
