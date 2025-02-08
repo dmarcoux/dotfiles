@@ -41,5 +41,8 @@
 
       export $(echo $VARS | xargs)
     }
+
+    # Switch to one of the autorandr configurations
+    ealias arf='autorandr --list | fzf --header="Switch to one of the autorandr configurations" | xargs --no-run-if-empty autorandr --change'
   '';
 }
