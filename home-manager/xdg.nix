@@ -163,6 +163,7 @@
         "text/x-haskell" = "nvim.desktop";
         "text/x-java-source" = "nvim.desktop";
         "text/x-java" = "nvim.desktop";
+        "text/x-kotlin" = "nvim.desktop";
         "text/x-lilypond" = "nvim.desktop";
         "text/x-literate-haskell" = "nvim.desktop";
         "text/x-log" = "nvim.desktop";
