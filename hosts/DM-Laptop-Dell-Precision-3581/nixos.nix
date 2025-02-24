@@ -9,7 +9,7 @@
     ../../nixos/chromium.nix
     ../../nixos/docker.nix
     ../../nixos/evince.nix
-    ../../nixos/gnome-keyring.nix
+    ../../nixos/gnome.nix
     ../../nixos/i3.nix
     ../../nixos/jetbrains.nix
     ../../nixos/keyboards.nix

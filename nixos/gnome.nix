@@ -1,9 +1,12 @@
-# System configuration for GNOME Keyring
+# System configuration for GNOME apps
 # It cannot be done in home-manager: https://github.com/nix-community/home-manager/issues/1454
 
 { pkgs, lib, ... }:
 
 {
+  # dconf is needed to be able to store settings of various GNOME apps
+  programs.dconf.enable = true;
+
   # Launch GNOME Keyring to store security credentials. It's used by many applications like JetBrains IDEs to store database passwords
   services.gnome.gnome-keyring.enable = true;
 

@@ -11,7 +11,7 @@
     ../../nixos/docker.nix
     ../../nixos/dotnet.nix
     ../../nixos/evince.nix
-    ../../nixos/gnome-keyring.nix
+    ../../nixos/gnome.nix
     ../../nixos/i3.nix
     ../../nixos/keyboards.nix
     ../../nixos/locales.nix
