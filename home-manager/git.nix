@@ -39,7 +39,13 @@ in
         compactionHeuristic = true;
         wsErrorHighlight = "all";
       };
-      fetch = { prune = true; };
+      fetch = {
+        # Fetch all remotes
+        all = true;
+        # When fetching, remove remote-tracking references and tags which no longer exist on the remote
+        prune = true;
+        pruneTags = true;
+      };
       # When a wrong command is given, git prompts for confirmation to autocorrect the command if it identifies exactly one similar valid command
       help = { autoCorrect = "prompt"; };
       init = { defaultBranch = "main"; };
