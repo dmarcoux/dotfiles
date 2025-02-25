@@ -97,7 +97,6 @@
       map gpr cd ${config.xdg.userDirs.extraConfig.XDG_PROJETS_DIR}
       # Directory where USB drives are mounted
       map gr cd /run/media/
-      map gsv cd "${config.home.homeDirectory}/.steam/steam/steamapps/common/Stardew Valley"
       map gt cd ${config.xdg.dataHome}/Trash
       map gv cd ${config.xdg.userDirs.videos}
 
