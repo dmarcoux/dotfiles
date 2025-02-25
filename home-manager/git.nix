@@ -40,6 +40,8 @@ in
         wsErrorHighlight = "all";
       };
       fetch = { prune = true; };
+      # When a wrong command is given, git prompts for confirmation to autocorrect the command if it identifies exactly one similar valid command
+      help = { autoCorrect = "prompt"; };
       init = { defaultBranch = "main"; };
       push = {
         default = "current";
