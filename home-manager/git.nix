@@ -53,6 +53,10 @@ in
         default = "current";
         followTags = true;
       };
+      tag = {
+        # Sort git tags by treating dotted version numbers as a series of integer values, so 1.101 is displayed before 1.1000
+        sort = "version:refname";
+      };
       rebase = {
         autoSquash = true;
       };
