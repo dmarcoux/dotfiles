@@ -41,7 +41,6 @@
     ../../home-manager/stylix.nix
     ../../home-manager/tldr.nix
     ../../home-manager/udiskie.nix
-    ../../home-manager/xcape.nix
     ../../home-manager/xdg.nix
     ../../home-manager/xorg.nix
     ../../home-manager/yank.nix
