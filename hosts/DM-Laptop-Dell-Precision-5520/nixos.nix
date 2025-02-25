@@ -9,7 +9,6 @@
     ../../nixos/chromium.nix
     ../../nixos/devenv.nix
     ../../nixos/docker.nix
-    ../../nixos/dotnet.nix
     ../../nixos/evince.nix
     ../../nixos/gnome.nix
     ../../nixos/i3.nix
