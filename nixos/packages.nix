@@ -70,6 +70,8 @@
     peek
     # Image editing software (and drawing)
     pinta
+    # Install and run Python applications in isolated environments
+    pipx
     # CLI program to copy/sync/move files and directories to and from many cloud services
     rclone
     # Batch rename files/directories according to a Perl expression
