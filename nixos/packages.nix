@@ -8,8 +8,6 @@
   environment.systemPackages = with pkgs; [
     # Infrastructure as Code tools
     ansible
-    # Local-first, peer-to-peer, and block-based notetaking app
-    pkgs-unstable.anytype
     # Frontend to XRandR to manage multiple monitors
     arandr
     # Various commands to manage file archives of various types, such as tar and Zip archives
@@ -54,6 +52,8 @@
     nix-index
     # Formatter for Nix code
     nixfmt-classic
+    # Note-taking app
+    pkgs-unstable.obsidian
     # Manage resolv.conf for DNS settings
     openresolv
     # TLS/SSL and cryptography library

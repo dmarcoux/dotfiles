@@ -236,8 +236,8 @@ in
           command = "WINIT_X11_SCALE_FACTOR=1 alacritty";
         }
         {
-          # Launch notetaking app
-          command = "anytype";
+          # Launch note-taking app
+          command = "obsidian";
         }
         {
           # Launch web browser
@@ -283,7 +283,6 @@ in
           { class = "^Code$"; }
           { class = "^jetbrains-.*"; }
           { class = "^obsidian$"; }
-          { class = "^anytype$"; }
         ];
 
         "${ws2}" = [
