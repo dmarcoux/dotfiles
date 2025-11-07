@@ -19,16 +19,16 @@
       # efiSysMountPoint = "/boot";
     };
 
-    # Timeout (in seconds) until loader boots the default menu item (the latest NixOS generation)
+    # Timeout (in seconds) until loader boots the selected boot entry
     timeout = 20;
 
     grub = {
       enable = true;
       devices = [ "nodev" ];
       efiSupport = true;
-      # Detect other systems present on the computer and add a menu entry for each of them
+      # Detect other systems present on the computer and add a boot entry for each of them
       useOSProber = true;
-      # Remember the last accessed menu entry. Useful when selecting one menu entry most of the time
+      # Remember the last accessed boot entry. Useful when selecting one boot entry most of the time
       default = "saved";
     };
   };
