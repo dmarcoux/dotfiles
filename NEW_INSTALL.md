@@ -18,7 +18,7 @@ If possible, do this on the previous host:
 
 # Install NixOS on a New Host
 
-1. In the *Live ISO*, set the keyboard layout to `Canadian (CSA)` in the OS settings (Search for `Keyboard`).
+1. In the *Live ISO*, search for `Keyboard` in the OS settings to then set the keyboard layout to `Canadian (CSA)` (it's under `French (Canada)`).
 
 2. Switch to the root user.
 
