@@ -34,7 +34,7 @@ in
           };
 
           # Overwrite some of the default colors set by stylix for i3's bar
-          colors = config.lib.stylix.i3.bar.colors // {
+          colors = config.stylix.targets.i3.exportedBarConfig.colors // {
             focusedWorkspace = {
               text = base00;
               background = base0B;
