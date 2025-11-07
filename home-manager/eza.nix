@@ -7,7 +7,7 @@
   home.packages = [ pkgs.eza ];
 
   # Aliases
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     ealias ls="eza --all --group-directories-first --across"
     ealias ll="eza --all --group-directories-first --long"
   '';

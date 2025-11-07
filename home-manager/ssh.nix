@@ -12,7 +12,7 @@
   };
 
   # Use the 1Password SSH agent for all hosts
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     export SSH_AUTH_SOCK=~/.1password/agent.sock
   '';
 }

@@ -1,5 +1,5 @@
 {
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     # Delete all generations older than 14 days for all profiles
     ealias ncgd='sudo nix-collect-garbage --delete-older-than 14d'
 

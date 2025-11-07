@@ -5,7 +5,7 @@
     gh = "GH_TOKEN=\"$(op read 'op://Personal/github.com/CLI Access Token')\" gh";
   };
 
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     # For the current branch, open the web browser to create a pull request on GitHub
     ealias ghpr='gh pr create --web'
 

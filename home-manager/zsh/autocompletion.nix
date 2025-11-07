@@ -1,5 +1,5 @@
 {
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     # Allow completion from within a word/phrase
     setopt COMPLETE_IN_WORD
 

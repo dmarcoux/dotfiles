@@ -55,7 +55,7 @@
       # This prevents issues with certain servers when SSH'ing like backspace not working and more...
       ssh = "TERM='xterm-256color' ssh";
     };
-    initExtra = ''
+    initContent = ''
       # Add $HOME/.npm-packages to $PATH to install npm packages globally with:
       # npm config set prefix "$HOME/.npm-packages"
       # Add $HOME/.cargo/bin to $PATH to install cargo packages globally with:

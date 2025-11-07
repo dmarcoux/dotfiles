@@ -138,7 +138,7 @@
     '';
   };
 
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     # Prevent nested lf instances, inspiration from https://wiki.archlinux.org/index.php/Ranger#Preventing_nested_ranger_instances
     lf() {
         if [ -z "$LF_LEVEL" ]; then

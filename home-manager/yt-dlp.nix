@@ -40,7 +40,7 @@
     '';
   };
 
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     # Download French and German videos from arte.tv
     #
     # $@: arte.tv URL(s) (either French or German)

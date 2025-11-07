@@ -26,7 +26,7 @@
 
   # Set the terminal title to "zsh: $USERNAME@$PWD"
   # Details at https://wiki.archlinux.org/title/Zsh#xterm_title
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     case "$TERM" in
       alacritty*|xterm*)
         precmd() { print -Pn '\e]2;zsh: %n@%~\a' } ;;

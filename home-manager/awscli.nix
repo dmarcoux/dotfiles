@@ -49,7 +49,7 @@
   '';
 
   # Aliases to use the profiles created above
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     alias awsp='aws --profile personal'
     alias scw='aws --profile scaleway'
     alias scwos='aws --profile scaleway-os'

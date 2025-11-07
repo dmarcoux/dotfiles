@@ -33,7 +33,7 @@ with config.lib.stylix.colors.withHashtag;
     fileWidgetCommand = "${config.programs.fzf.defaultCommand}";
   };
 
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     function cd_to_lf_g_mappings_and_project_directories() {
       local directory
       # Take the lf g mappings (except `g,`), format them before adding all directories under $XDG_PROJETS_DIR to the list of directories to be processed by fzf

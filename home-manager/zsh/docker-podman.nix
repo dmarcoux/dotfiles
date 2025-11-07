@@ -1,5 +1,5 @@
 {
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     ealias dc='devcontainer'
 
     ealias doc='docker'

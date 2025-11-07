@@ -1,5 +1,5 @@
 {
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     ealias cnf='command-not-found'
 
     # Quicker than cd ..; cd ...; etc...

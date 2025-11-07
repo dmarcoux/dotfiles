@@ -7,7 +7,7 @@
 # Shamelessly taken from https://wiki.math.cmu.edu/iki/wiki/tips/20140625-zsh-expand-alias.html
 
 {
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     # Define an array to store expandable aliases
     typeset -a ealiases
     ealiases=()

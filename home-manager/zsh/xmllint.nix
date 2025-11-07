@@ -1,5 +1,5 @@
 {
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     # Pretty print / Parse XML (so like jq, but for XML...)
     xq() {
       if [ -z "$1" ]; then
