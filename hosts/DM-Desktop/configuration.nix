@@ -7,7 +7,8 @@
     ./autorandr.nix
     ./hardware-configuration.nix # Include the results of the hardware scan
     ./disko-config.nix
-    ../../nixos/configuration.nix # System configuration
+    ./nixos.nix
+    ./home-manager.nix
   ];
 
   # Use the GRUB boot loader to dual-boot Windows and NixOS
