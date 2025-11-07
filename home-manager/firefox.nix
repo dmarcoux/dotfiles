@@ -10,14 +10,14 @@
     # Setup Firefox
     profiles.default = {
       search = {
-        # Default search engine
-        default = "DuckDuckGo";
-        privateDefault = "DuckDuckGo";
+        # Default search engine - DuckDuckGo
+        default = "ddg";
+        privateDefault = "ddg";
         # Force replace the existing search configuration. This is recommended since Firefox will replace the symlink for the search configuration on every launch
         force = true;
         # Order in which the search engines are listed. Any engines that aren’t included in this list will be listed after these in an unspecified order
         order = [
-          "DuckDuckGo"
+          "ddg"
         ];
       };
 
