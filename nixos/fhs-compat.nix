@@ -1,11 +1,17 @@
+# Configuration to help running binaries which expect a system following the Filesystem Hierarchy Standard (FHS)
+
 { pkgs, ... }:
 
 {
+
+  # https://github.com/Mic92/envfs
+  services.envfs.enable = true;
+
   programs.nix-ld = {
     enable = true;
 
-    # For the JetBrains Toolbox to work
-    # Taken from https://github.com/NixOS/nixpkgs/blob/3030f185ba6a4bf4f18b87f345f104e6a6961f34/pkgs/build-support/appimage/default.nix#L95-L212
+    # With the following libraries, most binaries should work. As an example, the JetBrains Toolbox works (and it does expect a lot)
+    # The list was taken from https://github.com/NixOS/nixpkgs/blob/3030f185ba6a4bf4f18b87f345f104e6a6961f34/pkgs/build-support/appimage/default.nix#L95-L212
     # TODO: It would be nice to somehow use it directly like this
     # libraries =  appimageTools.defaultFhsEnvArgs.multiPkgs;
     libraries = with pkgs; [

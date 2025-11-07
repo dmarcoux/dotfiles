@@ -4,6 +4,7 @@
   imports = [
     # NixOS base configuration
     ../../nixos/configuration.nix
+    ../../nixos/fhs-compat.nix
     # Everything else... this list is adapted to this host
     ../../nixos/1password.nix
     ../../nixos/chromium.nix
