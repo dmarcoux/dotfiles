@@ -55,18 +55,15 @@
   let
     system = "x86_64-linux";
 
-    pkgs = import nixpkgs {
-      inherit system;
-
+    nixpkgsConfig = {
       # Allow installation of unfree packages
-      config.allowUnfree = true;
+      allowUnfree = true;
     };
 
     pkgs-unstable = import nixpkgs-unstable {
       inherit system;
 
-      # Allow installation of unfree packages
-      config.allowUnfree = true;
+      config = nixpkgsConfig;
     };
 
     common_modules = [
@@ -94,40 +91,33 @@
     nixosConfigurations = {
       DM-Laptop-Dell-Precision-5520 = nixpkgs.lib.nixosSystem {
         specialArgs = {
-          inherit system;
-
-          pkgs = pkgs;
-          pkgs-unstable = pkgs-unstable;
+          inherit pkgs-unstable;
         };
 
         modules = [
+          { nixpkgs = { config = nixpkgsConfig; }; }
           ./hosts/DM-Laptop-Dell-Precision-5520/configuration.nix
         ] ++ common_modules;
       };
 
       DM-Laptop-Dell-Precision-3581 = nixpkgs.lib.nixosSystem {
         specialArgs = {
-          inherit system;
-
-          pkgs = pkgs;
-          pkgs-unstable = pkgs-unstable;
-          secrets = secrets;
+          inherit pkgs-unstable secrets;
         };
 
         modules = [
+          { nixpkgs = { config = nixpkgsConfig; }; }
           ./hosts/DM-Laptop-Dell-Precision-3581/configuration.nix
         ] ++ common_modules;
       };
 
       DM-Desktop = nixpkgs.lib.nixosSystem {
         specialArgs = {
-          inherit system;
-
-          pkgs = pkgs;
-          pkgs-unstable = pkgs-unstable;
+          inherit pkgs-unstable;
         };
 
         modules = [
+          { nixpkgs = { config = nixpkgsConfig; }; }
           ./hosts/DM-Desktop/configuration.nix
         ] ++ common_modules;
       };
