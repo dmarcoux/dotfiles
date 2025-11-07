@@ -83,9 +83,8 @@
 
     # Install the following extensions
     extensions = [
-      # uBlock Origin
-      # Setup: Be sure to configure filters in the extension's settings. Add this list to custom filters: https://www.i-dont-care-about-cookies.eu/abp/
-      "cjpalhdlnbpafiamejdnhcphjbkeiagm"
+      # uBlock Origin Lite
+      "ddkjiahejlhfcafbddmgiahcphecmpfh"
       # SponsorBlock for YouTube
       "mnjggcdmjocbbbhaepdhchncahnbgone"
       # Privacy Badger
