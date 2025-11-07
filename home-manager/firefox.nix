@@ -64,4 +64,7 @@
       };
     };
   };
+
+  # Same profile name as above...
+  stylix.targets.firefox.profileNames = [ "default" ];
 }
