@@ -98,8 +98,6 @@
       "jbbplnpkjmmeebjpijfedlgcdilocofh"
       # 1Password
       "aeblfdkhhhdcdjpifhhbdiojplfjncoa"
-      # GoFullPage - Full Page Screen Capture
-      "fdpohaocaechififmbbbbbknoalclacl"
     ];
   };
 }
