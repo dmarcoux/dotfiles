@@ -7,8 +7,7 @@
   environment.sessionVariables = { BROWSER = "chromium"; };
 
   # Install chromium with WideVine to play DRM-protected content
-  # TODO: Re-enable WideVine once I update. This fix should then be available: https://github.com/NixOS/nixpkgs/pull/438810
-  environment.systemPackages = [ (pkgs.chromium.override { enableWideVine = false; }) ];
+  environment.systemPackages = [ (pkgs.chromium.override { enableWideVine = true; }) ];
 
   programs.chromium = {
     # Configure Chromium through policies
