@@ -104,7 +104,7 @@
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
   # should
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.05";
 
   # TODO: https://github.com/NixOS/nixpkgs/issues/180175
   systemd.services.NetworkManager-wait-online.enable = false;

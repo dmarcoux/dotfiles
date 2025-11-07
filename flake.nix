@@ -2,7 +2,7 @@
   description = "NixOS";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
@@ -12,14 +12,14 @@
     # nixpkgs-staging-next.url = "github:nixos/nixpkgs/staging-next";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release-25.05";
       # Ensure that nixpkgs and home-manager stay in sync
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     stylix = {
       # Follow the stable NixOS release
-      url = "github:danth/stylix/release-24.11";
+      url = "github:danth/stylix/release-25.05";
       # Use nixpkgs
       inputs.nixpkgs.follows = "nixpkgs";
     };
