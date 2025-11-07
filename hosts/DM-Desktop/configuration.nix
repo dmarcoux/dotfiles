@@ -6,6 +6,7 @@
   imports = [
     ./autorandr.nix
     ./hardware-configuration.nix # Include the results of the hardware scan
+    ./disko-config.nix
     ../../nixos/configuration.nix # System configuration
   ];
 

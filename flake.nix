@@ -87,6 +87,7 @@
       }
       stylix.nixosModules.stylix
       flake-programs-sqlite.nixosModules.programs-sqlite
+      disko.nixosModules.disko
     ];
   in
   {
@@ -101,7 +102,6 @@
 
         modules = [
           ./hosts/DM-Laptop-Dell-Precision-5520/configuration.nix
-          disko.nixosModules.disko # TODO: Move to common_modules once all hosts are using disko
         ] ++ common_modules;
       };
 
@@ -116,7 +116,6 @@
 
         modules = [
           ./hosts/DM-Laptop-Dell-Precision-3581/configuration.nix
-          disko.nixosModules.disko # TODO: Move to common_modules once all hosts are using disko
         ] ++ common_modules;
       };
 
