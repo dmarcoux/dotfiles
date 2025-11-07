@@ -46,8 +46,8 @@
 
   # Enable a basic set of fonts providing several font styles and families and reasonable coverage of Unicode
   fonts.enableDefaultPackages = true;
-  # Install Nerd Fonts, patched and ready-to-use programming fonts: https://www.nerdfonts.com/
-  fonts.packages = [ pkgs.nerdfonts ];
+  # Install Nerd Fonts' version of DejaVu Sans Mono. Nerd Fonts are patched and ready-to-use programming fonts: https://www.nerdfonts.com/
+  fonts.packages = [ pkgs.nerd-fonts.dejavu-sans-mono ];
 
   time.timeZone = "Europe/Berlin";
 
