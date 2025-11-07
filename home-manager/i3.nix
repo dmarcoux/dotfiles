@@ -260,10 +260,11 @@ in
           '';
           notification = false; # See --no-startup-id option description in the i3 user guide
         }
-        {
-          # Launch Keymapp for my ZSA keyboard
-          command = "keymapp";
-        }
+        # Disabled for now...
+        # {
+        #   # Launch Keymapp for my ZSA keyboard
+        #   command = "keymapp";
+        # }
         {
           # Launch kbdd to monitor which keyboard layout is active
           command = "${pkgs.kbdd}/bin/kbdd";
