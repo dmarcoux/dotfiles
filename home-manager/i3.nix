@@ -302,6 +302,7 @@ in
 
         "${ws5}" = [
           { class = "^Lollypop$"; }
+          { class = "^Spotify$"; }
         ];
       };
 

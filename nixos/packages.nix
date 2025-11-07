@@ -84,6 +84,8 @@
     screen
     # Static analysis tool for shell scripts
     shellcheck
+    # Streaming service
+    pkgs-unstable.spotify
     # Infrastructure as Code tool
     pkgs-unstable.terraform
     # For the `tree` command which shows the contents of the current directory as a tree
