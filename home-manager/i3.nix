@@ -30,7 +30,7 @@ in
 
           fonts = {
             names = [ config.stylix.fonts.monospace.name ];
-            size = lib.mkForce 13.0;
+            size = lib.mkForce 14.0;
           };
 
           # Overwrite some of the default colors set by stylix for i3's bar

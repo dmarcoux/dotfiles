@@ -9,7 +9,7 @@
       # window: Window switcher
       # drun: Launch application (from list of .desktop files)
       modi = "window,drun";
-      font = "${config.stylix.fonts.monospace.name} 13";
+      font = "${config.stylix.fonts.monospace.name} 14";
       show-icons = true;
       # Sort entries by matches
       sort = true;

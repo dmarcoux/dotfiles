@@ -13,8 +13,7 @@
         # The cursor blinks every 750 milliseconds (this is the default interval)
         style = { blinking = "On"; };
       };
-      # A bit smaller than the default font size of 11.0
-      font = { size = lib.mkForce 10.0; };
+      font = { size = lib.mkForce 11.0; };
       keyboard.bindings = [
         # Create new window in the current directory with Ctrl+Shift+T
         { key = "T"; mods = "Control|Shift"; action = "CreateNewWindow"; }
