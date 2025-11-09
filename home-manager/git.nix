@@ -97,20 +97,6 @@ in
       ".~lock.*.odt" # Lock files from LibreOffice
     ];
 
-    includes = [
-      # Configuration specific to all repositories at work
-      # This is useful to use a separate account at work for GitHub/GitLab/etc...
-      {
-        contentSuffix = "work.gitconfig"; # Nix store name for the generated git configuration file for this include
-        condition = "gitdir:${config.xdg.userDirs.extraConfig.XDG_PROJETS_DIR}/work/**"; # Only applies to git repositories matching this path
-        contents = {
-          user = {
-            email = "TODO@work"; # Use this email instead of the default defined above
-          };
-        };
-      }
-    ];
-
     # Install and setup git-lfs
     lfs.enable = true;
   };
