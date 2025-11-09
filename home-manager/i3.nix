@@ -136,12 +136,17 @@ in
         "${mod}+c" = "exec CM_LAUNCHER=rofi clipmenu -i -p 'clipboard'";
 
         # Control media players with media keys
-        # TODO: Do the same for volume and mute. See WirePlumber, it comes with PipeWire: https://wiki.archlinux.org/title/WirePlumber#Keyboard_volume_control
         "XF86AudioPlay" = "exec playerctl play-pause";
         "XF86AudioPause" = "exec playerctl play-pause";
         "XF86AudioStop" = "exec playerctl stop";
         "XF86AudioNext" = "exec playerctl next";
         "XF86AudioPrev" = "exec playerctl previous";
+
+        # Control volume / mute
+        # From https://wiki.archlinux.org/title/WirePlumber#Keyboard_volume_control
+        "XF86AudioRaiseVolume" = "exec wpctl set-volume --limit 1.0 @DEFAULT_AUDIO_SINK@ 5%+"; # `1.0` is 100%
+        "XF86AudioLowerVolume" = "exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
+        "XF86AudioMute" = "exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
 
         # Change focus
         "${mod}+h" = "focus left";
