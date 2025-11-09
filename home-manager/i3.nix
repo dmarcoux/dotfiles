@@ -204,7 +204,6 @@ in
       workspaceLayout = "tabbed";
 
       # Assign workspaces to specific outputs/screens
-      # TODO: Do I really need this?
       workspaceOutputAssign = [
         {
           workspace = ws3;
