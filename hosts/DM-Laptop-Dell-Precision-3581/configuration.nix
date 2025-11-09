@@ -73,8 +73,6 @@
     # NetworkManager’s OpenConnect plugin
     networkmanager-openconnect
     # Distributed, highly available, datacenter-aware scheduler
-    # TODO: I might need to instead use the service to setup nomad: https://search.nixos.org/options?channel=24.11&from=0&size=50&sort=relevance&type=packages&query=services.nomad
-    nomad
     # Samba / CIFS
     samba
   ];
