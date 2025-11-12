@@ -43,8 +43,13 @@
   # Install blueman, a GUI to manage Bluetooth devices
   services.blueman.enable = true;
 
-  # Fix suspend/resume issues due to NVIDIA GPU. Its "production" driver aims to improve stability.
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
+  hardware.nvidia = {
+    # "production" driver aims to improve stability.
+    package = config.boot.kernelPackages.nvidiaPackages.production;
+    # Fix suspend/resume issues due to NVIDIA GPU.
+    powerManagement.enable = true;
+    powerManagement.finegrained = false;
+  };
 
   # System clock might be incorrect after booting Windows and going back to the NixOS
   # This sets RTC time standard to localtime, compatible with Windows in its default configuration
