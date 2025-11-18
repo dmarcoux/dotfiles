@@ -13,6 +13,9 @@
     ../../home-manager/caffeine.nix
     ../../home-manager/cbatticon.nix
     ../../home-manager/direnv.nix
+    # TODO: Commented out since Mise with distrobox doesn't work, at least not with shims.
+    #       It's annoying to always have to do `mise exec ...` on the NixOS host
+    # ../../home-manager/distrobox.nix
     ../../home-manager/eza.nix
     ../../home-manager/fd.nix
     ../../home-manager/firefox.nix
@@ -25,6 +28,7 @@
     ../../home-manager/jq.nix
     ../../home-manager/keyboard.nix
     ../../home-manager/lf.nix
+    ../../home-manager/mise.nix
     ../../home-manager/neovim.nix
     ../../home-manager/network-manager.nix
     ../../home-manager/pasystray.nix

@@ -11,6 +11,9 @@
     ./zsh/git.nix
     ./zsh/history.nix
     ./zsh/github_cli.nix
+    # TODO: Commented out since Mise with distrobox doesn't work, at least not with shims.
+    #       It's annoying to always have to do `mise exec ...` on the NixOS host
+    # ./zsh/mise.nix
     ./zsh/nixos.nix
     ./zsh/vnc.nix
     ./zsh/xmllint.nix
