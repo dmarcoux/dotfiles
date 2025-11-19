@@ -16,13 +16,13 @@
     ealias nrb='sudo nixos-rebuild boot --flake ~/dotfiles'
 
     # Search for a package
-    ealias ns='nix search'
     ealias nsu='nix search --update-cache'
 
     # Start default devShell of Nix Flakes in `flake.nix`
     ealias ndev='nix develop'
 
-    # Start a pure nix-shell
+    # Start a nix-shell
+    ealias ns='nix-shell'
     ealias nsp='nix-shell --pure'
     # Start a pure nix-shell, but this is one is globally ignored by Git. Useful for projects in which having a nix-shell isn't an option
     ealias nspl='nix-shell --pure shell.local.nix'
